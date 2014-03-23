@@ -2,11 +2,14 @@ package application.communication
 
 import grails.plugins.springsecurity.Secured
 
+import application.StatutService
+import application.TimelineService
+
 @Secured('IS_AUTHENTICATED_FULLY')
 class StatutController {
 
 
-    def messageService
+    def statutService
     def timelineService
     def springSecurityService
 
@@ -16,7 +19,7 @@ class StatutController {
     }
 
     def updateStatus(String message) {
-        statusService.updateStatus message
+        statutService.updateStatus(message)
         def messages = timelineService.getTimelineForUser(springSecurityService.principal.username)
         
         def content = twitter.renderMessages messages: messages

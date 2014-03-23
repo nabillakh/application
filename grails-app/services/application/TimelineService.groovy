@@ -1,6 +1,8 @@
 package application
 
 import grails.transaction.Transactional
+import application.RH.*
+import application.communication.*
 
 @Transactional
 class TimelineService {
@@ -11,11 +13,15 @@ class TimelineService {
 
     def getTimelineForUser(String username) {
         def per = Effectif.findByUsername(username)
-        def query = Statut.whereAny {
+        try { def query = Statut.whereAny {
             author { username == per.username }
             if(per.followed) author in per.followed
         }.order 'dateCreated', 'desc'
         def messages = query.list(max: 10)
         messages
+        }
+        catch (NullPointerException n){
+            
+        }
     }
 }

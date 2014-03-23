@@ -10,6 +10,10 @@ class Effectif {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+        
+    
+	static hasMany = [followed:Effectif]
+	static searchable = [only: 'username']
 
 	static transients = ['springSecurityService']
 

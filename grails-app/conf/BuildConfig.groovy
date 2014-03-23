@@ -65,7 +65,7 @@ grails.project.dependency.resolution = {
     dependencies {
         
         
-        compile 'org.springframework:spring-jms:3.2.2.RELEASE'
+        compile 'org.springframework:spring-jms:3.2.7.RELEASE'
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
@@ -100,7 +100,7 @@ grails.project.dependency.resolution = {
 
         compile ':activemq:0.4.1'
         
-        compile ':jms:1.2' 
+        compile ':jms:1.1' 
         
         compile ':searchable:0.6.6'
         compile ':spring-security-core:1.2.7.3'

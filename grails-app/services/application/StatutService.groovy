@@ -2,6 +2,7 @@ package application
 
 import grails.transaction.Transactional
 import application.communication.*
+import application.RH.*
 
 @Transactional
 class StatutService {
@@ -12,12 +13,17 @@ class StatutService {
     def timelineService
     
     void onMessage(newMessageUserName) {
+        try {
         log.debug "Message received. New message posted by user <${newMessageUserName}>."
         def following = Effectif.where {
             followed.username == newMessageUserName
         }.property('username').list()
         following.each { uname ->
             timelineService.clearTimelineCacheForUser(uname)
+        }
+        }
+        catch (NullPointerException n) {
+            timelineService.clearTimelineCacheForUser(username)
         }
     }
 
