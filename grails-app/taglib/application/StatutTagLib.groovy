@@ -6,7 +6,7 @@ class StatutTagLib {
     def renderMessages = { attrs ->
         def messages = attrs.messages
         messages.eachWithIndex { message, counter ->
-            out << g.render(template: '/status/statusMessages', model: [statusMessage: message, messageCounter: counter])
+            out << g.render(template: '/statut/statutMessages', model: [statutMessage: message, messageCounter: counter])
         }
     }
 }

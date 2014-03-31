@@ -11,7 +11,7 @@ class EffectifDroit implements Serializable {
 
 	boolean equals(other) {
 		if (!(other instanceof EffectifDroit)) {
-			return false
+			return false 
 		}
 
 		other.effectif?.id == effectif?.id &&

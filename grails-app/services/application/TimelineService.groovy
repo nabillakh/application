@@ -3,6 +3,7 @@ package application
 import grails.transaction.Transactional
 import application.RH.*
 import application.communication.*
+import application.PP.*
 
 @Transactional
 class TimelineService {
@@ -10,6 +11,8 @@ class TimelineService {
     static transactional = false
 
     void clearTimelineCacheForUser(String username) {}
+    
+    void clearTimelineCacheForKanabn(Kanban monKanban) {}
 
     def getTimelineForUser(String username) {
         def per = Effectif.findByUsername(username)
@@ -24,4 +27,27 @@ class TimelineService {
             
         }
     }
+    
+    def getTimelineForOF(OF monOF) {
+        try { def query = CompteRendu.whereAny {of == monOF }.order 'dateCreated', 'desc'
+            
+        def messages = query.list(max: 15)
+        messages
+        }
+        catch (NullPointerException n){
+            
+        }
+    }
+    
+        def getTimelineForKanban(Kanban monKanban) {
+        try { def query = CompteRendu.whereAny {kanban == monKanban }.order 'dateCreated', 'desc'
+            def messages = query.list(max: 15)
+            messages
+        }
+        catch (NullPointerException n){
+            
+        }
+    }
+    
+    
 }

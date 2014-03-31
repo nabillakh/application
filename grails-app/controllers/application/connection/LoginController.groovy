@@ -1,7 +1,10 @@
 package application.connection
 
+import application.RH.Effectif
+
 import org.springframework.security.access.annotation.Secured
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils 
+import org.springframework.dao.DataIntegrityViolationException
 
 import org.springframework.security.authentication.AccountExpiredException 
 import org.springframework.security.authentication.CredentialsExpiredException 
@@ -52,7 +55,7 @@ class LoginController {
 			return
 		}
 
-		String view = 'auth'
+		String view = 'authentifier'
 		String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
 		render view: view, model: [postUrl: postUrl,
 		                           rememberMeParameter: config.rememberMe.parameter]
@@ -127,4 +130,49 @@ class LoginController {
 	def ajaxDenied = {
 		render([error: 'access denied'] as JSON) 
 	}
+       // inscription ------------- 
+    
+    def inscr(Long id) {
+    
+        redirect (action:"save")
+    }
+    
+     def list(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        [EffectifInstanceList: Effectif.list(params), EffectifInstanceTotal: Effectif.count()]
+    }
+
+    def create() {
+        [EffectifInstance: new Effectif(params)]
+    }
+
+    def save() {
+        def EffectifInstance = new Effectif(params)
+        if (!EffectifInstance.save(flush: true)) {
+            render(view: "create", model: [EffectifInstance: EffectifInstance])
+            return
+        }
+
+        flash.message = message(code: 'default.created.message', args: [message(code: 'Effectif.label', default: 'Effectif'), EffectifInstance.id])
+        redirect(action: "show", id: EffectifInstance.id)
+    }
+
+    def show(Long id) {
+        def EffectifInstance = Effectif.get(id)
+        if (!EffectifInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'Effectif.label', default: 'Effectif'), id])
+            redirect(action: "list")
+            return
+        }
+
+        [EffectifInstance: EffectifInstance]
+    }
+
+  
+   
+       
+
+       
+
+     
 }

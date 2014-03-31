@@ -44,6 +44,6 @@ class StatutService {
     }
 
     private lookupCurrentPerson() {
-        Effectif.get(springSecurityService.principal.id)
+        Effectif.findById(springSecurityService.principal.id)
     }
 }
