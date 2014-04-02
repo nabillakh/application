@@ -1,4 +1,4 @@
-<%@ page import="application.communication.Mail" %>
+
 <!DOCTYPE html>
 <html>
 	<head>

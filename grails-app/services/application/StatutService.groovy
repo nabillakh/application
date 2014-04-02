@@ -12,20 +12,7 @@ class StatutService {
     def springSecurityService
     def timelineService
     
-    void onMessage(newMessageUserName) {
-        try {
-        log.debug "Message received. New message posted by user <${newMessageUserName}>."
-        def following = Effectif.where {
-            followed.username == newMessageUserName
-        }.property('username').list()
-        following.each { uname ->
-            timelineService.clearTimelineCacheForUser(uname)
-        }
-        }
-        catch (NullPointerException n) {
-            timelineService.clearTimelineCacheForUser(username)
-        }
-    }
+   
 
     void updateStatus(String message) {
         def status = new Statut(message: message) 

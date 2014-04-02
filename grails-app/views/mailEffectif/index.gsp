@@ -1,5 +1,5 @@
 
-<%@ page import="application.mail.MailEffectif" %>
+<%@ page import="application.communication.MailEffectif" %>
 <!DOCTYPE html>
 <html>
 	<head>

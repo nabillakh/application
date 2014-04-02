@@ -1,12 +1,13 @@
 package application.communication
 
 
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class MailEffectifController {
-
+   def mailService 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -15,7 +16,14 @@ class MailEffectifController {
     }
 
     def show(MailEffectif mailEffectifInstance) {
+        mailService.messageLu( mailEffectifInstance)
         respond mailEffectifInstance
+    }
+    
+    def Archiver(MailEffectif mailEffectifInstance) {
+        mailService.messageArchiver(mailEffectifInstance)
+        respond mailEffectifInstance
+        
     }
 
     def create() {

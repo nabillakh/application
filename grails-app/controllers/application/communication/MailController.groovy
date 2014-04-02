@@ -1,5 +1,6 @@
 package application.communication
-
+import application.RH.*
+import application.communication.*
 
 
 import static org.springframework.http.HttpStatus.*
@@ -7,12 +8,20 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class MailController {
-
+    def mailService  
+    def springSecurityService
+    
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
+        
+       def mesEffectifsMails = mailService.afficherMail()
+       def mesMails = mailService.mailInbox()
+       def mesMailsSent = mailService.mailenvoyer()
+       
+       // params.max = Math.min(max ?: 10, 100)
+       // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
+        [mailList: mesMails,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent ]
     }
 
     def show(Mail mailInstance) {
@@ -20,22 +29,29 @@ class MailController {
     }
 
     def create() {
+         
         respond new Mail(params)
     }
 
-    @Transactional
-    def save(Mail mailInstance) {
-        if (mailInstance == null) {
-            notFound()
-            return
-        }
+    
+    def save() {
+      def author = mailService.lookupCurrentPerson()
+      def monMessage = params.message
+      def monObjet = params.objet
+      def mail = new Mail(message : monMessage, author : author, objet : monObjet).save()
+      params.recepteur.each()  {user ->
+          def monMailEffectif = new MailEffectif(mail:mail,recepteur:user).save()
+      }
+      
+        redirect action:'index'
 
-        if (mailInstance.hasErrors()) {
-            respond mailInstance.errors, view:'create'
-            return
-        }
+    }
 
-        mailInstance.save flush:true
+    
+    def save2(Mail mailInstance) {
+      def author = mailService.lookupCurrentPerson()
+      mailInstance.author = author
+      mailInstance.save flush:true 
 
         request.withFormat {
             form multipartForm {
@@ -45,7 +61,7 @@ class MailController {
             '*' { respond mailInstance, [status: CREATED] }
         }
     }
-
+    
     def edit(Mail mailInstance) {
         respond mailInstance
     }
@@ -101,4 +117,28 @@ class MailController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    
+    
+    
+    
+    def list(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        [MailInstanceList: Mail.list(params), MailInstanceTotal: Effectif.count()]
+    }
+    
+    def maListe(Integer max) {
+        
+       def mesEffectifsMails = mailService.afficherMail()
+       def mesMails = mailService.mailInbox()
+       // params.max = Math.min(max ?: 10, 100)
+       // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
+       
+       def content = messagerie.miniMessagerie mesMails:mesMails
+       
+       render content
+       
+    } 
+    
+    
+    
 }

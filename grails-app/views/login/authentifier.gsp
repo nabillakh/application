@@ -143,7 +143,7 @@
 				
 					<div class="widget alert alert-info adjusted">
 						<i class="cus-exclamation"></i>
-						<strong>Entrez votre login est mot de passe .</strong>
+						<strong>Entrez vos identifiants de connection</strong>
 					</div>
 					<!-- content goes here -->
 					<div id="main-content">
@@ -155,6 +155,11 @@
 							<div class="control-group">
 								<input type="password" class="input-block-level" autofocus  class='text_' name='j_password' id='password'>
 							</div>
+                                                  <div class="widget alert alert-info adjusted">
+                                                    <label for='remember_me'>Remember me</label>
+                                                    <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me'
+                                                           <g:if test='${hasCookie}'>checked='checked'</g:if> />
+                                                  </div>
 							<div class="control-group no-border">
 								<div style="text-align: right;">
 									<input class="btn btn-primary" type="submit" value="Login" id="login_button">

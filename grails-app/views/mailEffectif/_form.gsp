@@ -1,4 +1,4 @@
-<%@ page import="application.mail.MailEffectif" %>
+<%@ page import="application.communication.MailEffectif" %>
 
 
 
@@ -16,7 +16,7 @@
 		<g:message code="mailEffectif.mail.label" default="Mail" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="mail" name="mail.id" from="${application.mail.Mail.list()}" optionKey="id" required="" value="${mailEffectifInstance?.mail?.id}" class="many-to-one"/>
+	<g:select id="mail" name="mail.id" from="${application.communication.Mail.list()}" optionKey="id" required="" value="${mailEffectifInstance?.mail?.id}" class="many-to-one"/>
 
 </div>
 

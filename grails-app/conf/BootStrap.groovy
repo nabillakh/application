@@ -1,4 +1,4 @@
-import  application.RH.*
+import application.RH.*
 import application.communication.*
 import application.PP.*
 
@@ -24,21 +24,27 @@ class BootStrap {
         def adminRole = new Droit(authority: 'ROLE_ADMIN').save(flush: true)
       def userRole = new Droit(authority: 'ROLE_USER').save(flush: true)
 
-      def testUser = new Effectif(username: 'test', password: 'test')
+      def testUser = new Effectif(username: 'test', password: 'test', nom : 'Lakhmissi', prenom : 'Nabil')
       def testUser2 = new Effectif(username: 'test2', password: 'test2')
       
         maCompetence.addToEffectifs(testUser)
-        testUser.save(failOnError: true)     
-      // def monMessage = new Statut(message : 'okokok', author :testUser, dateCreated : new Date())
-      // monMessage.save(flush:true)
+        maCompetence.addToEffectifs(testUser2)
+        testUser.save(failOnError: true)   
+        testUser2.save(failOnError: true)   
 
       EffectifDroit.create testUser, adminRole, true
+      EffectifDroit.create testUser2, adminRole, true
                 
         maCompetence.save(failOnError: true)
+        
+        def monMail = new Mail(author : testUser2, message:"okokokok", objet : "objet n1").save(failOnError: true)
+        def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser).save(failOnError: true)
+        
+                
 
-      assert Effectif.count()== 1
+      assert Effectif.count()== 2
       assert Droit.count() == 2
-      assert EffectifDroit.count() == 1
+      assert EffectifDroit.count() == 2
                 
         def monOrdo = new Ordonnancement(nom : "grille1").save(failOnError: true) 
         

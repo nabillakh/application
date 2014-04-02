@@ -10,5 +10,10 @@ class Mail {
     static hasMany = [recepteur:MailEffectif] 
     Date dateCreated = new Date()
 
+    static constraints = {
+        recepteur nullable:true
+        objet nullable:true
+    }
+
   
 }

@@ -4,23 +4,26 @@ class Effectif {
 
 	transient springSecurityService
 
-	
+        String nom
+        String prenom
+        String mailEffectif
+        Equipe equipe    
         String username
 	String password
        	boolean enabled = true
 	boolean accountExpired =false
 	boolean accountLocked = false
 	boolean passwordExpired 
-        
-    
-	static hasMany = [followed:Effectif]
-	static searchable = [only: 'username']
 
 	static transients = ['springSecurityService']
 
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+                mailEffectif email:true, unique:true, nullable:true
+                nom nullable : true
+                prenom nullable :true
+                equipe nullable : true
 	}
 
 	static mapping = {

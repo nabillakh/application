@@ -6,10 +6,17 @@ class MailEffectif {
     
     Effectif recepteur
     Mail mail
+    Date dateCreated= new Date()
     
-    Boolean lu
-
+    Boolean lu = false
+    Boolean archive = false
+    Boolean favoris = false
+ 
     static constraints = {
         lu nullable : true
     }
+    
+    def beforeInsert = {
+    }
+    
 }
