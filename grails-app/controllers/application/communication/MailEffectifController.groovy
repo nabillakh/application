@@ -18,7 +18,7 @@ class MailEffectifController {
     def show(MailEffectif mailEffectifInstance) {
         mailService.messageLu( mailEffectifInstance)
         respond mailEffectifInstance
-    }
+    } 
     
     def Archiver(MailEffectif mailEffectifInstance) {
         mailService.messageArchiver(mailEffectifInstance)

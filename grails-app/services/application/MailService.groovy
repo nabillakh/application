@@ -57,7 +57,7 @@ class MailService {
         def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
         mailEffectif.lu = true
         mailEffectif.save flush:true
-    }
+    } 
     
      private messageArchiver(MailEffectif mailEffectifInstance) {
         def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
