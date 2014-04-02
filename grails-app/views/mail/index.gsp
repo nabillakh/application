@@ -419,6 +419,7 @@
                                                                                                                <g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  ${fieldValue(bean: mailEffectifInstance, field: "mail.message")} </g:link>                                                                                                                
                                                                                                                 
                                                                                                                 ${mailEffectifInstance.lu}
+                                                                                                                ${mailEffectifInstance.archive}
                                                                                                                 </div>
                                                                                                               </div>
                                                                                                             </div>
@@ -439,7 +440,8 @@
                                                                         
                                                                         <div class="inbox-menu">
                                                                           <div class="inbox-control-panel">
-                                                                            <a href="${request.contextPath}/javascript:void(0)" id='refresh-inbox-menu' class="btn medium pull-right"><i class="icon-refresh"></i> Refresh</a>
+                                                                            
+                                                                            <a href="#" OnClick="javascript:window.location.reload()" id='refresh-inbox-menu' class="btn medium pull-right"><i class="icon-refresh"></i> Refresh</a>
                                                                           </div>
 												<!-- SLIDING MENU -->
 												<div class="slashc-sliding-menu" id="inbox-menu-js">	
@@ -450,7 +452,7 @@
 														</a>
 													</h1>
 													<ul class="mailbox" id="mailbox-js">
-														<li><a href="${request.contextPath}/javascript:void(0);"><span>Inbox</span><span class="badge">26</span><i class="icon-angle-right"></i></a>
+														<li><a href="${request.contextPath}/javascript:void(0);"><span>Inbox</span><span class="badge">${mailNonLu.size()}</span><i class="icon-angle-right"></i></a>
 															<ul>
                                                                                                                           <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
 																<li>
@@ -483,22 +485,26 @@
 																			<span class="tiny-des">${mailInstance.message}</span>
 																		</span>
 																	</a>
-																</li> </g:each>
+																</li> 
+                                                                                                                        </g:each>
 															</ul>
 														</li>
                                                                                                                
 														<li>
-															<a href="${request.contextPath}/javascript:void(0);"><span>Trash</span><i class="icon-angle-right"></i></a>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Corbeille</span><i class="icon-angle-right"></i></a>
 															<ul>
+																 <g:each in="${mesEffectifMailsArchiver}" status="i" var="mailEffectifArchiverInstance">
 																<li>
 																	<a href="${request.contextPath}/javascript:void(0)">
 																		<span class="tiny-sub">
-																			Message Title
-																			<!--<i class="icon-paper-clip"></i>-->
-																			<span class="tiny-des">Message line truncated...</span>
+																			From: ${mailEffectifArchiverInstance.mail.author.username}
+                                                                                                                                                        Objet: ${mailEffectifArchiverInstance.mail.objet}
+																			
+																			<span class="tiny-des">${mailEffectifArchiverInstance.mail.message}</span>
 																		</span>
 																	</a>
 																</li>
+                                                                                                                          </g:each>
 															</ul>
 														</li>
 														<li>

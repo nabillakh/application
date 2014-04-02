@@ -38,13 +38,8 @@ class BootStrap {
         maCompetence.save(failOnError: true)
         
         def monMail = new Mail(author : testUser2, message:"okokokok", objet : "objet n1").save(failOnError: true)
-        def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser).save(failOnError: true)
-        
+        def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser, lu: false, archive: false, favoris: false ).save(failOnError: true,flush: true)
                 
-
-      assert Effectif.count()== 2
-      assert Droit.count() == 2
-      assert EffectifDroit.count() == 2
                 
         def monOrdo = new Ordonnancement(nom : "grille1").save(failOnError: true) 
         

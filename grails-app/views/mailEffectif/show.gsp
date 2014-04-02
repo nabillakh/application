@@ -419,7 +419,8 @@
 																	</li>
 																</ul>
 															</div>
-															<a href="javascript:void(0)" id='delete-mail' class="btn btn-danger medium pull-right"><i class="icon-trash"></i> Delete Message</a>
+														<g:link  action="Archiver" controller="mailEffectif" id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Delete Message </g:link>	
+                                                                                                                   
 														</div>
 														<div class="message-body">
 															

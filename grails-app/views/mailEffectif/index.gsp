@@ -41,6 +41,7 @@
 						<td>${fieldValue(bean: mailEffectifInstance, field: "mail")}</td>
 					
 						<td>${fieldValue(bean: mailEffectifInstance, field: "recepteur")}</td>
+                                                <td>${fieldValue(bean: mailEffectifInstance, field: "archive")}</td>
 					
 					</tr>
 				</g:each>

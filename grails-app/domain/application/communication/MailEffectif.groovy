@@ -8,15 +8,16 @@ class MailEffectif {
     Mail mail
     Date dateCreated= new Date()
     
-    Boolean lu = false
-    Boolean archive = false
-    Boolean favoris = false
+    Boolean lu 
+    Boolean archive 
+    Boolean favoris
  
     static constraints = {
         lu nullable : true
+        archive nullable : true
+        favoris nullable : true
     }
     
-    def beforeInsert = {
-    }
+   
     
 }

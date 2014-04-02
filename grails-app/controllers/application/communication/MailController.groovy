@@ -14,14 +14,18 @@ class MailController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        
+       
        def mesEffectifsMails = mailService.afficherMail()
        def mesMails = mailService.mailInbox()
        def mesMailsSent = mailService.mailenvoyer()
+       def mesEffectifMailsArchiver = mailService.afficherMailArchiver() 
+       def mesMailsArchiver = mailService.mailArchiver()
+       def mailNonLu = mailService.mailnLu(mesEffectifsMails)
+       
        
        // params.max = Math.min(max ?: 10, 100)
        // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
-        [mailList: mesMails,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent ]
+        [mailList: mesMails, mailList: mesMailsArchiver, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu]
     }
 
     def show(Mail mailInstance) {
@@ -39,8 +43,11 @@ class MailController {
       def monMessage = params.message
       def monObjet = params.objet
       def mail = new Mail(message : monMessage, author : author, objet : monObjet).save()
+      def lu = false
+      def archive = false 
+      def favoris = false
       params.recepteur.each()  {user ->
-          def monMailEffectif = new MailEffectif(mail:mail,recepteur:user).save()
+          def monMailEffectif = new MailEffectif(mail:mail, recepteur:user, lu:lu, archive:archive, favoris:favoris ).save()
       }
       
         redirect action:'index'

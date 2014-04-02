@@ -22,7 +22,9 @@ class MailEffectifController {
     
     def Archiver(MailEffectif mailEffectifInstance) {
         mailService.messageArchiver(mailEffectifInstance)
-        respond mailEffectifInstance
+        respond mailEffectifInstance 
+        redirect(controller: "mail", action: "index")
+        
         
     }
 

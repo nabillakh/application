@@ -374,6 +374,7 @@
 					<!-- page header -->
 					<h1 id="page-header">Inbox</h1>	
 					
+						
 					<div class="fluid-container">
 
 						<div class="alert adjusted alert-info">
@@ -383,7 +384,7 @@
 						</div>
 
                                           
-						<!-- NO WIDGETS ON THIS PAGE -->
+							<!-- NO WIDGETS ON THIS PAGE -->
 							<div class="row-fluid">
 								<article class="span12">
 									
@@ -393,8 +394,23 @@
 									    <!-- wrap div -->
 									    
             							
-								        <div class="inner-spacer"> 	
-<div class="inbox-body-content" id="inbox-loading-panel-js">
+								        <div class="inner-spacer"> 
+								        <!-- content goes here -->
+											<div class="inbox-body" id="inbox-body-js">
+												<div class="inbox-control-panel">
+                                                                                                 
+												</div>
+												  <div class="jarviswidget" id="widget-id-4">
+
+                                                                                                      <!-- widget div-->
+                                                                                                      <div>
+									      <div class="jarviswidget" id="widget-id-4">
+
+                                                                                                      <!-- widget div-->
+                                                                                                      <div>
+            							
+								        	
+                                                  <div class="inbox-body-content" id="inbox-loading-panel-js">
 													<h1 class="message-title">Objet :  ${mailEffectifInstance.mail?.objet} </h1>
 													<h3 class="message-from">From: ${mailInstance.author.username}</h3>
 													
@@ -433,11 +449,12 @@
 															</div>
 														</div>
 													</div>
-												</div></div>
-  <div class="inbox-menu">
-      <div class="inbox-control-panel">
-     <a href="${request.contextPath}/javascript:void(0)" id='refresh-inbox-menu' class="btn medium pull-right"><i class="icon-refresh"></i> Refresh</a>
-  </div>
+												</div>
+     <div class="inbox-menu">
+                                                                          <div class="inbox-control-panel">
+                                                                            
+                                                                            <a href="#" OnClick="javascript:window.location.reload()" id='refresh-inbox-menu' class="btn medium pull-right"><i class="icon-refresh"></i> Refresh</a>
+                                                                          </div>
 												<!-- SLIDING MENU -->
 												<div class="slashc-sliding-menu" id="inbox-menu-js">	
 													<h1 id="inbox-menu-header-js">
@@ -447,7 +464,7 @@
 														</a>
 													</h1>
 													<ul class="mailbox" id="mailbox-js">
-														<li><a href="${request.contextPath}/javascript:void(0);"><span>Inbox</span><span class="badge">26</span><i class="icon-angle-right"></i></a>
+														<li><a href="${request.contextPath}/javascript:void(0);"><span>Inbox</span><span class="badge">${mailNonLu.size()}</span><i class="icon-angle-right"></i></a>
 															<ul>
                                                                                                                           <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
 																<li>
@@ -480,22 +497,26 @@
 																			<span class="tiny-des">${mailInstance.message}</span>
 																		</span>
 																	</a>
-																</li> </g:each>
+																</li> 
+                                                                                                                        </g:each>
 															</ul>
 														</li>
                                                                                                                
 														<li>
-															<a href="${request.contextPath}/javascript:void(0);"><span>Trash</span><i class="icon-angle-right"></i></a>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Corbeille</span><i class="icon-angle-right"></i></a>
 															<ul>
+																 <g:each in="${mesEffectifMailsArchiver}" status="i" var="mailEffectifArchiverInstance">
 																<li>
 																	<a href="${request.contextPath}/javascript:void(0)">
 																		<span class="tiny-sub">
-																			Message Title
-																			<!--<i class="icon-paper-clip"></i>-->
-																			<span class="tiny-des">Message line truncated...</span>
+																			From: ${mailEffectifArchiverInstance.mail.author.username}
+                                                                                                                                                        Objet: ${mailEffectifArchiverInstance.mail.objet}
+																			
+																			<span class="tiny-des">${mailEffectifArchiverInstance.mail.message}</span>
 																		</span>
 																	</a>
 																</li>
+                                                                                                                          </g:each>
 															</ul>
 														</li>
 														<li>
