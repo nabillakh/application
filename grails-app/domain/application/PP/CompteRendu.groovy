@@ -3,7 +3,7 @@ package application.PP
 import application.RH.*
 
 
-class CompteRendu {
+class CompteRendu  {
     String message
     Effectif author
     OF of
