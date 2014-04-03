@@ -19,6 +19,7 @@ class MailController {
        def mesEffectifsMails = mailService.afficherMail()
        def mesMails = mailService.mailInbox()
        def mesMailsSent = mailService.mailenvoyer()
+     
        def mesEffectifMailsArchiver = mailService.afficherMailArchiver() 
        def mesMailsArchiver = mailService.mailArchiver()
        def mailNonLu = mailService.mailnLu(mesEffectifsMails)

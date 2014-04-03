@@ -137,7 +137,7 @@
                                                                                 <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
                                                                                 <g:set var="imagenlu" value="${mailEffectifInstance.lu}" />
                                                                                 <g:set var="counter" value="${counter+1}" />   
-                                                                                   <li>
+                                                                                  
                                                                                           <g:if test="${counter <= 4}">
                                                                                                 <g:if test="${imagenlu == false}">
                                                                                                     <img src="${request.contextPath}/img/email-unread.png" alt="important mail">
@@ -146,21 +146,22 @@
                                                                                                     <img src="${request.contextPath}/img/email-read.png" alt="important mail">
                                                                                                   </g:else>
                                                                                                      
-                                                                                         <a href="${request.contextPath}/javascript:void(0)">
-                                                                                        <span class="tiny-sub">
-                                                                                            <i class="icon-paper-clip"></i>
+                                                                                 <li>        
+                                                                            <g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">   
+                                                                                     
+                                                                                          
                                                                                            ${mailEffectifInstance.mail.objet}: ${mailEffectifInstance.mail.author.username}
                                                                                           
 																			
                                                                                              <span class="tiny-des">${mailEffectifInstance.mail.message}</span>
-                                                                                         </span>
-                                                                                        </a>
+                                                                                         
+                                                                                </g:link>
                                                                                     </li>
                                                                                    </g:if>
                                                                                  </g:each>
 										
 									</ul>
-									 <g:link  action="create" controller="mail" id="go-to-inbox">Go to Inbox <i class="icon-double-angle-right"></i></g:link>
+									 <g:link  action="index" controller="mail" id="go-to-inbox">Go to Inbox <i class="icon-double-angle-right"></i></g:link>
                                                                         
 								</div>
 								<!-- end email lists -->
@@ -439,14 +440,14 @@
 															<ul>
                                                                                                                           <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
 																<li>
-																	<a href="${request.contextPath}/javascript:void(0)">
+																	<g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  
 																		<span class="tiny-sub">
 																			From: ${mailEffectifInstance.mail.author.username}
                                                                                                                                                         Objet: ${mailEffectifInstance.mail.objet}
 																			
 																			<span class="tiny-des">${mailEffectifInstance.mail.message}</span>
 																		</span>
-																	</a>
+																	</g:link>
 																</li>
                                                                                                                           </g:each>
 																
@@ -456,18 +457,18 @@
 															</ul>
 														</li>
 														<li>
-															<a href="${request.contextPath}/javascript:void(0);"><span>Envoyé</span><i class="icon-angle-right"></i></a>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Envoyés</span><i class="icon-angle-right"></i></a>
 															<ul>
 															<g:each in="${mesMailsSent}" status="i" var="mailInstance">	
                                                                                                                             <li>
-																	<a href="${request.contextPath}/javascript:void(0)">
+																	<g:link  controller="MailEffectif"  action="show"  id="${mailInstance.recepteur.id}">  
 																		<span class="tiny-sub">
-																			From: ${mailInstance.author.username}
+																			From :${mailInstance.recepteur.recepteur.username}
                                                                                                                                                         Objet : ${mailInstance.objet}
 																			<!--<i class="icon-paper-clip"></i>-->
 																			<span class="tiny-des">${mailInstance.message}</span>
 																		</span>
-																	</a>
+																	</g:link>
 																</li> 
                                                                                                                         </g:each>
 															</ul>
@@ -478,14 +479,14 @@
 															<ul>
 																 <g:each in="${mesEffectifMailsArchiver}" status="i" var="mailEffectifArchiverInstance">
 																<li>
-																	<a href="${request.contextPath}/javascript:void(0)">
+																	<g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  
 																		<span class="tiny-sub">
 																			From: ${mailEffectifArchiverInstance.mail.author.username}
                                                                                                                                                         Objet: ${mailEffectifArchiverInstance.mail.objet}
 																			
 																			<span class="tiny-des">${mailEffectifArchiverInstance.mail.message}</span>
 																		</span>
-																	</a>
+																	</g:link>
 																</li>
                                                                                                                           </g:each>
 															</ul>
@@ -495,14 +496,14 @@
 															<ul>
 																 <g:each in="${mesmailEffectifFavoris}" status="i" var="mesmailEffectifFavorisInstance">
 																<li>
-																	<a href="${request.contextPath}/javascript:void(0)">
+																	<g:link  controller="MailEffectif"  action="show"  id="${mesmailEffectifFavorisInstance.id}">  
 																		<span class="tiny-sub">
 																			From: ${mesmailEffectifFavorisInstance.mail.author.username}
                                                                                                                                                         Objet: ${mesmailEffectifFavorisInstance.mail.objet}
 																			
 																			<span class="tiny-des">${mesmailEffectifFavorisInstance.mail.message}</span>
 																		</span>
-																	</a>
+																	</g:link>
 																</li>
                                                                                                                           </g:each>
 															</ul>
