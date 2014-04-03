@@ -120,7 +120,11 @@
 							<div class="btn-group">
 								<!-- new mail ticker -->
 								<a href="${request.contextPath}/javascript:void(0)" class="btn btn-small btn-inverse dropdown-toggle" data-toggle="dropdown">
-									<span class="mail-sticker">3</span>
+									<script> if (${mailNonLu.size()} != 0)  {  document.write('<span class="mail-sticker">${mailNonLu.size()} </span> ');}  </script>
+                                                                        
+                                                                        		
+
+                                                                        
 									<i class="cus-email"></i>
 								</a>
 								<!-- end new mail ticker -->
@@ -129,57 +133,35 @@
 								<div class="dropdown-menu toolbar pull-right">
 									<h3>Inbox</h3>
 									<ul id="mailbox-slimscroll-js" class="mailbox">
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="unread">
-												<img src="img/email-important.png" alt="important mail">
-												From: David Simpson
-												<i class="icon-paper-clip"></i>
-												<span>Dear Victoria, Congratulations! Your work has been uploaded to wrapbootstrap.com...</span>
-											</a>
-										</li>
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="unread attachment">
-												
-												<img src="img/email-unread.png" alt="important mail">
-												Re:Last Year sales
-												<i class="icon-paper-clip"></i>
-												<span>Hey Vicky, find attached! Thx :-)</span>
-											</a>
-										</li>
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="unread">
-												<img src="img/email-unread.png" alt="important mail">
-												Company Party
-												<i class="icon-paper-clip"></i>
-												<span>Hi, You have been cordially invited to join new year after party.</span>
-											</a>
-										</li>
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="read">
-												<img src="img/email-read.png" alt="important mail">
-												RE: 2 Bugs found...
-												<i class="icon-paper-clip"></i>
-												<span>I have found two more bugs in this your beta version, maybe its not working...</span>
-											</a>
-										</li>
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="read">
-												<img src="img/email-read.png" alt="important mail">
-												2 Bugs found...
-												<i class="icon-paper-clip"></i>
-												<span>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</span>
-											</a>
-										</li>
-										<li>
-											<a href="${request.contextPath}/javascript:void(0)" class="read">
-												<img src="img/email-read.png" alt="important mail">
-												Welcome to Jarvis!
-												<i class="icon-paper-clip"></i>
-												<span>Feugiat a, tellus. Phasellus viverra nulla ut metus varius. Quisque rutrum. Aenean imperdiet... </span>
-											</a>
-										</li>
+                                                                                <g:set var="counter" value="${0}" /> 
+                                                                                <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
+                                                                                <g:set var="imagenlu" value="${mailEffectifInstance.lu}" />
+                                                                                <g:set var="counter" value="${counter+1}" />   
+                                                                                   <li>
+                                                                                          <g:if test="${counter <= 4}">
+                                                                                                <g:if test="${imagenlu == false}">
+                                                                                                    <img src="${request.contextPath}/img/email-unread.png" alt="important mail">
+                                                                                                </g:if>
+                                                                                                   <g:else>
+                                                                                                    <img src="${request.contextPath}/img/email-read.png" alt="important mail">
+                                                                                                  </g:else>
+                                                                                                     
+                                                                                         <a href="${request.contextPath}/javascript:void(0)">
+                                                                                        <span class="tiny-sub">
+                                                                                            <i class="icon-paper-clip"></i>
+                                                                                           ${mailEffectifInstance.mail.objet}: ${mailEffectifInstance.mail.author.username}
+                                                                                          
+																			
+                                                                                             <span class="tiny-des">${mailEffectifInstance.mail.message}</span>
+                                                                                         </span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                   </g:if>
+                                                                                 </g:each>
+										
 									</ul>
-									<a href="${request.contextPath}/javascript:void(0);" id="go-to-inbox">Go to Inbox <i class="icon-double-angle-right"></i></a>
+									 <g:link  action="create" controller="mail" id="go-to-inbox">Go to Inbox <i class="icon-double-angle-right"></i></g:link>
+                                                                        
 								</div>
 								<!-- end email lists -->
 							</div>
@@ -420,6 +402,7 @@
                                                                                                                 
                                                                                                                 ${mailEffectifInstance.lu}
                                                                                                                 ${mailEffectifInstance.archive}
+                                                                                                               favoris : ${mailEffectifInstance.favoris}
                                                                                                                 </div>
                                                                                                               </div>
                                                                                                             </div>
@@ -508,17 +491,20 @@
 															</ul>
 														</li>
 														<li>
-															<a href="${request.contextPath}/javascript:void(0);"><span>Saved Messages</span><i class="icon-angle-right"></i></a>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Fvoris</span><i class="icon-angle-right"></i></a>
 															<ul>
+																 <g:each in="${mesmailEffectifFavoris}" status="i" var="mesmailEffectifFavorisInstance">
 																<li>
 																	<a href="${request.contextPath}/javascript:void(0)">
 																		<span class="tiny-sub">
-																			Message Title
-																			<!--<i class="icon-paper-clip"></i>-->
-																			<span class="tiny-des">Message line truncated...</span>
+																			From: ${mesmailEffectifFavorisInstance.mail.author.username}
+                                                                                                                                                        Objet: ${mesmailEffectifFavorisInstance.mail.objet}
+																			
+																			<span class="tiny-des">${mesmailEffectifFavorisInstance.mail.message}</span>
 																		</span>
 																	</a>
 																</li>
+                                                                                                                          </g:each>
 															</ul>
 														</li>
 													</ul>

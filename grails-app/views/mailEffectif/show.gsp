@@ -419,7 +419,8 @@
 																	</li>
 																</ul>
 															</div>
-														<g:link  action="Archiver" controller="mailEffectif" id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Delete Message </g:link>	
+														<g:link  action="Archiver" controller="mailEffectif" onclick="return confirm('Etes vous sure de vouloir envoyer ce message à la corbeille? ');" id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Delete Message </g:link>	
+                                                                                                                <g:link  action="Favoriser" controller="mailEffectif"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon"></i>  favoris </g:link>	
                                                                                                                    
 														</div>
 														<div class="message-body">

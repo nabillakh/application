@@ -24,9 +24,17 @@ class MailEffectifController {
         mailService.messageArchiver(mailEffectifInstance)
         respond mailEffectifInstance 
         redirect(controller: "mail", action: "index")
-        
-        
-    }
+       
+       }
+       
+     def Favoriser(MailEffectif mailEffectifInstance) {
+        mailService.messagefavoris(mailEffectifInstance)
+        respond mailEffectifInstance 
+        redirect(controller: "mail", action: "index")
+       
+       }
+    
+    
 
     def create() {
         respond new MailEffectif(params)

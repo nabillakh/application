@@ -14,7 +14,8 @@ class MailController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-       
+       def mesmailEffectifFavoris =  mailService.afficherMailFavoris()
+       def mesMailsFavoris = mailService.mailFavoris()
        def mesEffectifsMails = mailService.afficherMail()
        def mesMails = mailService.mailInbox()
        def mesMailsSent = mailService.mailenvoyer()
@@ -25,7 +26,7 @@ class MailController {
        
        // params.max = Math.min(max ?: 10, 100)
        // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
-        [mailList: mesMails, mailList: mesMailsArchiver, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu]
+        [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu]
     }
 
     def show(Mail mailInstance) {

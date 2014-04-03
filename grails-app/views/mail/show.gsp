@@ -435,7 +435,10 @@
 																	</li>
 																</ul>
 															</div>
-															<a href="javascript:void(0)" id='delete-mail' class="btn btn-danger medium pull-right"><i class="icon-trash"></i> Delete Message</a>
+															
+                                                                                                                        <g:link     onclick="if (window.confirm('Vous etes sur de ne pas faire une betise ?')) { action='Archiver' ; controller='mailEffectif'; id='${mailEffectifInstance.id}';return true;} else {return false;}" } class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Delete Message </g:link>
+                                                                                                                     
+{location.href='default.htm';return true;} else {return false;}">
 														</div>
 														<div class="message-body">
 															
