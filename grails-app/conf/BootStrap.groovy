@@ -89,7 +89,7 @@ class BootStrap {
         // Non-repeating single event that replaces the one excluded next Monday
         def event2 = new Event(title:  'event 2').with {
             startTime = nextMonday.toDate()
-            endTime = nextMonday.plusHours(1).toDate()
+            endTime = nextMonday.plusHours(9).toDate()
             location = "New one-time location"
             save()
         }
@@ -97,7 +97,7 @@ class BootStrap {
         // Plain old non-repeating event
         def event3 = new Event(title: 'event isole').with {
             startTime = tomorrow.toDate()
-            endTime = tomorrow.plusMinutes(30).toDate()
+            endTime = tomorrow.plusMinutes(240).toDate()
             save()
         }
         

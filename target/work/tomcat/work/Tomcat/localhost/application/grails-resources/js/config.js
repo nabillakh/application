@@ -541,21 +541,16 @@
 				editable: true,
                                 eventSources: [{
                                         // your event source
-                                        url: '/event/list/',
+                                        url: 'http://localhost:8080/application/event/list',
                                         type: 'GET',
                                         dataType: 'json',
                                         data: {
                                             start: 'start',
                                             end: 'end',
-                                            title: 'title',
+                                            title: 'title'
                                         },
                                 error: function () {
                                     alert('there was an error while fetching events!');
-                                },
-                                success: function(data) {
-                                    var events = [];
-                                    // logic to get each item from data and push it in events array
-                                    callback(events);
                                 },
                                         color: 'yellow',
                                         textColor: 'black'
