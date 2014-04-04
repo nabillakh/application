@@ -531,13 +531,35 @@
 			var d = date.getDate();
 			var m = date.getMonth();
 			var y = date.getFullYear();
-			
-			var calendar = $('#calendar').fullCalendar({
+                        var calendar = $('#calendar').fullCalendar({
 				header: {
 					left: 'title', //,today
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
 				},
+				
+				editable: true,
+                                eventSources: [{
+                                        // your event source
+                                        url: '/event/list/',
+                                        type: 'GET',
+                                        dataType: 'json',
+                                        data: {
+                                            start: 'start',
+                                            end: 'end',
+                                            title: 'title',
+                                        },
+                                error: function () {
+                                    alert('there was an error while fetching events!');
+                                },
+                                success: function(data) {
+                                    var events = [];
+                                    // logic to get each item from data and push it in events array
+                                    callback(events);
+                                },
+                                        color: 'yellow',
+                                        textColor: 'black'
+                            }],
 				selectable: true,
 				selectHelper: true,
 				select: function(start, end, allDay) {
@@ -555,9 +577,6 @@
 					}
 					calendar.fullCalendar('unselect');
 				},
-				
-				editable: true,
-				events: '${createLink(controller: "event", action: "list")}'
 			});
 
 		};

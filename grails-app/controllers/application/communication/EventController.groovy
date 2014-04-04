@@ -1,7 +1,5 @@
 package application.communication
 
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import java.text.SimpleDateFormat
@@ -22,10 +20,8 @@ class EventController {
         respond eventInstance
     }
     
-    def list ={
+    def list = {
         def events = Event.list()
-
-
         // iterate through to see if we need to add additional Event instances because of recurring
         // events
         def eventList = []
@@ -34,8 +30,8 @@ class EventController {
 
         events.each {event ->
           
-            DateTime startTime = new DateTime(date)
-            DateTime endTime = startTime.plusMinutes(event.durationMinutes)
+            DateTime startTime = new DateTime(event.startTime)
+            DateTime endTime = new DateTime(event.endTime)
 
                 /*
                     start/end and occurrenceStart/occurrenceEnd are separate because fullCalendar will use the client's local timezone (which may be different than the server's timezone)
@@ -52,15 +48,9 @@ class EventController {
                         occurrenceEnd: endTime.toInstant().millis
                 ]
             }
-
-        withFormat {
-            html {
                 [eventInstanceList: eventList]
-            }
-            json {
+           
                 render eventList as JSON
-            }
-        }
     }
 
     def create() {
