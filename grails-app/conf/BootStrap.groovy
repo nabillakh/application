@@ -10,7 +10,7 @@ import static org.joda.time.DateTimeConstants.FRIDAY
 class BootStrap {
 
     def init = { servletContext ->
-
+ 
       createData()
         
     }
