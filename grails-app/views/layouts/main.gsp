@@ -16,9 +16,17 @@
 	<!--// OPTIONAL & CONDITIONAL CSS FILES //-->   
 	<!-- date picker css -->
 	<link rel="stylesheet" href="css/datepicker.css?v=1">
+	<!-- full calander css -->
+	<link rel="stylesheet" href="css/fullcalendar.css?v=1">
+	<!-- data tables extended CSS -->
+	<link rel="stylesheet" href="css/TableTools.css?v=1">
+	<!-- bootstrap wysimhtml5 editor -->
+	<link rel="stylesheet" href="css/bootstrap-wysihtml5.css?v=1">
+	<link rel="stylesheet" href="css/wysiwyg-color.css">
 	<!-- custom/responsive growl messages -->
 	<link rel="stylesheet" href="css/toastr.custom.css?v=1">
 	<link rel="stylesheet" href="css/toastr-responsive.css?v=1">
+	<link rel="stylesheet" href="css/jquery.jgrowl.css?v=1">
 	
 	<!-- // DO NOT REMOVE OR CHANGE ORDER OF THE FOLLOWING // -->
 	<!-- bootstrap default css (DO NOT REMOVE) -->

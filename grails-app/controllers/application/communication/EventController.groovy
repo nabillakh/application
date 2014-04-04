@@ -1,36 +1,29 @@
 package application.communication
 
-import org.joda.time.DateTime
-import org.joda.time.Instant
 
-import grails.converters.JSON
+
+import static org.springframework.http.HttpStatus.*
+import grails.transaction.Transactional
 import java.text.SimpleDateFormat
+import org.joda.time.DateTime
+import grails.converters.JSON
 
+@Transactional(readOnly = true)
 class EventController {
-    def eventService
 
-    def index = {
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Event.list(params), model:[eventInstanceCount: Event.count()]
     }
 
-    def list = {
-        def (startRange, endRange) = [params.long('start'), params.long('end')].collect { new Instant(it  * 1000L).toDate() }
-
-        def events = Event.withCriteria {
-            or {
-                and {
-                    eq("isRecurring", false)
-                    between("startTime", startRange, endRange)
-                }
-                and {
-                    eq("isRecurring", true)
-                    or {
-                        isNull("recurUntil")
-                        ge("recurUntil", startRange)
-                    }
-                }
-            }
-        }
+    def show(Event eventInstance) {
+        respond eventInstance
+    }
+    
+    def list ={
+        def events = Event.list()
 
 
         // iterate through to see if we need to add additional Event instances because of recurring
@@ -40,12 +33,9 @@ class EventController {
         def displayDateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
 
         events.each {event ->
-
-            def dates = eventService.findOccurrencesInRange(event, startRange, endRange)
-
-            dates.each { date ->
-                DateTime startTime = new DateTime(date)
-                DateTime endTime = startTime.plusMinutes(event.durationMinutes)
+          
+            DateTime startTime = new DateTime(date)
+            DateTime endTime = startTime.plusMinutes(event.durationMinutes)
 
                 /*
                     start/end and occurrenceStart/occurrenceEnd are separate because fullCalendar will use the client's local timezone (which may be different than the server's timezone)
@@ -62,7 +52,6 @@ class EventController {
                         occurrenceEnd: endTime.toInstant().millis
                 ]
             }
-        }
 
         withFormat {
             html {
@@ -74,107 +63,86 @@ class EventController {
         }
     }
 
-    def create = {
-        def eventInstance = new Event()
-        eventInstance.properties = params
-
-        [eventInstance: eventInstance]
+    def create() {
+        respond new Event(params)
     }
 
-
-    def show = {
-        def eventInstance = Event.get(params.id)
-        def occurrenceStart = params.long('occurrenceStart') ?: new Instant(eventInstance?.startTime)
-        def occurrenceEnd = params.long('occurrenceEnd') ?: new Instant(eventInstance?.endTime)
-
-        if (!eventInstance) {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'event.label', default: 'Event'), params.id])}"
-            redirect(action: "index")
+    @Transactional
+    def save(Event eventInstance) {
+        if (eventInstance == null) {
+            notFound()
+            return
         }
-        else {
-            def model = [eventInstance: eventInstance, occurrenceStart: occurrenceStart, occurrenceEnd: occurrenceEnd]
 
-            if (request.xhr) {
-                render(template: "showPopup", model: model)
+        if (eventInstance.hasErrors()) {
+            respond eventInstance.errors, view:'create'
+            return
+        }
+
+        eventInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'eventInstance.label', default: 'Event'), eventInstance.id])
+                redirect eventInstance
             }
-            else {
-                model
+            '*' { respond eventInstance, [status: CREATED] }
+        }
+    }
+
+    def edit(Event eventInstance) {
+        respond eventInstance
+    }
+
+    @Transactional
+    def update(Event eventInstance) {
+        if (eventInstance == null) {
+            notFound()
+            return
+        }
+
+        if (eventInstance.hasErrors()) {
+            respond eventInstance.errors, view:'edit'
+            return
+        }
+
+        eventInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Event.label', default: 'Event'), eventInstance.id])
+                redirect eventInstance
             }
-        }
-
-    }
-
-    def save = {
-        def eventInstance = new Event(params)
-
-        if (eventInstance.save(flush: true)) {
-            flash.message = "${message(code: 'default.created.message', args: [message(code: 'event.label', default: 'Event'), eventInstance.id])}"
-            redirect(action: "show", id: eventInstance.id)
-        }
-        else {
-            render(view: "create", model: [eventInstance: eventInstance])
-        }
-
-    }
-
-    def edit = {
-        def eventInstance = Event.get(params.id)
-        def (occurrenceStart, occurrenceEnd) = [params.long('occurrenceStart'), params.long('occurrenceEnd')]
-
-        if (!eventInstance) {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'event.label', default: 'Event'), params.id])}"
-            redirect(action: "index")
-        }
-        else {
-            [eventInstance: eventInstance, occurrenceStart: occurrenceStart, occurrenceEnd: occurrenceEnd]
-        }
-
-    }
-
-    def update = {
-        def eventInstance = Event.get(params.id)
-
-        EventRecurActionType editType = params.editType ? params.editType.toUpperCase() as EventRecurActionType : null
-
-        Date occurrenceStartTime = params.date('startTime', ['MM/dd/yyyy hh:mm a'])
-        Date occurrenceEndTime = params.date('endTime', ['MM/dd/yyyy hh:mm a'])
-
-        def result = eventService.updateEvent(eventInstance, editType, occurrenceStartTime, occurrenceEndTime, params)
-
-        if (!result.error) {
-            flash.message = "${message(code: 'default.updated.message', args: [message(code: 'event.label', default: 'Event'), eventInstance.id])}"
-            redirect(action: "index")
-        }
-        if (result.error == 'not.found') {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'event.label', default: 'Event'), params.id])}"
-            redirect(action: "index")
-        }
-        else if (result.error == 'has.errors') {
-            render(view: "edit", model: [eventInstance: eventInstance])
-        }
-
-    }
-
-
-    def delete = {
-        def eventInstance = Event.get(params.id)
-
-        EventRecurActionType deleteType = params.editType ? params.deleteType.toUpperCase() as EventRecurActionType : null
-        Date occurrenceStart = new Instant(params.long('occurrenceStart')).toDate()
-
-        def result = eventService.deleteEvent(eventInstance, deleteType, occurrenceStart)
-
-        if (!result.error) {
-            redirect(action: "index")
-        }
-        if (result.error == 'not.found') {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'event.label', default: 'Event'), params.id])}"
-            redirect(action: "index")
-        }
-        else if (result.error == 'has.errors') {
-            redirect(action: "index")
+            '*'{ respond eventInstance, [status: OK] }
         }
     }
 
-    
+    @Transactional
+    def delete(Event eventInstance) {
+
+        if (eventInstance == null) {
+            notFound()
+            return
+        }
+
+        eventInstance.delete flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Event.label', default: 'Event'), eventInstance.id])
+                redirect action:"index", method:"GET"
+            }
+            '*'{ render status: NO_CONTENT }
+        }
+    }
+
+    protected void notFound() {
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'eventInstance.label', default: 'Event'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*'{ render status: NOT_FOUND }
+        }
+    }
 }

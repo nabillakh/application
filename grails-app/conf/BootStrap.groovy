@@ -83,10 +83,6 @@ class BootStrap {
             startTime = now.toDate()
             endTime = now.plusHours(1).toDate()
             location = "Regular location"
-            recurType = EventRecurType.WEEKLY
-            [MONDAY, WEDNESDAY, FRIDAY]*.toInteger().each { addToRecurDaysOfWeek(it) }
-            addToExcludeDays(nextMonday.withTime(0, 0, 0, 0).toDate())
-            isRecurring = true
             save(flush: true)
         }
 
@@ -95,7 +91,6 @@ class BootStrap {
             startTime = nextMonday.toDate()
             endTime = nextMonday.plusHours(1).toDate()
             location = "New one-time location"
-            isRecurring = false
             save()
         }
 
@@ -103,7 +98,6 @@ class BootStrap {
         def event3 = new Event(title: 'event isole').with {
             startTime = tomorrow.toDate()
             endTime = tomorrow.plusMinutes(30).toDate()
-            isRecurring = false
             save()
         }
         
