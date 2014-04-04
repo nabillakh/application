@@ -461,15 +461,15 @@
 															<ul>
 															<g:each in="${mesMailsSent}" status="i" var="mailInstance">	
                                                                                                                             <li>
-																	<g:link  controller="MailEffectif"  action="show"  id="${mailInstance.recepteur.id}">  
-																		<span class="tiny-sub">
-																			From :${mailInstance.recepteur.recepteur.username}
-                                                                                                                                                        Objet : ${mailInstance.objet}
-																			<!--<i class="icon-paper-clip"></i>-->
-																			<span class="tiny-des">${mailInstance.message}</span>
-																		</span>
-																	</g:link>
-																</li> 
+                                                                                                                              <span class="tiny-sub">
+                                                                                                                                From :${mailInstance.recepteur.recepteur.username}                                                                                                                              
+                                                                                                                                <g:link  controller="Mail"  action="show"  id="${mailInstance.id}">
+                                                                                                                                  Objet : ${mailInstance.objet}
+                                                                                                                                </g:link>
+                   <!--<i class="icon-paper-clip"></i>-->
+                                                                                                                                <span class="tiny-des">${mailInstance.message}</span>
+                                                                                                                              </span>
+                                                                                                                        </li> 
                                                                                                                         </g:each>
 															</ul>
 														</li>

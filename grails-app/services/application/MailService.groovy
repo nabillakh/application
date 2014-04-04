@@ -62,6 +62,30 @@ class MailService {
     
 //---------------------------------------------
     
+//----------- listes des recepteurs --------------    
+    
+    
+    
+   private MailEffectif[] afficherRecepteurs(MailEffectif mailEffectifInstance) {
+        def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
+       
+        try { def query = MailEffectif.whereAny {                
+            ( mail { id == mailEffectif.mail.id }) 
+           }
+        def leMail2 = query.list(max: 10, sort:"dateCreated", order:"desc")
+        
+        
+       
+           return leMail2
+        }
+        catch (NullPointerException n){
+            return null
+        }
+    } 
+    
+//------------------------------------------------    
+    
+    
 //--------- liste des mails-------------
    private Mail[] mailInbox() {
        def listeMailEffectif = afficherMail()

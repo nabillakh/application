@@ -394,9 +394,17 @@
 									    
             							
 								        <div class="inner-spacer"> 	
+
+        <div class="inbox-body-content" id="inbox-loading-panel-js"> 
+        
+													<h1 class="message-title">Objet :  ${mailEffectifInstance.mail?.objet} </h1>
+													<h3 class="message-from">From: ${mailEffectifInstance.mail.author.username}  </h3>
+                                                                                                           <h3 class="message-from">Pour: <g:each in="${mesmailEffectifRecepteurs}" status="i" var="mesmailEffectifRecepteursInstance"> ${mesmailEffectifRecepteursInstance.recepteur.username} </g:each> </h3>
+
 <div class="inbox-body-content" id="inbox-loading-panel-js">
 													<h1 class="message-title">Objet :  ${mailEffectifInstance.mail?.objet} </h1>
 													<h3 class="message-from">From: ${mailEffectifInstance.mail.author.username}</h3>
+
 													
 													<div class="message-container">
 														<div class="message-control-panel">

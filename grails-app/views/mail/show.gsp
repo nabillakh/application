@@ -374,6 +374,211 @@
 					<!-- page header -->
 					<h1 id="page-header">Inbox</h1>	
 					
+
+					<div class="fluid-container">
+
+						<div class="alert adjusted alert-info">
+							<button class="close" data-dismiss="alert">×</button>
+							<i class="cus-exclamation"></i>
+							<strong>Info!</strong> Mobile version of this page is currently not supported.
+						</div>
+
+                                          
+						<!-- NO WIDGETS ON THIS PAGE -->
+							<div class="row-fluid">
+								<article class="span12">
+									
+									<!-- new widget -->
+									<div class="jarviswidget">
+
+									    <!-- wrap div -->
+									    
+            							
+								        <div class="inner-spacer"> 	
+        <div class="inbox-body-content" id="inbox-loading-panel-js"> 
+        
+													<h1 class="message-title">Objet :  ${mailInstance.objet} </h1>
+													<h3 class="message-from">From: ${mailInstance.author.username}  </h3>
+                                                                                                           <h3 class="message-from">Pour:  ${mailInstance.recepteur.recepteur.username}  </h3>
+													
+													<div class="message-container">
+														<div class="message-control-panel">
+															<div class="btn-group">
+																<a class="btn btn-primary medium" href="javascript:void(0);"><i class="icon-reply"></i> Reply</a>
+																<a class="btn btn-primary medium dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+																<ul class="dropdown-menu btn-small">
+																	<li>
+																		<a href="javascript:void(0);"><i class="cus-arrow-undo"></i> Reply All</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);"><i class="cus-envelope"></i> Mark as unread</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);"><i class=" cus-arrow-right"></i> Forward</a>
+																	</li>
+																	<li class="divider"></li>
+																	<li>
+																		<a href="javascript:void(0);"><i class="cus-cancel"></i> Cancel</a>
+																	</li>
+																</ul>
+															</div>
+														
+														</div>
+														<div class="message-body">
+															
+															
+															<p>${mailInstance.message}.</p>
+															
+															
+															
+															<div class="past-message">
+																
+															</div>
+														</div>
+                                                                 
+                                                                                                        
+                                                                                                        </div></div></div>
+                                                                                                        <article> 
+</div></div>
+  <div class="inbox-menu">
+      <div class="inbox-control-panel">
+     <a href="${request.contextPath}/javascript:void(0)" id='refresh-inbox-menu' class="btn medium pull-right"><i class="icon-refresh"></i> Refresh</a>
+  </div>
+												<!-- SLIDING MENU -->
+												<div class="slashc-sliding-menu" id="inbox-menu-js">	
+													<h1 id="inbox-menu-header-js">
+														<span>test</span> 
+														<a title="Slide Back Home" href="${request.contextPath}/javascript:void(0);" class="slashc-sliding-menu-home btn btn-inverse">
+															<i class="icon-angle-left"></i>
+														</a>
+													</h1>
+													<ul class="mailbox" id="mailbox-js">
+														<li><a href="${request.contextPath}/javascript:void(0);"><span>Inbox</span><span class="badge">26</span><i class="icon-angle-right"></i></a>
+															<ul>
+                                                                                                                          <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
+																<li>
+																	<a href="${request.contextPath}/javascript:void(0)">
+																		<span class="tiny-sub">
+																			From: ${mailEffectifInstance.mail.author.username}
+                                                                                                                                                        Objet: ${mailEffectifInstance.mail.objet}
+																			
+																			<span class="tiny-des">${mailEffectifInstance.mail.message}</span>
+																		</span>
+																	</a>
+																</li>
+                                                                                                                          </g:each>
+																
+																<li>
+																	<div class="push-down"></div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Envoyé</span><i class="icon-angle-right"></i></a>
+															<ul>
+															<g:each in="${mesMailsSent}" status="i" var="mailInstance">	
+                                                                                                                            <li>
+																	<a href="${request.contextPath}/javascript:void(0)">
+																		<span class="tiny-sub">
+																			From: ${mailInstance.author.username}
+                                                                                                                                                        Objet : ${mailInstance.objet}
+																			<!--<i class="icon-paper-clip"></i>-->
+																			<span class="tiny-des">${mailInstance.message}</span>
+																		</span>
+																	</a>
+																</li> </g:each>
+															</ul>
+														</li>
+                                                                                                               
+														<li>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Trash</span><i class="icon-angle-right"></i></a>
+															<ul>
+																<li>
+																	<a href="${request.contextPath}/javascript:void(0)">
+																		<span class="tiny-sub">
+																			Message Title
+																			<!--<i class="icon-paper-clip"></i>-->
+																			<span class="tiny-des">Message line truncated...</span>
+																		</span>
+																	</a>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<a href="${request.contextPath}/javascript:void(0);"><span>Saved Messages</span><i class="icon-angle-right"></i></a>
+															<ul>
+																<li>
+																	<a href="${request.contextPath}/javascript:void(0)">
+																		<span class="tiny-sub">
+																			Message Title
+																			<!--<i class="icon-paper-clip"></i>-->
+																			<span class="tiny-des">Message line truncated...</span>
+																		</span>
+																	</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+												<!-- end SLIDING MENU -->
+											</div>
+
+
+										</div>
+									    <!-- end content-->
+									   
+									    <!-- end wrap div -->
+									</div>
+									
+									
+									<!-- end widget -->
+								</article>
+							</div>
+					</div>		
+        </div>
+				<!-- end main content -->
+			
+				<!-- aside right on high res -->
+				<aside class="right">
+					
+					<!-- sparkline stats -->
+					<ul class="mystats indented">
+		                <li class="first">
+		                    <h1><span>My Balance:</span>$17,349</h1>
+		                    <div class="mychart" id="balance" style="width:35px"></div>
+		                </li>
+		                <li>
+		                    <h1><span>Impressions:</span>145k+</h1>
+		                    <div class="mychart" id="clicks" style="width:35px"></div>
+		                </li>
+		                <li>
+		                    <h1><span>Subscribers:</span>1,120</h1>
+		                    <div class="mychart" id="subscribe" style="width:35px"></div>
+		                </li>
+		                <li class="last">
+		                    <h1><span>Support Ticket:</span>945+</h1>
+		                    <div class="mychart" id="support" style="width:35px"></div>
+		                </li>
+		            </ul>
+		            <div class="divider"></div>
+		            <!-- end sparkline stats -->
+					
+					<!-- aside buttons -->
+					<div class="aside-buttons">
+		                <a href="${request.contextPath}/javascript:void(0)" title="" class="btn btn-primary">Create an Invoice</a>
+		            </div>
+		            <div class="divider"></div>
+		            <!-- end aside buttons -->
+		            
+				</aside>
+				
+				<!-- end aside right -->
+			
+			
+	    <!--/.fluid-container-->
+		<div class="push"></div>
+
+=======
 						
 					<div class="fluid-container">
 
@@ -596,6 +801,7 @@
 	    </div><!--/.fluid-container-->
 		<div class="push"></div>
 	</div>
+>>>>>>> origin/master
 	<!-- end .height-wrapper -->	
 	
 	<!-- footer -->
