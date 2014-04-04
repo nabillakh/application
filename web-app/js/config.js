@@ -558,6 +558,7 @@
 				selectable: true,
 				selectHelper: true,
 				select: function(start, end, allDay) {
+                                    $("#eventToAdd").dialog()
 					var title = prompt('Event Title:');
 					if (title) {
 						calendar.fullCalendar('renderEvent',
