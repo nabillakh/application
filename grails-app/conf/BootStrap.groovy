@@ -49,8 +49,12 @@ class BootStrap {
                 
                 
         def monOrdo = new Ordonnancement(nom : "grille1").save(failOnError: true) 
+        def monOrdo2 = new Ordonnancement(nom : "grille2").save(failOnError: true) 
+        def monOrdo3 = new Ordonnancement(nom : "grille3").save(failOnError: true) 
         
         def maFamille = new Famille(nom : "Famille1", ordo : monOrdo, chargeStandard : '200').save(failOnError: true)  
+        def maFamille2 = new Famille(nom : "Famille2", ordo : monOrdo2, chargeStandard : '200').save(failOnError: true)  
+        def maFamille3 = new Famille(nom : "Famille3", ordo : monOrdo3, chargeStandard : '200').save(failOnError: true)  
         
         def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
         

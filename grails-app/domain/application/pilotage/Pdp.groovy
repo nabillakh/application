@@ -1,0 +1,42 @@
+package application.pilotage
+
+import application.PP.*
+
+
+class Pdp {
+    
+    PicFamille picFamille
+    Integer mois
+    Float uniteActivite
+    Integer version
+    Date dateVersion
+    Date dateMaj
+    
+    static hasMany = [kanbansRealises : PdpKanbanEvent] 
+    
+    def chargePlanifie = {
+        picFamille.getFamille().getChargeStandard() * uniteActivite
+    }
+    
+    static constraints = {
+        version nullable : true
+        dateVersion nullable : true
+        dateMaj nullable : true
+        uniteActivite nullable : true
+        kanbansRealises nullable: true
+    }
+    
+    
+    
+    def beforeInsert = {
+        dateVersion = new Date()
+        dateMaj = new Date()
+        return true
+    }
+    
+    def beforeUpdate = {
+        dateMaj = new Date()
+        return true
+    }
+    
+}
