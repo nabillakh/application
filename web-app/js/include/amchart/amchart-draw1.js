@@ -1,7 +1,7 @@
 if ($('#chartdiv').length) {
 	var chartData = [{
 		date : new Date(2012, 0, 1),
-		sales : 227,
+		sales : 2000,
 		duration : 408
 	}, {
 		date : new Date(2012, 0, 2),
