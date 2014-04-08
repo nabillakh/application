@@ -558,35 +558,12 @@
                             }],
 				selectable: true,
 				selectHelper: true,
-				select: function(start, end, allDay) {
-                                    var deb = $.fullCalendar.formatDate(start, "yyyy-MM-dd'T'HH:mm:ss")
-                                    var fin = $.fullCalendar.formatDate(end, "yyyy-MM-dd'T'HH:mm:ss")
-                     
-                        var formHtml = '<form id="formHtml" name = "formHtml"  url="[resource:eventInstance, action:"save"] " >';
-                        formHtml += 'Event name:';
-                        formHtml += '<input  name="title"  type="text" value = "title"/> </br>';
-                        formHtml += 'Event start date:';
-                        formHtml += '<input name="start" type="#datePicker" value = '+deb+'/> </br>';
-                        formHtml += 'Event end date:';
-                        formHtml += '<input  name="end"  type="datePicker"  value = '+fin+'/>';
-                        formHtml += '<input type="submit" value="valider"/>';
-                        formHtml += '<form />';
-                        
-                                    
-                                 var formulaire =  bootbox.dialog(formHtml);
-                                   
-                                   calendar.fullCalendar('renderEvent',
-							{
-								title: formulaire.title,
-								start: formulaire.start,
-								end: formulaire.end,
-							},
-							true // make the event "stick"
-						);
-                                   
-                                   
-					calendar.fullCalendar('unselect');
-				},
+				dayClick: function (date, allDay, jsEvent, view) {
+                                    $('#eventTitle').val("");
+                                    $('#eventDate').val($.fullCalendar.formatDate(date, 'dd/MM/yyyy'));
+                                    $('#eventTime').val($.fullCalendar.formatDate(date, 'HH:mm'));
+                                    montrerFormulaire(date); 
+                                },
 			});
 
 		};
@@ -598,6 +575,10 @@
 	
 	/* end calendar */
 
+        function montrerFormulaire(date) {
+            var oForm = document.getElementById('popupEventForm');
+        }
+        
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
 	/* ---------------------------------------------------------------------- */	

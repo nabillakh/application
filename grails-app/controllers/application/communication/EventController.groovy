@@ -39,13 +39,10 @@ class EventController {
                 */
 
                 eventList << [
-                        id: event.id,
                         title: event.title,
                         allDay: false,
                         start: displayDateFormatter.format(startTime.toDate()),
                         end: displayDateFormatter.format(endTime.toDate()),
-                        occurrenceStart: startTime.toInstant().millis,
-                        occurrenceEnd: endTime.toInstant().millis
                 ]
             }
                 [eventInstanceList: eventList]

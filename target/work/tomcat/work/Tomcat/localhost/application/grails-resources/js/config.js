@@ -531,6 +531,7 @@
 			var d = date.getDate();
 			var m = date.getMonth();
 			var y = date.getFullYear();
+                                
                         var calendar = $('#calendar').fullCalendar({
 				header: {
 					left: 'title', //,today
@@ -557,22 +558,12 @@
                             }],
 				selectable: true,
 				selectHelper: true,
-				select: function(start, end, allDay) {
-                                    $("#eventToAdd").dialog()
-					var title = prompt('Event Title:');
-					if (title) {
-						calendar.fullCalendar('renderEvent',
-							{
-								title: title,
-								start: start,
-								end: end,
-								allDay: allDay
-							},
-							true // make the event "stick"
-						);
-					}
-					calendar.fullCalendar('unselect');
-				},
+				dayClick: function (date, allDay, jsEvent, view) {
+                                    $('#eventTitle').val("");
+                                    $('#eventDate').val($.fullCalendar.formatDate(date, 'dd/MM/yyyy'));
+                                    $('#eventTime').val($.fullCalendar.formatDate(date, 'HH:mm'));
+                                    montrerFormulaire(date); 
+                                },
 			});
 
 		};
@@ -584,6 +575,10 @@
 	
 	/* end calendar */
 
+        function montrerFormulaire(date) {
+            var oForm = document.getElementById('popupEventForm');
+        }
+        
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
 	/* ---------------------------------------------------------------------- */	
