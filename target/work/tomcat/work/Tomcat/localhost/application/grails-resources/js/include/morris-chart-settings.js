@@ -372,7 +372,7 @@ $(document).ready( function() {
                         data: obj,
                         xkey: 'annee',
                         ykeys: ['y', 'z', 'a'],
-                        labels: ['Y', 'Z', 'A']
+                        labels: ['Y', 'Z', 'A'],
                         stacked: true
                     });
                 }
