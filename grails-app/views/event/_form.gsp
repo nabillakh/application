@@ -4,7 +4,7 @@
 <div class="control-group">
 	<label for="nomKanban" class="control-label" >
 		<g:message code="Event.TitleKanban.label" default="Titre : " />
-
+		
 	</label>
 	<g:textField name="title" value="${eventInstance?.title}"  class="span12"  />
 
@@ -12,7 +12,7 @@
 <div class="control-group">
 	<label for="description" class="control-label" >
 		<g:message code="Event.location.label" default="Lieu : " />
-
+		
 	</label>
 	<g:textField name="location" value="${eventInstance?.location}" class="span12"  />
 
@@ -21,7 +21,7 @@
 <div class="control-group">
 	<label for="description" class="control-label" >
 		<g:message code="Event.description.label" default="Description : " />
-
+		
 	</label>
 	<g:textField name="description" value="${eventInstance?.description}" class="span12"  />
 
@@ -63,5 +63,6 @@
     </p>
   </div>
 </div>
+
 
 
