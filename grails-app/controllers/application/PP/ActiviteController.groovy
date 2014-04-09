@@ -1,6 +1,7 @@
 package application.PP
 
 import grails.converters.JSON
+import org.codehaus.groovy.grails.web.json.JSONObject
 import application.pilotage.*
 import application.PP.*
 import application.RH.*
@@ -25,31 +26,56 @@ class ActiviteController {
     def indicateur() {
         
     }
-    
+    // envoie data pour indicateur de 
     def chargePIC = {
         def pics = Pic.list()
-        Long nbAnnee = pics.size()
-        Long nbFamille = Famille.list().size() + 1
         // hypothese nbannee = nb pic
-        def picLists = new String[nbAnnee][nbFamille]
-        def i = -1 // annee
-        def j = 0 // famille
-        
+              
+        def picLists = []
         pics.each {pic ->
-            i++
-            def input = pic.annee.toString()
-            picLists[i][j] = input
+            def picList = new LinkedHashMap()
+            picList.put("annee",pic.annee.toString())
             
             pic.picFamille.each() { maPicFamille ->
-                j++
-                def nom = maPicFamille.famille.nom.toString()
-                def charge = maPicFamille.chargePlanifie().toString()         
-                picLists[i][j] = charge
+                 picList.put((maPicFamille.famille.nom.toString()),(maPicFamille.chargePlanifie()))
             }
-            j=0
+             picLists << (picList)
         }
+        
         [picInstanceList: picLists]
         render picLists as JSON
     }
+    // envoie la liste de famille pour parising dans le graphe 1
+    def listeFamille = {
+        def fams = Famille.list()
+        def famLists = []
+        fams.each{ fam ->
+            famLists << fam.nom.toString()
+        }
+        
+        [famInstanceList: famLists]
+        render famLists as JSON
+    }
+    
+    def barPIC = {
+        def pics = Pic.list()
+        // hypothese nbannee = nb pic
+              
+        def picLists = []
+        pics.each {pic ->
+            def picList = new LinkedHashMap()
+            picList.put("annee",pic.annee.toString())
+            def charge = 0
+            pic.picFamille.each() { maPicFamille ->
+                 charge += (maPicFamille.chargePlanifie())
+            }
+            picList.put("charge",charge)
+             picLists << (picList)
+        }
+        
+        [picInstanceList: picLists]
+        render picLists as JSON
+    }
+    
     
 }

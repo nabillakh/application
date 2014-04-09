@@ -356,27 +356,100 @@ $(document).ready( function() {
 		  stacked: true
 		});
 	}
+        // chargement data pour PIC
+        var json_data = (function() {
+               var json;
+               $.ajax({
+                   type:'GET',
+                   url: 'http://localhost:8080/application/activite/chargePIC',
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       bootbox.alert("ok");
+                       json = data;
+                   }, 
+                       error:function(){
+                       bootbox.alert("Error loading chart");
+                   }
+               });
+               return json;
+           });
+           
+        var absPIC = (function() {
+               var json;
+               $.ajax({
+                   type:'GET',
+                   url: 'http://localhost:8080/application/activite/listeFamille',
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       bootbox.alert("ok");
+                       json = data;
+                   }, 
+                           error:function(){
+                       bootbox.alert("Error loading chart");
+                   }
+               });
+               return json;
+           });
+        
         
         // charge issue du pic
         
-        if ($('#chargePIC').length){ 
-            $.ajax({
-                url: 'http://localhost:8080/application/activite/list',
-                success: function(data) {
-                    var $graph = data;
-                    var obj = $.parseJSON($graph);
-                    Morris.Bar({
-                        element: 'chargePIC',
-                        axes: false,
-                        grid: false,
-                        data: obj,
-                        xkey: 'annee',
-                        ykeys: ['y', 'z', 'a'],
-                        labels: ['Y', 'Z', 'A'],
-                        stacked: true
-                    });
-                }
-            });
+       if ($('#chargePIC').length){
+           Morris.Bar({
+		  element: 'chargePIC',
+		  axes: false,
+		  grid: false,
+		  data: json_data,
+		  xkey: 'annee',
+		  ykeys: ['Famille3','Famille1','Famille2'],
+		  labels: ["Famille3","Famille1","Famille2"],
+		  stacked: true
+		});
+	}
+        
+        var json_data2 = (function() {
+               var json;
+               $.ajax({
+                   type:'GET',
+                   url: 'http://localhost:8080/application/activite/barPIC',
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       json = data;
+                   }, 
+                           error:function(){
+                       alert("Error loading chart");
+                   }
+               });
+               return json;
+           })
+        
+        
+        
+	// bar graph color
+	if ($('#1barPIC').length){ 
+		    
+                
+                
+		Morris.Bar({
+		  element: '1barPIC',
+		  data: json_data2,
+		  xkey: 'annee',
+		  ykeys: ['charge'],
+		  labels: ['Charge'],
+		  barColors: function (row, series, type) {
+		    if (type === 'bar') {
+		      var red = Math.ceil(255 * row.y / this.ymax);
+		      return 'rgb(' + red + ',0,0)';
+		    }
+		    else {
+		      return '#000';
+		    }
+		  }
+		});
+	
 	}
         
         
