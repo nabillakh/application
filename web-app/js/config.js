@@ -538,6 +538,49 @@
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
 				},
+                                select :function bienvenue() {
+                                    var deb = 'start';
+                                    var formulaire = '<form url="[resource:eventInstance,  action:"save"] onSubmit="return confirmSubmit();"  >';
+                                        formulaire += '<label name="label.title" defaut="Titre"> Titre :';
+                                        formulaire += '<input type="text" name="title" value=""   />';
+                                         formulaire += '</label>';
+                                        formulaire += '<label name="label.location" defaut="Location"> Location :';
+                                        formulaire += '<input type="text" name="location" value=""   />';
+                                         formulaire += '</label>';
+                                         formulaire += '<label name="label.description" defaut="Description">  Description : ';
+                                        formulaire += '<input type="text" name="description" value=""   />';
+                                         formulaire += '</label>';
+                                         formulaire += '<label name="label.starttime" defaut="date du début">  Du :';
+                                        formulaire += '<input type="date" name="startTime" precision="day"  value=""  /></br>';
+                                         formulaire += '</label>';
+                                        formulaire += '<label name="label.endtime" defaut="Fin">   Fin : ';
+                                        formulaire += '<input type="date" name="endTime" precision="day"  value=""  />';
+                                        formulaire += '</label>';
+                                        formulaire += '</form>';
+                                     
+                                       
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    var location = 'event/save';
+                                  bootbox.confirm( formulaire , function(confirmed){
+                                     
+                                      
+    //if agreed, start ajax 
+   
+        if(confirmed) {
+        window.location.replace(location);
+          }
+
+            //todo fail output
+        });},
+
 				
 				editable: true,
                                 eventSources: [{
