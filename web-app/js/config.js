@@ -541,26 +541,22 @@
 				selectable: true,
 				selectHelper: true,
                                 select: function(start, end, allDay) {
-                                    bootbox.ajoutEvent("Ajouter un évennement : ", function(eventInstance) {
-                                        if( eventInstance == null ){
+                                    bootbox.ajoutEvent("Ajouter un évenement : ", function(data) {
+                                        if( data == null ){
                                             alert("rien");
                                         }
-                                        else {
-                                           
-                                         
-                                            
+                                        else {  
+                                            alert(data)
                                             $.ajax({
-                                                        url: '/event/save',
+                                                        url: 'http://localhost:8080/application/event/nouveauEvent',
                                                         type: 'POST',
-                                                        data: 'eventInstance=' + eventInstance 
-                                                       
-                                                     
-                                                     });                    
-                                            
-                                            
-                                            
-                                            
-                                                }
+                                                        data: JSON.stringify(data),
+                                                        type: "json",
+                                                        error : function() {
+                                                            alert("ko")
+                                                        }
+                                                    });   
+                                                 }
                                     });
                               },
 
