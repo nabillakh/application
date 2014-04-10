@@ -257,7 +257,116 @@ var bootbox = window.bootbox || (function(document, $) {
 
         return div;
     };
+    
+    
+    that.ajoutEvent = function(/*str, labelCancel, labelOk, cb, defaultVal*/) {
+        var str         = "",
+            labelCancel = _translate('CANCEL'),
+            labelOk     = _translate('CONFIRM'),
+            cb          = null,
+            defaultVal  = "";
 
+        switch (arguments.length) {
+            case 1:
+                str = arguments[0];
+                break;
+            case 2:
+                str = arguments[0];
+                if (typeof arguments[1] == 'function') {
+                    cb = arguments[1];
+                } else {
+                    labelCancel = arguments[1];
+                }
+                break;
+            case 3:
+                str         = arguments[0];
+                labelCancel = arguments[1];
+                if (typeof arguments[2] == 'function') {
+                    cb = arguments[2];
+                } else {
+                    labelOk = arguments[2];
+                }
+                break;
+            case 4:
+                str         = arguments[0];
+                labelCancel = arguments[1];
+                labelOk     = arguments[2];
+                cb          = arguments[3];
+                break;
+            case 5:
+                str         = arguments[0];
+                labelCancel = arguments[1];
+                labelOk     = arguments[2];
+                cb          = arguments[3];
+                defaultVal  = arguments[4];
+                break;
+            default:
+                throw new Error("Incorrect number of arguments: expected 1-5");
+                break;
+        }
+
+        var header = str;
+
+        // let's keep a reference to the form object for later
+        var form = $("<form  name='formulaire'> <label defaut='Titre'> Titre : <input type='text' name='title' value=''   />\n\ <label name='label.location' defaut='Location'> Location : <input type='text' name='location' value=''   /> </label> <label name='label.description' defaut='Description'>  Description :  <input type='text' name='description' value=''   /> </label> '<label name='label.starttime' defaut='date du début'>  Du : <input type='date' name='startTime' precision='day'  value=''  /></br> </label> <label name='label.endtime' defaut='Fin'>   Fin : <input type='date' name='endTime' precision='day'  value=''  /> </label> </form>");
+
+
+        var cancelCallback = function() {
+            if (typeof cb === 'function') {
+                // yep, native prompts dismiss with null, whereas native
+                // confirms dismiss with false...
+                cb(null);
+            }
+        };
+
+        var confirmCallback = function() {
+            if (typeof cb === 'function') {
+                cb(form.find("input[name='title']").val());
+            }
+        };
+
+        var div = that.dialog(form, [{
+            // first button (cancel)
+            "label"   : labelCancel,
+            "icon"    : _icons.CANCEL,
+            "callback":  cancelCallback
+        }, {
+            // second button (confirm)
+            "label"   : labelOk,
+            "icon"    : _icons.CONFIRM,
+            "callback": confirmCallback
+        }], {
+            // prompts need a few extra options
+            "header"  : header,
+            // explicitly tell dialog NOT to show the dialog...
+            "show"    : false,
+            "onEscape": cancelCallback
+        });
+
+        // ... the reason the prompt needs to be hidden is because we need
+        // to bind our own "shown" handler, after creating the modal but
+        // before any show(n) events are triggered
+        // @see https://github.com/makeusabrew/bootbox/issues/69
+
+        div.on("shown", function() {
+            form.find("input[type=text]").focus();
+
+            // ensure that submitting the form (e.g. with the enter key)
+            // replicates the behaviour of a normal prompt()
+            form.on("submit", function(e) {
+                e.preventDefault();
+                div.find(".btn-primary").click();
+            });
+        });
+
+        div.modal("show");
+
+        return div;
+    };
+    
+    
+    
+    
     that.dialog = function(str, handlers, options) {
         var buttons    = "",
             callbacks  = [],

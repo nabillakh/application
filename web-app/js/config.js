@@ -538,50 +538,21 @@
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
 				},
-                                select :function bienvenue() {
-                                    var deb = 'start';
-                                    var formulaire = '<form url="[resource:eventInstance,  action:"save"] onSubmit="return confirmSubmit();"  >';
-                                        formulaire += '<label name="label.title" defaut="Titre"> Titre :';
-                                        formulaire += '<input type="text" name="title" value=""   />';
-                                         formulaire += '</label>';
-                                        formulaire += '<label name="label.location" defaut="Location"> Location :';
-                                        formulaire += '<input type="text" name="location" value=""   />';
-                                         formulaire += '</label>';
-                                         formulaire += '<label name="label.description" defaut="Description">  Description : ';
-                                        formulaire += '<input type="text" name="description" value=""   />';
-                                         formulaire += '</label>';
-                                         formulaire += '<label name="label.starttime" defaut="date du début">  Du :';
-                                        formulaire += '<input type="date" name="startTime" precision="day"  value=""  /></br>';
-                                         formulaire += '</label>';
-                                        formulaire += '<label name="label.endtime" defaut="Fin">   Fin : ';
-                                        formulaire += '<input type="date" name="endTime" precision="day"  value=""  />';
-                                        formulaire += '</label>';
-                                        formulaire += '</form>';
-                                     
-                                       
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    var location = 'event/save';
-                                  bootbox.confirm( formulaire , function(confirmed){
-                                     
-                                      
-    //if agreed, start ajax 
-   
-        if(confirmed) {
-        window.location.replace(location);
-          }
-
-            //todo fail output
-        });},
+				selectable: true,
+				selectHelper: true,
+                                select: function(start, end, allDay) {
+                                    bootbox.ajoutEvent("ok", function(result) {
+                                        if(result==null){
+                                            alert("rien");
+                                        }
+                                        else {
+                                            alert("titre : " + result);
+                                        }
+                                    });
+                              },
 
 				
+                                
 				editable: true,
                                 eventSources: [{
                                         // your event source
@@ -599,14 +570,6 @@
                                         color: 'yellow',
                                         textColor: 'black'
                             }],
-				selectable: true,
-				selectHelper: true,
-				dayClick: function (date, allDay, jsEvent, view) {
-                                    $('#eventTitle').val("");
-                                    $('#eventDate').val($.fullCalendar.formatDate(date, 'dd/MM/yyyy'));
-                                    $('#eventTime').val($.fullCalendar.formatDate(date, 'HH:mm'));
-                                    montrerFormulaire(date); 
-                                },
 			});
 
 		};
@@ -618,10 +581,6 @@
 	
 	/* end calendar */
 
-        function montrerFormulaire(date) {
-            var oForm = document.getElementById('popupEventForm');
-        }
-        
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
 	/* ---------------------------------------------------------------------- */	

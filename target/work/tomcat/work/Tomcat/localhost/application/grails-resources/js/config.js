@@ -538,7 +538,21 @@
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
 				},
+				selectable: true,
+				selectHelper: true,
+                                select: function(start, end, allDay) {
+                                    bootbox.ajoutEvent("ok", function(result) {
+                                        if(result==null){
+                                            alert("rien");
+                                        }
+                                        else {
+                                            alert("titre : " + result);
+                                        }
+                                    });
+                              },
+
 				
+                                
 				editable: true,
                                 eventSources: [{
                                         // your event source
@@ -556,14 +570,6 @@
                                         color: 'yellow',
                                         textColor: 'black'
                             }],
-				selectable: true,
-				selectHelper: true,
-				dayClick: function (date, allDay, jsEvent, view) {
-                                    $('#eventTitle').val("");
-                                    $('#eventDate').val($.fullCalendar.formatDate(date, 'dd/MM/yyyy'));
-                                    $('#eventTime').val($.fullCalendar.formatDate(date, 'HH:mm'));
-                                    montrerFormulaire(date); 
-                                },
 			});
 
 		};
@@ -575,10 +581,6 @@
 	
 	/* end calendar */
 
-        function montrerFormulaire(date) {
-            var oForm = document.getElementById('popupEventForm');
-        }
-        
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
 	/* ---------------------------------------------------------------------- */	
