@@ -546,9 +546,6 @@
                                             alert("rien");
                                         }
                                         else {
-                                           
-                                            
-                                            
                                             alert("titre : " + result);
                                         }
                                     });

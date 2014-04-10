@@ -8,8 +8,7 @@
 
   
  <g:render template="/menues/mainleft" />
-   
-				
+   				
      <!-- main content -->
 				<div id="page-content">
 					<!-- breadcrumb -->
