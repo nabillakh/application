@@ -6,7 +6,7 @@
   </head>
 
   
- <g:render template="/menues/leftmail" />
+ <g:render template="/menues/mainleft" />
 				
 				<!-- main content -->
 				<div id="page-content">

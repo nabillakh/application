@@ -7,7 +7,7 @@
   </head>
 
   
- <g:render template="/menues/mainleft" />
+ <g:render template="/menues/leftmain" />
 				
 				
 				<div id="page-content">

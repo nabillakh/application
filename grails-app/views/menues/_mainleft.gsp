@@ -149,7 +149,7 @@
 							</li>
                                                         
 							<li class="">
-								<a href="mail"><i class="icon-envelope"></i>Boite de réception</a>
+								<g:link  action="index" controller="mail"> <i class="icon-envelope"></i>Boite de réception</g:link>
 							</li>
 							<li class="">
 								<a href="javascript:void(0)"><i class="icon-check"></i>Suvi d'activités<span class="badge">3</span></a>
