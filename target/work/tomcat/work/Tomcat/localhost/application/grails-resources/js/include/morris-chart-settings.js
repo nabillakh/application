@@ -397,18 +397,22 @@ $(document).ready( function() {
         // charge issue du pic
         
        if ($('#chargePIC').length){
-           Morris.Bar({
+           $.getJSON( "http://localhost:8080/application/activite/chargePIC", function( data ) {
+               $.getJSON( "http://localhost:8080/application/activite/listeFamille", function( fam ) {
+               Morris.Bar({
 		  element: 'chargePIC',
 		  axes: false,
 		  grid: false,
-		  data: json_data,
+		  data: data,
 		  xkey: 'annee',
-		  ykeys: ['Famille3','Famille1','Famille2'],
-		  labels: ["Famille3","Famille1","Famille2"],
+		  ykeys: fam,
+		  labels: fam,
 		  stacked: true
 		});
-	}
+	});
+	});
         
+       }
         var json_data2 = (function() {
                var json;
                $.ajax({
