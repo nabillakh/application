@@ -541,13 +541,26 @@
 				selectable: true,
 				selectHelper: true,
                                 select: function(start, end, allDay) {
-                                    bootbox.ajoutEvent("ok", function(result) {
-                                        if(result==null){
+                                    bootbox.ajoutEvent("Ajouter un évennement : ", function(eventInstance) {
+                                        if( eventInstance == null ){
                                             alert("rien");
                                         }
                                         else {
-                                            alert("titre : " + result);
-                                        }
+                                           
+                                         
+                                            
+                                            $.ajax({
+                                                        url: '/event/save',
+                                                        type: 'POST',
+                                                        data: 'eventInstance=' + eventInstance 
+                                                       
+                                                     
+                                                     });                    
+                                            
+                                            
+                                            
+                                            
+                                                }
                                     });
                               },
 
