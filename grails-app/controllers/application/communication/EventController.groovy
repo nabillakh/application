@@ -81,13 +81,7 @@ class EventController {
     def nouveauEvent() {
 
         def eventInstance = new Event(params)
-        if (!eventInstance.save(flush: true)) {
-            render(view: "create", model: [eventInstance: eventInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.created.message', args: [message(code: 'event.label', default: 'Event'), eventInstance.id])
-        redirect(action: "list")
+        redirect(view: "list")
     
 }
 }
