@@ -18,8 +18,8 @@ class MailEffectifController {
     def show(MailEffectif mailEffectifInstance) {
         mailService.messageLu( mailEffectifInstance)
 
-        def mesmailEffectifRecepteurs =  mailService.afficherRecepteurs(mailEffectifInstance)
-        [mailEffectifInstance: mailEffectifInstance,mesmailEffectifRecepteurs:mesmailEffectifRecepteurs ]
+        def mailRecepteurs =  mailService.afficherRecepteurs(mailEffectifInstance)
+        [mailEffectifInstance: mailEffectifInstance, mailRecepteurs : mailRecepteurs ]
         
 
         respond mailEffectifInstance

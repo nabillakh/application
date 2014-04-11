@@ -321,7 +321,7 @@ var bootbox = window.bootbox || (function(document, $) {
 
         var confirmCallback = function() {
             if (typeof cb === 'function') {
-                cb(form.find("input[name='title']").val());
+                cb(form.find("input[name='data']").val());
             }
         };
 

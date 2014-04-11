@@ -67,10 +67,10 @@ class MailService {
     
     
    private MailEffectif[] afficherRecepteurs(MailEffectif mailEffectifInstance) {
-        def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
+        def m = MailEffectif.get(mailEffectifInstance.id)
        
         try { def query = MailEffectif.whereAny {                
-            ( mail { id == mailEffectif.mail.id }) 
+            ( mail { id == m.mail.id }) 
            }
         def leMail2 = query.list(max: 10, sort:"dateCreated", order:"desc")
         
