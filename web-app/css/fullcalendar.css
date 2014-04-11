@@ -137,7 +137,9 @@ html .fc,
 	filter: alpha(opacity=20); /* for IE */
 	}
 	
-
+.active .fc-event-inner {
+    background: #0005ae;
+}
 
 /* Buttons
 ------------------------------------------------------------------------*/
