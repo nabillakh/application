@@ -531,44 +531,16 @@
 			var d = date.getDate();
 			var m = date.getMonth();
 			var y = date.getFullYear();
+                        var tab = new Array;
                                 
                         var calendar = $('#calendar').fullCalendar({
-				header: {
-					left: 'title', //,today
-					center: 'prev, next, today',
-					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
-				},
-				selectable: true,
-				selectHelper: true,
-                                select: function(start, end, allDay) {
-                                    bootbox.ajoutEvent("Ajouter un évenement : ", function(data) {
-                                        if( data == null ){
-                                            alert("rien");
-                                        }
-                                        else {  
-                                            alert(data)
-                                            $.ajax({
-                                                        url: 'http://localhost:8080/application/event/nouveauEvent',
-                                                        type: 'POST',
-                                                        data: JSON.stringify(data),
-                                                        type: "json",
-                                                        error : function() {
-                                                            alert("ko")
-                                                        }
-                                                    });   
-                                                 }
-                                    });
-                              },
-
-				
-                                
-				editable: true,
-                                eventSources: [{
-                                        // your event source
+                            eventSources: [
+                            // source pour obtenir mes données 
+                                    {
                                         url: 'http://localhost:8080/application/event/list',
-                                        type: 'GET',
-                                        dataType: 'json',
-                                        data: {
+                                        type: 'POST',
+                                        formulaireType: 'json',
+                                        formulaire: {
                                             start: 'start',
                                             end: 'end',
                                             title: 'title'
@@ -577,9 +549,69 @@
                                     alert('there was an error while fetching events!');
                                 },
                                         color: 'yellow',
-                                        textColor: 'black'
-                            }],
-			});
+                                        textColor: 'black',
+                                        cache: true
+                            },
+                                    
+                        // source pour persister mes données
+                        
+                        ],
+				header: {
+					left: 'title', //,today
+					center: 'prev, next, today',
+					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
+				},                               
+                                
+                        eventMouseover: function(event, jsEvent, view) {
+                            $(this).addClass("active");
+                        },
+                        
+                        eventMouseout: function(event, jsEvent, view) {
+                            $(this).removeClass("active");
+                        },
+                                                     
+                                
+                                
+				selectable: true,
+				selectHelper: true,
+                                select: function(start, end, allDay) {
+                                    bootbox.ajoutEvent("Ajouter un évenement : ", "non", "ok", function(json){
+                                       
+                                    if( json ){
+                                        
+                                        calendar.fullCalendar('renderEvent',
+						{
+						    title: json.title,
+						    start: json.start,
+						    end: json.end,
+                                                    allDay : false
+						},
+						true // make the event "stick"
+					);
+                                            calendar.fullCalendar('unselect'),
+                                            {
+                                                url: 'http://localhost:8080/application/event/nouveauEvent',
+                                                type: 'POST',
+                                                formulaireType: 'json',
+                                                formulaire: {
+                                                    title: json.title,
+						    start: json.start,
+						    end: json.end,
+                                                },
+                                                error: function () {
+                                                    alert('there was an error while fetching events!');
+                                                },
+                                                        color: 'yellow',
+                                                        textColor: 'black',
+                                                        cache: true
+                                            };
+                                        }
+                                        else {  
+                                        };
+                                    });
+                              },                                
+				editable: true,
+                            });
 
 		};
 		
@@ -589,6 +621,40 @@
 	}
 	
 	/* end calendar */
+           /* permet la persisitence de l'evenement et le rechargement du planning */
+        function saveEvent(tab) {
+              var event = new Object(), eventToSave = new Object();
+              eventToSave.EventID = event.id = Math.floor(200 * Math.random());
+              event.start = new Date(tab[3].val());
+              eventToSave.StartDate = tab[3].val();
+              if (tab[4].val() === "") {
+                  event.end = event.start;
+                  eventToSave.EndDate = eventToSave.StartDate;
+              }
+              else {
+                  event.end = new Date(tab[4].val());
+                  eventToSave.EndDate = tab[4].val();
+              }
+              eventToSave.EventName = event.title = tab[0].val();
+              
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                data: "{eventdata:" + JSON.stringify(eventToSave) + "}",
+                url: "http://localhost:8080/application/event/nouveauEvent",
+                dataType: "json",
+                success: function (data) {
+                    $('div[id*=fullcal]').fullCalendar('renderEvent', event, true);
+                },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            debugger;
+        }
+    });
+        }
+
+
+
+
 
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
@@ -780,10 +846,10 @@
 			}
 	
 			var plot = $.plot($("#sin-chart"), [{
-				data : sin,
+				formulaire : sin,
 				label : "sin(x)"
 			}, {
-				data : cos,
+				formulaire : cos,
 				label : "cos(x)"
 			}], {
 				series : {
@@ -819,8 +885,8 @@
 	
 			$("#sin-chart").bind("plotclick", function(event, pos, item) {
 				if (item) {
-					$("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
-					plot.highlight(item.series, item.datapoint);
+					$("#clickformulaire").text("You clicked point " + item.formulaireIndex + " in " + item.series.label + ".");
+					plot.highlight(item.series, item.formulairepoint);
 				}
 			});
 		}
@@ -831,22 +897,22 @@
 	
 		if ($("#bar-chart").length) {
 
-			var data1 = [];
+			var formulaire1 = [];
 			for (var i = 0; i <= 12; i += 1)
-				data1.push([i, parseInt(Math.random() * 30)]);
+				formulaire1.push([i, parseInt(Math.random() * 30)]);
 	
-			var data2 = [];
+			var formulaire2 = [];
 			for (var i = 0; i <= 12; i += 1)
-				data2.push([i, parseInt(Math.random() * 30)]);
+				formulaire2.push([i, parseInt(Math.random() * 30)]);
 	
-			var data3 = [];
+			var formulaire3 = [];
 			for (var i = 0; i <= 12; i += 1)
-				data3.push([i, parseInt(Math.random() * 30)]);
+				formulaire3.push([i, parseInt(Math.random() * 30)]);
 	
 			var ds = new Array();
 	
 			ds.push({
-				data : data1,
+				formulaire : formulaire1,
 				bars : {
 					show : true,
 					barWidth : 0.2,
@@ -854,7 +920,7 @@
 				}
 			});
 			ds.push({
-				data : data2,
+				formulaire : formulaire2,
 				bars : {
 					show : true,
 					barWidth : 0.2,
@@ -862,7 +928,7 @@
 				}
 			});
 			ds.push({
-				data : data3,
+				formulaire : formulaire3,
 				bars : {
 					show : true,
 					barWidth : 0.2,
@@ -911,7 +977,7 @@
 	
 			var ds_h = new Array();
 			ds_h.push({
-				data : d1_h,
+				formulaire : d1_h,
 				bars : {
 					horizontal : true,
 					show : true,
@@ -920,7 +986,7 @@
 				}
 			});
 			ds_h.push({
-				data : d2_h,
+				formulaire : d2_h,
 				bars : {
 					horizontal : true,
 					show : true,
@@ -929,7 +995,7 @@
 				}
 			});
 			ds_h.push({
-				data : d3_h,
+				formulaire : d3_h,
 				bars : {
 					horizontal : true,
 					show : true,
@@ -986,16 +1052,16 @@
 				'50%' : [[2, 90.2], [3, 98.1], [4, 105.2], [5, 111.7], [6, 118.2], [7, 125.6], [8, 130.5], [9, 138.3], [10, 143.7], [11, 151.4], [12, 156.7], [13, 157.7], [14, 161.0], [15, 162.0], [16, 162.8], [17, 162.2], [18, 162.8], [19, 163.3]]
 			};
 	
-			var dataset = [{
+			var formulaireset = [{
 				label : 'female mean',
-				data : females['mean'],
+				formulaire : females['mean'],
 				lines : {
 					show : true
 				},
 				color : "rgb(255,50,50)"
 			}, {
 				id : 'f15%',
-				data : females['15%'],
+				formulaire : females['15%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1004,7 +1070,7 @@
 				color : "rgb(255,50,50)"
 			}, {
 				id : 'f25%',
-				data : females['25%'],
+				formulaire : females['25%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1014,7 +1080,7 @@
 				fillBetween : 'f15%'
 			}, {
 				id : 'f50%',
-				data : females['50%'],
+				formulaire : females['50%'],
 				lines : {
 					show : true,
 					lineWidth : 0.5,
@@ -1025,7 +1091,7 @@
 				fillBetween : 'f25%'
 			}, {
 				id : 'f75%',
-				data : females['75%'],
+				formulaire : females['75%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1035,7 +1101,7 @@
 				fillBetween : 'f50%'
 			}, {
 				id : 'f85%',
-				data : females['85%'],
+				formulaire : females['85%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1045,14 +1111,14 @@
 				fillBetween : 'f75%'
 			}, {
 				label : 'male mean',
-				data : males['mean'],
+				formulaire : males['mean'],
 				lines : {
 					show : true
 				},
 				color : "rgb(50,50,255)"
 			}, {
 				id : 'm15%',
-				data : males['15%'],
+				formulaire : males['15%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1061,7 +1127,7 @@
 				color : "rgb(50,50,255)"
 			}, {
 				id : 'm25%',
-				data : males['25%'],
+				formulaire : males['25%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1071,7 +1137,7 @@
 				fillBetween : 'm15%'
 			}, {
 				id : 'm50%',
-				data : males['50%'],
+				formulaire : males['50%'],
 				lines : {
 					show : true,
 					lineWidth : 0.5,
@@ -1082,7 +1148,7 @@
 				fillBetween : 'm25%'
 			}, {
 				id : 'm75%',
-				data : males['75%'],
+				formulaire : males['75%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1092,7 +1158,7 @@
 				fillBetween : 'm50%'
 			}, {
 				id : 'm85%',
-				data : males['85%'],
+				formulaire : males['85%'],
 				lines : {
 					show : true,
 					lineWidth : 0,
@@ -1102,7 +1168,7 @@
 				fillBetween : 'm75%'
 			}]
 	
-			$.plot($("#fill-chart"), dataset, {
+			$.plot($("#fill-chart"), formulaireset, {
 	
 				xaxis : {
 					tickDecimals : 0
@@ -1123,16 +1189,16 @@
 	
 		if ($('#pie-chart').length) {
 
-				var data_pie = [];
+				var formulaire_pie = [];
 				var series = Math.floor(Math.random() * 10) + 1;
 				for (var i = 0; i < series; i++) {
-					data_pie[i] = {
+					formulaire_pie[i] = {
 						label : "Series" + (i + 1),
-						data : Math.floor(Math.random() * 100) + 1
+						formulaire : Math.floor(Math.random() * 100) + 1
 					}
 				}
 	
-				$.plot($("#pie-chart"), data_pie, {
+				$.plot($("#pie-chart"), formulaire_pie, {
 					series : {
 						pie : {
 							show : true,
@@ -1177,10 +1243,10 @@
 			var visitors = [[1, 65], [3, 50], [4, 73], [5, 100], [6, 95], [7, 103], [8, 111], [9, 97], [10, 125], [11, 100], [12, 95], [13, 141], [14, 126], [15, 131], [16, 146], [17, 158], [18, 160], [19, 151], [20, 125], [21, 110], [22, 100], [23, 85], [24, 37]];
 			//console.log(pageviews)
 			var plot = $.plot($("#site-stats"), [{
-				data : pageviews,
+				formulaire : pageviews,
 				label : "Your pageviews"
 			}, {
-				data : visitors,
+				formulaire : visitors,
 				label : "Site visitors"
 			}], {
 				series : {
@@ -1242,27 +1308,27 @@
 		
 		if ($('#updating-chart').length) {
 	
-			// For the demo we use generated data, but normally it would be coming from the server
-			var data = [], totalPoints = 200;
+			// For the demo we use generated formulaire, but normally it would be coming from the server
+			var formulaire = [], totalPoints = 200;
 			function getRandomData() {
-				if (data.length > 0)
-					data = data.slice(1);
+				if (formulaire.length > 0)
+					formulaire = formulaire.slice(1);
 	
 				// do a random walk
-				while (data.length < totalPoints) {
-					var prev = data.length > 0 ? data[data.length - 1] : 50;
+				while (formulaire.length < totalPoints) {
+					var prev = formulaire.length > 0 ? formulaire[formulaire.length - 1] : 50;
 					var y = prev + Math.random() * 10 - 5;
 					if (y < 0)
 						y = 0;
 					if (y > 100)
 						y = 100;
-					data.push(y);
+					formulaire.push(y);
 				}
 	
 				// zip the generated y values with the x values
 				var res = [];
-				for (var i = 0; i < data.length; ++i)
-					res.push([i, data[i]])
+				for (var i = 0; i < formulaire.length; ++i)
+					res.push([i, formulaire[i]])
 				return res;
 			}
 	
@@ -1472,7 +1538,7 @@
 		
 		/* buttons */		
 		$("#refresh-js").click(function() {
-		  toastr.warning('Please try again later', 'Database offline. No data available!');
+		  toastr.warning('Please try again later', 'Database offline. No formulaire available!');
 		  return false; 
 				
 		});
@@ -1493,7 +1559,7 @@
 		
 		$('#theme-switcher ul#theme-links-js li a').bind('click',
 			function(e) {
-				$("#switch-theme-js").attr("href", "css/themes/"+$(this).data('rel')+".css");
+				$("#switch-theme-js").attr("href", "css/themes/"+$(this).formulaire('rel')+".css");
 				return false;
 			}
 		);
@@ -1589,7 +1655,7 @@
 
 	function logout(){
 		
-		var linky = $('.logout-js').data('rel');
+		var linky = $('.logout-js').formulaire('rel');
 		window.location.href = linky;
 		
 	}
@@ -1719,7 +1785,7 @@
 	    for (var i = 0; i < items.length; i++) {
 	        //do stuff
 	        var newValue = Math.round(100*Math.random());
-	        $(this).data('easyPieChart').update(newValue);
+	        $(this).formulaire('easyPieChart').update(newValue);
 	        $('span', this).text(newValue);
 	    } 
 		//console.log(items.length);

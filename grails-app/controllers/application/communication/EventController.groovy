@@ -2,11 +2,14 @@ package application.communication
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import org.codehaus.groovy.grails.validation.Validateable
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 import grails.converters.JSON
 
-@Transactional(readOnly = true)
+
+
+@Transactional(readOnly = true) 
 class EventController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -47,10 +50,10 @@ class EventController {
             }
                 [eventInstanceList: eventList]
            
-                render eventList as JSON
+                render eventList as JSON 
     }
 
-    def create() {
+    def create() { 
         respond new Event(params)
     }
 
@@ -77,11 +80,12 @@ class EventController {
         }
     }
     
-    @Transactional
-    def nouveauEvent() {
-
-        def eventInstance = new Event(params)
-        redirect(view: "list")
     
-}
+    @Transactional
+    def nouveauEvent(Object eventdata) {
+        Event eventInstance = mapper.readValue(eventdata, Event.class)
+        
+        [eventInstance : eventInstance]
+        redirect(action: "save") 
+    }
 }

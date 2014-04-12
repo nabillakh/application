@@ -575,17 +575,40 @@
 				selectable: true,
 				selectHelper: true,
                                 select: function(start, end, allDay) {
-                                    tab=[];
-                                    bootbox.ajoutEvent("Ajouter un évenement : ", "non", "ok", function(eventInstance) {
-                                        if( eventInstance === null ){
-                                            alert("rien");
+                                    bootbox.ajoutEvent("Ajouter un évenement : ", "non", "ok", function(json){
+                                       
+                                    if( json ){
+                                        
+                                        calendar.fullCalendar('renderEvent',
+						{
+						    title: json.title,
+						    start: json.start,
+						    end: json.end,
+                                                    allDay : false
+						},
+						true // make the event "stick"
+					);
+                                            calendar.fullCalendar('unselect'),
+                                            {
+                                                url: 'http://localhost:8080/application/event/nouveauEvent',
+                                                type: 'POST',
+                                                formulaireType: 'json',
+                                                formulaire: {
+                                                    title: json.title,
+						    start: json.start,
+						    end: json.end,
+                                                },
+                                                error: function () {
+                                                    alert('there was an error while fetching events!');
+                                                },
+                                                        color: 'yellow',
+                                                        textColor: 'black',
+                                                        cache: true
+                                            };
                                         }
                                         else {  
-                                            tab.push(eventInstance);
                                         };
-                                    }
-                                );
-                                    saveEvent(tab); // code en dessous
+                                    });
                               },                                
 				editable: true,
                             });
