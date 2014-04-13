@@ -82,10 +82,28 @@ class EventController {
     
     
     @Transactional
-    def nouveauEvent(Object eventdata) {
-        Event eventInstance = mapper.readValue(eventdata, Event.class)
+    def nouveauEvent() {
+        // recupere en params le json du nouvel event. traduit en joda les dates puis cree l'event dans la bdd        
+        def titre = params.title
+        println(" titre : " + titre)
+        
+        DateTime debut = new DateTime(params.start)
+        DateTime fin = new DateTime(params.end)
+        
+        println("debut : " + debut)
+        
+        println("fin : " + fin)
+        
+        Event eventInstance = new Event()      
+            eventInstance.title = titre
+            eventInstance.startTime = debut.toDate()
+            eventInstance.endTime = fin.toDate()
+           
+        println("fin a partir de l'event: " + eventInstance.endTime) 
+        
+        eventInstance.save()
         
         [eventInstance : eventInstance]
-        redirect(action: "save") 
+        redirect action: "create" 
     }
 }

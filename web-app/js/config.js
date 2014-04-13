@@ -578,7 +578,7 @@
                                     bootbox.ajoutEvent("Ajouter un évenement : ", "non", "ok", function(json){
                                        
                                     if( json ){
-                                        
+                                        // permet d'afficher l'evenement sur l'agenda
                                         calendar.fullCalendar('renderEvent',
 						{
 						    title: json.title,
@@ -587,24 +587,21 @@
                                                     allDay : false
 						},
 						true // make the event "stick"
-					);
-                                            calendar.fullCalendar('unselect'),
-                                            {
+					),
+                                            $.ajax({
                                                 url: 'http://localhost:8080/application/event/nouveauEvent',
                                                 type: 'POST',
-                                                formulaireType: 'json',
-                                                formulaire: {
+                                                format: 'json',
+                                                data: {
                                                     title: json.title,
 						    start: json.start,
 						    end: json.end,
                                                 },
                                                 error: function () {
-                                                    alert('there was an error while fetching events!');
+                                                    alert('pb denvoi du json');
                                                 },
-                                                        color: 'yellow',
-                                                        textColor: 'black',
-                                                        cache: true
-                                            };
+                                            }),
+                                            calendar.fullCalendar('unselect');
                                         }
                                         else {  
                                         };
