@@ -104,6 +104,6 @@ class EventController {
         eventInstance.save()
         
         [eventInstance : eventInstance]
-        redirect action: "create" 
+        redirect action: "list" 
     }
 }

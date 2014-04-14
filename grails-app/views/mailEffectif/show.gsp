@@ -62,10 +62,12 @@
 																	</li>
 																</ul>
 															</div>
-															<g:link  action="Archiver" controller="mailEffectif" onclick="return confirm('Etes vous sure de vouloir envoyer ce message à la corbeille? ');" id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Delete Message </g:link>	
-														  <g:link  action="Favoriser" controller="mailEffectif"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon"></i>  favoris </g:link>
+                                                                                                                        
+														<g:if test="${mailEffectifInstance.archive == false}"><g:link  action="Archiver" controller="mailEffectif" onclick="if(!window.confirm('Voulez-vous Supprimer')) return false;"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Mettre dans la corbeille </g:link></g:if>	
+														<g:if test="${mailEffectifInstance.favoris == false} ${mailEffectifInstance.archive == false}"><g:link  action="Favoriser" controller="mailEffectif"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"> <i class="icon-trash"></i>  favoris </g:link></g:if>
+														<g:if test="${mailEffectifInstance.archive == true}"><g:link  action="delete" controller="mailEffectif" onclick="if(!window.confirm('Voulez-vous Supprimer')) return false;"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Supprimer </g:link></g:if>
 														</div>
-														<div class="message-body" style="height: 600px;">
+                                                                                                                <div class="message-body" style="height: 600px;">
 															<p>${mailEffectifInstance.mail?.message}</p>
 															
 															

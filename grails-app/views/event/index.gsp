@@ -1,5 +1,59 @@
+<style>
 
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	#wrap {
+		width: 1100px;
+		margin: 0 auto;
+		}
+		
+	#external-events {
+		float: left;
+		width: 110px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+		}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+		}
+		
+	.external-event { /* try to mimick the look of a real event */
+		margin: 10px 0;
+		padding: 2px 4px;
+		background: #3366CC;
+		color: #fff;
+		font-size: .85em;
+		cursor: pointer;
+		}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+		}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+		}
+
+	#calendar {
+		float: right;
+		width: 900px;
+		}
+</style>
 <!DOCTYPE html>
+
 
   <head>
 		<meta name="layout" content="main"/>
@@ -26,7 +80,7 @@
 					<!-- end breadcrumb -->
 					
 					<!-- page header -->
-					<h1 id="page-header">Dashboard</h1>	
+					<h1 id="page-header">Agenda</h1>	
 
 					<div class="alert adjusted alert-info">
 						<button class="close" data-dismiss="alert">×</button>
@@ -91,8 +145,16 @@
 													<i class="cus-exclamation"></i>
 													<strong>Helpful Hint:</strong> Did you know you can click on the <strong>Calendar Cell</strong> to add a new event? Try to add an event and see how easy it is!
 												</div>
-												<!-- calnedar container -->
-									        	<div id="calendar-container">
+                                                                                                
+                                                                                                
+                                                                                                
+                                                                                                 <div id='wrap'>
+                                                                        <g:set var="countkanban" value="${1}" /> 
+                                                                                       <kanbans:kanbanmini>
+                                                                                           
+                                                                                       </kanbans:kanbanmini>
+
+									        	<div id="calendar-container" style="weight: 600px; float :left ; text-align: left;  ">
 										        	<div id="calendar-buttons">
 														<div class="btn-group">
 															<a href="javascript:void(0)" class="btn btn-small" id="btn-today">Today</a>
@@ -116,7 +178,7 @@
 													</div>
 										        	<div class="dt-header calender-spacer"></div>
 										        	<div id="calendar"></div>
-									        	</div>
+									        	</div></div></div>
 									        	<!-- end calendar container -->
 									        </div>
 									        

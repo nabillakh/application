@@ -147,6 +147,7 @@ class MailService {
      private messageArchiver(MailEffectif mailEffectifInstance) {
         def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
         mailEffectif.archive = true
+        mailEffectif.favoris = false
         mailEffectif.save flush:true
     }
     

@@ -541,9 +541,11 @@
                                         type: 'POST',
                                         formulaireType: 'json',
                                         formulaire: {
+                                            
                                             start: 'start',
                                             end: 'end',
                                             title: 'title'
+                                          
                                         },
                                 error: function () {
                                     alert('there was an error while fetching events!');
@@ -575,7 +577,7 @@
 				selectable: true,
 				selectHelper: true,
                                 select: function(start, end, allDay) {
-                                    bootbox.ajoutEvent("Ajouter un évenement : ", "non", "ok", function(json){
+                                    bootbox.ajoutEvent("Ajouter un évenement : ", "Annuler", "Ajouter", function(json){
                                        
                                     if( json ){
                                         // permet d'afficher l'evenement sur l'agenda

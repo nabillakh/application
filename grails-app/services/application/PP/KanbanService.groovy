@@ -11,7 +11,29 @@ class KanbanService {
 
     def serviceMethod() {
 
-    }   
+    }  
+   //--- pour la taglib------------- 
+   
+     private Kanban[] afficherKanban() {
+       try { def query = Kanban.whereAny {                
+           
+           }
+        def leskanban = query.list()
+        
+        
+       
+           return leskanban
+        }
+        catch (NullPointerException n){
+            return null
+        }
+    }
+    
+    
+    
+   //---------------------
+    
+    
     // montre les phases auxquelles un kanban va passer
     @Transactional
     OF[] montrerOF(Kanban monKanban) {
