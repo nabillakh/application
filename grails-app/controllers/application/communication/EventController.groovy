@@ -24,8 +24,25 @@ class EventController {
         respond Event.list(params), model:[eventInstanceCount: Event.count(), mesKanbans : mesKanbans]
     }
 
-    def show(Event eventInstance) {
-        respond eventInstance
+    def show = {
+        def eventInstance = Event.get(params.id)
+        
+
+        if (!eventInstance) {
+            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'event.label', default: 'Event'), params.id])}"
+            redirect(action: "index")
+        }
+        else {
+            def model = [eventInstance: eventInstance, occurrenceStart: occurrenceStart, occurrenceEnd: occurrenceEnd]
+
+            if (request.xhr) {
+                render(template: "showPopup", model: model)
+            }
+            else {
+                model
+            }
+        }
+
     }
     
     def list = {

@@ -571,7 +571,9 @@
                         eventMouseout: function(event, jsEvent, view) {
                             $(this).removeClass("active");
                         },
-                                                     
+                                
+                                
+                                            
                                 
                                 
 				selectable: true,
@@ -610,9 +612,12 @@
                                     });
                               },                                
 				editable: true,
+                           
+                                
+                                
                                 
                                 droppable: true, // this allows things to be dropped onto the calendar
-			drop: function(date, allDay) { // this function is called when something is dropped
+                                drop: function(date, allDay) { // this function is called when something is dropped
 			
 				// retrieve the dropped element's stored Event Object
 				var originalEventObject = $(this).data('eventObject');
@@ -635,6 +640,7 @@
                                                 data: {
                                                     title: copiedEventObject.title,
 						    start: copiedEventObject.start,
+                                                    // mettre j+1 si agenda sinon h+2
 						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 24 * 1)),
                                                 },
                                                 error: function () {
