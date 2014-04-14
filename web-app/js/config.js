@@ -610,9 +610,72 @@
                                     });
                               },                                
 				editable: true,
+                                
+                                droppable: true, // this allows things to be dropped onto the calendar
+			drop: function(date, allDay) { // this function is called when something is dropped
+			
+				// retrieve the dropped element's stored Event Object
+				var originalEventObject = $(this).data('eventObject');
+				
+				// we need to copy it, so that multiple events don't have a reference to the same object
+				var copiedEventObject = $.extend({}, originalEventObject);
+				
+				// assign it the date that was reported
+				copiedEventObject.start = date;
+				copiedEventObject.allDay = allDay;
+				
+				// render the event on the calendar
+				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+                            // persistence de l'event    
+                            $.ajax({
+                                                url: 'http://localhost:8080/application/event/nouveauEvent2',
+                                                type: 'POST',
+                                                format: 'json',
+                                                data: {
+                                                    title: copiedEventObject.title,
+						    start: copiedEventObject.start,
+						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 24 * 1)),
+                                                },
+                                                error: function () {
+                                                    alert('pb denvoi du json');
+                                                },
+                                            });
+				
+				// is the "remove after drop" checkbox checked?
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(this).remove();
+				}}
+
                             });
 
 		};
+                
+                	
+		/* initialize the external events
+		-----------------------------------------------------------------*/
+	
+		$('#external-events div.external-event').each(function() {
+		
+			// create an Event Object 
+			// it doesn't need to have a start or end
+			var eventObject = {
+				title: $.trim($(this).text()) // use the element's text as the event title
+			};
+			
+			// store the Event Object in the DOM element so we can get to it later
+			$(this).data('eventObject', eventObject);
+			
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // will cause the event to go back to its
+				revertDuration: 0  //  original position after the drag
+			});
+			
+		});
+
 		
 		/* hide default buttons */
 		$('.fc-header-right, .fc-header-center').hide();
@@ -620,41 +683,12 @@
 	}
 	
 	/* end calendar */
-           /* permet la persisitence de l'evenement et le rechargement du planning */
-        function saveEvent(tab) {
-              var event = new Object(), eventToSave = new Object();
-              eventToSave.EventID = event.id = Math.floor(200 * Math.random());
-              event.start = new Date(tab[3].val());
-              eventToSave.StartDate = tab[3].val();
-              if (tab[4].val() === "") {
-                  event.end = event.start;
-                  eventToSave.EndDate = eventToSave.StartDate;
-              }
-              else {
-                  event.end = new Date(tab[4].val());
-                  eventToSave.EndDate = tab[4].val();
-              }
-              eventToSave.EventName = event.title = tab[0].val();
-              
-            $.ajax({
-                type: "POST",
-                contentType: "application/json",
-                data: "{eventdata:" + JSON.stringify(eventToSave) + "}",
-                url: "http://localhost:8080/application/event/nouveauEvent",
-                dataType: "json",
-                success: function (data) {
-                    $('div[id*=fullcal]').fullCalendar('renderEvent', event, true);
-                },
-                        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            debugger;
-        }
-    });
-        }
-
-
-
-
-
+      
+      
+      
+      
+      
+      
 	/* ---------------------------------------------------------------------- */
 	/*	JarvisGuage
 	/* ---------------------------------------------------------------------- */	

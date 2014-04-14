@@ -149,12 +149,19 @@
                                                                                                 
                                                                                                 
                                                                                                  <div id='wrap'>
-                                                                        <g:set var="countkanban" value="${1}" /> 
-                                                                                       <kanbans:kanbanmini>
-                                                                                           
-                                                                                       </kanbans:kanbanmini>
-
-									        	<div id="calendar-container" style="weight: 600px; float :left ; text-align: left;  ">
+                                                                                                   
+                                                                                                   <div id='external-events'>
+                                                                                                     <h4>Draggable Events</h4>
+                                                                                                     
+                                                                                                     <g:each in="${mesKanbans}" status="i" var="kanbanInstance">
+                                                                                                        <div class='external-event'> ${kanbanInstance.nomKanban} </div>
+                                                                                                       </g:each>
+                                                                                                       
+                                                                                                       <input type='checkbox' id='drop-remove' /> <label for='drop-remove'>remove after drop</label>
+                                                                                                     </p>
+                                                                                                   </div>
+                                                                                                   
+                                                                                                   <div id="calendar-container" style="weight: 600px; float :left ; text-align: left;  ">
 										        	<div id="calendar-buttons">
 														<div class="btn-group">
 															<a href="javascript:void(0)" class="btn btn-small" id="btn-today">Today</a>
@@ -178,7 +185,9 @@
 													</div>
 										        	<div class="dt-header calender-spacer"></div>
 										        	<div id="calendar"></div>
-									        	</div></div></div>
+									        	</div>
+
+                                          
 									        	<!-- end calendar container -->
 									        </div>
 									        

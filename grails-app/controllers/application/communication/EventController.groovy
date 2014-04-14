@@ -12,11 +12,16 @@ import grails.converters.JSON
 @Transactional(readOnly = true) 
 class EventController {
 
+    def kanbanService
+    
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+        // envoi de la liste de kanban
+        def mesKanbans = kanbanService.afficherKanban()
+        
         params.max = Math.min(max ?: 10, 100)
-        respond Event.list(params), model:[eventInstanceCount: Event.count()]
+        respond Event.list(params), model:[eventInstanceCount: Event.count(), mesKanbans : mesKanbans]
     }
 
     def show(Event eventInstance) {
@@ -86,8 +91,8 @@ class EventController {
         // recupere en params le json du nouvel event. traduit en joda les dates puis cree l'event dans la bdd        
         def titre = params.title
         println(" titre : " + titre)
-        
         DateTime debut = new DateTime(params.start)
+        
         DateTime fin = new DateTime(params.end)
         
         println("debut : " + debut)
@@ -106,4 +111,32 @@ class EventController {
         [eventInstance : eventInstance]
         redirect action: "list" 
     }
+    
+    @Transactional
+    def nouveauEvent2() {
+        // recupere en params le json du kanban planifie. traduit en joda les dates puis cree l'event dans la bdd        
+        def titre = params.title
+        println(" titre : " + titre)
+        DateTime debut = new DateTime(new Date(params.start))
+        
+        DateTime fin = new DateTime(new Date(params.end))
+        
+        println("debut : " + debut)
+        
+        println("fin : " + fin)
+        
+        Event eventInstance = new Event()      
+            eventInstance.title = titre
+            eventInstance.startTime = debut.toDate()
+            eventInstance.endTime = fin.toDate()
+           
+        println("fin a partir de l'event: " + eventInstance.endTime) 
+        
+        eventInstance.save()
+        
+        [eventInstance : eventInstance]
+        redirect action: "list" 
+    }
+    
+    
 }
