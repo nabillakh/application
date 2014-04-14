@@ -26,6 +26,10 @@ class MailService {
             return null
         }
     }
+    
+    
+    
+    
     //Corbeille--------------------------
        private MailEffectif[] afficherMailArchiver() {
         def per = Effectif.get(springSecurityService.principal.id)
@@ -133,6 +137,22 @@ class MailService {
          return mailNonLu
         
      }
+    
+    
+        
+//--------- liste des mails-------------
+   private Mail[] mailHistoriques() {
+       def listeMailEffectif = afficherMail()
+       // le * permet de faire boucler la liste
+       def listeMailInbox=listeMailEffectif*.mail // les classer par date de creation
+       // faire une boucle sur cette liste : si mail.mailPrecedent non null on ajoute le mailPrecedent à une nouvelle liste
+       // et on le supprime de listeMailInbox
+        
+        
+       return listeMailInbox
+   }
+    
+    
      //-------- id du user connecté------------------------------------
     private lookupCurrentPerson() {
         Effectif.get(springSecurityService.principal.id)

@@ -9,10 +9,13 @@ class Mail {
     Effectif author
     static hasMany = [recepteur:MailEffectif] 
     Date dateCreated = new Date()
+    
+    Mail mailPrecedent
 
     static constraints = {
         recepteur nullable:true
         objet nullable:true
+        mailPrecedent nullable : true
     }
 
   
