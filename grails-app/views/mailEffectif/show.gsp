@@ -72,7 +72,7 @@
 														</div>
                                                                                                  <div style="display: none;" id='ReplayALL' >
                                                                                                                     <g:form url="[action:'Relier',controller:'Mail']">
-                                                                                                                        <g:hiddenField name="mailPrecedent" value="${mailEffectifInstance.mail.id}" />
+                                                                                                                        <g:hiddenField name="conversation" value="${mailEffectifInstance.mail.conversation.id}" />
                                                                                                      A :</br> <input name="recepteur" value="${mailEffectifInstance.mail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">
                                                                                                                         <g:hiddenField name="objet"  value="${mailEffectifInstance.mail?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"/>              
                                                                                                                         <textArea id="wysihtml5" name="message"   value="${mailInstance?.message}"  placeholder="Enter text ..."  style="width: 80%; height: 100px;" ></textArea>               
@@ -83,7 +83,7 @@
                                                                                                  </div>
                                                                                                    <div style="display: none;" id='Replay' >
                                                                                                                     <g:form url="[action:'Relier',controller:'Mail']">
-                                                                                                                        <g:hiddenField name="mailPrecedent" value="${mailEffectifInstance.mail.id}" />
+                                                                                                                        <g:hiddenField name="conversation" value="${mailEffectifInstance.mail.conversation.id}" />
                                                                                                      A :</br> <input name="recepteur" value="${mailEffectifInstance.mail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">
                                                                                                                         <g:hiddenField name="objet"  value="${mailEffectifInstance.mail?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"/>              
                                                                                                                         <textArea id="wysihtml5" name="message"   value="${mailInstance?.message}"  placeholder="Enter text ..."  style="width: 80%; height: 100px;" ></textArea>               

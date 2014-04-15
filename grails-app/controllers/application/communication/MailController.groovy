@@ -45,8 +45,14 @@ class MailController {
       def monMessage = params.message
       def monObjet = params.objet
       def mail = new Mail(message : monMessage, author : author, objet : monObjet).save()
-      mail.mailPrecedent = mail
-      mail.save flush:true
+      //---creation de la conversation pout tout un nouveau message--------
+      def conversation = new Conversation(mails : mail).save()
+      //------------------------------------------------------------------
+      //----mettre l'id de la conversation dans le mail--------
+      mail.conversation = conversation
+        mail.save flush:true
+      //---------------
+      
       def lu = false
       def archive = false 
       def favoris = false
@@ -61,9 +67,10 @@ class MailController {
     def Relier() {
       def authorR = mailService.lookupCurrentPerson()
       def monMessageR = params.message
-      def monmailprecedentR = params.mailprecedent
+      //------attribuer l'id de la conversation au nouveau mail-----
+      def maconversationR = params.conversation
       def monObjetR = params.objet
-      def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, mailprecedent: monmailprecedentR).save()
+      def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, conversation: maconversationR).save()
       def lu = false
       def archive = false 
       def favoris = false
