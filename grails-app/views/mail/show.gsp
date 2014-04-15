@@ -34,7 +34,7 @@
 								        <!-- content goes here -->
 											<div class="inbox-body" id="inbox-body-js">
 												<div class="inbox-control-panel">
-												
+												<g:link  action="create" controller="mail" class="btn medium btn-primary pull-right"><i class="icon-star"></i>  Nouveau message </g:link>
 												</div>
 												<div class="inbox-body-content" id="inbox-loading-panel-js">
 													<h1 class="message-title">Objet :  ${mailInstance.objet} </h1>

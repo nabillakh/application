@@ -16,7 +16,9 @@ class Mail {
         recepteur nullable:true
         objet nullable:true
         mailPrecedent nullable : true
+      
     }
+    
 
   
 }

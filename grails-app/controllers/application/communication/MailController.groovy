@@ -45,6 +45,8 @@ class MailController {
       def monMessage = params.message
       def monObjet = params.objet
       def mail = new Mail(message : monMessage, author : author, objet : monObjet).save()
+      mail.mailPrecedent = mail
+      mail.save flush:true
       def lu = false
       def archive = false 
       def favoris = false
@@ -55,6 +57,25 @@ class MailController {
         redirect action:'index'
 
     }
+   //--------- Replay ----------------- 
+    def Relier() {
+      def authorR = mailService.lookupCurrentPerson()
+      def monMessageR = params.message
+      def monmailprecedentR = params.mailprecedent
+      def monObjetR = params.objet
+      def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, mailprecedent: monmailprecedentR).save()
+      def lu = false
+      def archive = false 
+      def favoris = false
+      params.recepteur.each()  {user ->
+          def monMailEffectif = new MailEffectif(mail:mailR, recepteur:user, lu:lu, archive:archive, favoris:favoris ).save()
+      }
+      
+        redirect action:'index'
+
+    }
+    
+    //-------------------------------------
 
     
     def save2(Mail mailInstance) {

@@ -34,7 +34,7 @@
 								        <!-- content goes here -->
 											<div class="inbox-body" id="inbox-body-js">
 												<div class="inbox-control-panel">
-													
+												<g:link  action="create" controller="mail" class="btn medium btn-primary pull-right"><i class="icon-star"></i>  Nouveau message </g:link>	
 												</div>
 												<div class="inbox-body-content" id="inbox-loading-panel-js">
 													<h2 class="message-title">Objet :  ${mailEffectifInstance.mail?.objet} </h2>
@@ -44,11 +44,11 @@
 													<div class="message-container"  >
 														<div class="message-control-panel">
 															<div class="btn-group">
-																<a class="btn btn-primary medium" href="javascript:void(0);"><i class="icon-reply"></i> Reply</a>
+																<a class="btn btn-primary medium" href='javascript: Replay()'><i class="icon-reply"></i> Reply</a>
 																<a class="btn btn-primary medium dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
 																<ul class="dropdown-menu btn-small">
 																	<li>
-																		<a href="javascript:void(0);"><i class="cus-arrow-undo"></i> Reply All</a>
+																		<a href='javascript: ReplayALL()'><i class="cus-arrow-undo"></i> Reply All</a>
 																	</li>
 																	<li>
 																		<a href="javascript:void(0);"><i class="cus-envelope"></i> Mark as unread</a>
@@ -67,17 +67,38 @@
 														<g:if test="${mailEffectifInstance.favoris == false} ${mailEffectifInstance.archive == false}"><g:link  action="Favoriser" controller="mailEffectif"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"> <i class="icon-trash"></i>  favoris </g:link></g:if>
 														<g:if test="${mailEffectifInstance.archive == true}"><g:link  action="delete" controller="mailEffectif" onclick="if(!window.confirm('Voulez-vous Supprimer')) return false;"  id="${mailEffectifInstance.id}" class="btn medium btn-primary pull-right"><i class="icon-trash"></i>  Supprimer </g:link></g:if>
 														</div>
-                                                                                                                <div class="message-body" style="height: 600px;">
+                                                                                                                <div class="message-body" style="height: 100px;">
 															<p>${mailEffectifInstance.mail?.message}</p>
-															
-															
-															
-															
 														</div>
-													</div>
+                                                                                                 <div style="display: none;" id='ReplayALL' >
+                                                                                                                    <g:form url="[action:'Relier',controller:'Mail']">
+                                                                                                                        <g:hiddenField name="mailPrecedent" value="${mailEffectifInstance.mail.id}" />
+                                                                                                     A :</br> <input name="recepteur" value="${mailEffectifInstance.mail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">
+                                                                                                                        <g:hiddenField name="objet"  value="${mailEffectifInstance.mail?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"/>              
+                                                                                                                        <textArea id="wysihtml5" name="message"   value="${mailInstance?.message}"  placeholder="Enter text ..."  style="width: 80%; height: 100px;" ></textArea>               
+                                                                                                                        <fieldset class="buttons">
+                                                                                                                        <g:submitButton name="create" controller="Mail" class="btn medium btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                                                                                                                        </fieldset>                      
+                                                                                                                     </g:form>
+                                                                                                 </div>
+                                                                                                   <div style="display: none;" id='Replay' >
+                                                                                                                    <g:form url="[action:'Relier',controller:'Mail']">
+                                                                                                                        <g:hiddenField name="mailPrecedent" value="${mailEffectifInstance.mail.id}" />
+                                                                                                     A :</br> <input name="recepteur" value="${mailEffectifInstance.mail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">
+                                                                                                                        <g:hiddenField name="objet"  value="${mailEffectifInstance.mail?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"/>              
+                                                                                                                        <textArea id="wysihtml5" name="message"   value="${mailInstance?.message}"  placeholder="Enter text ..."  style="width: 80%; height: 100px;" ></textArea>               
+                                                                                                                        <fieldset class="buttons">
+                                                                                                                        <g:submitButton name="create" controller="Mail" class="btn medium btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                                                                                                                        </fieldset>                      
+                                                                                                                     </g:form>
+                                                                                                 </div>
+													
+                                                                                                        
+                                                                                                        </div>
 												</div>
-												
+                                                                                                              
 											</div>
+                                                                                        
 										                           <div class="inbox-menu">
                                                                           <div class="inbox-control-panel">
                                                                             
@@ -100,9 +121,26 @@
 					</div>		
 				</div>
 				<!-- end main content -->
-			
-				
-							
+<!-- ---------------------------------------------------------------------------- -->                                                                   
+ <script>
+function ReplayALL(){
+		if(document.getElementById('ReplayALL').style.display == 'none'){
+    	document.getElementById('ReplayALL').style.display = 'block';
+  		}
+  		else {
+    	document.getElementById('ReplayALL').style.display = 'none';
+		}
+}
+function Replay(){
+if(document.getElementById('Replay').style.display == 'none'){
+    	document.getElementById('Replay').style.display = 'block';
+  		}
+  		else {
+    	document.getElementById('Replay').style.display = 'none';
+		}
+}
+</script>			
+ <!-- ---------------------------------------------------------------------------- -->   
 					
 				
 				
