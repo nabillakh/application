@@ -35,7 +35,7 @@
 									    <!-- wrap div -->
 									    
             							
-								        <div class="inner-spacer"> 
+								       
 								        <!-- content goes here -->
 											<div class="inbox-body" id="inbox-body-js">
 												<div class="inbox-control-panel">
@@ -48,16 +48,23 @@
                                                                                                       <div>
 
                                                                                                         <div class="inner-spacer"> 
+                                                                                                            
+                                                                                                            
+                                                                                                               
+                                                                                                    
+                                                                                                       
+                                                                                                                                                    
                                                                                                           <!-- content -->
                                                                                                           <g:each in="${mesConversations}" status="i" var="mesConversationsInstance">
-                                                                                                          <div class="accordion" id="accordion1">
-                                                                                                            <div class="accordion-group">
-                                                                                                              <div class="accordion-heading">
-                                                                                                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse${i}">
-                                                                                                                  <i class="icon-plus-sign"></i> ${mesConversationsInstance.id} </a>
-                                                                                                              </div>
+                                                                                                          <div class="alert alert-info adjusted alert-block" style=" margin: 0px;">
+											<p>
+											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username} <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}
+                                                                                        </p>
+											
                                                                                                               
-                                                                                                              <!-- gerer ce bout de code sous forme de taglib pour gerer la condition -->
+                                                                                                             
+                                                                                                              
+                                                                                                              <!-- gerer ce bout de code sous forme de taglib pour gerer la condition
                                                                                                               <div id="collapse${i}" class="accordion-body collapse" style="height: 0px; ">
                                                                                                                 <g:each in="${mesEffectifsMails}" status="j" var="mailEffectifInstance">
                                                                                                                   <g:if test = "${mesConversations.mails.contains(mailEffectifInstance.mail)}" >
@@ -65,16 +72,14 @@
                                                                                                                <g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  ${fieldValue(bean: mailEffectifInstance, field: "mail.message")} </g:link>
                                                                                                                 </div>
                                                                                                                   </g:if>
-                                                                                                                 </g:each>
-                                                                                                              </div>
-                                                                                                            </div>
-                                                                                                          </div>
-                                                                                                          
+                                                                                                                 </g:each>    -->
+                                                                                                              
+                                                                                                     </div>     
                                                                                                     </g:each>
                                                                                                             
                                                                                                             
                                                                                                           <!-- end content -->	
-                                                                                                        </div>
+                                                                                                      
 
                                                                                                       </div>
                                                                                                       <!-- end widget div -->

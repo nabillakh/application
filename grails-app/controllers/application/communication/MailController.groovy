@@ -48,7 +48,8 @@ class MailController {
       def maConversation = new Conversation().save(flush:true)
       // mettre la conversation a la creation du mail
       def mail = new Mail(conversation : maConversation ,message : monMessage, author : author, objet : monObjet).save(flush:true)
-      
+       maConversation.lastmail = mail
+       maConversation.save flush:true
       def lu = false
       def archive = false 
       def favoris = false
@@ -67,6 +68,8 @@ class MailController {
       def maconversationR = params.conversation
       def monObjetR = params.objet
       def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, conversation: maconversationR).save()
+       mailR.conversation.lastmail = mailR
+       mailR.save flush:true
       def lu = false
       def archive = false 
       def favoris = false
