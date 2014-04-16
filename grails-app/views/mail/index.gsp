@@ -46,22 +46,14 @@
 
                                                                                                         <div class="inner-spacer"> 
                                                                                                           <!-- content -->
-                                                                                                          <g:each in="${mesEffectifsMails}" status="i" var="mailEffectifInstance">
+                                                                                                          <g:each in="${mesConversations}" status="i" var="mesConversationsInstance">
                                                                                                           <div class="accordion" id="accordion1">
                                                                                                             <div class="accordion-group">
                                                                                                               <div class="accordion-heading">
                                                                                                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse${i}">
-                                                                                                                  <i class="icon-plus-sign"></i> ${mailEffectifInstance.mail.objet} </a>
+                                                                                                                  <i class="icon-plus-sign"></i> ${mesConversationsInstance.id} </a>
                                                                                                               </div>
-                                                                                                              <div id="collapse${i}" class="accordion-body collapse" style="height: 0px; ">
-                                                                                                                <div class="accordion-inner"> 
-                                                                                                               <g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  ${fieldValue(bean: mailEffectifInstance, field: "mail.message")} </g:link>                                                                                                                
-                                                                                                                
-                                                                                                                ${mailEffectifInstance.lu}
-                                                                                                                ${mailEffectifInstance.archive}
-                                                                                                               favoris : ${mailEffectifInstance.favoris}
-                                                                                                                </div>
-                                                                                                              </div>
+                                                                                                             
                                                                                                             </div>
                                                                                                           </div>
                                                                                                           

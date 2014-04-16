@@ -16,7 +16,7 @@ class MailService {
     private MailEffectif[] afficherMail() {
         def per = Effectif.get(springSecurityService.principal.id)
         try { def query = MailEffectif.whereAny {                
-            (recepteur { username == per.username }) && (archive == false)
+            ( (recepteur { username == per.username })||(mail.author { username == per.username })) && (archive == false)
            }
         def leMail = query.list(max : 10,sort : "dateCreated",order:"desc")
         

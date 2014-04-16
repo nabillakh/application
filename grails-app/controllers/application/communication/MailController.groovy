@@ -19,7 +19,7 @@ class MailController {
        def mesEffectifsMails = mailService.afficherMail()
        def mesMails = mailService.mailInbox()
        def mesMailsSent = mailService.mailenvoyer()
-     
+       def mesConversations = mailService.mesConversations()
        def mesEffectifMailsArchiver = mailService.afficherMailArchiver() 
        def mesMailsArchiver = mailService.mailArchiver()
        def mailNonLu = mailService.mailnLu(mesEffectifsMails)
@@ -27,7 +27,7 @@ class MailController {
        
        // params.max = Math.min(max ?: 10, 100)
        // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
-        [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu]
+        [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu, mesConversations : mesConversations ]
     }
 
     def show(Mail mailInstance) {
