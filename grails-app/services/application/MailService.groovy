@@ -89,6 +89,7 @@ class MailService {
     
 //------------------------------------------------    
     
+ 
     
 //--------- liste des mails-------------
    private Mail[] mailInbox() {
@@ -98,6 +99,21 @@ class MailService {
        return listeMailInbox
    }
    
+       
+//--------- liste des conversations a partir de la liste de mail-------------
+
+    private Conversation[] mesConversations() {
+        def listeMail = mailInbox()
+        def mesConversations = []
+        listeMail.each() {mail -> 
+            mesConversations.add(mail.conversation)
+        }
+        mesConversations.unique()
+        return mesConversations
+    }
+    
+    
+    
     private Mail[] mailArchiver() {
        def listeMailEffectifArchiver = afficherMailArchiver()
        // le * permet de faire boucler la liste

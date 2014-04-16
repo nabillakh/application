@@ -43,8 +43,8 @@ class BootStrap {
       EffectifDroit.create testUser2, adminRole, true
                 
         maCompetence.save(failOnError: true)
-        
-        def monMail = new Mail(author : testUser2, message:"okokokok", objet : "objet n1").save(failOnError: true)
+        def maConversation = new Conversation().save(flush:true)
+        def monMail = new Mail(conversation : maConversation, author : testUser2, message:"okokokok", objet : "objet n1").save(failOnError: true,flush: true)
         def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser, lu: false, archive: false, favoris: false ).save(failOnError: true,flush: true)
                 
                 

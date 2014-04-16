@@ -15,8 +15,14 @@ class Mail {
     static constraints = {
         recepteur nullable:true
         objet nullable:true
-        mailPrecedent nullable : true
-      
+        conversation nullable : true
+    }
+    
+    def beforeInsert = {
+    }
+    
+    transient afterInsert = {
+        
     }
     
 

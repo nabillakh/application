@@ -44,14 +44,11 @@ class MailController {
       def author = mailService.lookupCurrentPerson()
       def monMessage = params.message
       def monObjet = params.objet
-      def mail = new Mail(message : monMessage, author : author, objet : monObjet).save()
       //---creation de la conversation pout tout un nouveau message--------
-      def conversation = new Conversation(mails : mail).save()
-      //------------------------------------------------------------------
-      //----mettre l'id de la conversation dans le mail--------
-      mail.conversation = conversation
-        mail.save flush:true
-      //---------------
+      def maConversation = new Conversation().save(flush:true)
+      // mettre la conversation a la creation du mail
+      def mail = new Mail(conversation : maConversation ,message : monMessage, author : author, objet : monObjet).save(flush:true)
+      
       
       def lu = false
       def archive = false 
@@ -63,7 +60,7 @@ class MailController {
         redirect action:'index'
 
     }
-   //--------- Replay ----------------- 
+   //--------- Reply ----------------- 
     def Relier() {
       def authorR = mailService.lookupCurrentPerson()
       def monMessageR = params.message
