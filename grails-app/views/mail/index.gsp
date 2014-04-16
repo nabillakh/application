@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<%@ page import="application.MailService" %>
+<%
+    def myService = grailsApplication.classLoader.loadClass('application.MailService').newInstance()
+%>
   <head>
 		<meta name="layout" content="main"/>
 		<title>Sysprod</title>
@@ -53,7 +56,17 @@
                                                                                                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse${i}">
                                                                                                                   <i class="icon-plus-sign"></i> ${mesConversationsInstance.id} </a>
                                                                                                               </div>
-                                                                                                             
+                                                                                                              
+                                                                                                              <!-- gerer ce bout de code sous forme de taglib pour gerer la condition -->
+                                                                                                              <div id="collapse${i}" class="accordion-body collapse" style="height: 0px; ">
+                                                                                                                <g:each in="${mesEffectifsMails}" status="j" var="mailEffectifInstance">
+                                                                                                                  <g:if test = "${mesConversations.mails.contains(mailEffectifInstance.mail)}" >
+                                                                                                                <div class="accordion-inner"> 
+                                                                                                               <g:link  controller="MailEffectif"  action="show"  id="${mailEffectifInstance.id}">  ${fieldValue(bean: mailEffectifInstance, field: "mail.message")} </g:link>
+                                                                                                                </div>
+                                                                                                                  </g:if>
+                                                                                                                 </g:each>
+                                                                                                              </div>
                                                                                                             </div>
                                                                                                           </div>
                                                                                                           

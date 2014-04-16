@@ -44,11 +44,10 @@ class MailController {
       def author = mailService.lookupCurrentPerson()
       def monMessage = params.message
       def monObjet = params.objet
-      //---creation de la conversation pout tout un nouveau message--------
+      //---creation de la conversation pour un nouveau message--------
       def maConversation = new Conversation().save(flush:true)
       // mettre la conversation a la creation du mail
       def mail = new Mail(conversation : maConversation ,message : monMessage, author : author, objet : monObjet).save(flush:true)
-      
       
       def lu = false
       def archive = false 

@@ -111,8 +111,20 @@ class MailService {
         mesConversations.unique()
         return mesConversations
     }
-    
-    
+
+//--------- liste des mailsEffectifs par conversation a partir de la liste de mailEffectif-------------    
+    private listeMailEffectif(Conversation conversation, MailEffectif[] maListe) {
+        def mesMailsEffectifs = []
+        conversation.mails.each() {mail ->
+            maListe.each() {mailEffectif ->
+            if(mailEffectif.mail == mail) {
+                mesMailsEffectifs << mailEffectif
+            }
+                
+            }
+        }
+        return mesMailsEffectifs
+    }
     
     private Mail[] mailArchiver() {
        def listeMailEffectifArchiver = afficherMailArchiver()
@@ -192,6 +204,7 @@ class MailService {
         mailEffectif.favoris = true
         mailEffectif.save flush:true
     }
+    
     
     
 }

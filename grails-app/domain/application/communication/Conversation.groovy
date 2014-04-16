@@ -5,7 +5,7 @@ class Conversation {
     
     
     static hasMany = [mails:Mail] 
-    Date lastDate 
+    Date lastDate = new Date()
     
     
     static constraints = {
@@ -14,17 +14,9 @@ class Conversation {
     
     
     def beforeInsert = {
-        lastDate = new Date()
-        return true
     }
     
     def beforeUpdate = {
-        mails.each { mail -> 
-            if(mail.dateCreated >= lastDate) {
-                lastDate = mail.dateCreated
-            }
-        }
-        return true
     }
     
     
