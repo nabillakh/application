@@ -39,7 +39,7 @@
 								        <!-- content goes here -->
 											<div class="inbox-body" id="inbox-body-js">
 												<div class="inbox-control-panel">
-                                                                                                  <g:link  action="create" controller="mail" class="btn medium btn-primary pull-right"><i class="icon-star"></i>  Nouveau message </g:link>
+												<g:link  action="create" controller="mail" class="btn medium btn-primary pull-right"><i class="icon-star"></i>  Nouveau message </g:link>
 												</div>
                                                                                           
                                                                                                     <div class="jarviswidget" id="widget-id-4">
@@ -57,8 +57,9 @@
                                                                                                           <!-- content -->
                                                                                                           <g:each in="${mesConversations}" status="i" var="mesConversationsInstance">
                                                                                                           <div class="alert alert-info adjusted alert-block" style=" margin: 0px;">
+											 <g:link  controller="Mail"  action="ShowConversation"  id="${mesConversationsInstance.id}">   
 											<p>
-											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username} <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}
+											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username} <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}</g:link>
                                                                                         </p>
 											
                                                                                                               
@@ -81,12 +82,12 @@
                                                                                                           <!-- end content -->	
                                                                                                       
 
-                                                                                                      </div>
+                                                                                                      
                                                                                                       <!-- end widget div -->
-                                                                                                    </div>
+                                                                                                  
 
                                                                                                     <!-- ajouter par NL -->
-                                                                                                </div>
+                                                                                               
                                                                          <g:set var="listcompteur" value="${1}" />  
                                                                             <messagerie:listMessagerie>
                                                                             </messagerie:listMessagerie>

@@ -33,7 +33,17 @@ class MailController {
     def show(Mail mailInstance) {
         respond mailInstance
     }
+    //_______________show Conversation ___________________
 
+    
+   def ShowConversation (Conversation conversationInstance ){
+       def Listmail = mailService.AfficherConversation(conversationInstance)
+       [Listmail : Listmail ,  conversationInstance : conversationInstance]
+       
+   }
+    
+    //______________________________________________________
+    
     def create() {
          
         respond new Mail(params)

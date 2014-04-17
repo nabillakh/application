@@ -16,7 +16,7 @@ class MailService {
     private MailEffectif[] afficherMail() {
         def per = Effectif.get(springSecurityService.principal.id)
         try { def query = MailEffectif.whereAny {                
-            ( (recepteur { username == per.username })||(mail.author { username == per.username })) && (archive == false)
+            (recepteur { username == per.username }) && (archive == false)
            }
         def leMail = query.list(max : 10,sort : "dateCreated",order:"desc")
         
@@ -109,8 +109,33 @@ class MailService {
             mesConversations.add(mail.conversation)
         }
         mesConversations.unique()
+       
         return mesConversations
     }
+    
+    //____________________ Liste des mails à afficher dans une conversation en entrée _____________
+    private AfficherConversation(Conversation conversationInstance) {
+        def lesmail = []
+          def mailIN = mailInbox()
+          def mailOUT =  mailenvoyer()
+          def listeMail =  []
+          listeMail.addAll(mailIN)
+          listeMail.addAll(mailOUT)
+         
+          
+          def maConversation = Conversation.get( conversationInstance.id)
+         listeMail.each() { mail ->
+        if(( mail.conversation == maConversation ) && (!lesmail.contains(mail))){
+             lesmail.add(mail)     }
+            
+         }
+        lesmail.sort{a,b-> b.dateCreated<=>a.dateCreated}
+
+        return lesmail
+    }
+    
+    
+    //______________________________________________________________________________
 
 //--------- liste des mailsEffectifs par conversation a partir de la liste de mailEffectif-------------    
     private listeMailEffectif(Conversation conversation, MailEffectif[] maListe) {
