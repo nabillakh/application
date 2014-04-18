@@ -1,52 +1,88 @@
 if ($('#chartdiv').length) {
 	var chartData = [{
 		date : new Date(2012, 0, 1),
-		sales : 2000,
-		duration : 408
+		developpement : 108,
+                commercial : 54,
+                management : 54,
+                veille : 27,
+		capacite : 270
 	}, {
 		date : new Date(2012, 0, 2),
-		sales : 371,
-		duration : 482
+		developpement : 110,
+                commercial : 60,
+                management : 51,
+                veille : 27,
+		capacite : 255
 	}, {
 		date : new Date(2012, 0, 3),
-		sales : 433,
-		duration : 562
+		developpement : 150,
+                commercial : 83,
+                management : 63,
+                veille : 45,
+		capacite : 315
 	}, {
 		date : new Date(2012, 0, 4),
-		sales : 345,
-		duration : 379
+		developpement : 105,
+                commercial : 45,
+                management : 50,
+                veille : 27,
+		capacite : 255
 	}, {
 		date : new Date(2012, 0, 5),
-		sales : 480,
-		duration : 501
+		developpement : 146,
+                commercial : 51,
+                management : 50,
+                veille : 47,
+		capacite : 315
 	}, {
 		date : new Date(2012, 0, 6),
-		sales : 386,
-		duration : 443
+		developpement : 150,
+                commercial : 63,
+                management : 70,
+                veille : 57,
+		capacite : 300
 	}, {
 		date : new Date(2012, 0, 7),
-		sales : 348,
-		duration : 405
+		developpement : 61,
+                commercial : 44,
+                management : 45,
+                veille : 43,
+		capacite : 180
 	}, {
 		date : new Date(2012, 0, 8),
-		sales : 238,
-		duration : 309
+		developpement : 59,
+                commercial : 39,
+                management : 22,
+                veille : 18,
+		capacite : 150
 	}, {
 		date : new Date(2012, 0, 9),
-		sales : 218,
-		duration : 287
+		developpement : 112,
+                commercial : 45,
+                management : 50,
+                veille : 27,
+		capacite : 285
 	}, {
 		date : new Date(2012, 0, 10),
-		sales : 349,
-		duration : 485
+		developpement : 149,
+                commercial : 49,
+                management : 58,
+                veille : 23,
+		capacite : 300
 	}, {
 		date : new Date(2012, 0, 11),
-		sales : 603,
-		duration : 890
+		developpement : 175,
+                commercial : 69,
+                management : 39,
+                veille : 27,
+		capacite : 270
 	}, {
 		date : new Date(2012, 0, 12),
-		sales : 534,
-		duration : 810
+		developpement : 125,
+                commercial : 43,
+                management : 38,
+                veille : 27,
+		capacite : 225
 	}];
 
 	var chart;
@@ -68,7 +104,8 @@ if ($('#chartdiv').length) {
 		categoryAxis.minPeriod = "DD";
 		// our data is daily, so we set minPeriod to DD
 		categoryAxis.autoGridCount = false;
-		categoryAxis.gridCount = 50;
+		categoryAxis.min = 0;
+		categoryAxis.max = 300;
 		categoryAxis.gridAlpha = 0;
 		categoryAxis.gridColor = "#000000";
 		categoryAxis.axisColor = "#000";
@@ -87,63 +124,97 @@ if ($('#chartdiv').length) {
 			format : 'YYYY'
 		}];
 
-		// as we have data of different units, we create two different value axes
-		// Duration value axis
-		var durationAxis = new AmCharts.ValueAxis();
-		durationAxis.title = "duration";
-		durationAxis.gridAlpha = 0.05;
-		durationAxis.axisAlpha = 0;
-		durationAxis.inside = true;
-		// the following line makes this value axis to convert values to duration
-		// it tells the axis what duration unit it should use. mm - minute, hh - hour...
-		durationAxis.duration = "mm";
-		durationAxis.durationUnits = {
-			DD : "d. ",
-			hh : "h ",
-			mm : "min",
-			ss : ""
-		};
-		chart.addValueAxis(durationAxis);
+		
 
-		// sales value axis
+		// charge value axis
 		var salesAxis = new AmCharts.ValueAxis();
-		salesAxis.title = "sales";
+		salesAxis.title = "Charge planifiée (jour)";
 		salesAxis.gridAlpha = 0;
-		salesAxis.position = "right";
 		salesAxis.inside = true;
-		salesAxis.unit = " sales";
+		salesAxis.mininimum = 0;
+		salesAxis.maximum = 400;
+		salesAxis.unit = " j";
+                salesAxis.stackType ="regular";
 		salesAxis.axisAlpha = 0;
 		chart.addValueAxis(salesAxis);
 
 		// GRAPHS
 		// duration graph
 		var durationGraph = new AmCharts.AmGraph();
-		durationGraph.title = "duration";
-		durationGraph.valueField = "duration";
+		durationGraph.title = "Capacité planifiée";
+		durationGraph.valueField = "capacite";
 		durationGraph.type = "line";
-		durationGraph.valueAxis = durationAxis;
+		durationGraph.valueAxis = salesAxis;
 		// indicate which axis should be used
 		durationGraph.lineColor = "#CC0000";
-		durationGraph.balloonText = "[[value]]";
+		durationGraph.balloonText = "[[title]] : [[value]] j";
 		durationGraph.lineThickness = 1;
-		durationGraph.legendValueText = "[[value]]";
+		durationGraph.legendValueText = "[[value]] j";
 		durationGraph.bullet = "square";
 		chart.addGraph(durationGraph);
 
-		// sales graph
+		// developpement graph
 		var salesGraph = new AmCharts.AmGraph();
-		salesGraph.valueField = "sales";
-		salesGraph.title = "sales";
+		salesGraph.valueField = "developpement";
+		salesGraph.title = "developpement";
 		salesGraph.type = "column";
 		salesGraph.fillAlphas = 0.3;
-		salesGraph.fillColors = ["#00438D", "#006AAC"];
+		salesGraph.fillColors = ["#0000FF", "#0000FF"];
 		salesGraph.valueAxis = salesAxis;
 		// indicate which axis should be used
-		salesGraph.balloonText = "[[value]] sales";
-		salesGraph.legendValueText = "[[value]] sales";
-		salesGraph.lineColor = "#739BC5";
+		salesGraph.balloonText = "[[title]] : [[value]] j";
+		salesGraph.legendValueText = "[[value]] j";
+		salesGraph.lineColor = "#0000FF";
 		salesGraph.lineAlpha = .7;
 		chart.addGraph(salesGraph);
+                
+                
+		// management graph
+		var salesGraph = new AmCharts.AmGraph();
+		salesGraph.valueField = "management";
+		salesGraph.title = "management";
+		salesGraph.type = "column";
+		salesGraph.fillAlphas = 0.3;
+		salesGraph.fillColors = ["#F08080", "#F08080"];
+		salesGraph.valueAxis = salesAxis;
+		// indicate which axis should be used
+		salesGraph.balloonText = "[[title]] : [[value]] j";
+		salesGraph.legendValueText = "[[value]] j";
+		salesGraph.lineColor = "#F08080";
+		salesGraph.lineAlpha = .7;
+		chart.addGraph(salesGraph);
+                
+                // veille graph
+		var salesGraph = new AmCharts.AmGraph();
+		salesGraph.valueField = "veille";
+		salesGraph.title = "veille";
+		salesGraph.type = "column";
+		salesGraph.fillAlphas = 0.3;
+		salesGraph.fillColors = ["#32CD32", "#32CD32"];
+		salesGraph.valueAxis = salesAxis;
+		// indicate which axis should be used
+		salesGraph.balloonText = "[[title]] : [[value]] j";
+		salesGraph.legendValueText = "[[value]] j";
+		salesGraph.lineColor = "#32CD32";
+		salesGraph.lineAlpha = .7;
+		chart.addGraph(salesGraph);
+                
+
+                // commercial graph
+		var salesGraph = new AmCharts.AmGraph();
+		salesGraph.valueField = "commercial";
+		salesGraph.title = "commercial";
+		salesGraph.type = "column";
+		salesGraph.fillAlphas = 0.3;
+		salesGraph.fillColors = ["#FF00FF", "#FF00FF"];
+		salesGraph.valueAxis = salesAxis;
+		// indicate which axis should be used
+		salesGraph.balloonText = "[[title]] : [[value]] j";
+		salesGraph.legendValueText = "[[value]] j";
+		salesGraph.lineColor = "#FF00FF";
+		salesGraph.lineAlpha = .7;
+		chart.addGraph(salesGraph);
+                
 
 		// CURSOR
 		var chartCursor = new AmCharts.ChartCursor();
@@ -155,8 +226,8 @@ if ($('#chartdiv').length) {
 		// LEGEND
 		var legend = new AmCharts.AmLegend();
 		legend.bulletType = "round";
-		legend.equalWidths = false;
-		legend.valueWidth = 120;
+		legend.equalWidths = true;
+		legend.valueWidth = 30;
 		legend.color = "#000000";
 		chart.addLegend(legend);
 
