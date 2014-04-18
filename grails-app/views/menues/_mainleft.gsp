@@ -155,51 +155,30 @@
 								<g:link  action="index" controller="mail"> <i class="icon-envelope"></i>Boite de réception</g:link>
 							</li>
 							<li class="">
-								<a href="javascript:void(0)"><i class="icon-check"></i>Suvi d'activités<span class="badge">3</span></a>
+								<a href="javascript:void(0)"><i class="cus-chart-bar"></i>Suvi d'activités<span class="badge">3</span></a>
 								<ul>
+                                                                        
                                                                         <li>
-                                                                                <g:link  action="portefeuille" controller="activite"> Portefeuille d'activité </g:link>
-									</li>	
-                                                                    <li>
-                                                                                <g:link  action="activite" controller="activite">  Mon activité </g:link>
+                                                                                <g:link  action="activite" controller="activite"> Mon activité </g:link>
 									</li>
 									<li>
-										<a href="validation.html">eeeeee</a>
-									</li>
-									<li>
-										<a href="wizard.html">Mes indicateurs</a>
+                                                                                <g:link  action="indicateur" controller="activite"> Mes indicateurs </g:link>
 									</li>
 								</ul>
 							</li>
                                                         <li class="">
-								<a href="mail"><i class="icon-envelope"></i>Mon agenda</a>
+								<g:link  action="index" controller="event"> <i class="cus-calendar-2"></i> Mes agenda </g:link>
 							</li>
 
-							<li class="">
-								<a href="javascript:void(0)"><i class="icon-signal"></i>Charts &amp; Graphs<span class="badge">3</span></a>
-								<ul>
-									<li>
-										<a href="basic">Basic Charts</a>
-									</li>
-									<li>
-										<a href="adv_charts.html">Advanced Charts</a>
-									</li>
-									<li>
-										<a href="raphael.html">Raphael Engine</a>
-									</li>
-								</ul>
-							</li>
-							<li class="">
-								<a href="widgets.html"><i class="icon-refresh"></i>Smart Widgets</a>
-							</li>
+							
 							<li class="">
 								<a href="javascript:void(0)"><i class="icon-plus"></i>Administration</a>
 								<ul>
 									<li>
-										<a href="administration/ressource">Gestion des ressources</a>
+										<g:link  action="ressource" controller="administration">Gestion des ressources</g:link>
 									</li>
 									<li>
-										<a href="administration/activite">Gestion d'activite</a>
+										<g:link  action="activite" controller="administration">Gestion d'activite</g:link>
 									</li>
 								</ul>
 							</li>
