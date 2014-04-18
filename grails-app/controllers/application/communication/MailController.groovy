@@ -70,16 +70,46 @@ class MailController {
         redirect action:'index'
 
     }
-   //--------- Reply ----------------- 
-    def Relier() {
+ //__________________ReplyALL__________________________ 
+    def RelierALL() {
+        //récupérer lautor de last mail pour l'ajouter a la liste des recepteur 
+       def lauthor = params.author
+      def authorR = mailService.lookupCurrentPerson()
+      def monMessageR = params.message
+      //------attribuer l'id de la conversation au nouveau mail-----
+      def maconversationR = params.conversation
+      def monObjetR = params.objet
+     def  listrecepteur = new ArrayList<Effectif>()
+     
+      params.recepteur.each()  { user ->
+         if(user != authorR){ listrecepteur.add(user)} // le filtre ne marche pas il récupere le mail connecté aussi 
+         }
+         
+         listrecepteur.add(lauthor)
+         
+      
+      def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, conversation: maconversationR).save()
+      
+      def lu = false
+      def archive = false 
+      def favoris = false
+      listrecepteur.each()  {user ->
+          def monMailEffectif = new MailEffectif(mail:mailR, recepteur:user, lu:lu, archive:archive, favoris:favoris ).save()
+      }
+      
+        redirect action:'index'
+
+    }
+ //_________________________________________________________________
+//________________________Repondre à l'auteur seulement_____________
+def Relier() {
       def authorR = mailService.lookupCurrentPerson()
       def monMessageR = params.message
       //------attribuer l'id de la conversation au nouveau mail-----
       def maconversationR = params.conversation
       def monObjetR = params.objet
       def mailR = new Mail(message : monMessageR, author : authorR, objet : monObjetR, conversation: maconversationR).save()
-       mailR.conversation.lastmail = mailR
-       mailR.save flush:true
+       
       def lu = false
       def archive = false 
       def favoris = false
@@ -91,8 +121,7 @@ class MailController {
 
     }
     
-    //-------------------------------------
-
+//____________________________________________________________
     
     def save2(Mail mailInstance) {
       def author = mailService.lookupCurrentPerson()

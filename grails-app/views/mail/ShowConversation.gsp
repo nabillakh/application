@@ -80,9 +80,9 @@
 														
                                                                                                                       </div> 
                                                                                                                       <div style="display: none;" id='ReplayALL' >
-                                                                                                                    <g:form url="[action:'Relier',controller:'Mail']">
-                                                                                                                        <g:hiddenField name="conversation" value="${conversationInstance.id}" />
-                                                                                                     A :</br> <input name="recepteur" value="${conversationInstance.lastmail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">
+                                                                                                                    <g:form url="[action:'RelierALL',controller:'Mail']">
+                                                                                                                        <g:hiddenField name="conversation" value="${conversationInstance.id}" /> <g:hiddenField name="author" value="${conversationInstance.lastmail.author?.id}" />
+                                                                                                     A :</br> <input name="recepteur" value="${conversationInstance.lastmail.recepteur.recepteur?.id}" class="many-to-many" style="width: 80%; height: 20px;">  ${conversationInstance.lastmail?.dateCreated}
                                                                                                                         <g:hiddenField name="objet"  value="${conversationInstance.lastmail?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"/>              
                                                                                                                         <textArea id="wysihtml5" name="message"   value="${conversationInstance.lastmail?.message}"  placeholder="Enter text ..."  style="width: 80%; height: 100px;" ></textArea>               
                                                                                                                         <fieldset class="buttons">

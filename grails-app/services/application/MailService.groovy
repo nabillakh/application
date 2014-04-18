@@ -104,17 +104,20 @@ class MailService {
 
     private Conversation[] mesConversations() {
         def listeMail = mailInbox()
-        def mesConversations = []
+        //je mets arraylist pour forcer le type. il y avait incompatobilite de type.
+      def LesConversations = new ArrayList<Conversation>()
+        def mesConversations = new ArrayList<Conversation>()
         listeMail.each() {mail -> 
             mesConversations.add(mail.conversation)
         }
         mesConversations.unique()
-       
-        return mesConversations
+        // appeller la fonction qui donne le dernier mail pour chaque conversation
+        LesConversations = LastMail(mesConversations)
+        return LesConversations
     }
     
     //____________________ Liste des mails à afficher dans une conversation en entrée _____________
-    private AfficherConversation(Conversation conversationInstance) {
+    private Mail[] AfficherConversation(Conversation conversationInstance) {
         def lesmail = []
           def mailIN = mailInbox()
           def mailOUT =  mailenvoyer()
@@ -129,13 +132,34 @@ class MailService {
              lesmail.add(mail)     }
             
          }
-        lesmail.sort{a,b-> b.dateCreated<=>a.dateCreated}
+        // Créer une liste de contenu unique basée sur les éléments de ArrayList
+    Set mySet = new HashSet( lesmail)
+ 
+    // Créer une Nouvelle ArrayList à partir de Set
+  def lesmail2 = new ArrayList<Mail>(mySet); 
+        
+        lesmail2.sort{a,b-> b.dateCreated<=>a.dateCreated}
 
-        return lesmail
+        return lesmail2
     }
-    
-    
-    //______________________________________________________________________________
+//_____________________________________________________________________________
+//_______________________Last Mail____________________________________________
+ private Conversation[] LastMail ( ArrayList<Conversation> mesConversations )
+ {
+
+     def LesConversations = []
+     mesConversations.each() { conversation ->
+         def mailsconversation = AfficherConversation(conversation)
+         // deja classé dans la fonction AfficherConversation
+         //    mailsconversation.sort{a,b-> b.dateCreated<=>a.dateCreated}
+         def lelastmail =  mailsconversation.getAt(0)
+         conversation.lastmail = lelastmail
+         conversation.save flush:true
+         LesConversations.add(conversation)  
+     }
+     return LesConversations
+ }
+ //___________________________________________________________________
 
 //--------- liste des mailsEffectifs par conversation a partir de la liste de mailEffectif-------------    
     private listeMailEffectif(Conversation conversation, MailEffectif[] maListe) {
