@@ -24,7 +24,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="charge" title="${message(code: 'OF.charge.label', default: 'Charge')}" />
+						<g:sortableColumn property="chargePlanifiee" title="${message(code: 'OF.chargePlanifiee.label', default: 'Charge Planifiee')}" />
 					
 						<g:sortableColumn property="dateDebutPlanifie" title="${message(code: 'OF.dateDebutPlanifie.label', default: 'Date Debut Planifie')}" />
 					
@@ -40,7 +40,7 @@
 				<g:each in="${OFInstanceList}" status="i" var="OFInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${OFInstance.id}">${fieldValue(bean: OFInstance, field: "charge")}</g:link></td>
+						<td><g:link action="show" id="${OFInstance.id}">${fieldValue(bean: OFInstance, field: "chargePlanifiee")}</g:link></td>
 					
 						<td><g:formatDate date="${OFInstance.dateDebutPlanifie}" /></td>
 					

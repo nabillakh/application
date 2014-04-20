@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'charge', 'error')} ">
-	<label for="charge">
-		<g:message code="OF.charge.label" default="Charge" />
+<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'chargePlanifiee', 'error')} ">
+	<label for="chargePlanifiee">
+		<g:message code="OF.chargePlanifiee.label" default="Charge Planifiee" />
 		
 	</label>
-	<g:field name="charge" value="${fieldValue(bean: OFInstance, field: 'charge')}"/>
+	<g:field name="chargePlanifiee" value="${fieldValue(bean: OFInstance, field: 'chargePlanifiee')}"/>
 
 </div>
 

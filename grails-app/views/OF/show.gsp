@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list OF">
 			
-				<g:if test="${OFInstance?.charge}">
+				<g:if test="${OFInstance?.chargePlanifiee}">
 				<li class="fieldcontain">
-					<span id="charge-label" class="property-label"><g:message code="OF.charge.label" default="Charge" /></span>
+					<span id="chargePlanifiee-label" class="property-label"><g:message code="OF.chargePlanifiee.label" default="Charge Planifiee" /></span>
 					
-						<span class="property-value" aria-labelledby="charge-label"><g:fieldValue bean="${OFInstance}" field="charge"/></span>
+						<span class="property-value" aria-labelledby="chargePlanifiee-label"><g:fieldValue bean="${OFInstance}" field="chargePlanifiee"/></span>
 					
 				</li>
 				</g:if>

@@ -23,11 +23,13 @@
 			</g:if>
 			<ol class="property-list famille">
 			
-				<g:if test="${familleInstance?.chargeStandard}">
+				<g:if test="${familleInstance?.ordo}">
 				<li class="fieldcontain">
-					<span id="chargeStandard-label" class="property-label"><g:message code="famille.chargeStandard.label" default="Charge Standard" /></span>
+					<span id="ordo-label" class="property-label"><g:message code="famille.ordo.label" default="Ordo" /></span>
 					
-						<span class="property-value" aria-labelledby="chargeStandard-label"><g:fieldValue bean="${familleInstance}" field="chargeStandard"/></span>
+						<g:each in="${familleInstance.ordo}" var="o">
+						<span class="property-value" aria-labelledby="ordo-label"><g:link controller="ordonnancement" action="show" id="${o.id}">${o?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -37,15 +39,6 @@
 					<span id="nom-label" class="property-label"><g:message code="famille.nom.label" default="Nom" /></span>
 					
 						<span class="property-value" aria-labelledby="nom-label"><g:fieldValue bean="${familleInstance}" field="nom"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${familleInstance?.ordo}">
-				<li class="fieldcontain">
-					<span id="ordo-label" class="property-label"><g:message code="famille.ordo.label" default="Ordo" /></span>
-					
-						<span class="property-value" aria-labelledby="ordo-label"><g:link controller="ordonnancement" action="show" id="${familleInstance?.ordo?.id}">${familleInstance?.ordo?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

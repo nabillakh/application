@@ -28,7 +28,12 @@
   </div>
 </div>
 
-
+<div class="control-group">
+  <label class="control-label" for="multiSelect">sous famille</label>
+  <div class="controls"  size="16" >
+	<g:select multiple="multiple" id="multiSelect" name="ordo.id" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" value="${kanbanInstance?.ordo?.id}" class="span12 with-search"/>
+  </div>
+</div>
 
 <div class="control-group">
   <label class="control-label">Date de lancement</label>
@@ -68,7 +73,7 @@
 		<g:message code="kanban.charge.label" default="Charge" />
 		
 	</label>
-	<g:field name="charge" value="${fieldValue(bean: kanbanInstance, field: 'charge')}" class="span12"  />
+	<g:field name="chargePlanifiee" value="${fieldValue(bean: kanbanInstance, field: 'chargePlanifiee')}" class="span12"  />
 
 </div>
 

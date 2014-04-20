@@ -22,5 +22,5 @@ class Phase {
         competence nullable : true
     }
     
-    static mappedBy = [kanbans : 'phase']
+    static mappedBy = [kanbans : 'phaseActuelle']
 }

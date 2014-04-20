@@ -14,7 +14,7 @@ class PicFamille {
     static hasMany = [pdp : Pdp]   
     
     def chargePlanifie = {
-        return (famille.getChargeStandard() * uniteActivite)
+        return (famille.getChargePlanifiee() * uniteActivite)
     }
     
     def restantAPlanifier = {

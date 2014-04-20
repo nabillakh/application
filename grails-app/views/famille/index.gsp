@@ -24,11 +24,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="chargeStandard" title="${message(code: 'famille.chargeStandard.label', default: 'Charge Standard')}" />
-					
 						<g:sortableColumn property="nom" title="${message(code: 'famille.nom.label', default: 'Nom')}" />
-					
-						<th><g:message code="famille.ordo.label" default="Ordo" /></th>
 					
 					</tr>
 				</thead>
@@ -36,11 +32,7 @@
 				<g:each in="${familleInstanceList}" status="i" var="familleInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${familleInstance.id}">${fieldValue(bean: familleInstance, field: "chargeStandard")}</g:link></td>
-					
-						<td>${fieldValue(bean: familleInstance, field: "nom")}</td>
-					
-						<td>${fieldValue(bean: familleInstance, field: "ordo")}</td>
+						<td><g:link action="show" id="${familleInstance.id}">${fieldValue(bean: familleInstance, field: "nom")}</g:link></td>
 					
 					</tr>
 				</g:each>

@@ -2,12 +2,21 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: familleInstance, field: 'chargeStandard', 'error')} required">
-	<label for="chargeStandard">
-		<g:message code="famille.chargeStandard.label" default="Charge Standard" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: familleInstance, field: 'ordo', 'error')} ">
+	<label for="ordo">
+		<g:message code="famille.ordo.label" default="Ordo" />
+		
 	</label>
-	<g:field name="chargeStandard" value="${fieldValue(bean: familleInstance, field: 'chargeStandard')}" required=""/>
+	
+<ul class="one-to-many">
+<g:each in="${familleInstance?.ordo?}" var="o">
+    <li><g:link controller="ordonnancement" action="show" id="${o.id}">${o?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="ordonnancement" action="create" params="['famille.id': familleInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'ordonnancement.label', default: 'Ordonnancement')])}</g:link>
+</li>
+</ul>
+
 
 </div>
 
@@ -17,15 +26,6 @@
 		
 	</label>
 	<g:textField name="nom" value="${familleInstance?.nom}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: familleInstance, field: 'ordo', 'error')} required">
-	<label for="ordo">
-		<g:message code="famille.ordo.label" default="Ordo" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="ordo" name="ordo.id" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" value="${familleInstance?.ordo?.id}" class="many-to-one"/>
 
 </div>
 

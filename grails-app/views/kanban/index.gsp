@@ -456,9 +456,9 @@
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                                                                                                               <td><g:link action="show" controller="Kanban" id="${kanbanInstance.id}">${fieldValue(bean: kanbanInstance, field: "nomKanban")}</g:link></td>
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "description")}</td>
-                                                                                                          <td>${fieldValue(bean: kanbanInstance, field: "phase")}</td>
+                                                                                                          <td>${fieldValue(bean: kanbanInstance, field: "phaseActuelle")}</td>
                                                                                                           <td><g:formatDate date="${kanbanInstance.dateFinPlanifie}" /></td>
-                                                                                                          <td>${fieldValue(bean: kanbanInstance, field: "charge")}</td>
+                                                                                                          <td>${fieldValue(bean: kanbanInstance, field: "chargePlanifiee")}</td>
                                                                                                           </tr>
                                                                                                           </g:each>
                                                                                                           
