@@ -9,7 +9,23 @@ class OF {
 
     Kanban kanban
     Phase phase
-    Float charge
+    Float chargePlanifiee
+    
+    static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser']
+    
+    public Float getChargeRealisee() {
+        kanbanService.chargeOFRealise(this)
+    }
+    public Float getChargeAgenda() {
+        kanbanService.chargeOFAgenda(this)
+    }
+    public Float getChargeRestantAPlanifier() {
+        chargePlanifiee - chargeAgenda
+    }
+    public Float getChargeRestantARealiser() {
+        chargePlanifiee - chargeRealisee
+    }
+    
     
     Date dateDebutPlanifie = new Date()
     Date dateFinPlanifie = new Date()
@@ -17,7 +33,7 @@ class OF {
     static hasMany = [affectes : Effectif] 
     
     static constraints = {
-        charge nullable : true
+        chargePlanifiee nullable : true
         affectes nullable : true
     }
 }
