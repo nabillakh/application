@@ -14,20 +14,28 @@ class Kanban {
     Date dateLancement= new Date()
     Date dateFinPlanifie= new Date()
     
-    Float charge
+    Float chargePlanifiee
     
     Ordonnancement ordo
-    Phase phase
-    Famille famille
+    Phase phaseActuelle
+    Famille famille 
     
-    static hasMany = [compteRendus : CompteRendu]
+    static hasMany = [compteRendus : CompteRendu, of:OF]
+    
+    static transients = ['chargePlanifiee']
+    
+    public int getChargePlanifiee() {
+        0
+    }
+    
     
     static constraints = {
         compteRendus nullable : true   
         ordo nullable : true
-        phase nullable :true
+        phaseActuelle nullable :true
         dateFinPlanifie nullable : true
-        charge nullable :true
+        chargePlanifiee nullable :true
+        of nullable:true
     }
     
    
@@ -37,5 +45,5 @@ class Kanban {
     transient afterInsert = {
     }
     
-    static mappedBy = [compteRendus : 'kanban']
+    static mappedBy = [compteRendus : 'kanban', of : 'kanban']
 }
