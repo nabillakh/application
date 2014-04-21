@@ -49,14 +49,15 @@ class BootStrap {
        maConversation.save flush:true
         def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser, lu: false, archive: false, favoris: false ).save(failOnError: true,flush: true)
                 
-                
-        def monOrdo = new Ordonnancement(nom : "grille1").save(failOnError: true) 
-        def monOrdo2 = new Ordonnancement(nom : "grille2").save(failOnError: true) 
-        def monOrdo3 = new Ordonnancement(nom : "grille3").save(failOnError: true) 
+                 
+        def monOrdo = new Ordonnancement(nom : "grille1", chargeStandard : 50).save(failOnError: true) 
+        def monOrdo2 = new Ordonnancement(nom : "grille2", chargeStandard : 50).save(failOnError: true) 
+        def monOrdo3 = new Ordonnancement(nom : "grille3", chargeStandard : 50).save(failOnError: true) 
         
-        def maFamille = new Famille(nom : "Famille1", ordo : monOrdo, chargeStandard : '200').save(failOnError: true)  
-        def maFamille2 = new Famille(nom : "Famille2", ordo : monOrdo2, chargeStandard : '200').save(failOnError: true)  
-        def maFamille3 = new Famille(nom : "Famille3", ordo : monOrdo3, chargeStandard : '200').save(failOnError: true)  
+        def maFamille = new Famille(nom : "Famille1", ordo : monOrdo, chargeStandard : '200').save(failOnError: true, flush : true)  
+        def maFamille2 = new Famille(nom : "Famille2", ordo : monOrdo2, chargeStandard : '200').save(failOnError: true, flush : true)  
+        def maFamille3 = new Famille(nom : "Famille3", ordo : monOrdo3, chargeStandard : '200').save(failOnError: true, flush : true)
+        
         
         def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
         
@@ -64,7 +65,7 @@ class BootStrap {
         
         ["Analyse":1, "Algorithme":2, "Developpement":3, "Test":4, "Mise en prod":5].each {nomA,numA -> 
             def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 2)
-            monKanban.setPhase(phase)
+            monKanban.setPhaseActuelle(phase)
             monOrdo.addToPhases(phase)
             phase.save(failOnError: true)
         }
