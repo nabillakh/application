@@ -7,7 +7,12 @@ class AdministrationController {
     def index() { }
     
     def ressource() {
-        render view:'ressource'
+         def listeEffectif = kanbanService.listeEffectif()
+        def listeCompetence = kanbanService.listeCompetence()
+        def listeDroit = kanbanService.listeDroit()
+        
+        
+        [effectifInstanceList: listeEffectif, competenceInstanceList : listeCompetence, droitInstanceList : listeDroit]
     }
     
     def activite(Integer max) {

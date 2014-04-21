@@ -92,7 +92,7 @@
                                                                                      <g:each in="${phaseInstance.kanbans}" var="o">
                                                                                 <div class="control-group" style=" text-align: left;">
                                                                                   <label class="control-label"  for="kanbans">
-                                                                                <g:message code="phasekanbans.label" default="Kanban : " />  <g:link controller="kanbans" action="show" id="${o.id}">${o?.nomKanban.encodeAsHTML()}</g:link>
+                                                                                <g:message code="phase.kanbans.label" default="Kanban : " />  <g:link controller="kanbans" action="show" id="${o.id}">${o?.nomKanban.encodeAsHTML()}</g:link>
                                                                                   </label>
                                                                                 </div>
                                                                                 </g:each>

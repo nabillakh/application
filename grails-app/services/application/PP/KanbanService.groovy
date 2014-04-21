@@ -4,7 +4,7 @@ import grails.validation.ValidationException
 import org.springframework.transaction.annotation.Transactional
 import application.PP.*
 
-
+import application.RH.*
 class KanbanService {
 
     def springSecurityService
@@ -60,8 +60,25 @@ class KanbanService {
         return maListe
     }
     
+    //____________________________
     
-    
+    private Effectif[] listeEffectif() {
+       def maListe = []
+        maListe = Effectif.list(sort: "nom", order: "desc")
+        return maListe
+    }
+    //__________________________
+     private Competence[] listeCompetence() {
+       def maListe = []
+        maListe = Competence.list(sort: "nom", order: "desc")
+        return maListe
+    }
+    //_________________________________
+    private Droit[] listeDroit() {
+       def maListe = []
+        maListe = Droit.list(sort: "authority", order: "desc")
+        return maListe
+    }
    //---------------------
     
     
