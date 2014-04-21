@@ -397,8 +397,9 @@
 							
 							<div class="row-fluid">
 								<article class="span12">
+                                                                    <div> <table>
 									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-1">
+									<tr><td style=" width:500px;"><div class="jarviswidget" id="widget-id-1">
 									    <header>
 									        <h2>Fiche du projet : "${fieldValue(bean: kanbanInstance, field: "nomKanban")}"</h2>                           
 									    </header>
@@ -427,22 +428,22 @@
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
                                                                                 <center>
-                                                                                <div class="control-group">
+                                                                                <div class="control-group" style=" text-align: left;">
                                                                                   <label class="control-label"  for="nomKanban">
                                                                                     <g:message code="kanban.nomKanban.label" default="Nom du projet : ${kanbanInstance?.nomKanban}" />
                                                                                   </label>
                                                                                 </div>
-                                                                                <div class="control-group">
+                                                                                <div class="control-group"style=" text-align: left;">
                                                                                   <label class="control-label"  for="description">
                                                                                     <g:message code="kanban.description.label" default="Description : ${kanbanInstance?.description}" />
                                                                                   </label>
                                                                                 </div>
-                                                                                <div class="control-group">
+                                                                                <div class="control-group" style=" text-align: left;">
                                                                                   <label class="control-label"  for="phase">
-                                                                                    <g:message code="kanban.phase.label" default="Etat d'avancement du projet : ${kanbanInstance?.phase}" />
+                                                                                    <g:message code="kanban.phaseActuelle.label" default="Etat d'avancement du projet : ${kanbanInstance?.phaseActuelle}" />
                                                                                   </label>
                                                                                 </div>
-                                                                                <div class="control-group">
+                                                                                <div class="control-group" style=" text-align: left;">
                                                                                   <label class="control-label"  for="dateFinPlanifie">
                                                                                     <g:message code="kanban.dateFinPlanifie.label" default="Date de fin planifiée : ${kanbanInstance?.dateFinPlanifie}" />
                                                                                   </label>
@@ -455,8 +456,68 @@
 										    <!-- end content-->
 									    </div>
 									    <!-- end wrap div -->
-									</div>
-                                                                        
+									</div></td>
+                                                                        <!-- -------------------- -->
+                                                                 	<!-- new widget -->
+                                                                            <td style=" width:500px;"><div class="jarviswidget" id="widget-id-1"  >
+									    <header>
+									        <h2>Fiche du projet : </h2>                           
+									    </header>
+									    <!-- wrap div -->
+									    <div>
+									    
+									        <div class="jarviswidget-editbox">
+									            <div>
+									                <label>Title:</label>
+									                <input type="text" />
+									            </div>
+									            <div>
+									                <label>Styles:</label>
+									                <span data-widget-setstyle="purple" class="purple-btn"></span>
+									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+									                <span data-widget-setstyle="green" class="green-btn"></span>
+									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+									                <span data-widget-setstyle="orange" class="orange-btn"></span>
+									                <span data-widget-setstyle="pink" class="pink-btn"></span>
+									                <span data-widget-setstyle="red" class="red-btn"></span>
+									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+									                <span data-widget-setstyle="black" class="black-btn"></span>
+									            </div>
+									        </div>
+            
+									        <div class="inner-spacer"> 
+									        <!-- content goes here -->
+                                                                                <center>
+                                                                                <div class="control-group" style=" text-align: left;">
+                                                                                  <label class="control-label"  for="nomKanban">
+                                                                                    <g:message code="kanban.nomKanban.label" default="Nom du projet : " />
+                                                                                  </label>
+                                                                                </div>
+                                                                                <div class="control-group"style=" text-align: left;">
+                                                                                  <label class="control-label"  for="description">
+                                                                                    <g:message code="kanban.description.label" default="Description : " />
+                                                                                  </label>
+                                                                                </div>
+                                                                                <div class="control-group" style=" text-align: left;">
+                                                                                  <label class="control-label"  for="phase">
+                                                                                    <g:message code="kanban.phaseActuelle.label" default="Etat d'avancement du projet : " />
+                                                                                  </label>
+                                                                                </div>
+                                                                                <div class="control-group" style=" text-align: left;">
+                                                                                  <label class="control-label"  for="dateFinPlanifie">
+                                                                                    <g:message code="kanban.dateFinPlanifie.label" default="Date de fin planifiée : " />
+                                                                                  </label>
+                                                                                </div>
+                                                                                  </center>
+                                                                                </div>
+                                                                              
+                                                                              
+                                                                              
+										    <!-- end content-->
+									    </div>
+									    <!-- end wrap div -->
+									</div></td></tr></table>
+                                                                          </div>          
                                                                         <div class="jarviswidget" id="widget-id-1">
 									    <header>
 									        <h2>Ordonnancement du projet : "${fieldValue(bean: kanbanInstance, field: "nomKanban")}"</h2>                           

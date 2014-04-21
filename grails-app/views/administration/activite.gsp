@@ -144,7 +144,7 @@
                                                                                                         
                                                                                                         <g:each in="${ordoInstanceList}" status="i" var="ordoInstance">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><g:link action="show" controller="ordo" id="${ordoInstance.id}">${fieldValue(bean: ordoInstance, field: "nom")}</g:link></td>
+                                                                                                              <td><g:link action="show" controller="Ordonnancement" id="${ordoInstance.id}">${fieldValue(bean: ordoInstance, field: "nom")}</g:link></td>
                                                                                                           <td>${ordoInstance.famille}</td>
                                                                                                           <td>${ordoInstance.phases.size()}</td>
                                                                                                           </tr>
