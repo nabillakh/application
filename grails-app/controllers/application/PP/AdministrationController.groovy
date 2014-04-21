@@ -15,7 +15,8 @@ class AdministrationController {
         def listeKanban = kanbanService.listeKanban()
         def listeFamille = kanbanService.listeFamille()
         def listePhase = kanbanService.listePhase()
+        def listeOrdo = kanbanService.listeOrdo()
         
-        [kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceListe : listePhase]
+        [kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
     }
 }

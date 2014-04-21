@@ -12,4 +12,7 @@ class Ordonnancement {
         famille nullable:true
         phases nullable : true
     }
+    
+     static mappedBy = [famille : 'ordo']
+    
 }
