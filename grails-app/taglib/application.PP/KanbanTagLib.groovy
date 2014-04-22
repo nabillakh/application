@@ -14,7 +14,7 @@ class KanbanTagLib {
        
        
         meskanbans.eachWithIndex { kanban, counter ->
-            out << g.render(template: '/kanban/minikanban', model: [meskanbans : meskanbans, kanabanCounter: counter])
+            out << g.render(template: '/kanban/minikanban', model: [meskanbans : meskanbans, kanbanCounter: counter])
         }
     }
 }

@@ -2312,9 +2312,86 @@
 				}
 			});
 		}// end if
+	if ($('#wizard_kanban').length) {
+			$('#wizard_kanban').bootstrapWizard({
+				'tabClass' : 'nav',
+				'debug' : false,
+				onShow : function(tab, navigation, index) {
+					//console.log('onShow');
+				},
+				onNext : function(tab, navigation, index) {
+					//console.log('onNext');
+					if (index == 1) {
+						// Make sure we entered the name
+						if (!$('#nomKanban').val()) {
+							//alert('You must enter your name');
+							$('#nomKanban').focus();
+							$('#nomKanban').closest('.control-group').removeClass('success');
+							$('#nomKanban').closest('.control-group').addClass('error');
+							return false;
+						}
+						if (!$('#dateLivraison').val()) {
+							//alert('You must enter your last name');
+							$('#dateLivraison').focus();
+							$('#dateLivraison').closest('.control-group').removeClass('success');
+							$('#dateLivraison').closest('.control-group').addClass('error');
+							return false;
+						}
+                                                
+                                                if($('#dateLivraison').val() && $('#nomKanban').val()) {
+                                                    $.ajax({
+                                                url: 'http://localhost:8080/application/activite/nouveauKanban',
+                                                type: 'POST',
+                                                format: 'json',
+                                                data: {
+                                                    nomKanban: $('#nomKanban').val(),
+						    dateLivraison : $('#dateLivraison').val(),
+                                                    description: $('#description').val(),
+						    famille : $('#fam').val(),
+						    ordo : $('#sfam').val(),
+                                                    chargePlanifiee : $('#chargePlanifiee').val(),
+                                                },
+                                            })
+                                }
+                                                
+                                                
+					}	
+                                        
 	
+				},
+				onPrevious : function(tab, navigation, index) {
+					//console.log('onPrevious');
+				},
+				onLast : function(tab, navigation, index) {
+					//console.log('onLast');
+				},
+				onTabClick : function(tab, navigation, index) {
+					//console.log('onTabClick');
+					alert('on tab click disabled');
+					return false;
+				},
+				onTabShow : function(tab, navigation, index) {
+					//console.log('onTabShow');
+					var $total = navigation.find('li').length;
+					var $current = index + 1;
+					var $percent = ($current / $total) * 100;
+					$('#wizard_kanban').find('.bar').css({
+						width : $percent + '%'
+					});
+				}
+			});
+		}
+        
+        
 	}
-	
+        
+	//permet de gerer l'affichage dans le wizard du kanban
+        function majWizard(monId) {
+            $('#monId').val(monId);
+            $('#nomKanban').val("okokokokok");            
+        }
+        
+        
 	/* end setup_wizard_demo */
 
 	/* ---------------------------------------------------------------------- */

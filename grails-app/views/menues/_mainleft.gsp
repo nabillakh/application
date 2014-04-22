@@ -134,10 +134,10 @@
 						
 						<ul class="menu" id="accordion-menu-js">
 							<li class="current">
-								<a href="javascript:void(0)"><i class="icon-off"></i>Tableau de bord <span class="badge">2</span></a>
+								<a href="javascript:void(0)"><i class="icon-off"></i>Général <span class="badge">2</span></a>
 								<ul>
 									<li>
-										<g:link  action="index" controller="Login">Tableau de bord</g:link>
+										<g:link  action="index" controller="Login">Page d'accueil</g:link>
 									</li>
 									<li>
                                                                                 <sec:ifLoggedIn>
@@ -163,6 +163,9 @@
 									</li>
 									<li>
                                                                                 <g:link  action="indicateur" controller="activite"> Mes indicateurs </g:link>
+									</li>
+                                                                        <li>
+                                                                                <g:link  action="portefeuille" controller="activite"> Ajouter un projet </g:link>
 									</li>
 								</ul>
 							</li>

@@ -1,8 +1,3 @@
-<%@ page import="application.mail.Mail" %>
-<%@ page import="application.mail.MailController" %>
-
-
-
 
 <div class="fieldcontain ${hasErrors(bean: mailInstance, field: 'message', 'error')} ">
 	<label for="message">

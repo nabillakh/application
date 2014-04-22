@@ -48,7 +48,7 @@
 									        <div class="inner-spacer wysihtml5-widget"> 
                                                                                   <g:form url="[action:'save']">
 									        <!-- content -->
-                                                                                     A : <g:select name="recepteur" from="${application.RH.Effectif.list(username)}" multiple="multiple" optionKey="id" style="width: 100%; height: 60px;" value="${effectifInstance?.id?.username}" class="many-to-many" style="width: 100%; height: 50px;"/>
+                                                                                     A : <g:select name="recepteur" from="${application.RH.Effectif.list(username)}" multiple="multiple" optionKey="id" style="width: 100%; height: 60px;" value="${effectifInstance?.id?.username}" class="many-to-many"/>
                                                                                       <div class="fieldcontain ${hasErrors(bean: mailInstance, field: 'objet', 'error')} ">
                                                                                         <textArea   name="objet"  value="${mailInstance?.objet}"  placeholder="Objet..." style="width: 100%; height: 20px;"></textArea>
                                                                                       </div>

@@ -5,11 +5,14 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 import application.pilotage.*
 import application.PP.*
 import application.RH.*
+import application.*
 
+import org.joda.time.DateTime
 
 class ActiviteController {
         
 	def springSecurityService
+        def kanbanService
 
     def activite(Integer max) {
         
@@ -18,9 +21,50 @@ class ActiviteController {
     }
     
     def portefeuille(Integer max) {
+        def listeKanban = kanbanService.listeKanban()
+        def listeFamille = kanbanService.listeFamille()
+        def listePhase = kanbanService.listePhase()
+        def listeOrdo = kanbanService.listeOrdo()
+        def monKanban = new Kanban()
         
-        params.max = Math.min(max ?: 10, 100)
-        respond Kanban.list(params), model:[KanbanInstanceCount: Kanban.count()]
+        def monJson = []
+        // asupprimer
+        listeKanban.each {unKanban ->
+            def liste =  new LinkedHashMap()
+            liste.put("id",unKanban.id)
+            liste.put("nomKanban",unKanban.nomKanban)
+            monJson << liste
+        } 
+        
+        
+        [monKanban : monKanban, kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
+    }
+    
+    def nouveauKanban() {
+        def nomKanban = params.nomKanban
+        //def dateLivraison = new DateTime(params.dateLivraison)
+        def description = params.description
+        def famille = params.famille
+        def ordo = params.ordo
+        def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
+        Kanban monKanban = new Kanban()
+        monKanban.nomKanban = nomKanban
+        // monKanban.dateFinPlanifie = dateLivraison.toDate()
+        monKanban.description = description
+        monKanban.famille = Famille.get(Integer.parseInt(famille))
+        monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
+        monKanban.chargePlanifiee = chargePlanifiee 
+        
+        println("1 nom du kanban: " + monKanban.nomKanban) 
+        println("1 nom dde famille avec objet: " + monKanban.famille) 
+        monKanban.save(flush : true)
+        
+        kanbanService.requeteCreation(monKanban)
+        println("2 nom du kanban: " + monKanban.nomKanban + " id2 " + monKanban.id)
+        
+        
+        
+        
     }
     
     def indicateur() {
@@ -76,6 +120,8 @@ class ActiviteController {
         [picInstanceList: picLists]
         render picLists as JSON
     }
+    
+    
     
     
 }

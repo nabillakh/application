@@ -12,4 +12,7 @@ class Statut {
     transient afterInsert = {
         jmsService.send 'grailstwitter.status', author.username
     }
+    static constraints = {
+        author nullable: true
+    }
 }

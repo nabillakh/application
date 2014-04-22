@@ -11,7 +11,7 @@
    				
      <!-- main content --><div id="page-content">
 					<!-- page header -->
-					<h1 id="page-header">Management des activités</h1>	
+					<h1 id="page-header">Management des ressources humaines</h1>	
                                         <!-- images avec données macro -->
                                         <div id="start">
 							<ul>
@@ -54,7 +54,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-2">
 									    <header>
-									        <h2>Gestion opérationnelle</h2>                           
+									        <h2>Gestion RH</h2>                           
 									    </header>
 									    
 									    <!-- widget div-->
