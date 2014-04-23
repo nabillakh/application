@@ -15,4 +15,13 @@ class KanbanTagLib {
             out << g.render(template: '/kanban/minikanban', model: [mesOF : mesOF, ofCounter: counter])
         }
     }
+    
+    def toDoList = {attrs -> 
+    
+    def maToDo = eventService.maToDo()
+    maToDo.eachWithIndex { Of, counter ->
+            out << g.render(template: '/kanban/maToDo', model: [maToDo : maToDo, ofCounter: counter])      
+        }
+    
+    }
 }

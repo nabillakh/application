@@ -41,6 +41,25 @@ class EventService {
         
         return lesOF
     }
+           // liste des OF pour la to do list de la semaine
+
+    private OF[] maToDo() {
+        def lesOF = [] 
+        def aujourdhui = new Date()
+        def per = Effectif.get(springSecurityService.principal.id)
+        try {
+            def query = OF.whereAny {
+                affectes {per}
+                dateFinPlanifie > aujourdhui + 1
+            }
+            lesOF = query.list()
+        }
+        
+        catch (NullPointerException n){
+        }
+        
+        return lesOF
+    }
     
     
 
