@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 import grails.converters.JSON
 
+import application.PP.*
 
 @Transactional(readOnly = true) 
 class EventController {
@@ -150,6 +151,12 @@ class EventController {
         println("fin a partir de l'event: " + eventInstance.endTime) 
         
         eventInstance.save()
+        
+        // creation de l'imputation
+        
+        eventService.imputation(eventInstance, OF.get(params.id))
+        
+        
         
         [eventInstance : eventInstance]
         redirect action: "list" 

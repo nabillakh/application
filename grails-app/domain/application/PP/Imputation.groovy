@@ -13,9 +13,4 @@ class Imputation {
     static constraints = {
     }
     
-    
-    def beforeInsert = {             
-        realise = false
-        return true
-    }
 }

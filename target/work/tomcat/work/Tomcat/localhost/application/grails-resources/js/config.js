@@ -640,6 +640,7 @@
                                                 data: {
                                                     title: copiedEventObject.title,
 						    start: copiedEventObject.start,
+                                                    id : copiedEventObject.id,
                                                     // mettre j+1 si agenda sinon h+2
 						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 24 * 1)),
                                                 },
@@ -667,7 +668,8 @@
 			// create an Event Object 
 			// it doesn't need to have a start or end
 			var eventObject = {
-				title: $.trim($(this).text()) // use the element's text as the event title
+				title: $.trim($(this).text()), // use the element's text as the event title
+                                id: $(this).data('id')
 			};
 			
 			// store the Event Object in the DOM element so we can get to it later

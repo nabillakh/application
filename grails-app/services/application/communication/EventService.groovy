@@ -12,7 +12,7 @@ class EventService {
     def springSecurityService
     
     def imputation(Event e, OF of)  {
-        def monEventOf = new Imputation(event : e, of : of)
+        def monEventOf = new Imputation(event : e, of : of, realise : false)
         monEventOf.save()       
       
     }
