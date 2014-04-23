@@ -8,20 +8,20 @@ import org.joda.time.DateTime
 import grails.converters.JSON
 
 
-
 @Transactional(readOnly = true) 
 class EventController {
 
     def kanbanService
+    def eventService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    
     def index(Integer max) {
         // envoi de la liste de kanban
-        def mesKanbans = kanbanService.afficherKanban()
+        def mesOF = eventService.mesOF()
         
         params.max = Math.min(max ?: 10, 100)
-        respond Event.list(params), model:[eventInstanceCount: Event.count(), mesKanbans : mesKanbans]
+        respond Event.list(params), model:[eventInstanceCount: Event.count(), mesOF : mesOF]
     }
 
     def show = {

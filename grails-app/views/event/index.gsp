@@ -82,11 +82,6 @@
 					<!-- page header -->
 					<h1 id="page-header">Agenda</h1>	
 
-					<div class="alert adjusted alert-info">
-						<button class="close" data-dismiss="alert">×</button>
-						<i class="cus-exclamation"></i>
-						<strong>Welcome to {Jarvis} Admin</strong> Please don't forget to check out all the pages and the features.
-					</div>
 					
 					<div class="fluid-container">
 						
@@ -112,7 +107,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-1">
 									    <header>
-									        <h2>Calendar</h2>                           
+									        <h2>Calendrier</h2>                           
 									    </header>
 									    
 									    <!-- widget div-->
@@ -140,24 +135,18 @@
             
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
-												<div class="widget alert alert-info adjusted">
-													<button class="close" data-dismiss="alert">×</button>
-													<i class="cus-exclamation"></i>
-													<strong>Helpful Hint:</strong> Did you know you can click on the <strong>Calendar Cell</strong> to add a new event? Try to add an event and see how easy it is!
-												</div>
-                                                                                                
-                                                                                                
+												
                                                                                                 
                                                                                                  <div id='wrap'>
                                                                                                    
                                                                                                    <div id='external-events'>
-                                                                                                     <h4>Draggable Events</h4>
+                                                                                                     <h4>Liste des projets en cours</h4>
                                                                                                      
-                                                                                                     <g:each in="${mesKanbans}" status="i" var="kanbanInstance">
-                                                                                                        <div class='external-event'> ${kanbanInstance.nomKanban} </div>
+                                                                                                     <g:each in="${mesOF}" status="i" var="ofInstance">
+                                                                                                        <div class='external-event'> ${ofInstance.kanban.nomKanban} : ${ofInstance.phase.nom}</div>
                                                                                                        </g:each>
                                                                                                        
-                                                                                                       <input type='checkbox' id='drop-remove' /> <label for='drop-remove'>remove after drop</label>
+                                                                                                       <input type='checkbox' id='drop-remove' /> <label for='drop-remove'>a enlever?</label>
                                                                                                      </p>
                                                                                                    </div>
                                                                                                    

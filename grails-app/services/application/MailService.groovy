@@ -12,6 +12,8 @@ class MailService {
    
 
     def springSecurityService
+    
+    
    //-------mail reçu et non archivé ---------  
     private MailEffectif[] afficherMail() {
         def per = Effectif.get(springSecurityService.principal.id)
