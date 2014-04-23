@@ -33,6 +33,7 @@
 						<th><g:message code="OF.kanban.label" default="Kanban" /></th>
 					
 						<th><g:message code="OF.phase.label" default="Phase" /></th>
+						<th>dans l'agenda</th>
 					
 					</tr>
 				</thead>
@@ -49,6 +50,8 @@
 						<td>${fieldValue(bean: OFInstance, field: "kanban")}</td>
 					
 						<td>${fieldValue(bean: OFInstance, field: "phase")}</td>
+                                                
+						<td>${fieldValue(bean: OFInstance, field: "chargeAgenda")}</td>
 					
 					</tr>
 				</g:each>
