@@ -3,18 +3,16 @@ import application.PP.KanbanService
 class KanbanTagLib {
     static namespace = 'kanbans'
     
-    def KanbanService
-    
+    def kanbanService
+    def eventService
     
     def kanbanmini = { attrs ->
         
        
-       def meskanbans = KanbanService.afficherKanban()
-     
+       def mesOF = eventService.mesOF()
        
-       
-        meskanbans.eachWithIndex { kanban, counter ->
-            out << g.render(template: '/kanban/minikanban', model: [meskanbans : meskanbans, kanbanCounter: counter])
+        mesOF.eachWithIndex { OF, counter ->
+            out << g.render(template: '/kanban/minikanban', model: [mesOF : mesOF, ofCounter: counter])
         }
     }
 }
