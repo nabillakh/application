@@ -36,49 +36,60 @@
 												<div class="inbox-control-panel">
 												<g:link  action="create" controller="mail" class="btn medium btn-primary pull-right"><i class="icon-star"></i>  Nouveau message </g:link>
 												</div>
-												<div class="inbox-body-content" id="inbox-loading-panel-js">
-													<h1 class="message-title">Objet :  ${conversationInstance.lastmail.objet} </h1>
+												
+													 
 													<div class="message-container">
-												<div class="message-control-panel">
-															<div class="btn-group">
-																<a class="btn btn-primary medium" href='javascript: Replay()'><i class="icon-reply"></i> Reply</a>
-																<a class="btn btn-primary medium dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
-																<ul class="dropdown-menu btn-small">
-																	<li>
-																		<a href='javascript: ReplayALL()'><i class="cus-arrow-undo"></i> Reply All</a>
-																	</li>
-																	<li>
-																		<a href="javascript:void(0);"><i class="cus-envelope"></i> Mark as unread</a>
-																	</li>
-																	<li>
-																		<a href="javascript:void(0);"><i class=" cus-arrow-right"></i> Forward</a>
-																	</li>
-																	<li class="divider"></li>
-																	<li>
-																		<a href="javascript:void(0);"><i class="cus-cancel"></i> Cancel</a>
-																	</li>
-																</ul>
-															</div>
-                                                                                                                        
+												<div class="message-control-panel" >
+															
+                                                                                                                      
+                                                                                                    <h4>	Objet :  ${conversationInstance.lastmail.objet} </h4>
 														
-														</div>
                                                                                                                           
-                                                                                                                              
-														  <div class="message-body">
-                                                                                                                    <table style="width: 700px;">   
+                                                                                                          </div>                    
+														  
+														 <g:set var="last" value=" ${conversationInstance.lastmail.id}" />  
+                                                                                                                   
+                                                                                                                      
                                                                                                                      <g:each in="${Listmail}" status="i" var="ListmailInstance">
-                                                                                                                         <tr  style="  border-bottom: 1px solid red; height:40px;"><td>${conversationInstance.id}</td>
-                                                                                                                     <td> De : ${ListmailInstance.author.username}</td>
-                                                                                                                     <td>   A :  ${ListmailInstance.recepteur.recepteur.username} </td>
-                                                                                                                     <td>    ${ListmailInstance.message}</td>
-                                                                                                                      <td style="text-align: right;">   ${ListmailInstance.dateCreated} </td></tr>
+                                                                                                                          <g:set var="courant" value=" ${ListmailInstance.id}" /> 
+                                                                                                                               <g:if test="${courant != last}"> 
+                                                                                                                         <div class="alert alert-info adjusted alert-block" style=" margin: 0px;">
+                                                                                                                        <!-- <div class="alert adjusted alert-success" style=" height: 50px; margin-bottom: 0px;"> -->
+                                                                                                                        
+                                                                                                                            
+					
+					
+                                                                                                                         ${conversationInstance.id}
+                                                                                                                      De : ${ListmailInstance.author.username}
+                                                                                                                     A :  ${ListmailInstance.recepteur.recepteur.username} 
+                                                                                                                        ${ListmailInstance.message}
+                                                                                                                      ${ListmailInstance.dateCreated} 
                                                                                                                     
                                                                                                                   
-															
+															</div>
+                                                                                                                        </g:if>
+                                                                                                        
+                                                                                                                          <g:else>
+                                                                                                                               <g:set var="rep" value=" ${ListmailInstance.recepteur.size()}" /> 
+                                                                                                                                 <g:set var="tous" value=" ${1}" /> 
+                                                                                                                         
+                                                                                                                <div class="message-body" >
+														<table style=" margin-top : 0px; width: 700px;">
+                                                                                                                        <tr>  <td> <h5>       De : ${ListmailInstance.author.username} </h5></td> 
+                                                                                                                              <td style="text-align: right;"> <h5> ${ListmailInstance.dateCreated} </h5></td></tr>
+                                                                                                                        <tr>  <td>   à :  ${ListmailInstance.recepteur.recepteur.username} </td> </tr>
+                                                                                                                        <tr>  <td>  <span> ${ListmailInstance.message}</span> </td></tr> 
+                                                                                                                        <tr>  <td>   <g:if test="${ListmailInstance.author != currentLoggedInUser }" > Cliquez ici pour <a href="javascript:Replay()">Répondre </a>  </g:if>
+                                                                                                                                                            <g:if test="${rep != tous}">  ou ici pour <a href="javascript:Replay()">Répondre à tous ${rep}</a> </g:if> </td></tr>
+                                                                                                                            
+                                                                                                                </table>
+														</div>     
+                                                                                                                            </g:else>
 															  </g:each>
-															</table>
+                                                                                                                          
+															
 														
-                                                                                                                      </div> 
+                                                                                                                 </div>
                                                                                                                       <div style="display: none;" id='ReplayALL' >
                                                                                                                     <g:form url="[action:'RelierALL',controller:'Mail']">
                                                                                                                         <g:hiddenField name="conversation" value="${conversationInstance.id}" /> <g:hiddenField name="author" value="${conversationInstance.lastmail.author?.id}" />
@@ -104,10 +115,10 @@
 													
                                                                                                                  
                                                                                                                   
-													</div>
-												</div>
+													
 												<g:set var="listcompteur" value="${1}" />  
-											</div><messagerie:listMessagerie>
+											</div>
+                                                                                        <messagerie:listMessagerie>
                                                                             </messagerie:listMessagerie>
 											</div>
 
@@ -123,7 +134,7 @@
 								</article>
 							</div>
 					</div>		
-				</div>
+				
 				<!-- end main content -->
 			
 				

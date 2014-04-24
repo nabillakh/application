@@ -140,7 +140,7 @@ class MailService {
     // Créer une Nouvelle ArrayList à partir de Set
   def lesmail2 = new ArrayList<Mail>(mySet); 
         
-        lesmail2.sort{a,b-> b.dateCreated<=>a.dateCreated}
+        lesmail2.sort{a,b-> a.dateCreated<=>b.dateCreated}
 
         return lesmail2
     }
@@ -154,11 +154,12 @@ class MailService {
          def mailsconversation = AfficherConversation(conversation)
          // deja classé dans la fonction AfficherConversation
          //    mailsconversation.sort{a,b-> b.dateCreated<=>a.dateCreated}
-         def lelastmail =  mailsconversation.getAt(0)
+         def lelastmail =  mailsconversation.getAt(mailsconversation.size() - 1)
          conversation.lastmail = lelastmail
          conversation.save flush:true
          LesConversations.add(conversation)  
      }
+     LesConversations.sort{a,b-> b.lastmail.dateCreated<=>a.lastmail.dateCreated}
      return LesConversations
  }
  //___________________________________________________________________
@@ -237,11 +238,18 @@ class MailService {
         Effectif.get(springSecurityService.principal.id)
     }
     //----------- modification des valeurs des mails------------
-    private messageLu(MailEffectif mailEffectifInstance) {
-        def mailEffectif = MailEffectif.get(mailEffectifInstance.id)
-        mailEffectif.lu = true
-        mailEffectif.save flush:true
+    private messageLu(Conversation conversationInstance) {
+        def per = Effectif.get(springSecurityService.principal.id)
+        def Conver = Conversation.get(conversationInstance.id)
+        Conver.mails.each() { mail ->
+            mail.recepteur.each() { maileff ->
+            if(  maileff.recepteur == per ){
+                 maileff.lu = true
+         maileff.save flush:true }
+        }
+        
     } 
+    }
     
      private messageArchiver(MailEffectif mailEffectifInstance) {
         def mailEffectif = MailEffectif.get(mailEffectifInstance.id)

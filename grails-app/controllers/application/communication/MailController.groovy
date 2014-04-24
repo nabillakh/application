@@ -37,6 +37,7 @@ class MailController {
 
     
    def ShowConversation (Conversation conversationInstance ){
+       mailService.messageLu( conversationInstance)
        def Listmail = mailService.AfficherConversation(conversationInstance)
        [Listmail : Listmail ,  conversationInstance : conversationInstance]
        

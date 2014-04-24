@@ -56,7 +56,7 @@
                                                                                                           <div class="alert alert-info adjusted alert-block" style=" margin: 0px;">
 											 <g:link  controller="Mail"  action="ShowConversation"  id="${mesConversationsInstance.id}">   
 											<p>
-											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username} <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}</g:link>
+											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username}   <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}</g:link>
                                                                                         </p>
 											
                                                                                                               
