@@ -3,27 +3,29 @@ package application.PP
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class PhaseController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Phase.list(params), model:[phaseInstanceCount: Phase.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Phase phaseInstance) {
         respond phaseInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Phase(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Phase phaseInstance) {
         if (phaseInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class PhaseController {
             '*' { respond phaseInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Phase phaseInstance) {
         respond phaseInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Phase phaseInstance) {
         if (phaseInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class PhaseController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Phase phaseInstance) {
 
         if (phaseInstance == null) {

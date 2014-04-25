@@ -1,6 +1,8 @@
 package application.communication
+
 import application.RH.*
 import application.communication.*
+import grails.plugins.springsecurity.Secured
 
 
 import static org.springframework.http.HttpStatus.*
@@ -12,7 +14,7 @@ class MailController {
     def springSecurityService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
        def mesmailEffectifFavoris =  mailService.afficherMailFavoris()
        def mesMailsFavoris = mailService.mailFavoris()
@@ -29,13 +31,13 @@ class MailController {
        // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
         [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu, mesConversations : mesConversations ]
     }
-
+   @Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Mail mailInstance) {
         respond mailInstance
     }
     //_______________show Conversation ___________________
 
-    
+   @Secured([ 'IS_AUTHENTICATED_FULLY']) 
    def ShowConversation (Conversation conversationInstance ){
        mailService.messageLu( conversationInstance)
        def Listmail = mailService.AfficherConversation(conversationInstance)
@@ -45,12 +47,13 @@ class MailController {
     
     //______________________________________________________
     
-    def create() {
+   @Secured(['IS_AUTHENTICATED_FULLY'])
+   def create() {
          
         respond new Mail(params)
     }
 
-    
+   @Secured(['IS_AUTHENTICATED_FULLY']) 
     def save() {
       def author = mailService.lookupCurrentPerson()
       def monMessage = params.message
@@ -72,6 +75,7 @@ class MailController {
 
     }
  //__________________ReplyALL__________________________ 
+   @Secured(['IS_AUTHENTICATED_FULLY'])
     def RelierALL() {
         //récupérer lautor de last mail pour l'ajouter a la liste des recepteur 
        def lauthor = params.author
@@ -103,7 +107,8 @@ class MailController {
     }
  //_________________________________________________________________
 //________________________Repondre à l'auteur seulement_____________
-def Relier() {
+@Secured(['IS_AUTHENTICATED_FULLY'])
+    def Relier() {
       def authorR = mailService.lookupCurrentPerson()
       def monMessageR = params.message
       //------attribuer l'id de la conversation au nouveau mail-----
@@ -123,7 +128,7 @@ def Relier() {
     }
     
 //____________________________________________________________
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save2(Mail mailInstance) {
       def author = mailService.lookupCurrentPerson()
       mailInstance.author = author
@@ -137,12 +142,13 @@ def Relier() {
             '*' { respond mailInstance, [status: CREATED] }
         }
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Mail mailInstance) {
         respond mailInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Mail mailInstance) {
         if (mailInstance == null) {
             notFound()
@@ -166,6 +172,7 @@ def Relier() {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Mail mailInstance) {
 
         if (mailInstance == null) {
@@ -196,12 +203,12 @@ def Relier() {
     
     
     
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [MailInstanceList: Mail.list(params), MailInstanceTotal: Effectif.count()]
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def maListe(Integer max) {
         
        def mesEffectifsMails = mailService.afficherMail()

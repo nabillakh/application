@@ -3,27 +3,29 @@ package application.PP
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class FamilleController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Famille.list(params), model:[familleInstanceCount: Famille.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Famille familleInstance) {
         respond familleInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Famille(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Famille familleInstance) {
         if (familleInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class FamilleController {
             '*' { respond familleInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Famille familleInstance) {
         respond familleInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Famille familleInstance) {
         if (familleInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class FamilleController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Famille familleInstance) {
 
         if (familleInstance == null) {

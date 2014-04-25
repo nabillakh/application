@@ -3,27 +3,29 @@ package application.PP
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class CompteRenduController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond CompteRendu.list(params), model:[compteRenduInstanceCount: CompteRendu.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(CompteRendu compteRenduInstance) {
         respond compteRenduInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new CompteRendu(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(CompteRendu compteRenduInstance) {
         if (compteRenduInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class CompteRenduController {
             '*' { respond compteRenduInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(CompteRendu compteRenduInstance) {
         respond compteRenduInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(CompteRendu compteRenduInstance) {
         if (compteRenduInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class CompteRenduController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(CompteRendu compteRenduInstance) {
 
         if (compteRenduInstance == null) {

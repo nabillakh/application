@@ -3,6 +3,7 @@ package application.PP
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
@@ -14,21 +15,22 @@ class OFController {
     def springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond OF.list(params), model:[OFInstanceCount: OF.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(OF OFInstance) {
         respond OFInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new OF(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(OF OFInstance) {
         if (OFInstance == null) {
             notFound()
@@ -50,12 +52,13 @@ class OFController {
             '*' { respond OFInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(OF OFInstance) {
         respond OFInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(OF OFInstance) {
         if (OFInstance == null) {
             notFound()
@@ -79,6 +82,7 @@ class OFController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(OF OFInstance) {
 
         if (OFInstance == null) {

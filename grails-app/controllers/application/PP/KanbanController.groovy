@@ -3,6 +3,8 @@ package application.PP
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import application.*
+import grails.plugins.springsecurity.Secured
+import grails.plugins.springsecurity.Secured
 
 @Transactional(readOnly = true)
 class KanbanController {
@@ -13,23 +15,24 @@ class KanbanController {
     def springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Kanban.list(params), model:[kanbanInstanceCount: Kanban.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Kanban kanbanInstance) {
         def ofs = kanbanService.montrerOF(kanbanInstance)
         def cRendus = kanbanService.afficherCRKanban(kanbanInstance)
         [kanbanInstance:kanbanInstance, ofs : ofs, cRendus : cRendus]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Kanban(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Kanban kanbanInstance) {
         
         if (!kanbanInstance.save(flush: true)) {
@@ -45,12 +48,13 @@ class KanbanController {
         // redirect(action: "show", id: kanbanInstance.id)
         redirect(action:"index")
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Kanban kanbanInstance) {
         respond kanbanInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Kanban kanbanInstance) {
         if (kanbanInstance == null) {
             notFound()
@@ -74,6 +78,7 @@ class KanbanController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Kanban kanbanInstance) {
 
         if (kanbanInstance == null) {
@@ -101,7 +106,7 @@ class KanbanController {
             '*'{ render status: NOT_FOUND }
         }
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def updateCompteRendu(String message, Long kanban) {
         compteRenduService.updateCompteRendu(message , kanban)
         def messages = timelineService.getTimelineForUser(springSecurityService.principal.username)

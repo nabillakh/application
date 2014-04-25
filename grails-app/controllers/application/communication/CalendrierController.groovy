@@ -3,27 +3,29 @@ package application.communication
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class CalendrierController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Calendrier.list(params), model:[calendrierInstanceCount: Calendrier.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Calendrier calendrierInstance) {
         respond calendrierInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Calendrier(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Calendrier calendrierInstance) {
         if (calendrierInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class CalendrierController {
             '*' { respond calendrierInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Calendrier calendrierInstance) {
         respond calendrierInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Calendrier calendrierInstance) {
         if (calendrierInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class CalendrierController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Calendrier calendrierInstance) {
 
         if (calendrierInstance == null) {

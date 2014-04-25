@@ -3,27 +3,29 @@ package application.communication
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ConversationController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Conversation.list(params), model:[conversationInstanceCount: Conversation.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Conversation conversationInstance) {
         respond conversationInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Conversation(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Conversation conversationInstance) {
         if (conversationInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class ConversationController {
             '*' { respond conversationInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Conversation conversationInstance) {
         respond conversationInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Conversation conversationInstance) {
         if (conversationInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class ConversationController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Conversation conversationInstance) {
 
         if (conversationInstance == null) {

@@ -3,27 +3,29 @@ package application.pilotage
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class PdpController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Pdp.list(params), model:[pdpInstanceCount: Pdp.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Pdp pdpInstance) {
         respond pdpInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Pdp(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Pdp pdpInstance) {
         if (pdpInstance == null) {
             notFound()
@@ -45,12 +47,13 @@ class PdpController {
             '*' { respond pdpInstance, [status: CREATED] }
         }
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Pdp pdpInstance) {
         respond pdpInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Pdp pdpInstance) {
         if (pdpInstance == null) {
             notFound()
@@ -74,6 +77,7 @@ class PdpController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Pdp pdpInstance) {
 
         if (pdpInstance == null) {

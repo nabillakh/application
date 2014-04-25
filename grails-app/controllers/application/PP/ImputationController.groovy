@@ -3,27 +3,30 @@ package application.PP
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+
 class ImputationController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Imputation.list(params), model:[imputationInstanceCount: Imputation.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Imputation imputationInstance) {
         respond imputationInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Imputation(params)
     }
 
     @Transactional
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Imputation imputationInstance) {
         if (imputationInstance == null) {
             notFound()
@@ -46,11 +49,14 @@ class ImputationController {
         }
     }
 
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Imputation imputationInstance) {
+    
         respond imputationInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Imputation imputationInstance) {
         if (imputationInstance == null) {
             notFound()
@@ -74,6 +80,7 @@ class ImputationController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Imputation imputationInstance) {
 
         if (imputationInstance == null) {

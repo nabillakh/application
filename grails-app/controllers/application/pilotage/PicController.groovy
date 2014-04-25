@@ -3,6 +3,7 @@ package application.pilotage
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
@@ -11,21 +12,22 @@ class PicController {
     def picService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Pic.list(params), model:[picInstanceCount: Pic.count()]
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Pic picInstance) {
         respond picInstance
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
         respond new Pic(params)
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Pic picInstance) {
         
         if (!picInstance.save(flush: true)) {
@@ -41,12 +43,13 @@ class PicController {
         // redirect(action: "show", id: picInstance.id)
         redirect(action:"index")
     }
-
+@Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Pic picInstance) {
         respond picInstance
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def update(Pic picInstance) {
         if (picInstance == null) {
             notFound()
@@ -70,6 +73,7 @@ class PicController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def delete(Pic picInstance) {
 
         if (picInstance == null) {

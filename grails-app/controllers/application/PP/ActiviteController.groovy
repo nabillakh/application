@@ -1,6 +1,7 @@
 package application.PP
 
 import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
 import org.codehaus.groovy.grails.web.json.JSONObject
 import application.pilotage.*
 import application.PP.*
@@ -13,13 +14,13 @@ class ActiviteController {
         
 	def springSecurityService
         def kanbanService
-
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def activite(Integer max) {
         
         params.max = Math.min(max ?: 10, 100)
         respond Kanban.list(params), model:[KanbanInstanceCount: Kanban.count()]
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def portefeuille(Integer max) {
         def listeKanban = kanbanService.listeKanban()
         def listeFamille = kanbanService.listeFamille()
@@ -39,7 +40,7 @@ class ActiviteController {
         
         [monKanban : monKanban, kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauKanban() {
         def nomKanban = params.nomKanban
         //def dateLivraison = new DateTime(params.dateLivraison)
@@ -66,11 +67,12 @@ class ActiviteController {
         
         
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def indicateur() {
         
     }
     // envoie data pour indicateur de 
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def chargePIC = {
         def pics = Pic.list()
         // hypothese nbannee = nb pic
@@ -90,6 +92,7 @@ class ActiviteController {
         render picLists as JSON
     }
     // envoie la liste de famille pour parising dans le graphe 1
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def listeFamille = {
         def fams = Famille.list()
         def famLists = []
@@ -100,7 +103,7 @@ class ActiviteController {
         [famInstanceList: famLists]
         render famLists as JSON
     }
-    
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def barPIC = {
         def pics = Pic.list()
         // hypothese nbannee = nb pic
