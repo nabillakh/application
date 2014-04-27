@@ -54,13 +54,19 @@
                                                                                                           <!-- content -->
                                                                                                           <g:each in="${mesConversations}" status="i" var="mesConversationsInstance">
                                                                                                           <div class="alert alert-info adjusted alert-block" style=" margin: 0px;">
-											 <g:link  controller="Mail"  action="ShowConversation"  id="${mesConversationsInstance.id}">   
-											<p>
-											<strong>  De : </strong>${mesConversationsInstance.lastmail.author.username}   <strong> Objet :</strong> ${mesConversationsInstance.lastmail.objet} <strong> Contenu : </strong>${mesConversationsInstance.lastmail.message}</g:link>
-                                                                                        </p>
+                                                                                                              <g:set var="conv" value=" ${mesConversationsInstance.id}" /> 
+                                                                                                              <g:each in="${meslastmail}" status="j" var="meslastmailInstance">
+                                                                                                                  <g:set var="last" value=" ${meslastmailInstance.conversation.id}" /> 
+                                                                                                                               <g:if test="${conv == last}">
+                                                                                                                     <g:link  controller="Mail"  action="ShowConversation"  id="${mesConversationsInstance.id}">   
 											
-                                                                                                              
-                                                                                                             
+                                                                                             
+                                                                                                                             <p>
+                                                                                                                            <strong>  De : </strong>${meslastmailInstance.author.username}   <strong> Objet :</strong> ${meslastmailInstance.objet} <strong> Contenu : </strong>${meslastmailInstance.message}</g:link>
+                                                                                                                                </p>
+											
+                                                                                                                               </g:if>
+                                                                                                               </g:each>                  
                                                                                                               
                                                                                                               <!-- gerer ce bout de code sous forme de taglib pour gerer la condition
                                                                                                               <div id="collapse${i}" class="accordion-body collapse" style="height: 0px; ">

@@ -12,8 +12,7 @@ class Event {
     Date startTime
     Date endTime
     
-    Effectif organisateur
-    static hasMany = [invites : Calendrier]
+    
     
     static transients = ['durationMinutes']
 
@@ -24,8 +23,8 @@ class Event {
         description(nullable: true, blank: true)
         startTime(nullable: false)
         endTime(required: true, nullable: false, validator: {val, obj -> val > obj.startTime} )
-        invites nullable: true
-        organisateur nullable : true
+       
+        
     }
 
     public int getDurationMinutes() {

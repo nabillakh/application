@@ -16,7 +16,7 @@ class EventController {
     def eventService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    
     def index(Integer max) {
         // envoi de la liste de kanban
         def mesOF = eventService.mesOF()
@@ -24,7 +24,7 @@ class EventController {
         params.max = Math.min(max ?: 10, 100)
         respond Event.list(params), model:[eventInstanceCount: Event.count(), mesOF : mesOF]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+
     def show = {
         def eventInstance = Event.get(params.id)
         
@@ -45,7 +45,7 @@ class EventController {
         }
 
     }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    
     def list = {
         def events = Event.list()
         // iterate through to see if we need to add additional Event instances because of recurring
@@ -75,13 +75,12 @@ class EventController {
            
                 render eventList as JSON 
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+
     def create() { 
         respond new Event(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Event eventInstance) {
         if (eventInstance == null) {
             notFound()
@@ -106,7 +105,6 @@ class EventController {
     
     
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauEvent() {
         // recupere en params le json du nouvel event. traduit en joda les dates puis cree l'event dans la bdd        
         def titre = params.title
@@ -133,7 +131,6 @@ class EventController {
     }
     
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauEvent2() {
         // recupere en params le json du kanban planifie. traduit en joda les dates puis cree l'event dans la bdd        
         def titre = params.title

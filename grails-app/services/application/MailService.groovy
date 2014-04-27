@@ -114,8 +114,8 @@ class MailService {
         }
         mesConversations.unique()
         // appeller la fonction qui donne le dernier mail pour chaque conversation
-        LesConversations = LastMail(mesConversations)
-        return LesConversations
+        mesConversations.sort{a,b-> b.lastmail.dateCreated<=>a.lastmail.dateCreated}
+        return mesConversations
     }
     
     //____________________ Liste des mails à afficher dans une conversation en entrée _____________
@@ -140,30 +140,47 @@ class MailService {
     // Créer une Nouvelle ArrayList à partir de Set
   def lesmail2 = new ArrayList<Mail>(mySet); 
         
-        lesmail2.sort{a,b-> a.dateCreated<=>b.dateCreated}
+        lesmail2.sort{a,b-> b.dateCreated<=>a.dateCreated}
 
         return lesmail2
     }
 //_____________________________________________________________________________
 //_______________________Last Mail____________________________________________
- private Conversation[] LastMail ( ArrayList<Conversation> mesConversations )
+ private Mail[] LastMail ()
  {
-
-     def LesConversations = []
-     mesConversations.each() { conversation ->
-         def mailsconversation = AfficherConversation(conversation)
+     def leslastmail = new ArrayList<Mail>()
+    def lesConversations = mesConversations()
+      
+    lesConversations.each() { conversation ->
+          def mailsconversation = AfficherConversation(conversation)
          // deja classé dans la fonction AfficherConversation
          //    mailsconversation.sort{a,b-> b.dateCreated<=>a.dateCreated}
-         def lelastmail =  mailsconversation.getAt(mailsconversation.size() - 1)
-         conversation.lastmail = lelastmail
-         conversation.save flush:true
-         LesConversations.add(conversation)  
+         def lelastmail =  mailsconversation.getAt(0)
+         
+         leslastmail.add(lelastmail)  
      }
-     LesConversations.sort{a,b-> b.lastmail.dateCreated<=>a.lastmail.dateCreated}
-     return LesConversations
+     
+     return leslastmail
+ }
+ //___________________________________________________________________
+//_____________ LE last mail pour répondre au author ________________
+private  LEastMail ( Conversation conversationInstance )
+ {
+        def lesmail = []
+        def maConversation = Conversation.get( conversationInstance.id)
+        def mailIN = mailInbox()
+  mailIN.each() { mail ->
+        if(( mail.conversation == maConversation ) && (!lesmail.contains(mail))){
+             lesmail.add(mail)     }
+                }
+                 lesmail.sort{a,b-> b.dateCreated<=>a.dateCreated}
+                 def Monlastmail =  lesmail.getAt(0)
+                 
+     return Monlastmail
  }
  //___________________________________________________________________
 
+//________________________________________________________
 //--------- liste des mailsEffectifs par conversation a partir de la liste de mailEffectif-------------    
     private listeMailEffectif(Conversation conversation, MailEffectif[] maListe) {
         def mesMailsEffectifs = []

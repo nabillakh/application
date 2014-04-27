@@ -16,20 +16,24 @@ class MailController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
+       
+        
+        
        def mesmailEffectifFavoris =  mailService.afficherMailFavoris()
        def mesMailsFavoris = mailService.mailFavoris()
        def mesEffectifsMails = mailService.afficherMail()
        def mesMails = mailService.mailInbox()
        def mesMailsSent = mailService.mailenvoyer()
-       def mesConversations = mailService.mesConversations()
-       def mesEffectifMailsArchiver = mailService.afficherMailArchiver() 
+         def mesConversations = mailService.mesConversations()
+        def mesEffectifMailsArchiver = mailService.afficherMailArchiver() 
        def mesMailsArchiver = mailService.mailArchiver()
        def mailNonLu = mailService.mailnLu(mesEffectifsMails)
+       def  meslastmail = mailService.LastMail()
        
        
        // params.max = Math.min(max ?: 10, 100)
        // respond Mail.list(params), model:[mailInstanceCount: Mail.count()]
-        [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu, mesConversations : mesConversations ]
+        [mailList: mesMails, mailList: mesMailsArchiver, maList: mesMailsFavoris, mesmailEffectifFavoris: mesmailEffectifFavoris, mesEffectifMailsArchiver:mesEffectifMailsArchiver,  mesEffectifsMails : mesEffectifsMails, mesMailsSent : mesMailsSent, mailNonLu:mailNonLu, mesConversations : mesConversations,meslastmail:meslastmail ]
     }
    @Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Mail mailInstance) {
@@ -41,7 +45,8 @@ class MailController {
    def ShowConversation (Conversation conversationInstance ){
        mailService.messageLu( conversationInstance)
        def Listmail = mailService.AfficherConversation(conversationInstance)
-       [Listmail : Listmail ,  conversationInstance : conversationInstance]
+       def Monlastmail = mailService.LEastMail(conversationInstance)
+       [Listmail : Listmail ,  conversationInstance : conversationInstance,  Monlastmail: Monlastmail]
        
    }
     
