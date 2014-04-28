@@ -53,4 +53,6 @@ class CompteRenduService {
     private lookupCurrentKanban(Long id) {
         Kanban.get(id)
     }
+    
+    
 }

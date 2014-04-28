@@ -12,13 +12,12 @@ class TimelineService {
 
     void clearTimelineCacheForUser(String username) {}
     
-    void clearTimelineCacheForKanabn(Kanban monKanban) {}
+    void clearTimelineCacheForKanban(Kanban monKanban) {}
 
     def getTimelineForUser(String username) {
         def per = Effectif.findByUsername(username)
         try { def query = Statut.whereAny {
             author { username == per.username }
-            if(per.followed) author in per.followed
         }.order 'dateCreated', 'desc'
         def messages = query.list(max: 10)
         messages

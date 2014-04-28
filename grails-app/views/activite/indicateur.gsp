@@ -4,8 +4,14 @@
 
   <head>
 		<meta name="layout" content="main"/>
-		<title>Sysprod</title>
+		<title>Mes indicateurs</title>
   </head>
+
+  
+ <g:render template="/menues/mainleft" />
+
+
+
 
 				<div id="page-content">
                                 
@@ -98,5 +104,4 @@
                                 
                                 </div>
 				<!-- end main content -->
-			  
- <g:render template="/menues/mainleft" />
+<g:render template="/menues/mainright" />
