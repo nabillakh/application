@@ -154,3 +154,39 @@ Caused by: groovy.lang.MissingPropertyException: No such property: id for class:
 2014-04-29 17:26:39,391 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
 2014-04-29 17:26:39,396 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
 2014-04-29 17:26:39,396 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
+2014-04-29 18:02:14,825 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event
+Cannot get property 'principal' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:render>: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <g:render>: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:44)
+	... 5 more
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_menues__mainright_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_menues__mainright_gsp:18)
+	... 6 more
+Caused by: java.lang.NullPointerException: Cannot get property 'principal' on null object
+	at application.PP.KanbanService$$EOcq13vG.chargeEffectifRealise(KanbanService.groovy:259)
+	at application.PP.KanbanTagLib$_closure2$$EOcq15fz.doCall(KanbanTagLib.groovy:22)
+	... 7 more
+2014-04-29 18:02:18,319 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event
+Cannot get property 'principal' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:render>: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <g:render>: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:44)
+	... 5 more
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <kanbans:toDoList>: Cannot get property 'principal' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_menues__mainright_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_menues__mainright_gsp:18)
+	... 6 more
+Caused by: java.lang.NullPointerException: Cannot get property 'principal' on null object
+	at application.PP.KanbanService$$EOcq13vG.chargeEffectifRealise(KanbanService.groovy:259)
+	at application.PP.KanbanTagLib$_closure2$$EOcq15fz.doCall(KanbanTagLib.groovy:22)
+	... 7 more

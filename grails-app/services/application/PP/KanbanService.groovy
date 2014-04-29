@@ -248,6 +248,30 @@ class KanbanService {
                maCharge += chargeOFRealise(of)     
         }
         return maCharge
+    }    
+    // permet d'avoir la charge deja dans l'agenda par effectif
+    
+    private Float chargeEffectifRealise() {
+        def maCharge = 0        
+        
+        def lesOF = [] 
+        def aujourdhui = new Date()
+        def per = Effectif.get(springSecurityService.principal.id)
+        try {
+            def query = OF.whereAny {
+                affectes {per}
+                dateFinPlanifie > aujourdhui + 1
+            }
+            lesOF = query.list()
+        }
+        
+        catch (NullPointerException n){
+        }
+        
+        lesOF.each() {of ->
+            maCharge += chargeOFRealise(of)
+        }
+        return maCharge
     }   
     
     

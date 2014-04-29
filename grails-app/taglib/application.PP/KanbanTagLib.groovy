@@ -19,7 +19,7 @@ class KanbanTagLib {
     def toDoList = {attrs -> 
     
     def maToDo = eventService.maToDo()
-    def maCharge = kanbanService.chargeEffectifAgenda()
+    def maCharge = kanbanService.chargeEffectifRealise()
     maToDo.eachWithIndex { Of, counter ->
             out << g.render(template: '/kanban/maToDo', model: [maToDo : maToDo, ofCounter: counter, maCharge : maCharge])      
         }
