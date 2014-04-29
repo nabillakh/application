@@ -229,7 +229,7 @@ class KanbanService {
     // mettre periode temporelle
     private Float chargeOFRealise(OF of) {
         def listeCharge = []
-        listeCharge = OF.findAll("from Imputation as b where b.of=?", [of])
+        listeCharge = Imputation.findAll("from Imputation as b where b.of=?", [of])
         def charge = 0
         listeCharge.each() { monImputation ->
             // test si l'imput est déclarée comme realisee
@@ -238,7 +238,19 @@ class KanbanService {
             }
         }
         return charge
-    }    
+    }   
+    
+    // permet d'avoir la charge realisee par kanban
+    
+    private Float chargeKanbanRealise(Kanban kanban) {
+        def maCharge = 0
+        kanban.of.each() {of ->
+               maCharge += chargeOFRealise(of)     
+        }
+        return maCharge
+    }   
+    
+    
     //   //// permet de charger la charge deja dans l'agenda
     private Float chargeOFAgenda(OF of) {
         def listeCharge = []
@@ -248,7 +260,17 @@ class KanbanService {
             charge += monImputation.event.durationMinutes / 60
         }
         return charge
-    }  
+    }   
+    
+    // permet d'avoir la charge deja dans l'agenda par kanban
+    
+    private Float chargeKanbanAgenda(Kanban kanban) {
+        def maCharge = 0
+        kanban.of.each() {of ->
+               maCharge += chargeOFAgenda(of)     
+        }
+        return maCharge
+    }   
     //   rend les kanbans par famille
     // mettre par annee aussi
     private Kanban[] projetsFamille(Famille famille) {

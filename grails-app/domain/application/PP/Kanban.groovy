@@ -7,7 +7,7 @@ import application.communication.*
 
 @ToString(includes='nomKanban')
 class Kanban {
-     
+     def kanbanService
     String nomKanban
     String description
     
@@ -22,7 +22,26 @@ class Kanban {
     
     static hasMany = [compteRendus : CompteRendu, of:OF]
     
-    static transients = ['chargePlanifiee']
+    static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser', 'avancementRealise']
+    
+    public Float getChargeRealisee() {
+        kanbanService.chargeKanbanRealise(this)
+    }
+    public Float getChargeAgenda() {
+        kanbanService.chargeKanbanAgenda(this)
+    }
+    public Float getChargeRestantAPlanifier() {
+        chargePlanifiee - chargeAgenda
+    }
+    public Float getChargeRestantARealiser() {
+        chargePlanifiee - chargeRealisee
+    }
+    public Float getAvancementRealise() {
+        chargeRealisee / chargePlanifiee * 100
+    }
+    public Float getAvancementAgenda() {
+        chargeRealisee / chargeAgenda * 100
+    }
     
     
     

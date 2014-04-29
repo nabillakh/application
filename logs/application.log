@@ -493,3 +493,68 @@ Cannot resolve which method to invoke for [null] due to overlapping prototypes b
 	at java.lang.Thread.run(Thread.java:724)
 2014-04-29 14:14:14,324 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-04-29 14:14:15,334 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 15:29:19,555 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 147: unable to resolve class JSON 
+ @ line 147, column 25.
+           render picLists as JSON
+                           ^
+
+1 error
+
+2014-04-29 15:29:35,502 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 147: unable to resolve class JSON 
+ @ line 147, column 25.
+           render picLists as JSON
+                           ^
+
+1 error
+
+2014-04-29 15:31:51,938 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unexpected token: = @ line 131, column 49.
+   cement(Kanban kanbanInstance) = {
+                                 ^
+
+1 error
+
+2014-04-29 15:32:07,532 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 147: unable to resolve class JSON 
+ @ line 147, column 25.
+           render picLists as JSON
+                           ^
+
+1 error
+
+2014-04-29 15:58:28,627 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@6369c6] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\Kanban.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 15:59:05,481 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 15:59:06,518 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:26:13,035 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:26:13,991 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:29:45,164 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:29:46,246 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:33:15,249 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@12a85e] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 16:35:18,601 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@bdc4b] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 16:36:27,201 [FileSystemWatcher: files=#16 cl=groovy.lang.GroovyClassLoader@12a85e] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\Kanban.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 16:37:02,882 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 16:37:03,522 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig

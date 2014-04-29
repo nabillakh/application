@@ -37,14 +37,19 @@
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
                                                   <div class="row-fluid">
+                                                    <article class="span12">
+                                                      <center><label class="control-label"  for="nomKanban">
+                                                          <h1 id="page-header"><g:message code="kanban.nomKanban.label" default="Projet : ${kanbanInstance?.nomKanban}" /></h1>
+                                                        </label></center>
+                                                    </article>
+                                                  </div>
+                                                  <div class="row-fluid">
                                                     <article class="span9">
                                                       <center>
                                                         
-                                                        <label class="control-label"  for="nomKanban">
-                                                          <h1 id="page-header"><g:message code="kanban.nomKanban.label" default="Projet : ${kanbanInstance?.nomKanban}" /></h1>
-                                                        </label></br>
+                                                        </br>
                                                         <label class="control-label"  for="description">
-                                                          <g:message code="kanban.description.label" default="Description : ${kanbanInstance?.description}" />
+                                                          <pre><g:message code="kanban.description.label" default="Description : ${kanbanInstance?.description}" /></pre>
                                                         </label>
                                                         <label class="control-label"  for="phase">
                                                           <g:message code="kanban.phaseActuelle.label" default="Etat d'avancement du projet : ${kanbanInstance?.phaseActuelle.nom}" />
@@ -53,11 +58,29 @@
                                                         <label class="control-label"  for="dateFinPlanifie">
                                                           Date de fin planifiée :  <g:formatDate code="kanban.dateFinPlanifie.label" format="dd-MM-yyyy" date="${kanbanInstance?.dateFinPlanifie}" />
                                                         </label>
+                                                        
+                                                        
+                                                        <label class="control-label"  for="phase">
+                                                          Charge planifiee : ${kanbanInstance?.chargePlanifiee}
+                                                        </label>
+                                                        
+                                                        <label class="control-label"  for="phase">
+                                                          Charge dans agenda : ${kanbanInstance?.getAvancementAgenda()}
+                                                        </label>
+                                                        
+                                                        
                                                       </center>
                                                     </article>
                                                     <article class="span3">
-                                                      ok
-                                                    </article>
+                                                      <!-- easy pie chart -->
+							<div class="easypie">
+								<div class="percentage" data-percent=${kanbanInstance.getAvancementRealise()}>
+									<span>${kanbanInstance.getAvancementRealise()}</span>%
+								</div>
+							</div>
+                                                    </article>                     
+                                                    
+                                                    
                                                   </div>
 
 
@@ -67,68 +90,17 @@
 							<!-- row-fluid -->
 							
                                                         <div class="row-fluid">
-								
+								ok
 								<article class="span6">
 									<!-- new widget -->
 									
-                                                                        <div class="jarviswidget" id="widget-id-1">
-									    <header>
-									        <h2>Fiche du projet : "${fieldValue(bean: kanbanInstance, field: "nomKanban")}"</h2>                           
-									    </header>
-									    <!-- wrap div -->
-									    <div>
-									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-            
-									        <div class="inner-spacer"> 
-									        <!-- content goes here -->
-                                                                                <center>
-                                                                                <div class="control-group" style=" text-align: left;">
-                                                                                  <label class="control-label"  for="nomKanban">
-                                                                                    <g:message code="kanban.nomKanban.label" default="Nom du projet : ${kanbanInstance?.nomKanban}" />
-                                                                                  </label>
-                                                                                </div>
-                                                                                <div class="control-group"style=" text-align: left;">
-                                                                                  <label class="control-label"  for="description">
-                                                                                    <g:message code="kanban.description.label" default="Description : ${kanbanInstance?.description}" />
-                                                                                  </label>
-                                                                                </div>
-                                                                                <div class="control-group" style=" text-align: left;">
-                                                                                  <label class="control-label"  for="phase">
-                                                                                    <g:message code="kanban.phaseActuelle.label" default="Etat d'avancement du projet : ${kanbanInstance?.phaseActuelle}" />
-                                                                                  </label>
-                                                                                </div>
-                                                                                <div class="control-group" style=" text-align: left;">
-                                                                                  <label class="control-label"  for="dateFinPlanifie">
-                                                                                    <g:message code="kanban.dateFinPlanifie.label" default="Date de fin planifiée : ${kanbanInstance?.dateFinPlanifie}" />
-                                                                                  </label>
-                                                                                </div>
-                                                                                  </center>
-                                                                                </div>
-                                                                              
-                                                                              
-                                                                              
-										    <!-- end content-->
-									    </div>
-									    <!-- end wrap div -->
-									</div>
+                                                                        
+                                                    
+                                                      <div id="indicateurKanban"></div>
+                                                      <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
+                                                      <g:hiddenField name="chargePlanifiee" id="chargePlanifiee" value="${kanbanInstance.chargePlanifiee}"/>
+                                                      <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
+                                                      
                                                                         
                                                                         
 									<!-- end widget -->
@@ -137,30 +109,10 @@
 								<article class="span6">
 									
 									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-5">
-									    <header>
-									        <h2>Avancement</h2>                           
-									    </header>
+                                                                        
 									    <div>
 									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
+									       
             
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
@@ -179,14 +131,13 @@
 									        
 									        
 									    </div>
-									</div>
 									<!-- end widget -->
 								</article>
 								
 							</div>
                                                         
                                                 </section>
-                                                        
+                                                <section>
 							<div class="row-fluid">
 								<article class="span12">      
                                                                         <div class="jarviswidget" id="widget-id-1">
@@ -233,7 +184,7 @@
 									    </div>
 									    <!-- end wrap div -->
 									</div>
-                                                                        </div></article></div>
+                                                                        </div></article></div></section>     
                                                         <article>
                                                           <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
 									    <header>

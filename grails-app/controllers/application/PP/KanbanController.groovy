@@ -125,6 +125,5 @@ class KanbanController {
         def mesCR = kanbanService.afficherCRKanban(monKanban)
         [mesCR:mesCR.reverse()]
     }
-    
-    
+       
 }

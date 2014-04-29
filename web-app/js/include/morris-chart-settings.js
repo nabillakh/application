@@ -413,6 +413,27 @@ $(document).ready( function() {
 	});
         
        }
+       
+       if ($('#indicateurKanban').length){
+           
+               Morris.Bar({
+		  element: 'indicateurKanban',
+		  axes: true,
+		  grid: true,
+		  data: [
+		    {x: '2011 Q1', y: $('#chargePlanifiee').val(), z: 2, a: 3},
+		    {x: '2011 Q2', y: $('#chargePlanifiee').val(), z: null, a: 1},
+		    {x: '2011 Q3', y: 0, z: 2, a: $('#chargePlanifiee').val()},
+		    {x: '2011 Q4', y: 2, z: 4, a: 3}
+		  ],
+		  xkey: 'x',
+		  ykeys: ['y', 'z', 'a'],
+		  labels: [$('#kanban'), 'Z', 'A'],
+		  stacked: true
+		});
+            }
+       
+       
         var json_data2 = (function() {
                var json;
                $.ajax({

@@ -639,10 +639,10 @@
                                                 format: 'json',
                                                 data: {
                                                     title: copiedEventObject.title,
-						    start: copiedEventObject.start,
+						    start: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 8 * 1)),
                                                     id : copiedEventObject.id,
                                                     // mettre j+1 si agenda sinon h+2
-						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 24 * 1)),
+						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 12 * 1)),
                                                 },
                                                 error: function () {
                                                     alert('pb denvoi du json');
