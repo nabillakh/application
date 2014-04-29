@@ -35,11 +35,16 @@ class CompteRenduService {
     void updateCompteRendu(String message, Long kanban) {
         try {
             def leKanban = lookupCurrentKanban(kanban)
+            println("reconstruction kanban" + leKanban.nomKanban)
             def status = new CompteRendu(message: message, kanban:leKanban)
             status.author = lookupCurrentPerson()
-            leKanban.addToCompteRendus(status)
-            leKanban.save()
-            status.save() 
+            println("auteur : " + status.author.nom)
+            println("kanban associe : " + status.kanban.nomKanban)
+            // leKanban.addToCompteRendus(status)
+            // println("leKanban compteRendus")
+            // leKanban.save()
+            status.save()
+            println(status.id + " : nv cr")
         }
         catch(NullPointerException n) {}
         

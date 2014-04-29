@@ -198,3 +198,410 @@ Possible solutions: getCompteRendus()
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 09:58:36,254 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dede
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco3JZY.$tt__updateCompteRendu(KanbanController.groovy:113)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 09:58:43,410 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: ssasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco3JZY.$tt__updateCompteRendu(KanbanController.groovy:113)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 09:59:27,493 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dzdzd
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco3Wib.$tt__updateCompteRendu(KanbanController.groovy:114)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:04:31,662 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: grgr
+kanban: 1
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco4nUc.$tt__updateCompteRendu(KanbanController.groovy:114)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:04:39,593 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dzdzdz
+kanban: 1
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco4nUc.$tt__updateCompteRendu(KanbanController.groovy:114)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:05:07,127 [http-bio-8080-exec-12] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dzdzdz
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco4nUc.$tt__updateCompteRendu(KanbanController.groovy:114)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:05:52,311 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: zdzdz
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco57sg.$tt__updateCompteRendu(KanbanController.groovy:115)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:05:59,070 [http-bio-8080-exec-13] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasas
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco57sg.$tt__updateCompteRendu(KanbanController.groovy:115)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:10:22,347 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dzdz
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco57sg.$tt__updateCompteRendu(KanbanController.groovy:115)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:11:07,910 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco6USd.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:11:31,328 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService.$tt__updateCompteRendu(CompteRenduService.groovy:40)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:12:43,362 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sadada
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco6tNM.$tt__updateCompteRendu(CompteRenduService.groovy:41)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:13:23,196 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco735n.$tt__updateCompteRendu(CompteRenduService.groovy:41)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:15:09,619 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco7V4W.$tt__updateCompteRendu(CompteRenduService.groovy:42)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:00,139 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: defef
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco7hsF.$tt__updateCompteRendu(CompteRenduService.groovy:42)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:24,074 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: dddd
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco7oNc.$tt__updateCompteRendu(CompteRenduService.groovy:42)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:33,007 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\CompteRenduService.groovy: 43: unexpected token: ok @ line 43, column 44.
+   rintln("leKanban.compteRendus"ok?"")
+                                 ^
+
+1 error
+
+2014-04-29 10:16:40,767 [http-bio-8080-exec-10] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\CompteRenduService.groovy: 43: unexpected token: ok @ line 43, column 44.
+   rintln("leKanban.compteRendus"ok?"")
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor834.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:46,399 [http-bio-8080-exec-1] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\CompteRenduService.groovy: 43: unexpected token: ok @ line 43, column 44.
+   rintln("leKanban.compteRendus")
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:48,312 [http-bio-8080-exec-12] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\CompteRenduService.groovy: 43: unexpected token: ok @ line 43, column 44.
+   rintln("leKanban.compteRendus")
+                                 ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:17:03,535 [http-bio-8080-exec-12] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasas
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco7yFd.$tt__updateCompteRendu(CompteRenduService.groovy:42)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:18:20,631 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/updateCompteRendu - parameters:
+message: sasasa
+kanban: 4
+No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.Kanban.addToCompteRendus() is applicable for argument types: (application.PP.CompteRendu) values: [application.PP.CompteRendu : (unsaved)]
+Possible solutions: getCompteRendus()
+	at application.PP.CompteRenduService$$EOco8J6y.$tt__updateCompteRendu(CompteRenduService.groovy:43)
+	at application.PP.KanbanController$$EOco6aEp.$tt__updateCompteRendu(KanbanController.groovy:116)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)

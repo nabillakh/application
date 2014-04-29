@@ -44,3 +44,10 @@ Cannot resolve which method to invoke for [null] due to overlapping prototypes b
 java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
 	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
 	at java.lang.Thread.run(Thread.java:724)
+2014-04-29 10:16:33,227 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\CompteRenduService.groovy: 43: unexpected token: ok @ line 43, column 44.
+   rintln("leKanban.compteRendus"ok?"")
+                                 ^
+
+1 error
+

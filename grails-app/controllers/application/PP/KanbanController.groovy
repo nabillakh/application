@@ -23,8 +23,11 @@ class KanbanController {
 @Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Kanban kanbanInstance) {
         def ofs = kanbanService.montrerOF(kanbanInstance)
-        def cRendus = kanbanService.afficherCRKanban(kanbanInstance)
-        [kanbanInstance:kanbanInstance, ofs : ofs, cRendus : cRendus]
+        println("charger des of ok")
+        def mesCR = kanbanService.afficherCRKanban(kanbanInstance)
+        
+        println("charger des cr ok")
+        [kanbanInstance:kanbanInstance, ofs : ofs, mesCR : mesCR]
     }
 @Secured(['IS_AUTHENTICATED_FULLY'])
     def create() {
@@ -108,10 +111,20 @@ class KanbanController {
     }
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def updateCompteRendu(String message, Long kanban) {
-        compteRenduService.updateCompteRendu(message , kanban)
-        def messages = timelineService.getTimelineForUser(springSecurityService.principal.username)
         
-        def content = compteRendus.renderMessages messages: messages
-        render content
+        println("controleur updateCR" + message + kanban)
+        compteRenduService.updateCompteRendu(message , kanban)
+        render "<script>obtenirCompteRendu()</script>"
     }
+    
+    
+    def obtenirCompteRendu(Long kanban) {
+        println("ok")
+        println(kanban)
+        def monKanban = Kanban.get(kanban)
+        def mesCR = kanbanService.afficherCRKanban(monKanban)
+        [mesCR:mesCR.reverse()]
+    }
+    
+    
 }

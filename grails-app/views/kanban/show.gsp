@@ -211,8 +211,8 @@
 									    <!-- end wrap div -->
 									</div>
                                                                         </div></article></div>
-                                                        
-                                                                            <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
+                                                        <article>
+                                                          <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
 									    <header>
 									        <h2>Compte Rendu</h2>                           
 									    </header> 
@@ -274,9 +274,7 @@
 									    <!-- end widget div -->
 									
                                                                             
-                                                                            
-									</div>
-									</div>
+                                                                            </article>
 									</div>
                                                         
                                                         
