@@ -4,25 +4,6 @@
 		<meta name="layout" content="main"/>
 		<title>Gestion projet</title>
                 <g:javascript library="jquery" plugin="jquery" />
-                  <style type="text/css">
-        #chatMessages {
-            border: 1px solid #000;
-            height: 300px;
-            width: 900px;
-            overflow-y: auto;
-        }
-        #messageBox {
-            width: 888px;
-        }
-        .nickname {
-            color: #f00;
-            font-weight: bold;
-        }
-        .msg {
-            color: #444;
-            font-weight: normal;
-        }
-    </style>
   </head>
 
  
@@ -90,12 +71,12 @@
 							<!-- row-fluid -->
 							
                                                         <div class="row-fluid">
-								ok
+								
 								<article class="span6">
 									<!-- new widget -->
 									
                                                                         
-                                                    
+                                                    mettre courbe avancement
                                                       <div id="indicateurKanban"></div>
                                                       <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
                                                       <g:hiddenField name="chargePlanifiee" id="chargePlanifiee" value="${kanbanInstance.chargePlanifiee}"/>
@@ -109,7 +90,7 @@
 								<article class="span6">
 									
 									<!-- new widget -->
-                                                                        
+                                                                        avancement par phase
 									    <div>
 									    
 									       
@@ -139,32 +120,12 @@
                                                 </section>
                                                 <section>
 							<div class="row-fluid">
-								<article class="span12">      
-                                                                        <div class="jarviswidget" id="widget-id-1">
+								<article class="span6">      
 									    <header>
 									        <h2>Ordonnancement du projet : "${fieldValue(bean: kanbanInstance, field: "nomKanban")}"</h2>                           
 									    </header>
 									    <!-- wrap div -->
-									    <div>
 									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
             
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
@@ -178,14 +139,11 @@
                                                                                       </tr>
                                                                                   </div>
                                                                                 </g:each>
-                                                                                
-                                                                                
-										    <!-- end content-->
-									    </div>
-									    <!-- end wrap div -->
 									</div>
-                                                                        </div></article></div></section>     
-                                                        <article>
+                                                                        </div></article></div></section> 
+
+                                                <section>
+                                                        <article class="span6">
                                                           <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
 									    <header>
 									        <h2>Compte Rendu</h2>                           
