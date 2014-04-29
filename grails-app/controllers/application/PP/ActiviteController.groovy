@@ -43,14 +43,14 @@ class ActiviteController {
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauKanban() {
         def nomKanban = params.nomKanban
-        //def dateLivraison = new DateTime(params.dateLivraison)
+        DateTime dateLivraison = new DateTime(params.dateLivraison)
         def description = params.description
         def famille = params.famille
         def ordo = params.ordo
         def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
         Kanban monKanban = new Kanban()
         monKanban.nomKanban = nomKanban
-        // monKanban.dateFinPlanifie = dateLivraison.toDate()
+        monKanban.dateFinPlanifie = dateLivraison.toDate()
         monKanban.description = description
         monKanban.famille = Famille.get(Integer.parseInt(famille))
         monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
@@ -64,6 +64,7 @@ class ActiviteController {
         println("2 nom du kanban: " + monKanban.nomKanban + " id2 " + monKanban.id)
         
         
+        monKanban.save(flush : true)
         
         
     }

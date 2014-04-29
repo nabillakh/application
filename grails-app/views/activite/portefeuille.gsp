@@ -61,6 +61,8 @@
 															<th> </th>
                                                                                                                         <th><center>Nom du projet</center></th>
 															<th><center>Description</center></th>
+                                                                                                                        <th><center>deb</center></th>
+															<th><center>fin</center></th>
 														</tr>
 													</thead>
 													<tbody>
@@ -69,6 +71,8 @@
                                                                                                               <td><center><a class="btn btn-primary medium" href="#" id="${kanbanInstance.id}" onClick="majWizard(this.id);return false;">Modifier</a></center></td>
                                                                                                               <td><g:link action="show" controller = "kanban" id="${kanbanInstance.id}"><center> ${fieldValue(bean: kanbanInstance, field: "nomKanban")}</center></g:link></td>
                                                                                                           <td><center>${fieldValue(bean: kanbanInstance, field: "description")}</center></td>
+                                                                                                          <td><center>${fieldValue(bean: kanbanInstance, field: "dateLancement")}</center></td>
+                                                                                                          <td><center>${fieldValue(bean: kanbanInstance, field: "dateFinPlanifie")}</center></td>
                                                                                                           
                                                                                                           </tr>
                                                                                                           </g:each>

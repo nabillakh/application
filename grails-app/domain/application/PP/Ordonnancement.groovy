@@ -4,6 +4,7 @@ class Ordonnancement {
     
     String nom
     Famille famille
+    SortedSet phases
     static hasMany = [phases : Phase]
     
     Float chargeStandard
@@ -13,6 +14,10 @@ class Ordonnancement {
         phases nullable : true
     }
     
-     static mappedBy = [famille : 'ordo']
+     static mappedBy = {
+         famille : 'ordo'
+     }
+     
+    
     
 }

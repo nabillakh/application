@@ -4,6 +4,7 @@ import grails.validation.ValidationException
 import org.springframework.transaction.annotation.Transactional
 import application.PP.*
 import application.RH.*
+import org.joda.time.DateTime
 
 
 class KanbanService {
@@ -96,31 +97,45 @@ class KanbanService {
     @Transactional
     Phase[] montrerPhasesInitiales(Kanban kanban) {
         def ordo = kanban.getOrdo()
+                println("recherche de l'ordo du kanban : "+ordo.nom)
         try{
-            return ordo.getPhases()
-        }
+            println("dans try")
+             return ordo.getPhases()
+           // return Phase.findAll("from Phase as b where b.monOrdo=? order by b.ordre", [ordo])
+            println("liste de phases ok")
+            }
         catch (NullPointerException n) {
+            println("nullpointer")
             return null
         }
     }        
     // creation d'of automatique apres chaque saisie de kanban 
     @Transactional
     void requeteCreation(Kanban monKanban){
+        println("dans requetecreation")
+        
         try {
             def famille = monKanban.getFamille()
+        println("famille du kanban :" + famille.nom)
+            println("date de fin : " + monKanban.getDateFinPlanifie())
             // monKanban.setOrdo(famille.getOrdo())
-            def ofs = OF.findByKanban(monKanban)
+            def ofs = OF.findAll("from OF as b where b.kanban=?", [monKanban])
             if(!ofs)  {
-                for (maPhase in montrerPhasesInitiales(monKanban)) { 
+                montrerPhasesInitiales(monKanban).each() { maPhase ->
                     def of = new OF(phase : maPhase, kanban : monKanban)
+            println("creation de l'of")
                     chargeInitialeOF(of)
+            println("charge dans of")
                     
                     if(maPhase.ordre == 1) {
                         monKanban.phaseActuelle = maPhase
                     }
                     
                     of.save()
+            println("avant ajout dans liste ofs")
+            println("ajout of dans ofs")
                 }
+            ordonnancementOF(monKanban)
             }
             else {
                 throw new RuntimeException('il y a deja des OFs')
@@ -129,7 +144,45 @@ class KanbanService {
         catch(ValidationException e){
             System.out.println("ofs")
         }
-    }    
+    }
+    
+    // permet de préordonnancer les of et de les étaler dans le temps
+    void ordonnancementOF(Kanban kanban) {
+            println("dans ordonancement of")
+            def ofs = OF.findAll("from OF as b where b.kanban=?", [kanban])
+        Date dateFin = kanban.getDateFinPlanifie()
+            println(dateFin)
+        Date dateDeb = kanban.getDateLancement()
+            println(dateDeb)
+        
+        def delta = (dateFin.getTime() - dateDeb.getTime())/(1000*60*60*24)
+            println(delta)
+        def d = 0
+        
+        def charge = 0
+        ofs.each() {of ->
+            charge += of.chargePlanifiee
+        }
+            println(charge)
+        
+        ofs.each() { of ->
+            d += ((of.chargePlanifiee * delta)/charge)
+            println("duree" + d + " de l'of : " + of.phase.nom)
+            def jours = Math.round(d)
+            println("nb de jours : " + jours)
+            DateTime maDate = new DateTime(dateDeb)
+            println("datedeb : " + maDate)   
+            maDate = maDate.plusDays((int)jours)
+            println("datedeb + jours : " + maDate)   
+            of.setDateFinPlanifie(maDate.toDate())
+            of.save()
+        }
+        
+        
+    }
+
+
+    
     // permet de charger les OF au debut
     @Transactional
     void chargeInitialeOF(OF of) {
@@ -203,6 +256,17 @@ class KanbanService {
         listeProjets = Kanban.findAll("from Kanban as b where b.famille=?", [famille])
         
         return listeProjets
+    }
+    
+
+    
+    private Date ajouterJourDate(Date maDate, Integer jours) {
+        println("dans ajout jours")
+        Calendar cal = Calendar.getInstance()
+        println("instance calendar")
+        cal.setTime(maDate.getTime())
+        cal.add(Calendar.DATE, jours)
+        return cal.getTime();
     }
     
     

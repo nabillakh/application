@@ -44,7 +44,7 @@ class KanbanController {
         }
             // ajouter par NL
             // permet de creer des OF a la creation d'un Kanban
-        
+            
         kanbanService.requeteCreation(kanbanInstance)
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'kanban.label', default: 'Kanban'), kanbanInstance.id])

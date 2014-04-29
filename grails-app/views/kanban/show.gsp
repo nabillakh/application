@@ -32,15 +32,38 @@
 
 				<!-- main content -->
 				<div id="page-content">
-					<!-- page header -->
-					<h1 id="page-header">Gestion du portefeuille</h1>	
-					
 					<div class="fluid-container">
 						
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
-							
+                                                  <div class="row-fluid">
+                                                    <article class="span9">
+                                                      <center>
+                                                        
+                                                        <label class="control-label"  for="nomKanban">
+                                                          <h1 id="page-header"><g:message code="kanban.nomKanban.label" default="Projet : ${kanbanInstance?.nomKanban}" /></h1>
+                                                        </label></br>
+                                                        <label class="control-label"  for="description">
+                                                          <g:message code="kanban.description.label" default="Description : ${kanbanInstance?.description}" />
+                                                        </label>
+                                                        <label class="control-label"  for="phase">
+                                                          <g:message code="kanban.phaseActuelle.label" default="Etat d'avancement du projet : ${kanbanInstance?.phaseActuelle.nom}" />
+                                                        </label>
+                                                        
+                                                        <label class="control-label"  for="dateFinPlanifie">
+                                                          Date de fin planifiée :  <g:formatDate code="kanban.dateFinPlanifie.label" format="dd-MM-yyyy" date="${kanbanInstance?.dateFinPlanifie}" />
+                                                        </label>
+                                                      </center>
+                                                    </article>
+                                                    <article class="span3">
+                                                      ok
+                                                    </article>
+                                                  </div>
 
+
+                                                  
+                                                  
+                                                  
 							<!-- row-fluid -->
 							
                                                         <div class="row-fluid">
@@ -162,7 +185,7 @@
 								
 							</div>
                                                         
-                                                        
+                                                </section>
                                                         
 							<div class="row-fluid">
 								<article class="span12">      

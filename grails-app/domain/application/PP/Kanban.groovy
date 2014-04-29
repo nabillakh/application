@@ -12,7 +12,7 @@ class Kanban {
     String description
     
     Date dateLancement= new Date()
-    Date dateFinPlanifie= new Date()
+    Date dateFinPlanifie
     
     Float chargePlanifiee
     

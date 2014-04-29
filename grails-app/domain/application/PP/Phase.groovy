@@ -4,7 +4,8 @@ import application.RH.*
 import groovy.transform.ToString
 
 @ToString(includes='nom') 
-class Phase {
+
+class Phase  implements Comparable {
 
     String nom
     Long ordre
@@ -23,4 +24,8 @@ class Phase {
     }
     
     static mappedBy = [kanbans : 'phaseActuelle']
+    
+    int compareTo(obj) {
+       ordre.compareTo(obj.ordre)
+   }
 }
