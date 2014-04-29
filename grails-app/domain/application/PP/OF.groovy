@@ -6,7 +6,9 @@ import application.RH.*
 
 @ToString()
 class OF {
-
+// a retirer et passer en transient
+    def kanbanService
+    
     Kanban kanban
     Phase phase
     Float chargePlanifiee

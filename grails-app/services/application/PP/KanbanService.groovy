@@ -3,8 +3,9 @@ package application.PP
 import grails.validation.ValidationException
 import org.springframework.transaction.annotation.Transactional
 import application.PP.*
-
 import application.RH.*
+
+
 class KanbanService {
 
     def springSecurityService
@@ -19,16 +20,13 @@ class KanbanService {
            
            }
         def leskanban = query.list()
-        
-        
-       
-           return leskanban
+        return leskanban
         }
         catch (NullPointerException n){
             return null
         }
     }
-    
+
     //--- pour la taglib'administration------------- 
    // mettre a jour les listes pour filtrer au niveau d'une entreprise
      private Kanban[] listeKanban() {
@@ -136,7 +134,7 @@ class KanbanService {
     @Transactional
     void chargeInitialeOF(OF of) {
         try{
-            float maCharge = ((of.getKanban().getFamille().getChargePlanifiee()) * (of.getPhase().getCleRepartition()))
+            float maCharge = ((of.getKanban().getChargePlanifiee()) * (of.getPhase().getCleRepartition()))
             of.setChargePlanifiee(maCharge)
         }
         catch(NullPointerException n ) {
@@ -183,7 +181,7 @@ class KanbanService {
         listeCharge.each() { monImputation ->
             // test si l'imput est déclarée comme realisee
             if(monImputation.realise) {
-                charge += monImputation.event.durationMinutes
+                charge += monImputation.event.durationMinutes /60
             }
         }
         return charge
@@ -191,10 +189,10 @@ class KanbanService {
     //   //// permet de charger la charge deja dans l'agenda
     private Float chargeOFAgenda(OF of) {
         def listeCharge = []
-        listeCharge = OF.findAll("from Imputation as b where b.of=?", [of])
+        listeCharge = Imputation.findAll("from Imputation as b where b.of=?", [of])
         def charge = 0
         listeCharge.each() { monImputation ->
-            charge += monImputation.event.durationMinutes
+            charge += monImputation.event.durationMinutes / 60
         }
         return charge
     }  

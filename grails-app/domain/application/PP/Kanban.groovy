@@ -24,9 +24,7 @@ class Kanban {
     
     static transients = ['chargePlanifiee']
     
-    public int getChargePlanifiee() {
-        0
-    }
+    
     
     
     static constraints = {

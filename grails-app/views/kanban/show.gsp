@@ -145,7 +145,7 @@
 			                                        <div class="widget-content-padding">
                                                                   <g:each in="${ofs}" status="k" var="ofInstance">
 			                                            <div class="semi-block">
-			                                                <strong>${ofInstance.phase.nom}</strong><strong class="pull-right">87%</strong>
+			                                                <strong>${ofInstance.phase.nom}</strong><strong class="pull-right">${ofInstance.chargeAgenda / ofInstance.chargePlanifiee * 100} %</strong>
 			                                                <div class="progress progress-info value"><div class="bar" data-percentage="40" data-amount-part="${ofInstance.chargeAgenda}" data-amount-total="${ofInstance.chargePlanifiee}">456 / 631</div></div>
 			                                            </div>
                                                                   </g:each>
