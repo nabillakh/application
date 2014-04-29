@@ -1,0 +1,16 @@
+2014-04-28 20:45:05,573 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 20:45:06,365 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 20:56:01,663 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 20:56:02,719 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 20:56:07,045 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 20:56:07,795 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 21:00:09,081 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 21:00:12,769 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 21:03:16,257 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-28 21:03:17,071 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 08:12:33,611 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 08:12:36,571 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-29 08:58:49,438 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@2ce189] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:724)

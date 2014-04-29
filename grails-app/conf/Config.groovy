@@ -104,18 +104,20 @@ environments {
         grails.logging.jul.usebridge = true
     }
     production {
-        grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        // grails.logging.jul.usebridge = false
+        grails.serverURL = "http://37.187.179.132:8080/application"
     }
 }
 
-// log4j configuration
-log4j = {
-    // Example of changing the log pattern for the default console appender:
-    //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+def catalinaBase = System.properties.getProperty('catalina.base')
+if (!catalinaBase) catalinaBase = '.'   // just in case
+def logDirectory = "${catalinaBase}/logs"
+
+log4j = { root ->
+    appenders {
+        rollingFile name:'stdout', file:"${logDirectory}/application.log".toString(),  maxFileSize:'100MB'
+        rollingFile name:'stacktrace', file:"${logDirectory}/application._stack.log".toString(), maxFileSize:'100MB'
+     }
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
@@ -128,4 +130,5 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+     root.level = org.apache.log4j.Level.WARN
 }
