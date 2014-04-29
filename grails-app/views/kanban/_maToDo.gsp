@@ -11,11 +11,11 @@
 						<li>
 							<!-- easy pie chart -->
 							<div class="easypie">
-								<div class="percentage" data-percent="68">
-									<span>68</span>%
+								<div class="percentage" data-percent=${maCharge}>
+									<span>${maCharge}</span>%
 								</div>
 								<div class="easypie-text">
-									Avancement de la To Do
+									Avancement de mes tâches
 								</div>
 							</div>
 							<!-- end easy pie chart -->
