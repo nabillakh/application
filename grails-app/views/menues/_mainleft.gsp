@@ -92,14 +92,13 @@
 					<!-- end search box -->
 										
 					<!-- aside item: Mini profile -->
+                                        <center>
 					<div class="my-profile">
-						<a href="javascript:void(0)" class="my-profile-pic">
-							<img src="${request.contextPath}/img/avatar/avatar_0.jpg" alt="" />
-						</a>
                                           Bienvenue
                                           <sec:ifLoggedIn><sec:username/></sec:ifLoggedIn>
 					<span><a href="javascript:void(0);">Modifier profil </a></span>
 					</div>
+                                        </center>
 					<div class="divider"></div>
 					<!-- end aside item: Mini profile -->
 
@@ -180,16 +179,7 @@
 					<div class="divider"></div>
 					<!-- end aside item: Inbox -->
 					
-					<!-- aside item: Tiny Stats -->
-					<div class="number-stats">
-				    	<ul>
-				        	<li>4579<span>visitors</span></li>
-				            <li>571<span>orders</span></li>
-				            <li>879<span>reviews</span></li>
-				        </ul>
-				    </div>
-				    <div class="divider"></div>
-					<!-- end aside item: Tiny Stats -->
+                                        
 					
 		            <!-- end aside buttons -->
 				</aside>
