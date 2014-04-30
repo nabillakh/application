@@ -22,10 +22,14 @@ for( monOF in (mesOF) ) {
 printHtmlPart(3)
 expressionOut.print(monOF.phase.nom)
 printHtmlPart(4)
+expressionOut.print(monOF.getChargeRealisee() / monOF.chargePlanifiee *100)
+printHtmlPart(5)
+expressionOut.print(monOF.getChargeRealisee() / monOF.chargePlanifiee *100)
+printHtmlPart(6)
 i++
 }
 }
-printHtmlPart(5)
+printHtmlPart(7)
 }
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -33,7 +37,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1398254047276L
+public static final long LAST_MODIFIED = 1398783996129L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

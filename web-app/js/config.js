@@ -538,7 +538,7 @@
                             eventSources: [
                             // source pour obtenir mes données 
                                     {
-                                        url: 'http://localhost:8080/application/event/list',
+                                        url: '/application/event/list',
                                         type: 'POST',
                                         formulaireType: 'json',
                                         formulaire: {
@@ -555,8 +555,6 @@
                                         textColor: 'black',
                                         cache: true
                             },
-                                    
-                        // source pour persister mes données
                         
                         ],
 				header: {
@@ -594,7 +592,7 @@
 						true // make the event "stick"
 					),
                                             $.ajax({
-                                                url: 'http://localhost:8080/application/event/nouveauEvent',
+                                                url: '/application/event/nouveauEvent',
                                                 type: 'POST',
                                                 format: 'json',
                                                 data: {
@@ -635,15 +633,15 @@
 				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
                             // persistence de l'event    
                             $.ajax({
-                                                url: 'http://localhost:8080/application/event/nouveauEvent2',
+                                                url: '/application/event/nouveauEvent2',
                                                 type: 'POST',
                                                 format: 'json',
                                                 data: {
                                                     title: copiedEventObject.title,
-						    start: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 8 * 1)),
+						    start: new Date(copiedEventObject.start.getTime()),
                                                     id : copiedEventObject.id,
                                                     // mettre j+1 si agenda sinon h+2
-						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 12 * 1)),
+						    end: new Date(copiedEventObject.start.getTime() + (1000 * 60 * 60 * 2 * 1)),
                                                 },
                                                 error: function () {
                                                     alert('pb denvoi du json');
@@ -2343,7 +2341,7 @@
                                                 
                                                 if($('#dateLivraison').val() && $('#nomKanban').val()) {
                                                     $.ajax({
-                                                url: 'http://localhost:8080/application/activite/nouveauKanban',
+                                                url: '/application/activite/nouveauKanban',
                                                 type: 'POST',
                                                 format: 'json',
                                                 data: {

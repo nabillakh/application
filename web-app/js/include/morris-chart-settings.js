@@ -361,7 +361,7 @@ $(document).ready( function() {
                var json;
                $.ajax({
                    type:'GET',
-                   url: 'http://localhost:8080/application/activite/chargePIC',
+                   url: '/application/activite/chargePIC',
                    async: false,
                    global: false,
                    success: function(data) {
@@ -379,7 +379,7 @@ $(document).ready( function() {
                var json;
                $.ajax({
                    type:'GET',
-                   url: 'http://localhost:8080/application/activite/listeFamille',
+                   url: '/application/activite/listeFamille',
                    async: false,
                    global: false,
                    success: function(data) {
@@ -397,8 +397,8 @@ $(document).ready( function() {
         // charge issue du pic
         
        if ($('#chargePIC').length){
-           $.getJSON( "http://localhost:8080/application/activite/chargePIC", function( data ) {
-               $.getJSON( "http://localhost:8080/application/activite/listeFamille", function( fam ) {
+           $.getJSON( "/application/activite/chargePIC", function( data ) {
+               $.getJSON( "/application/activite/listeFamille", function( fam ) {
                Morris.Bar({
 		  element: 'chargePIC',
 		  axes: false,
@@ -438,7 +438,7 @@ $(document).ready( function() {
                var json;
                $.ajax({
                    type:'GET',
-                   url: 'http://localhost:8080/application/activite/barPIC',
+                   url: '/application/activite/barPIC',
                    async: false,
                    global: false,
                    success: function(data) {

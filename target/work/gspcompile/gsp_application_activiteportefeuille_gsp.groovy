@@ -40,50 +40,54 @@ printHtmlPart(9)
 expressionOut.print(fieldValue(bean: kanbanInstance, field: "nomKanban"))
 printHtmlPart(10)
 })
-invokeTag('link','g',70,['action':("show"),'controller':("kanban"),'id':(kanbanInstance.id)],2)
+invokeTag('link','g',72,['action':("show"),'controller':("kanban"),'id':(kanbanInstance.id)],2)
 printHtmlPart(11)
 expressionOut.print(fieldValue(bean: kanbanInstance, field: "description"))
 printHtmlPart(12)
+expressionOut.print(fieldValue(bean: kanbanInstance, field: "dateLancement"))
+printHtmlPart(12)
+expressionOut.print(fieldValue(bean: kanbanInstance, field: "dateFinPlanifie"))
+printHtmlPart(13)
 i++
 }
 }
-printHtmlPart(13)
-expressionOut.print(monKanban.nomKanban)
 printHtmlPart(14)
-expressionOut.print(monKanban.description)
+expressionOut.print(monKanban.nomKanban)
 printHtmlPart(15)
-expressionOut.print(monKanban.famille)
+expressionOut.print(monKanban.description)
 printHtmlPart(16)
+expressionOut.print(monKanban.famille)
+printHtmlPart(17)
 loop:{
 int i = 0
 for( famille in (familleInstanceList) ) {
-printHtmlPart(17)
+printHtmlPart(18)
 expressionOut.print(famille.id)
-printHtmlPart(18)
+printHtmlPart(19)
 expressionOut.print(famille.nom)
-printHtmlPart(19)
-i++
-}
-}
 printHtmlPart(20)
-expressionOut.print(monKanban.ordo)
-printHtmlPart(16)
-loop:{
-int i = 0
-for( ordo in (application.PP.Ordonnancement.list()) ) {
-printHtmlPart(17)
-expressionOut.print(ordo.id)
-printHtmlPart(18)
-expressionOut.print(ordo.nom)
-printHtmlPart(19)
 i++
 }
 }
 printHtmlPart(21)
-expressionOut.print(monKanban.dateFinPlanifie)
+expressionOut.print(monKanban.ordo)
+printHtmlPart(17)
+loop:{
+int i = 0
+for( ordo in (application.PP.Ordonnancement.list()) ) {
+printHtmlPart(18)
+expressionOut.print(ordo.id)
+printHtmlPart(19)
+expressionOut.print(ordo.nom)
+printHtmlPart(20)
+i++
+}
+}
 printHtmlPart(22)
-expressionOut.print(monKanban.chargePlanifiee)
+expressionOut.print(monKanban.dateFinPlanifie)
 printHtmlPart(23)
+expressionOut.print(monKanban.chargePlanifiee)
+printHtmlPart(24)
 invokeTag('render','g',1,['template':("/menues/mainright")],-1)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -91,7 +95,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1398180201650L
+public static final long LAST_MODIFIED = 1398769597606L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

@@ -16,18 +16,26 @@ if(true && (affichageToDo == 1)) {
 printHtmlPart(1)
 invokeTag('set','g',4,['var':("affichageToDo"),'value':("$affichageToDo+1}")],-1)
 printHtmlPart(2)
+expressionOut.print(maCharge)
+printHtmlPart(3)
+expressionOut.print(maCharge)
+printHtmlPart(4)
 loop:{
 int i = 0
 for( monOF in (maToDo) ) {
-printHtmlPart(3)
-expressionOut.print(monOF.kanban.nomKanban)
-printHtmlPart(4)
-expressionOut.print(monOF.phase.nom)
 printHtmlPart(5)
+expressionOut.print(monOF.kanban.nomKanban)
+printHtmlPart(6)
+expressionOut.print(monOF.phase.nom)
+printHtmlPart(7)
+expressionOut.print(monOF.getChargeRealisee() / monOF.chargePlanifiee *100)
+printHtmlPart(8)
+expressionOut.print(monOF.getChargeRealisee() / monOF.chargePlanifiee *100)
+printHtmlPart(9)
 i++
 }
 }
-printHtmlPart(6)
+printHtmlPart(10)
 }
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -35,7 +43,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1398254212204L
+public static final long LAST_MODIFIED = 1398784468683L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
