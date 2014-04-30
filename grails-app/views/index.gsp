@@ -7,6 +7,7 @@
   </head>
 
   
+                                          <sec:ifLoggedIn>
  <g:render template="/menues/mainleft" />
    				
      <!-- main content -->
@@ -224,3 +225,11 @@
 
 
  
+</sec:ifLoggedIn>
+  
+  
+  
+  
+  <sec:ifNotLoggedIn>
+    <h2> <g:link  action="index" controller="login"> <font size="3" face="georgia" color="red"> Se connecter </font></g:link> <h2>
+  </sec:ifNotLoggedIn>

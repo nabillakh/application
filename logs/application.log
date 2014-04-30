@@ -592,3 +592,5 @@ java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on nu
 2014-04-30 08:58:22,041 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-04-30 10:10:37,423 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-04-30 10:10:38,305 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-30 11:49:13,710 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-30 11:49:16,292 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
