@@ -25,78 +25,11 @@
 							<!-- row-fluid -->
 							
 							<div class="row-fluid">
-								<article class="span12">
-									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-1">
-									    <header>
-									        <h2>Portefeuille</h2>                           
-									    </header>
-									    <!-- wrap div -->
-									    <div>
-									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-            
-									        <div class="inner-spacer"> 
-									        <!-- content goes here -->
-									        
-												<table class="table table-striped table-bordered responsive" id="dtable">
-													<thead>
-														<tr>
-															<th> </th>
-                                                                                                                        <th><center>Nom du projet</center></th>
-															<th><center>Description</center></th>
-                                                                                                                        <th><center>deb</center></th>
-															<th><center>fin</center></th>
-														</tr>
-													</thead>
-													<tbody>
-                                                                                                          <g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
-                                                                                                            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><center><a class="btn btn-primary medium" href="#" id="${kanbanInstance.id}" onClick ="modifierKanban(this.id);return false;">Modifier</a></center></td>
-                                                                                                              <td><g:link action="show" controller = "kanban" id="${kanbanInstance.id}"><center> ${fieldValue(bean: kanbanInstance, field: "nomKanban")}</center></g:link></td>
-                                                                                                          <td><center>${fieldValue(bean: kanbanInstance, field: "description")}</center></td>
-                                                                                                          <td><center>${fieldValue(bean: kanbanInstance, field: "dateLancement")}</center></td>
-                                                                                                          <td><center>${fieldValue(bean: kanbanInstance, field: "dateFinPlanifie")}</center></td>
-                                                                                                          
-                                                                                                          </tr>
-                                                                                                          </g:each>
-                                                                                                          
-                                                                                                          </tbody>
-												</table>
-										        	
-										    </div>
-										    <!-- end content-->
-                                                                                  </div>
-									    <!-- end wrap div -->
-									</div>
-									<!-- end widget -->
-								</article>
-							</div>
-                                                        <div class="row-fluid">
-                                                        <article>
-                                                          
-                                                          </article></div>
-                                                        
+								
+                                                                                                                  
                                                       <!-- wiazrd de creation d'un kanban -->
-                                                      <div class="row-fluid">
-								<article class="span12">
+                                                      
+								<article class="span6">
 									
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
@@ -152,7 +85,7 @@
 															</li>
 														</ul>
                                                                                                                 
-                                                                                                                      <input type="text" id="monId" value = "NC" >
+                                                                                                                      <input type="hidden" id="monId" value = "NC" >
 														<!-- end wizard steps -->
 														
 														<div class="tab-content">
@@ -160,15 +93,15 @@
 														    <fieldset class="tab-pane" id="inverse-tab1">
 																<div class="control-group">
 																	<label class="control-label" for="nomKanban">Nom du projet</label>
-																	<div class="controls">
+                                                                                                                                        
 																		<input type="text" class="span12" id="nomKanban" required value=${monKanban.nomKanban}>
-																	</div>
+                                                                                                                                                
 																</div>
 																<div class="control-group">
 																	<label class="control-label" for="description">Description</label>
-																	<div class="controls">
+                                                                                                                                        
 																		<input type="text" class="span12" id="description" value=${monKanban.description}>
-																	</div>
+                                                                                                                                                
 																</div>
 																<div class="control-group">
 																	<label class="control-label" for="fam" >Famille de projet</label>
@@ -206,7 +139,7 @@
 														    <!-- step 2-->
 														    <fieldset class="tab-pane" id="inverse-tab2">
                                                                                                                       
-                                                                                                                      <input type="text" class="span12" id="test" value="on y est">
+                                                                                                                      
                                                                                                                     <div id="gestionOF">
                                                                                                                       
                                                                                                                       <g:if test="${mesOF}">
@@ -315,6 +248,48 @@
 									</div>
 									
 									
+									<!-- end widget -->
+								</article>
+                                                      
+                                                      <article class="span6">
+									<!-- new widget -->
+									<div class="jarviswidget" id="widget-id-1">
+									    <header>
+									        <h2>Portefeuille</h2>                           
+									    </header>
+									    <!-- wrap div -->
+									    <div>
+									    
+									        <div class="jarviswidget-editbox">
+									            <div>
+									                <label>Title:</label>
+									                <input type="text" />
+									            </div>
+									            <div>
+									                <label>Styles:</label>
+									                <span data-widget-setstyle="purple" class="purple-btn"></span>
+									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+									                <span data-widget-setstyle="green" class="green-btn"></span>
+									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+									                <span data-widget-setstyle="orange" class="orange-btn"></span>
+									                <span data-widget-setstyle="pink" class="pink-btn"></span>
+									                <span data-widget-setstyle="red" class="red-btn"></span>
+									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+									                <span data-widget-setstyle="black" class="black-btn"></span>
+									            </div>
+									        </div>
+            
+									        <div class="inner-spacer" id="listeKanbans"> 
+                                                                                  
+										    </div>
+                                                                              <script type="text/javascript">
+                                                                                        <g:remoteFunction action="listeKanban" update="listeKanbans"/>;
+                                                                                      </script>
+										    <!-- end content-->
+                                                                                  </div>
+									    <!-- end wrap div -->
+									</div>
+                                                                        
 									<!-- end widget -->
 								</article>
 							</div>

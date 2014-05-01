@@ -32,7 +32,8 @@ class KanbanService {
    // mettre a jour les listes pour filtrer au niveau d'une entreprise
      private Kanban[] listeKanban() {
        def maListe = []
-        maListe = Kanban.list(sort: "famille.nom", order: "desc")
+        // maListe = Kanban.list(sort: "dateLancement", order: "desc")
+        maListe = Kanban.list()
         return maListe
     }
     

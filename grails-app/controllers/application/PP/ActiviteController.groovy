@@ -30,7 +30,7 @@ class ActiviteController {
         def monKanban = new Kanban()
         def mesOF = monKanban.of
         
-        [mesOF : mesOF, monKanban : monKanban, kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
+        [mesOF : mesOF, monKanban : monKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
     }
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauKanban() {
@@ -73,17 +73,9 @@ class ActiviteController {
             monKanban.chargePlanifiee = chargePlanifiee 
             monKanban.save(flush : true)
         }
-        kanbanService.requeteCreation(monKanban)
-        println("2 requete creation faite: " + monKanban.nomKanban + " id2 " + monKanban.id)
-        
-        
+        kanbanService.requeteCreation(monKanban)        
         monKanban.save(flush : true)
-        def unId = monKanban.id
-        params.monId = unId
-        println("lid final est" + unId)
         
-        
-        render "<script> modifierKanban(5) </script>"
          
     }
     
@@ -102,6 +94,12 @@ class ActiviteController {
         
        // render(template: '${request.contextPath}/activite/obtenirOF', model: 
             [mesOF : mesOF] 
+    }
+    
+    def listeKanban() {
+        def listeKanban = kanbanService.listeKanban()
+        
+        [kanbanInstanceList: listeKanban.reverse()]
     }
     
     

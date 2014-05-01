@@ -2345,7 +2345,7 @@
                                                 var nomKanban = $('#nomKanban').val();
                                                     $.ajax({
                                                         url: '/application/activite/nouveauKanban',
-                                                        type: 'GET',
+                                                        type: 'POST',
                                                         data: {
                                                             monId: monId,
                                                             nomKanban: nomKanban,
@@ -2356,13 +2356,11 @@
                                                             chargePlanifiee : $('#chargePlanifiee').val(),
                                                         },
                                                         success: function(data) {
-                                                            alert("ok1")
-                                                            alert("ok" +  monId);
                                                         },
                                                         error: function() {
-                                                            alert("non");
                                                         },
                                             });
+                                    listeKanban();
                                 }
                                 
                                                 
@@ -2396,6 +2394,23 @@
         
         
 	}
+        // apporte la liste de kanban au wizard
+        function listeKanban() {
+            $.ajax({
+                url: '/application/activite/listeKanban',
+                success: function(rep){
+                    $('#listeKanbans').html(rep);
+                    
+                                    if($('#monId').val()=="NC"){
+                                        $('#monId').val($('#kanban0').val());
+                                        obtenirOF($('#kanban0').val())
+                                    }
+                      },
+                      error: function()
+              {alert("ca marche pas");}
+                  });
+        }
+        
         
 	//permet de gerer l'affichage dans le wizard du kanban
         function majWizard(monId) {
@@ -2410,15 +2425,11 @@
         }
         
         function obtenirOF(monId) {
-            alert("dans fonction" + monId)
-            $('#test').val("oui!! ok" + monId);
             $.ajax({
                 url: '/application/activite/obtenirOF',
                 data : {monId:monId},
                 success: function(rep){
-                    alert("dans obtenirof 1");
                     $('#gestionOF').html(rep); // rafraichi toute ta DIV "bien sur il lui faut un id "
-                    alert("dans obtenirof");
                       },
                       error: function()
               {alert("ca marche pas");}
