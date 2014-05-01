@@ -138,7 +138,7 @@ class KanbanService {
             ordonnancementOF(monKanban)
             }
             else {
-                throw new RuntimeException('il y a deja des OFs')
+                println("deja OF")
             }
         }
         catch(ValidationException e){
@@ -328,6 +328,18 @@ class KanbanService {
         listeProjets = Kanban.findAll("from Kanban as b where b.famille=?", [famille])
         
         return listeProjets
+    }
+    
+    
+    
+     OF[] afficherOFKanban(Kanban monKanban){
+        try{
+            // requete SQL
+            return OF.findAll("from OF as b where b.kanban=?", [monKanban])
+        }
+        catch (NullPointerException n) {
+            return null
+        }
     }
     
     

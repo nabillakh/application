@@ -2338,22 +2338,33 @@
 							$('#dateLivraison').closest('.control-group').addClass('error');
 							return false;
 						}
-                                                
+                                                        
                                                 if($('#dateLivraison').val() && $('#nomKanban').val()) {
+                                                    
+                                                var monId = $('#monId').val();
+                                                var nomKanban = $('#nomKanban').val();
                                                     $.ajax({
-                                                url: '/application/activite/nouveauKanban',
-                                                type: 'POST',
-                                                format: 'json',
-                                                data: {
-                                                    nomKanban: $('#nomKanban').val(),
-						    dateLivraison : $('#dateLivraison').val(),
-                                                    description: $('#description').val(),
-						    famille : $('#fam').val(),
-						    ordo : $('#sfam').val(),
-                                                    chargePlanifiee : $('#chargePlanifiee').val(),
-                                                },
-                                            })
+                                                        url: '/application/activite/nouveauKanban',
+                                                        type: 'GET',
+                                                        data: {
+                                                            monId: monId,
+                                                            nomKanban: nomKanban,
+                                                            dateLivraison : $('#dateLivraison').val(),
+                                                            description: $('#description').val(),
+                                                            famille : $('#fam').val(),
+                                                            ordo : $('#sfam').val(),
+                                                            chargePlanifiee : $('#chargePlanifiee').val(),
+                                                        },
+                                                        success: function(data) {
+                                                            alert("ok1")
+                                                            alert("ok" +  monId);
+                                                        },
+                                                        error: function() {
+                                                            alert("non");
+                                                        },
+                                            });
                                 }
+                                
                                                 
                                                 
 					}	
@@ -2368,7 +2379,7 @@
 				},
 				onTabClick : function(tab, navigation, index) {
 					//console.log('onTabClick');
-					alert('on tab click disabled');
+					// alert('on tab click disabled');
 					return false;
 				},
 				onTabShow : function(tab, navigation, index) {
@@ -2389,8 +2400,37 @@
 	//permet de gerer l'affichage dans le wizard du kanban
         function majWizard(monId) {
             $('#monId').val(monId);
-            $('#nomKanban').val("okokokokok");            
+            $('#nomKanban').val("okokokokok");
+            
         }
+        
+        function modifierKanban(monId) {
+            majWizard(monId);
+            obtenirOF(monId);
+        }
+        
+        function obtenirOF(monId) {
+            alert("dans fonction" + monId)
+            $('#test').val("oui!! ok" + monId);
+            $.ajax({
+                url: '/application/activite/obtenirOF',
+                data : {monId:monId},
+                success: function(rep){
+                    alert("dans obtenirof 1");
+                    $('#gestionOF').html(rep); // rafraichi toute ta DIV "bien sur il lui faut un id "
+                    alert("dans obtenirof");
+                      },
+                      error: function()
+              {alert("ca marche pas");}
+                  });
+                   // <g:remoteFunction action="obtenirOF" params="\'kanban=\' + unKanban" update="gestionOF"/>;
+        }
+                                                                                      
+                                                                                                   
+        
+        
+        
+
         
         
 	/* end setup_wizard_demo */

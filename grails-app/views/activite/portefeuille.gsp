@@ -5,6 +5,7 @@
   <head>
 		<meta name="layout" content="main"/>
 		<title>Gestion du portefeuille</title>
+                <g:javascript library="jquery" plugin="jquery" />
   </head>
 
   
@@ -68,7 +69,7 @@
 													<tbody>
                                                                                                           <g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><center><a class="btn btn-primary medium" href="#" id="${kanbanInstance.id}" onClick="majWizard(this.id);return false;">Modifier</a></center></td>
+                                                                                                              <td><center><a class="btn btn-primary medium" href="#" id="${kanbanInstance.id}" onClick ="modifierKanban(this.id);return false;">Modifier</a></center></td>
                                                                                                               <td><g:link action="show" controller = "kanban" id="${kanbanInstance.id}"><center> ${fieldValue(bean: kanbanInstance, field: "nomKanban")}</center></g:link></td>
                                                                                                           <td><center>${fieldValue(bean: kanbanInstance, field: "description")}</center></td>
                                                                                                           <td><center>${fieldValue(bean: kanbanInstance, field: "dateLancement")}</center></td>
@@ -88,7 +89,10 @@
 									<!-- end widget -->
 								</article>
 							</div>
-                                                        
+                                                        <div class="row-fluid">
+                                                        <article>
+                                                          
+                                                          </article></div>
                                                         
                                                       <!-- wiazrd de creation d'un kanban -->
                                                       <div class="row-fluid">
@@ -147,12 +151,13 @@
 																<a href="#inverse-tab4" data-toggle="tab">Indicateur</a>
 															</li>
 														</ul>
+                                                                                                                
+                                                                                                                      <input type="text" id="monId" value = "NC" >
 														<!-- end wizard steps -->
 														
 														<div class="tab-content">
 															<!-- step 1-->
 														    <fieldset class="tab-pane" id="inverse-tab1">
-                                                                                                                      <input type="hidden"  id="monId" value ="1">
 																<div class="control-group">
 																	<label class="control-label" for="nomKanban">Nom du projet</label>
 																	<div class="controls">
@@ -200,25 +205,32 @@
 														    </fieldset>
 														    <!-- step 2-->
 														    <fieldset class="tab-pane" id="inverse-tab2">
-																<div class="control-group">
-																	<label class="control-label" for="s1">Sample Input</label>
-																	<div class="controls">
-																		<input type="text" class="span12" id="s1">
-																	</div>
-																</div>
-																<div class="control-group">
-																	<label class="control-label" for="s2">Sample Input</label>
-																	<div class="controls">
-																		<input type="text" class="span12" id="s2">
-																	</div>
-																</div>
-																<div class="control-group">
-																	<label class="control-label" for="s3">Sample Input</label>
-																	<div class="controls">
-																		<input type="text" class="span12" id="s3">
-																	</div>
-																</div>
-														    </fieldset>
+                                                                                                                      
+                                                                                                                      <input type="text" class="span12" id="test" value="on y est">
+                                                                                                                    <div id="gestionOF">
+                                                                                                                      
+                                                                                                                      <g:if test="${mesOF}">
+                                                                                                                      <g:each in="${mesOF}" status="o" var="unOF">
+                                                                                                                        l'id est : ${unOF.kanban.id} et son nom est : ${unOF.kanban.nomKanban}
+                                                                                                                        <div class="control-group">
+                                                                                                                          <label class="control-label" for="nomPhase">Nom de l'activité</label>
+                                                                                                                          <div class="controls">${unOF.phase.nom}                                                                                                                          </div>
+                                                                                                                          <label class="control-label" for="nomPhase">Charge</label>
+                                                                                                                          <div class="controls">${unOF.chargePlanifiee}
+                                                                                                                    </div>
+                                                                                                                          <label class="control-label" for="nomPhase">Ressources</label>
+                                                                                                                          <div class="controls">${unOF.affectes.nom}
+                                                                                                                          </div>
+                                                                                                                        </div>
+                                                                                                                      </g:each>
+                                                                                                                      </g:if>
+                                                                                      
+                                                                                                                                                                          
+                                                                                    
+
+														    </fieldset> 
+                                                                                                                    
+                                                                                                                    
 														    <!-- step 3-->
 														    <fieldset class="tab-pane" id="inverse-tab3">
 																<div class="control-group">
@@ -293,6 +305,9 @@
 													</div>
 									
 												</form>
+                                                                                
+                                                                                                                   
+																
 										    </div>
 										    <!-- end content-->
 									    </div>
@@ -307,9 +322,18 @@
                                                         
 
 						</section>
+                                                
+                                                
+                                                
 						<!-- end widget grid -->
 					</div>		
 				</div>
+                                
+                                
+                                
+                                                                                    
+                                                                                     
+                               
 				<!-- end main content -->
 			
 <g:render template="/menues/mainright" />

@@ -180,11 +180,11 @@
                                                                                               }
                                                                                               }
                                                                                               function obtenirCompteRendu() {
-                                                                                        var kanban = $('#monKanban').val()
+                                                                                              var kanban = $('#monKanban').val()
                                                                                               <g:remoteFunction action="obtenirCompteRendu" params="\'kanban=\' + kanban" update="chatMessages"/>
-                                                                                                        }
-                                                                                                        function pollMessages() {
-                                                                                                          retrieveLatestMessages();
+                                                                                            }
+                                                                                                function pollMessages() {
+                                                                                                          obtenirCompteRendu();
                                                                                                           setTimeout('pollMessages()', 5000);
                                                                                                         }
                                                                                                         pollMessages();

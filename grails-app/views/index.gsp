@@ -29,7 +29,7 @@
 					<!-- end breadcrumb -->
 					
 					<!-- page header -->
-					<h1 id="page-header">Tableau de bord</h1>	
+                                        
                                         <sec:ifLoggedIn>
 					<div class="alert adjusted alert-info">
 						<button class="close" data-dismiss="alert">×</button>

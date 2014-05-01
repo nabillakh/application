@@ -1,472 +1,552 @@
-2014-04-30 11:49:55,968 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:49:56,003 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:50:05,686 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
-2014-04-30 11:50:23,104 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:50:23,106 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:50:23,106 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:50:23,691 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
-2014-04-30 11:50:34,105 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-04-30 11:51:01,206 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
-2014-04-30 11:51:01,329 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
-2014-04-30 11:51:01,329 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
-2014-04-30 11:51:01,405 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
-2014-04-30 11:51:01,406 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
-2014-04-30 11:51:01,406 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
-2014-04-30 11:51:01,460 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
-2014-04-30 11:51:01,460 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
-2014-04-30 11:51:01,460 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
-2014-04-30 11:51:01,516 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
-2014-04-30 11:51:01,516 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
-2014-04-30 11:51:01,516 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
-2014-04-30 11:51:01,593 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
-2014-04-30 11:51:01,593 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
-2014-04-30 11:51:01,593 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
-2014-04-30 11:51:01,660 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
-2014-04-30 11:51:01,660 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
-2014-04-30 11:51:01,661 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
-2014-04-30 11:51:01,725 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
-2014-04-30 11:51:01,725 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
-2014-04-30 11:51:01,726 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
-2014-04-30 11:51:01,784 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
-2014-04-30 11:51:01,784 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
-2014-04-30 11:51:01,785 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
-2014-04-30 11:51:01,850 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
-2014-04-30 11:51:01,850 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
-2014-04-30 11:51:01,851 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
-2014-04-30 11:51:01,910 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
-2014-04-30 11:51:01,910 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
-2014-04-30 11:51:01,910 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
-2014-04-30 11:51:01,964 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
-2014-04-30 11:51:01,964 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
-2014-04-30 11:51:01,964 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
-2014-04-30 11:51:02,019 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
-2014-04-30 11:51:02,019 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
-2014-04-30 11:51:02,019 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
-2014-04-30 11:51:02,105 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
-2014-04-30 11:51:02,106 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
-2014-04-30 11:51:02,106 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
-2014-04-30 11:51:02,310 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
-2014-04-30 11:51:02,311 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
-2014-04-30 11:51:02,311 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
-2014-04-30 11:51:02,388 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
-2014-04-30 11:51:02,388 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
-2014-04-30 11:51:02,388 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
-2014-04-30 11:51:03,298 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
-2014-04-30 11:51:03,299 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
-2014-04-30 11:51:03,299 [http-bio-8080-exec-4] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
-2014-04-30 11:51:03,901 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
-2014-04-30 11:51:03,901 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
-2014-04-30 11:51:03,901 [http-bio-8080-exec-4] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
-2014-04-30 11:51:03,999 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
-2014-04-30 11:51:03,999 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
-2014-04-30 11:51:03,999 [http-bio-8080-exec-4] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
-2014-04-30 11:51:24,148 [http-bio-8080-exec-2] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 11:52:41,127 [http-bio-8080-exec-10] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 11:52:42,264 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
-2014-04-30 11:52:42,264 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
-2014-04-30 11:52:42,264 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
-2014-04-30 11:52:42,270 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
-2014-04-30 11:52:42,270 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
-2014-04-30 11:52:42,270 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
-2014-04-30 11:52:42,495 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-04-30 11:52:42,495 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-04-30 11:52:42,501 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-04-30 11:52:42,501 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-04-30 11:52:42,505 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-04-30 11:52:42,505 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-04-30 11:52:42,505 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-04-30 11:52:42,505 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-04-30 11:52:42,512 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-04-30 11:52:42,512 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-04-30 11:52:42,516 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-04-30 11:52:42,517 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-04-30 11:52:42,686 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-04-30 11:52:42,686 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-04-30 11:52:42,703 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-04-30 11:52:42,703 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-04-30 11:52:42,718 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-04-30 11:52:42,718 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-04-30 11:52:42,725 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-04-30 11:52:42,725 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-04-30 11:52:42,743 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-04-30 11:52:42,743 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-04-30 11:52:42,760 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-04-30 11:52:42,760 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-04-30 11:52:42,853 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-04-30 11:52:42,853 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-04-30 11:52:42,870 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-04-30 11:52:42,870 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-04-30 11:52:42,898 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-04-30 11:52:42,898 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-04-30 11:52:42,919 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-04-30 11:52:42,919 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-04-30 11:52:42,941 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-04-30 11:52:42,941 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-04-30 11:52:42,979 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-04-30 11:52:42,979 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-04-30 11:52:43,045 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-04-30 11:52:43,045 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-04-30 11:52:43,127 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-04-30 11:52:43,127 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-04-30 11:52:43,136 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-04-30 11:52:43,136 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-04-30 11:52:43,152 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-04-30 11:52:43,153 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-04-30 11:52:43,181 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-04-30 11:52:43,182 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-04-30 11:52:43,221 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-04-30 11:52:43,221 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-04-30 11:52:43,229 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-04-30 11:52:43,230 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-04-30 11:52:43,235 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-04-30 11:52:43,235 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-04-30 11:52:43,281 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-04-30 11:52:43,281 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-04-30 11:52:43,355 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-04-30 11:52:43,355 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-04-30 11:52:43,411 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-04-30 11:52:43,411 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-04-30 11:52:43,425 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-04-30 11:52:43,425 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
-2014-04-30 11:52:43,429 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-04-30 11:52:43,429 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-04-30 11:52:43,429 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-04-30 11:52:43,429 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-04-30 11:52:43,434 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-04-30 11:52:43,434 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-04-30 11:52:43,451 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-04-30 11:52:43,451 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-04-30 11:52:43,500 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-04-30 11:52:43,501 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
-2014-04-30 11:53:27,600 [http-bio-8080-exec-7] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 11:53:27,955 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-04-30 11:53:27,956 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-04-30 11:53:28,009 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-04-30 11:53:28,009 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-04-30 11:53:28,014 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-04-30 11:53:28,014 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-04-30 11:53:28,020 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-04-30 11:53:28,020 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-04-30 11:53:28,023 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-04-30 11:53:28,023 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-04-30 11:53:28,045 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-04-30 11:53:28,045 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-04-30 11:53:28,127 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-04-30 11:53:28,127 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-04-30 11:53:28,145 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-04-30 11:53:28,145 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-04-30 11:53:28,151 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-04-30 11:53:28,151 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-04-30 11:53:28,204 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-04-30 11:53:28,204 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-04-30 11:53:28,218 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-04-30 11:53:28,218 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-04-30 11:53:28,245 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-04-30 11:53:28,246 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-04-30 11:53:28,291 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-04-30 11:53:28,292 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-04-30 11:53:28,331 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-04-30 11:53:28,331 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-04-30 11:53:28,336 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-04-30 11:53:28,336 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-04-30 11:53:28,344 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-04-30 11:53:28,347 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-04-30 11:53:28,381 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-04-30 11:53:28,381 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-04-30 11:53:28,416 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-04-30 11:53:28,416 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-04-30 11:53:28,419 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-04-30 11:53:28,419 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-04-30 11:53:28,497 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-04-30 11:53:28,498 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-04-30 11:53:28,505 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-04-30 11:53:28,506 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-04-30 11:53:28,516 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-04-30 11:53:28,516 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-04-30 11:53:28,542 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-04-30 11:53:28,542 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-04-30 11:53:28,582 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-04-30 11:53:28,582 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-04-30 11:53:28,632 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-04-30 11:53:28,633 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-04-30 11:53:28,693 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-04-30 11:53:28,693 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-04-30 11:53:28,695 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-04-30 11:53:28,695 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-04-30 11:53:28,695 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-04-30 11:53:28,695 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-04-30 11:53:28,697 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-04-30 11:53:28,697 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-04-30 11:53:28,718 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-04-30 11:53:28,718 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-04-30 11:53:28,743 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-04-30 11:53:28,744 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-04-30 11:53:28,814 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-04-30 11:53:28,815 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
-2014-04-30 11:53:28,818 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-04-30 11:53:28,818 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-04-30 11:53:28,821 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-04-30 11:53:28,821 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
-2014-04-30 11:53:28,828 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-04-30 11:53:28,828 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-04-30 11:53:57,199 [http-bio-8080-exec-1] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 11:53:57,528 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-04-30 11:53:57,529 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-04-30 11:53:57,560 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-04-30 11:53:57,560 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-04-30 11:53:57,583 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-04-30 11:53:57,584 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-04-30 11:53:57,588 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-04-30 11:53:57,588 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-04-30 11:53:57,590 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-04-30 11:53:57,590 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-04-30 11:53:57,631 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-04-30 11:53:57,631 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-04-30 11:53:57,710 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-04-30 11:53:57,710 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-04-30 11:53:57,718 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-04-30 11:53:57,718 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-04-30 11:53:57,756 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-04-30 11:53:57,756 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-04-30 11:53:57,758 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-04-30 11:53:57,758 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-04-30 11:53:57,773 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-04-30 11:53:57,773 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-04-30 11:53:57,789 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-04-30 11:53:57,789 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-04-30 11:53:57,847 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-04-30 11:53:57,847 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-04-30 11:53:57,892 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-04-30 11:53:57,892 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-04-30 11:53:57,930 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-04-30 11:53:57,930 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-04-30 11:53:57,945 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-04-30 11:53:57,945 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-04-30 11:53:57,955 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-04-30 11:53:57,955 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-04-30 11:53:57,955 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-04-30 11:53:57,955 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-04-30 11:53:58,023 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-04-30 11:53:58,023 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-04-30 11:53:58,052 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-04-30 11:53:58,052 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-04-30 11:53:58,067 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-04-30 11:53:58,067 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-04-30 11:53:58,099 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-04-30 11:53:58,099 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-04-30 11:53:58,121 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-04-30 11:53:58,121 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-04-30 11:53:58,148 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-04-30 11:53:58,148 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-04-30 11:53:58,182 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-04-30 11:53:58,182 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-04-30 11:53:58,242 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-04-30 11:53:58,243 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-04-30 11:53:58,257 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-04-30 11:53:58,257 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-04-30 11:53:58,259 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-04-30 11:53:58,259 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-04-30 11:53:58,281 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-04-30 11:53:58,281 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-04-30 11:53:58,284 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-04-30 11:53:58,284 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-04-30 11:53:58,324 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-04-30 11:53:58,324 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-04-30 11:53:58,358 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-04-30 11:53:58,358 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-04-30 11:53:58,359 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-04-30 11:53:58,359 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
-2014-04-30 11:53:58,364 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-04-30 11:53:58,364 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-04-30 11:53:58,377 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-04-30 11:53:58,377 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
-2014-04-30 11:54:44,985 [http-bio-8080-exec-3] ERROR [/application].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/application] threw exception
-org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [/index]: Error processing GroovyPageView: Tag [render] is missing required attribute [template]
+2014-05-01 12:55:31,230 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:55:31,266 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:55:41,444 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-01 12:56:01,295 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:56:01,297 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:56:01,297 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:56:01,925 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
+2014-05-01 12:56:10,613 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-01 12:56:33,062 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
+2014-05-01 12:56:33,076 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
+2014-05-01 12:56:33,076 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
+2014-05-01 12:56:33,298 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
+2014-05-01 12:56:33,298 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
+2014-05-01 12:56:33,298 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
+2014-05-01 12:56:33,517 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
+2014-05-01 12:56:33,517 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
+2014-05-01 12:56:33,517 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
+2014-05-01 12:56:33,592 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
+2014-05-01 12:56:33,595 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
+2014-05-01 12:56:33,596 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
+2014-05-01 12:56:33,919 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
+2014-05-01 12:56:33,919 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
+2014-05-01 12:56:33,919 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
+2014-05-01 12:56:33,933 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
+2014-05-01 12:56:33,934 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
+2014-05-01 12:56:33,934 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
+2014-05-01 12:56:34,146 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
+2014-05-01 12:56:34,147 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
+2014-05-01 12:56:34,147 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
+2014-05-01 12:56:34,269 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
+2014-05-01 12:56:34,270 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
+2014-05-01 12:56:34,270 [http-bio-8080-exec-10] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
+2014-05-01 12:56:34,405 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
+2014-05-01 12:56:34,406 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
+2014-05-01 12:56:34,406 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
+2014-05-01 12:56:34,785 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
+2014-05-01 12:56:34,785 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
+2014-05-01 12:56:34,785 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
+2014-05-01 12:56:35,121 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
+2014-05-01 12:56:35,122 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
+2014-05-01 12:56:35,122 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
+2014-05-01 12:56:35,122 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
+2014-05-01 12:56:35,122 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
+2014-05-01 12:56:35,123 [http-bio-8080-exec-10] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
+2014-05-01 12:56:35,409 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
+2014-05-01 12:56:35,410 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
+2014-05-01 12:56:35,410 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
+2014-05-01 12:56:35,411 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
+2014-05-01 12:56:35,412 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
+2014-05-01 12:56:35,412 [http-bio-8080-exec-10] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
+2014-05-01 12:56:35,580 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
+2014-05-01 12:56:35,603 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
+2014-05-01 12:56:35,603 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
+2014-05-01 12:56:35,786 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
+2014-05-01 12:56:35,787 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
+2014-05-01 12:56:35,788 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
+2014-05-01 12:56:35,959 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
+2014-05-01 12:56:35,959 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
+2014-05-01 12:56:35,959 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
+2014-05-01 12:56:36,132 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
+2014-05-01 12:56:36,133 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
+2014-05-01 12:56:36,133 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
+2014-05-01 12:56:50,429 [http-bio-8080-exec-3] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
+2014-05-01 12:56:52,775 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
+2014-05-01 12:56:52,775 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
+2014-05-01 12:56:52,775 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
+2014-05-01 12:56:52,854 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
+2014-05-01 12:56:52,855 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
+2014-05-01 12:56:52,855 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
+2014-05-01 12:56:52,906 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
+2014-05-01 12:56:52,906 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
+2014-05-01 12:56:52,998 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
+2014-05-01 12:56:52,998 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
+2014-05-01 12:56:53,058 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
+2014-05-01 12:56:53,058 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
+2014-05-01 12:56:53,100 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
+2014-05-01 12:56:53,100 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
+2014-05-01 12:56:53,211 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
+2014-05-01 12:56:53,212 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
+2014-05-01 12:56:53,248 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
+2014-05-01 12:56:53,248 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
+2014-05-01 12:56:53,432 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
+2014-05-01 12:56:53,433 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
+2014-05-01 12:56:53,515 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
+2014-05-01 12:56:53,516 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
+2014-05-01 12:56:53,616 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
+2014-05-01 12:56:53,617 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
+2014-05-01 12:56:53,629 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
+2014-05-01 12:56:53,629 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
+2014-05-01 12:56:53,773 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
+2014-05-01 12:56:53,773 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
+2014-05-01 12:56:53,775 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
+2014-05-01 12:56:53,776 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
+2014-05-01 12:56:53,814 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
+2014-05-01 12:56:53,814 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
+2014-05-01 12:56:53,839 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
+2014-05-01 12:56:53,839 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
+2014-05-01 12:56:53,991 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
+2014-05-01 12:56:53,991 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
+2014-05-01 12:56:54,051 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
+2014-05-01 12:56:54,051 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
+2014-05-01 12:56:54,213 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
+2014-05-01 12:56:54,214 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
+2014-05-01 12:56:54,233 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
+2014-05-01 12:56:54,234 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
+2014-05-01 12:56:54,269 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
+2014-05-01 12:56:54,269 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
+2014-05-01 12:56:54,323 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
+2014-05-01 12:56:54,324 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
+2014-05-01 12:56:54,373 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
+2014-05-01 12:56:54,373 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
+2014-05-01 12:56:54,449 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
+2014-05-01 12:56:54,449 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
+2014-05-01 12:56:54,549 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
+2014-05-01 12:56:54,549 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
+2014-05-01 12:56:54,642 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
+2014-05-01 12:56:54,642 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
+2014-05-01 12:56:54,651 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
+2014-05-01 12:56:54,651 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
+2014-05-01 12:56:54,729 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
+2014-05-01 12:56:54,729 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
+2014-05-01 12:56:54,778 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
+2014-05-01 12:56:54,781 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
+2014-05-01 12:56:54,787 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
+2014-05-01 12:56:54,788 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
+2014-05-01 12:56:54,942 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
+2014-05-01 12:56:54,942 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
+2014-05-01 12:56:55,032 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
+2014-05-01 12:56:55,032 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
+2014-05-01 12:56:55,119 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
+2014-05-01 12:56:55,119 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
+2014-05-01 12:56:55,120 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
+2014-05-01 12:56:55,120 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
+2014-05-01 12:56:55,148 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
+2014-05-01 12:56:55,148 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
+2014-05-01 12:56:55,152 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
+2014-05-01 12:56:55,152 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
+2014-05-01 12:56:55,221 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
+2014-05-01 12:56:55,223 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
+2014-05-01 12:59:07,861 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Tag [render] is missing required attribute [template]
-	... 3 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Tag [render] is missing required attribute [template]
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp:33)
-	... 3 more
-2014-04-30 11:59:35,772 [http-bio-8080-exec-7] ERROR [/application].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/application] threw exception
-org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [/index]: Error initializing GroovyPageView
+2014-05-01 12:59:19,701 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.RuntimeException: Error initializing GroovyPageView
-	... 3 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Expecting '=' after attribute name ("/login/index").
-	... 3 more
-2014-04-30 11:59:57,203 [http-bio-8080-exec-7] ERROR [/application].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/application] threw exception
-org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [/index]: Error processing GroovyPageView: Tag [render] is missing required attribute [template]
+2014-05-01 12:59:43,116 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Tag [render] is missing required attribute [template]
-	... 3 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Tag [render] is missing required attribute [template]
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp:33)
-	... 3 more
-2014-04-30 12:00:07,957 [http-bio-8080-exec-7] ERROR [/application].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/application] threw exception
-org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [/index]: Error processing GroovyPageView: Template not found for name [/login/index] and path [/login/_index.gsp]
+2014-05-01 12:59:50,277 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Template not found for name [/login/index] and path [/login/_index.gsp]
-	... 3 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Template not found for name [/login/index] and path [/login/_index.gsp]
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_index_gsp:33)
-	... 3 more
-2014-04-30 12:03:53,274 [http-bio-8080-exec-10] ERROR [/application].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/application] threw exception
-org.codehaus.groovy.grails.web.mapping.exceptions.UrlMappingException: Error mapping onto view [/index]: Error initializing GroovyPageView
+2014-05-01 13:00:04,808 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.RuntimeException: Error initializing GroovyPageView
-	... 3 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Grails tag [g:render] was not closed
-	... 3 more
-2014-04-30 12:04:10,836 [http-bio-8080-exec-1] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 12:04:11,398 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-04-30 12:04:11,398 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-04-30 12:04:11,508 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-04-30 12:04:11,508 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-04-30 12:04:11,511 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-04-30 12:04:11,512 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-04-30 12:04:11,513 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-04-30 12:04:11,513 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-04-30 12:04:11,515 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-04-30 12:04:11,515 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-04-30 12:04:11,574 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-04-30 12:04:11,575 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-04-30 12:04:11,578 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-04-30 12:04:11,578 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-04-30 12:04:11,674 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-04-30 12:04:11,675 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-04-30 12:04:11,675 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-04-30 12:04:11,675 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-04-30 12:04:11,678 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-04-30 12:04:11,678 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-04-30 12:04:11,682 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-04-30 12:04:11,682 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-04-30 12:04:11,703 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-04-30 12:04:11,703 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-04-30 12:04:11,797 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-04-30 12:04:11,797 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-04-30 12:04:11,824 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-04-30 12:04:11,824 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-04-30 12:04:11,834 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-04-30 12:04:11,834 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-04-30 12:04:11,836 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-04-30 12:04:11,836 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-04-30 12:04:11,864 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-04-30 12:04:11,864 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-04-30 12:04:11,866 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-04-30 12:04:11,866 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-04-30 12:04:11,961 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-04-30 12:04:11,961 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-04-30 12:04:11,992 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-04-30 12:04:11,993 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-04-30 12:04:11,995 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-04-30 12:04:11,995 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-04-30 12:04:12,000 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-04-30 12:04:12,000 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-04-30 12:04:12,020 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-04-30 12:04:12,020 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-04-30 12:04:12,047 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-04-30 12:04:12,047 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-04-30 12:04:12,077 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-04-30 12:04:12,077 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-04-30 12:04:12,131 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-04-30 12:04:12,132 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-04-30 12:04:12,151 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-04-30 12:04:12,151 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-04-30 12:04:12,179 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-04-30 12:04:12,179 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-04-30 12:04:12,210 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-04-30 12:04:12,210 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-04-30 12:04:12,220 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-04-30 12:04:12,220 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-04-30 12:04:12,240 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-04-30 12:04:12,240 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-04-30 12:04:12,247 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-04-30 12:04:12,247 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
-2014-04-30 12:04:12,291 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-04-30 12:04:12,291 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-04-30 12:04:12,292 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-04-30 12:04:12,293 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-04-30 12:04:12,304 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-04-30 12:04:12,304 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
-2014-04-30 12:05:38,061 [http-bio-8080-exec-6] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-04-30 12:05:38,432 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-04-30 12:05:38,432 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-04-30 12:05:38,575 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-04-30 12:05:38,576 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-04-30 12:05:38,586 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-04-30 12:05:38,586 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-04-30 12:05:38,593 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-04-30 12:05:38,593 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-04-30 12:05:38,598 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-04-30 12:05:38,598 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-04-30 12:05:38,599 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-04-30 12:05:38,599 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-04-30 12:05:38,634 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-04-30 12:05:38,634 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-04-30 12:05:38,715 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-04-30 12:05:38,716 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-04-30 12:05:38,733 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-04-30 12:05:38,734 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-04-30 12:05:38,742 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-04-30 12:05:38,742 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-04-30 12:05:38,743 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-04-30 12:05:38,743 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-04-30 12:05:38,773 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-04-30 12:05:38,773 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-04-30 12:05:38,805 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-04-30 12:05:38,806 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-04-30 12:05:38,897 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-04-30 12:05:38,897 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-04-30 12:05:38,907 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-04-30 12:05:38,907 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-04-30 12:05:38,909 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-04-30 12:05:38,909 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-04-30 12:05:38,934 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-04-30 12:05:38,939 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-04-30 12:05:38,940 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-04-30 12:05:38,940 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-04-30 12:05:38,987 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-04-30 12:05:38,987 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-04-30 12:05:40,339 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-04-30 12:05:40,971 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-04-30 12:05:40,981 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-04-30 12:05:40,981 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-04-30 12:05:40,988 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-04-30 12:05:40,988 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-04-30 12:05:40,992 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-04-30 12:05:40,992 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-04-30 12:05:41,053 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-04-30 12:05:41,053 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-04-30 12:05:41,086 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-04-30 12:05:41,086 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-04-30 12:05:41,118 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-04-30 12:05:41,118 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-04-30 12:05:41,121 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-04-30 12:05:41,121 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-04-30 12:05:41,132 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-04-30 12:05:41,132 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-04-30 12:05:41,148 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-04-30 12:05:41,149 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-04-30 12:05:41,185 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-04-30 12:05:41,186 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-04-30 12:05:41,263 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-04-30 12:05:41,263 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-04-30 12:05:41,266 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-04-30 12:05:41,267 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
-2014-04-30 12:05:41,285 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-04-30 12:05:41,286 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-04-30 12:05:41,292 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-04-30 12:05:41,292 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-04-30 12:05:41,292 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-04-30 12:05:41,292 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
+2014-05-01 13:00:16,235 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:00:22,588 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:01:02,192 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJTX.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:01:19,810 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:01:36,368 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:01:53,168 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:02:10,697 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: ca marche
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:02:20,345 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 13:02:39,111 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/activite/obtenirOF - parameters:
+kanban: NC
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd0UJpI.obtenirOF(ActiviteController.groovy:105)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 18:52:56,042 [http-bio-8080-exec-10] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
+2014-05-01 18:53:26,861 [http-bio-8080-exec-6] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
+2014-05-01 18:53:27,400 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
+2014-05-01 18:53:27,400 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
+2014-05-01 18:53:27,402 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
+2014-05-01 18:53:27,402 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
+2014-05-01 18:53:27,402 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
+2014-05-01 18:53:27,402 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
+2014-05-01 18:53:27,404 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
+2014-05-01 18:53:27,404 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
+2014-05-01 18:53:27,412 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
+2014-05-01 18:53:27,412 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
+2014-05-01 18:53:27,426 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
+2014-05-01 18:53:27,426 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
+2014-05-01 18:53:27,489 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
+2014-05-01 18:53:27,489 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
+2014-05-01 18:53:27,659 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
+2014-05-01 18:53:27,659 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
+2014-05-01 18:53:27,664 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
+2014-05-01 18:53:27,664 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
+2014-05-01 18:53:27,682 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
+2014-05-01 18:53:27,682 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
+2014-05-01 18:53:27,698 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
+2014-05-01 18:53:27,698 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
+2014-05-01 18:53:27,706 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
+2014-05-01 18:53:27,706 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
+2014-05-01 18:53:27,710 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
+2014-05-01 18:53:27,710 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
+2014-05-01 18:53:27,815 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
+2014-05-01 18:53:27,815 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
+2014-05-01 18:53:27,845 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
+2014-05-01 18:53:27,845 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
+2014-05-01 18:53:27,845 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
+2014-05-01 18:53:27,845 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
+2014-05-01 18:53:27,866 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
+2014-05-01 18:53:27,867 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
+2014-05-01 18:53:27,880 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
+2014-05-01 18:53:27,880 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
+2014-05-01 18:53:27,885 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
+2014-05-01 18:53:27,885 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
+2014-05-01 18:53:27,977 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
+2014-05-01 18:53:27,977 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
+2014-05-01 18:53:27,987 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
+2014-05-01 18:53:27,987 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
+2014-05-01 18:53:28,000 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
+2014-05-01 18:53:28,000 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
+2014-05-01 18:53:28,019 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
+2014-05-01 18:53:28,019 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
+2014-05-01 18:53:28,032 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
+2014-05-01 18:53:28,032 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
+2014-05-01 18:53:28,048 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
+2014-05-01 18:53:28,048 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
+2014-05-01 18:53:28,104 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
+2014-05-01 18:53:28,104 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
+2014-05-01 18:53:28,126 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
+2014-05-01 18:53:28,126 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
+2014-05-01 18:53:28,132 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
+2014-05-01 18:53:28,132 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
+2014-05-01 18:53:28,157 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
+2014-05-01 18:53:28,157 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
+2014-05-01 18:53:28,168 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
+2014-05-01 18:53:28,168 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
+2014-05-01 18:53:28,186 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
+2014-05-01 18:53:28,186 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
+2014-05-01 18:53:28,223 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
+2014-05-01 18:53:28,224 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
+2014-05-01 18:53:28,237 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
+2014-05-01 18:53:28,237 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
+2014-05-01 18:53:28,248 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
+2014-05-01 18:53:28,249 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
+2014-05-01 18:53:28,262 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
+2014-05-01 18:53:28,262 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
+2014-05-01 19:12:37,812 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GroovyCastException occurred when processing request: [POST] /application/activite/nouveauKanban - parameters:
+description: 
+nomKanban: okokokokok
+ordo: 1
+famille: 3
+dateLivraison: 2014-05-31
+chargePlanifiee: 20.0
+monId: NC
+Cannot cast object '11' with class 'java.lang.Long' to class 'grails.converters.JSON'. Stacktrace follows:
+org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object '11' with class 'java.lang.Long' to class 'grails.converters.JSON'
+	at application.PP.ActiviteController$$EOd1zpcb.nouveauKanban(ActiviteController.groovy:95)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 19:12:52,866 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GroovyCastException occurred when processing request: [POST] /application/activite/nouveauKanban - parameters:
+description: 
+nomKanban: okokokokok
+ordo: 1
+famille: 3
+dateLivraison: 2014-05-31
+chargePlanifiee: 20.0
+monId: 3
+Cannot cast object '3' with class 'java.lang.Long' to class 'grails.converters.JSON'. Stacktrace follows:
+org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object '3' with class 'java.lang.Long' to class 'grails.converters.JSON'
+	at application.PP.ActiviteController$$EOd1zpcb.nouveauKanban(ActiviteController.groovy:95)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 19:38:53,552 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GroovyCastException occurred when processing request: [POST] /application/activite/nouveauKanban - parameters:
+description: 
+nomKanban: okokokokok
+ordo: 1
+famille: 3
+dateLivraison: 2014-05-31
+chargePlanifiee: 20.0
+monId: 9
+Cannot cast object '9' with class 'java.lang.Long' to class 'grails.converters.JSON'. Stacktrace follows:
+org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object '9' with class 'java.lang.Long' to class 'grails.converters.JSON'
+	at application.PP.ActiviteController$$EOd1zpcb.nouveauKanban(ActiviteController.groovy:95)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 19:53:33,918 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 8
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd26aXG.obtenirOF(ActiviteController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 19:53:39,647 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 9
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd26aXG.obtenirOF(ActiviteController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 19:53:42,325 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 8
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd26aXG.obtenirOF(ActiviteController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:09:34,940 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/activite/obtenirOF
+Cannot get property 'nomKanban' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'nomKanban' on null object
+	at application.PP.ActiviteController$$EOd2DmdM.obtenirOF(ActiviteController.groovy:94)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:17:08,298 [http-bio-8080-exec-11] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [GET] /application/activite/nouveauKanban - parameters:
+description: 
+nomKanban: okokokokok
+ordo: 1
+famille: 3
+dateLivraison: 2014-05-25
+chargePlanifiee: 
+monId: 9
+empty String. Stacktrace follows:
+java.lang.NumberFormatException: empty String
+	at java.lang.Float.parseFloat(Float.java:452)
+	at application.PP.ActiviteController$$EOd2Fk7c.nouveauKanban(ActiviteController.groovy:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:34:53,231 [http-bio-8080-exec-11] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 8
+Unable to load template for uri [/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2KYay.obtenirOF(ActiviteController.groovy:102)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:36:10,272 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2Kgj9.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:37:22,731 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:38:42,535 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:38:57,992 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:40:07,394 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:40:26,844 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:41:09,185 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 10
+Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2LB4s.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 20:42:12,544 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - ControllerExecutionException occurred when processing request: [GET] /application/activite/obtenirOF - parameters:
+monId: 9
+Unable to load template for uri [/activite/${request.contextPath}/activite/_obtenirOF.gsp]. Template not found.. Stacktrace follows:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.ControllerExecutionException: Unable to load template for uri [/activite/${request.contextPath}/activite/_obtenirOF.gsp]. Template not found.
+	at application.PP.ActiviteController$$EOd2MPkS.obtenirOF(ActiviteController.groovy:103)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-01 21:04:47,219 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 92: unexpected token: = @ line 92, column 21.
+       def obtenirOF() = {
+                       ^
+
+1 error
+

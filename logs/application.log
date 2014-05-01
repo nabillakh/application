@@ -594,3 +594,51 @@ java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on nu
 2014-04-30 10:10:38,305 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-04-30 11:49:13,710 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-04-30 11:49:16,292 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-30 13:43:53,192 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 47: The current scope already contains a variable of the name nomKanban
+ @ line 47, column 13.
+           def nomKanban = params.monId
+               ^
+
+1 error
+
+2014-04-30 14:10:47,420 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 57: The current scope already contains a variable of the name monKanban
+ @ line 57, column 20.
+               Kanban monKanban = new Kanban()
+                      ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 74: The current scope already contains a variable of the name monKanban
+ @ line 74, column 20.
+               Kanban monKanban = Kanban.get(monId2)
+                      ^
+
+2 errors
+
+2014-04-30 15:08:38,632 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@5b8886] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-30 15:19:48,939 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@4abe40] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:724)
+2014-04-30 17:20:51,515 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 92: illegal string body character after dollar sign;
+   solution: either escape a literal dollar sign "\$5" or bracket the value expression "${5}" @ line 92, column 9.
+           render "<script> $('#monId').val();obtenirOF() </script>"
+           ^
+
+1 error
+
+2014-04-30 18:50:38,531 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-04-30 18:50:40,084 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-01 12:54:50,509 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-01 12:54:53,677 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-01 21:04:48,087 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ActiviteController.groovy: 92: unexpected token: = @ line 92, column 21.
+       def obtenirOF() = {
+                       ^
+
+1 error
+

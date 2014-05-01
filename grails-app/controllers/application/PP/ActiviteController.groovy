@@ -14,6 +14,7 @@ class ActiviteController {
         
 	def springSecurityService
         def kanbanService
+        
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def activite(Integer max) {
         
@@ -27,47 +28,84 @@ class ActiviteController {
         def listePhase = kanbanService.listePhase()
         def listeOrdo = kanbanService.listeOrdo()
         def monKanban = new Kanban()
+        def mesOF = monKanban.of
         
-        def monJson = []
-        // asupprimer
-        listeKanban.each {unKanban ->
-            def liste =  new LinkedHashMap()
-            liste.put("id",unKanban.id)
-            liste.put("nomKanban",unKanban.nomKanban)
-            monJson << liste
-        } 
-        
-        
-        [monKanban : monKanban, kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
+        [mesOF : mesOF, monKanban : monKanban, kanbanInstanceList: listeKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
     }
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def nouveauKanban() {
         def nomKanban = params.nomKanban
+        // def monId = Long.parseLong(params.monId)
+        def monId = params.monId
         DateTime dateLivraison = new DateTime(params.dateLivraison)
         def description = params.description
         def famille = params.famille
         def ordo = params.ordo
         def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
-        Kanban monKanban = new Kanban()
-        monKanban.nomKanban = nomKanban
-        monKanban.dateFinPlanifie = dateLivraison.toDate()
-        monKanban.description = description
-        monKanban.famille = Famille.get(Integer.parseInt(famille))
-        monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
-        monKanban.chargePlanifiee = chargePlanifiee 
         
-        println("1 nom du kanban: " + monKanban.nomKanban) 
-        println("1 nom dde famille avec objet: " + monKanban.famille) 
-        monKanban.save(flush : true)
-        
+        def monKanban = new Kanban()
+        if(monId=="NC") {
+            monKanban = new Kanban()
+            // monKanban.id = monId
+            monKanban.nomKanban = nomKanban
+            monKanban.dateFinPlanifie = dateLivraison.toDate()
+            monKanban.description = description
+            monKanban.famille = Famille.get(Integer.parseInt(famille))
+            monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
+            monKanban.chargePlanifiee = chargePlanifiee 
+            println("1 nom du kanban: " + monKanban.nomKanban) 
+            println("1 id du kanban: " + monId) 
+            println("1 nom dde famille avec objet: " + monKanban.famille)
+            monKanban.save(flush : true)
+        }
+        else {
+            println("dans update") 
+            def monId2 = Long.parseLong(monId)
+            println("1 id du kanban: " + monId) 
+            monKanban = Kanban.get(monId2)
+            println("1 nom du kanban chargé: " + monKanban.nomKanban) 
+            monKanban.setNomKanban(nomKanban)
+            println("1 nom du kanban modifié 2: " + monKanban.nomKanban) 
+            monKanban.dateFinPlanifie = dateLivraison.toDate()
+            monKanban.description = description
+            monKanban.famille = Famille.get(Integer.parseInt(famille))
+            monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
+            monKanban.chargePlanifiee = chargePlanifiee 
+            monKanban.save(flush : true)
+        }
         kanbanService.requeteCreation(monKanban)
-        println("2 nom du kanban: " + monKanban.nomKanban + " id2 " + monKanban.id)
+        println("2 requete creation faite: " + monKanban.nomKanban + " id2 " + monKanban.id)
         
         
         monKanban.save(flush : true)
+        def unId = monKanban.id
+        params.monId = unId
+        println("lid final est" + unId)
         
         
+        render "<script> modifierKanban(5) </script>"
+         
     }
+    
+    
+        
+    def obtenirOF()  {
+        def monId = params.monId
+        println("obtenir of ok")
+        println(monId)
+        def monKanban = Kanban.get(monId)
+        println("kanban recuperer ? " + monKanban.nomKanban)
+        def mesOF = kanbanService.afficherOFKanban(monKanban)
+        mesOF.each() {of -> 
+            println("OF recuperes : " + of.phase.nom)
+        }
+        
+       // render(template: '${request.contextPath}/activite/obtenirOF', model: 
+            [mesOF : mesOF] 
+    }
+    
+    
+    
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def indicateur() {
         
