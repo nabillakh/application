@@ -138,7 +138,7 @@
                                                                                 <g:link  action="indicateur" controller="activite"> Mes indicateurs </g:link>
 									</li>
                                                                         <li>
-                                                                                <g:link  action="portefeuille" controller="activite"> Ajouter un projet </g:link>
+                                                                                <g:link  action="index" controller="kanban"> Ajouter un projet </g:link>
 									</li>
 								</ul>
 							</li>

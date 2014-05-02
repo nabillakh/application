@@ -5,6 +5,8 @@ import grails.transaction.Transactional
 import application.*
 import grails.plugins.springsecurity.Secured
 import grails.plugins.springsecurity.Secured
+import java.text.SimpleDateFormat
+import org.joda.time.DateTime
 
 @Transactional(readOnly = true)
 class KanbanController {
@@ -37,7 +39,17 @@ class KanbanController {
     @Transactional
     @Secured(['IS_AUTHENTICATED_FULLY'])
     def save(Kanban kanbanInstance) {
+        println("dans save")
+        println(params.dateLancement)
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd")
+        Date dateFinPlanifie = sdf.parse(params.dateFinPlanifie)
+        Date dateLancement = sdf.parse(params.dateLancement)
+        kanbanInstance.setDateFinPlanifie(dateFinPlanifie)
+        kanbanInstance.setDateLancement(dateLancement)
         
+        println(kanbanInstance.dateFinPlanifie)
+        kanbanInstance.save(flush: true)
+        println(kanbanInstance.id)
         if (!kanbanInstance.save(flush: true)) {
             render(view: "create", model: [kanbanInstance: kanbanInstance])
             return
@@ -51,6 +63,36 @@ class KanbanController {
         // redirect(action: "show", id: kanbanInstance.id)
         redirect(action:"index")
     }
+    
+    def nouveauKanban() {
+        def nomKanban = params.nomKanban
+        DateTime dateLivraison = new DateTime(params.dateLivraison)
+        def description = params.description
+        def famille = params.famille
+        def ordo = params.ordo
+        def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
+        
+        def monKanban = new Kanban()
+        
+            monKanban.nomKanban = nomKanban
+            monKanban.dateFinPlanifie = dateLivraison.toDate()
+            monKanban.description = description
+            monKanban.famille = Famille.get(Integer.parseInt(famille))
+            monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
+            monKanban.chargePlanifiee = chargePlanifiee 
+            
+            monKanban.save(flush : true)
+        
+        
+        kanbanService.requeteCreation(monKanban)        
+        monKanban.save(flush : true)
+        // redirect(action:"index")
+        redirect(action: "show", id: monKanban.id)
+         
+    }
+    
+    
+    
 @Secured(['IS_AUTHENTICATED_FULLY'])
     def edit(Kanban kanbanInstance) {
         respond kanbanInstance

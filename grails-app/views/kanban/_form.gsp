@@ -6,8 +6,10 @@
 		<g:message code="kanban.nomKanban.label" default="Nom du projet" />
 		
 	</label>
-	<g:textField name="nomKanban" value="${kanbanInstance?.nomKanban}"  class="span12"  />
+  <div class="controls"  size="16" >
+	<g:textField name="nomKanban"  class="span12"  />
 
+</div>
 </div>
 
 
@@ -16,22 +18,24 @@
 		<g:message code="kanban.description.label" default="Description" />
 		
 	</label>
-	<g:textField name="description" value="${kanbanInstance?.description}" class="span12"  />
+  <div class="controls"  size="16" >
+	<g:textField name="description" class="span12"/>
 
+</div>
 </div>
 
 
 <div class="control-group">
   <label class="control-label" for="multiSelect">Famille de projet</label>
   <div class="controls"  size="16" >
-	<g:select multiple="multiple" id="multiSelect" name="famille.id" from="${application.PP.Famille.list()}" optionKey="id" required="" value="${kanbanInstance?.famille?.id}" class="span12 with-search"/>
+	<g:select id="multiSelect" name="famille" from="${application.PP.Famille.list()}" optionKey="id" required="" class="span12 with-search"/>
   </div>
 </div>
 
 <div class="control-group">
   <label class="control-label" for="multiSelect">sous famille</label>
   <div class="controls"  size="16" >
-	<g:select multiple="multiple" id="multiSelect" name="ordo.id" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" value="${kanbanInstance?.ordo?.id}" class="span12 with-search"/>
+	<g:select id="multiSelect" name="ordo" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" class="span12 with-search"/>
   </div>
 </div>
 
@@ -41,14 +45,9 @@
   
   <div class="controls" size="16" >
     <div>
-      <g:datePicker name="dateLancement" value="${kanbanInstance?.dateLancement}"
+      <g:field type="date" name="dateLancement" 
               default="${new Date()}" precision="day"  />
     </div>
-    
-    
-     <p class="help-block">
-      99/99/9999
-    </p>
   </div>
 </div>
 
@@ -59,12 +58,9 @@
   
   <div class="controls" size="16" >
     <div>
-            <g:datePicker name="dateFinPlanifie" value="${kanbanInstance?.dateFinPlanifie}"
+            <g:field type="date"  name="dateFinPlanifie" value="dateFinPlanifie"
               default="${new Date()}" precision="day"  />
     </div>
-     <p class="help-block">
-      99/99/9999
-    </p>
   </div>
 </div>
 
@@ -73,7 +69,9 @@
 		<g:message code="kanban.charge.label" default="Charge" />
 		
 	</label>
-	<g:field name="chargePlanifiee" value="${fieldValue(bean: kanbanInstance, field: 'chargePlanifiee')}" class="span12"  />
+  <div class="controls"  size="16" >
+	<g:field name="chargePlanifiee"  class="span12"  />
 
+</div>
 </div>
 

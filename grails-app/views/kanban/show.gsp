@@ -208,23 +208,10 @@
                                                                             
                                                                             </article>
 									</div>
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        </section>
-                                                                        </div>
+                                                            </section>
+</div>
                                                                         
                                                           
-                                                          
-							</div>
                                                         
                                                         				<!-- end main content -->
 			
