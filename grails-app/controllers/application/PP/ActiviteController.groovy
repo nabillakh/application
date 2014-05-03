@@ -15,13 +15,13 @@ class ActiviteController {
 	def springSecurityService
         def kanbanService
         
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def activite(Integer max) {
         
         params.max = Math.min(max ?: 10, 100)
         respond Kanban.list(params), model:[KanbanInstanceCount: Kanban.count()]
     }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def portefeuille(Integer max) {
         def listeKanban = kanbanService.listeKanban()
         def listeFamille = kanbanService.listeFamille()
@@ -32,7 +32,7 @@ class ActiviteController {
         
         [mesOF : mesOF, monKanban : monKanban, familleInstanceList : listeFamille, phaseInstanceList : listePhase, ordoInstanceList : listeOrdo]
     }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def nouveauKanban() {
         def nomKanban = params.nomKanban
         // def monId = Long.parseLong(params.monId)
@@ -104,12 +104,12 @@ class ActiviteController {
     
     
     
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def indicateur() {
         
     }
     // envoie data pour indicateur de 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def chargePIC = {
         def pics = Pic.list()
         // hypothese nbannee = nb pic
@@ -129,7 +129,7 @@ class ActiviteController {
         render picLists as JSON
     }
     // envoie la liste de famille pour parising dans le graphe 1
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def listeFamille = {
         def fams = Famille.list()
         def famLists = []
@@ -140,7 +140,7 @@ class ActiviteController {
         [famInstanceList: famLists]
         render famLists as JSON
     }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def barPIC = {
         def pics = Pic.list()
         // hypothese nbannee = nb pic

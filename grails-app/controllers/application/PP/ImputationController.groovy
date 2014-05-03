@@ -11,22 +11,22 @@ import grails.transaction.Transactional
 class ImputationController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Imputation.list(params), model:[imputationInstanceCount: Imputation.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Imputation imputationInstance) {
         respond imputationInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Imputation(params)
     }
 
     @Transactional
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Imputation imputationInstance) {
         if (imputationInstance == null) {
             notFound()
@@ -49,14 +49,14 @@ class ImputationController {
         }
     }
 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Imputation imputationInstance) {
     
         respond imputationInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Imputation imputationInstance) {
         if (imputationInstance == null) {
             notFound()
@@ -80,7 +80,7 @@ class ImputationController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Imputation imputationInstance) {
 
         if (imputationInstance == null) {

@@ -10,22 +10,22 @@ import grails.transaction.Transactional
 class PhaseController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Phase.list(params), model:[phaseInstanceCount: Phase.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Phase phaseInstance) {
         respond phaseInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Phase(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Phase phaseInstance) {
         if (phaseInstance == null) {
             notFound()
@@ -47,13 +47,13 @@ class PhaseController {
             '*' { respond phaseInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Phase phaseInstance) {
         respond phaseInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Phase phaseInstance) {
         if (phaseInstance == null) {
             notFound()
@@ -77,7 +77,7 @@ class PhaseController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Phase phaseInstance) {
 
         if (phaseInstance == null) {

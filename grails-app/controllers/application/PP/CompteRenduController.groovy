@@ -10,22 +10,22 @@ import grails.transaction.Transactional
 class CompteRenduController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond CompteRendu.list(params), model:[compteRenduInstanceCount: CompteRendu.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(CompteRendu compteRenduInstance) {
         respond compteRenduInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new CompteRendu(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(CompteRendu compteRenduInstance) {
         if (compteRenduInstance == null) {
             notFound()
@@ -47,13 +47,13 @@ class CompteRenduController {
             '*' { respond compteRenduInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(CompteRendu compteRenduInstance) {
         respond compteRenduInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(CompteRendu compteRenduInstance) {
         if (compteRenduInstance == null) {
             notFound()
@@ -77,7 +77,7 @@ class CompteRenduController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(CompteRendu compteRenduInstance) {
 
         if (compteRenduInstance == null) {

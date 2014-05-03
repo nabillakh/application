@@ -10,22 +10,22 @@ import grails.transaction.Transactional
 class FamilleController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Famille.list(params), model:[familleInstanceCount: Famille.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Famille familleInstance) {
         respond familleInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Famille(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Famille familleInstance) {
         if (familleInstance == null) {
             notFound()
@@ -47,13 +47,13 @@ class FamilleController {
             '*' { respond familleInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Famille familleInstance) {
         respond familleInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Famille familleInstance) {
         if (familleInstance == null) {
             notFound()
@@ -77,7 +77,7 @@ class FamilleController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Famille familleInstance) {
 
         if (familleInstance == null) {

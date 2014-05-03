@@ -10,22 +10,22 @@ import grails.transaction.Transactional
 class CalendrierController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Calendrier.list(params), model:[calendrierInstanceCount: Calendrier.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Calendrier calendrierInstance) {
         respond calendrierInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Calendrier(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Calendrier calendrierInstance) {
         if (calendrierInstance == null) {
             notFound()
@@ -47,13 +47,13 @@ class CalendrierController {
             '*' { respond calendrierInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Calendrier calendrierInstance) {
         respond calendrierInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Calendrier calendrierInstance) {
         if (calendrierInstance == null) {
             notFound()
@@ -77,7 +77,7 @@ class CalendrierController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Calendrier calendrierInstance) {
 
         if (calendrierInstance == null) {

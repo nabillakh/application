@@ -10,22 +10,22 @@ import grails.transaction.Transactional
 class ConversationController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Conversation.list(params), model:[conversationInstanceCount: Conversation.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Conversation conversationInstance) {
         respond conversationInstance
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Conversation(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Conversation conversationInstance) {
         if (conversationInstance == null) {
             notFound()
@@ -47,13 +47,13 @@ class ConversationController {
             '*' { respond conversationInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Conversation conversationInstance) {
         respond conversationInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Conversation conversationInstance) {
         if (conversationInstance == null) {
             notFound()
@@ -77,7 +77,7 @@ class ConversationController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Conversation conversationInstance) {
 
         if (conversationInstance == null) {

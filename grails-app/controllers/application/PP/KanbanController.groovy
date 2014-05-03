@@ -17,12 +17,12 @@ class KanbanController {
     def springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Kanban.list(params), model:[kanbanInstanceCount: Kanban.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Kanban kanbanInstance) {
         def ofs = kanbanService.montrerOF(kanbanInstance)
         println("charger des of ok")
@@ -31,13 +31,13 @@ class KanbanController {
         println("charger des cr ok")
         [kanbanInstance:kanbanInstance, ofs : ofs, mesCR : mesCR]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Kanban(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(Kanban kanbanInstance) {
         println("dans save")
         println(params.dateLancement)
@@ -93,13 +93,13 @@ class KanbanController {
     
     
     
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Kanban kanbanInstance) {
         respond kanbanInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(Kanban kanbanInstance) {
         if (kanbanInstance == null) {
             notFound()
@@ -123,7 +123,7 @@ class KanbanController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Kanban kanbanInstance) {
 
         if (kanbanInstance == null) {
@@ -151,7 +151,7 @@ class KanbanController {
             '*'{ render status: NOT_FOUND }
         }
     }
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def updateCompteRendu(String message, Long kanban) {
         
         println("controleur updateCR" + message + kanban)

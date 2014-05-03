@@ -5,7 +5,7 @@ import grails.plugins.springsecurity.Secured
 import application.StatutService
 import application.TimelineService
 
-@Secured('IS_AUTHENTICATED_FULLY')
+@Secured('IS_AUTHENTICATED_REMEMBERED')
 class StatutController {
 
 

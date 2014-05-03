@@ -10,12 +10,12 @@ import grails.transaction.Transactional
 class MailEffectifController {
    def mailService 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond MailEffectif.list(params), model:[mailEffectifInstanceCount: MailEffectif.count()]
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(MailEffectif mailEffectifInstance) {
         mailService.messageLu( mailEffectifInstance)
 
@@ -26,14 +26,14 @@ class MailEffectifController {
         respond mailEffectifInstance
 
     } 
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def Archiver(MailEffectif mailEffectifInstance) {
         mailService.messageArchiver(mailEffectifInstance)
         respond mailEffectifInstance 
         redirect(controller: "mail", action: "index")
        
        }
-       @Secured(['IS_AUTHENTICATED_FULLY'])
+       @Secured(['IS_AUTHENTICATED_REMEMBERED'])
      def Favoriser(MailEffectif mailEffectifInstance) {
         mailService.messagefavoris(mailEffectifInstance)
         respond mailEffectifInstance 
@@ -42,13 +42,13 @@ class MailEffectifController {
        }
     
     
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new MailEffectif(params)
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def save(MailEffectif mailEffectifInstance) {
         if (mailEffectifInstance == null) {
             notFound()
@@ -70,13 +70,13 @@ class MailEffectifController {
             '*' { respond mailEffectifInstance, [status: CREATED] }
         }
     }
-@Secured(['IS_AUTHENTICATED_FULLY'])
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(MailEffectif mailEffectifInstance) {
         respond mailEffectifInstance
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def update(MailEffectif mailEffectifInstance) {
         if (mailEffectifInstance == null) {
             notFound()
@@ -100,7 +100,7 @@ class MailEffectifController {
     }
 
     @Transactional
-    @Secured(['IS_AUTHENTICATED_FULLY'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(MailEffectif mailEffectifInstance) {
 
         if (mailEffectifInstance == null) {
