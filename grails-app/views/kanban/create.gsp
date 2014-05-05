@@ -107,6 +107,7 @@
 							<!-- row-fluid -->
 							
 							<div class="row-fluid">
+								
 								<article class="span12">
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">

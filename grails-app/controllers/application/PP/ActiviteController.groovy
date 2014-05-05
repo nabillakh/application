@@ -18,8 +18,8 @@ class ActiviteController {
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def activite(Integer max) {
         
-        params.max = Math.min(max ?: 10, 100)
-        respond Kanban.list(params), model:[KanbanInstanceCount: Kanban.count()]
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif()
+        [kanbanInstanceList:kanbanInstanceList]
     }
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def portefeuille(Integer max) {

@@ -1,5 +1,7 @@
 package application.RH
 
+import application.PP.*
+
 class Effectif {
 
 	transient springSecurityService
@@ -15,7 +17,11 @@ class Effectif {
 	boolean accountLocked = false
 	boolean passwordExpired 
 
-	static transients = ['springSecurityService']
+	static transients = ['springSecurityService', 'listeKanban']
+        
+        public Kanban[] getListeKanban() {
+            kanbanService.listeKanbanEffectif(this)
+        }
 
 	static constraints = {
 		username blank: false, unique: true

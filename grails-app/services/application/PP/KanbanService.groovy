@@ -4,6 +4,7 @@ import grails.validation.ValidationException
 import org.springframework.transaction.annotation.Transactional
 import application.PP.*
 import application.RH.*
+import application.communication.*
 import org.joda.time.DateTime
 
 
@@ -11,9 +12,9 @@ class KanbanService {
 
     def springSecurityService
 
-    def serviceMethod() {
-
-    }  
+    def eventService
+    
+    
    //--- pour la taglib------------- 
    
      private Kanban[] afficherKanban() {
@@ -37,6 +38,16 @@ class KanbanService {
         return maListe
     }
     
+    private Kanban[] listeKanbanEffectif() {
+       def maListe = []
+       def mesOfs = eventService.mesOF()
+       mesOfs.each() { of ->
+           maListe.add(of.kanban)
+       }
+        maListe.unique()
+        return maListe
+    }
+    
         //--- pour la taglib'administration------------- 
    // mettre a jour les listes pour filtrer au niveau d'une entreprise
      private Famille[] listeFamille() {
@@ -57,6 +68,7 @@ class KanbanService {
      private Ordonnancement[] listeOrdo() {
        def maListe = []
         maListe = Ordonnancement.list()
+        
         return maListe
     }
     

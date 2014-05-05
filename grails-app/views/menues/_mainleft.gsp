@@ -143,6 +143,18 @@
 								</ul>
 							</li>
                                                         <li class="">
+								<a href="javascript:void(0)"><i class="cus-chart-bar"></i>Pilotage</a>
+								<ul>
+                                                                        
+                                                                        <li>
+                                                                                <g:link  action="index" controller="pic"> Plan pluri-annuel </g:link>
+									</li>
+									<li>
+                                                                                <g:link  action="index" controller="pdp"> Plan annuel </g:link>
+									</li>
+								</ul>
+							</li>
+                                                        <li class="">
 								<g:link  action="index" controller="event"> <i class="cus-calendar-2"></i> Mes agenda </g:link>
 							</li>
 

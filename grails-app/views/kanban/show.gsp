@@ -122,7 +122,7 @@
 							<div class="row-fluid">
 								<article class="span6">      
 									    <header>
-									        <h2>Ordonnancement du projet : "${fieldValue(bean: kanbanInstance, field: "nomKanban")}"</h2>                           
+									        <h2>Ordonnancement du projet</h2>                           
 									    </header>
 									    <!-- wrap div -->
 									    
@@ -140,9 +140,8 @@
                                                                                   </div>
                                                                                 </g:each>
 									</div>
-                                                                        </div></article></div></section> 
-
-                                                <section>
+                                                                </article>
+                                                          
                                                         <article class="span6">
                                                           <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
 									    <header>

@@ -24,11 +24,11 @@
 							<!-- row-fluid -->
 							
 							<div class="row-fluid">
-								<article class="span12">
+                                                          <article class="span12">
 									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-1">
+									<div class="jarviswidget" id="widget-id-0">
 									    <header>
-									        <h2>Portefeuille</h2>                           
+									        <h2>Liste des projets</h2>                           
 									    </header>
 									    <!-- wrap div -->
 									    <div>
@@ -54,36 +54,18 @@
             
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
-									        
-												<table class="table table-striped table-bordered responsive" id="col-filter">
+                                                                                
+												<table class="table table-striped table-bordered responsive" id="dtable">
 													<thead>
 														<tr>
-															<th>Nom du projet</th>
+                                                                                                                  <th>Nom du projet</th>
 															<th>Description</th>
 															<th>Phase du projet</th>
 															<th>Date de fin planifiée</th>
 															<th>Charge associée</th>
 														</tr>
-														<tr class="second">
-															<td>
-																<input type="text" name="nomKanban" value="Nom du projet" class="search_init">
-															</td>
-															<td>
-																<input type="text" name="description" value="Description" class="search_init">
-															</td>
-															<td>
-																<input type="text" name="phase" value="Phase du projet" class="search_init">
-															</td>
-															<td>
-																<input type="text" name="dateFinPlanifie" value="Date de fin planifiée" class="search_init">
-															</td>
-															<td>
-																<input type="text" name="charge" value="Charge associée" class="search_init">
-															</td>
-														</tr>
 													</thead>
-													<tbody>
-                                                                                                          <g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
+													<tbody class="responsive"><g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                                                                                                               <td><g:link action="show" controller="Kanban" id="${kanbanInstance.id}">${fieldValue(bean: kanbanInstance, field: "nomKanban")}</g:link></td>
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "description")}</td>
@@ -92,8 +74,7 @@
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "chargePlanifiee")}</td>
                                                                                                           </tr>
                                                                                                           </g:each>
-                                                                                                          
-                                                                                                          </tbody>
+													</tbody>
 												</table>
 										        	
 										    </div>
@@ -103,10 +84,12 @@
 									</div>
 									<!-- end widget -->
 								</article>
+                                                          
 							</div>
 							
 							<!-- end row-fluid -->
-                                                        <g:link  action="create" controller="Kanban" class="btn medium">Ajouter un Kanban</g:link>
+                                                        <g:link  action="create" controller="Kanban" class="btn btn-primary medium pull-right" >Ajouter un Kanban</g:link>
+                                                        <div></div>
                                                         
                                                         
 
