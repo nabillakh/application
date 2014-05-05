@@ -7,11 +7,22 @@ import application.pilotage.*
 @Transactional
 class PicService {
     
+    def Pic picAnnee(Integer year) {
+        def monPic = new Pic()
+        def mesPics = []
+        mesPics = Pic.findAll("from Pic as b where b.annee=?", [year])
+        mesPics.each() {pic->
+            if(pic.archive==false) {
+                monPic = pic
+            }
+        }
+        return monPic
+    }
     
     def generationPicFamille(Pic pic) {
-        def mesFamilles = Famille.list()
+        def mesFamilles = Ordonnancement.list()
         mesFamilles.each() {fam ->
-            def picFam = new PicFamille(famille : fam, uniteActivite : 24)
+            def picFam = new PicFamille(ordo : fam, uniteActivite : 24)
             generationPdp(picFam)
             pic.addToPicFamille(picFam)
             .save()

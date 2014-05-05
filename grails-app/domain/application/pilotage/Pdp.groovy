@@ -15,7 +15,7 @@ class Pdp {
     static hasMany = [kanbansRealises : PdpKanbanEvent] 
     
     def chargePlanifie = {
-        picFamille.getFamille().getChargeStandard() * uniteActivite
+        picFamille.getOrdo().getChargeStandard() * uniteActivite
     }
     
     static constraints = {

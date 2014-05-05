@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: picFamilleInstance, field: 'famille', 'error')} required">
-	<label for="famille">
-		<g:message code="picFamille.famille.label" default="Famille" />
+<div class="fieldcontain ${hasErrors(bean: picFamilleInstance, field: 'ordo', 'error')} required">
+	<label for="ordo">
+		<g:message code="picFamille.ordo.label" default="Ordo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="famille" name="famille.id" from="${application.PP.Famille.list()}" optionKey="id" required="" value="${picFamilleInstance?.famille?.id}" class="many-to-one"/>
+	<g:select id="ordo" name="ordo.id" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" value="${picFamilleInstance?.ordo?.id}" class="many-to-one"/>
 
 </div>
 

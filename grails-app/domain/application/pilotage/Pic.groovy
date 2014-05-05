@@ -6,6 +6,7 @@ class Pic {
     Integer version
     Date dateVersion
     Date dateMaj
+    boolean archive
     
     static hasMany = [picFamille : PicFamille]
     
@@ -14,5 +15,12 @@ class Pic {
         version nullable : true
         dateVersion nullable : true
         dateMaj nullable : true
+        archive nullable : true
+    }
+    
+    
+    def beforeInsert = {
+        archive = false
+        return true
     }
 }

@@ -41,11 +41,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${picFamilleInstance?.famille}">
+				<g:if test="${picFamilleInstance?.ordo}">
 				<li class="fieldcontain">
-					<span id="famille-label" class="property-label"><g:message code="picFamille.famille.label" default="Famille" /></span>
+					<span id="ordo-label" class="property-label"><g:message code="picFamille.ordo.label" default="Ordo" /></span>
 					
-						<span class="property-value" aria-labelledby="famille-label"><g:link controller="famille" action="show" id="${picFamilleInstance?.famille?.id}">${picFamilleInstance?.famille?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="ordo-label"><g:link controller="ordonnancement" action="show" id="${picFamilleInstance?.ordo?.id}">${picFamilleInstance?.ordo?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

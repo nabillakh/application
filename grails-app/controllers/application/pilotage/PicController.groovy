@@ -5,6 +5,8 @@ package application.pilotage
 import static org.springframework.http.HttpStatus.*
 import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
+import application.PP.*
+import org.joda.time.DateTime
 
 @Transactional(readOnly = true)
 class PicController {
@@ -15,7 +17,17 @@ class PicController {
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Pic.list(params), model:[picInstanceCount: Pic.count()]
+        def maDate = new DateTime()
+        def year = maDate.year
+        
+        def pic1 = picService.picAnnee(year - 1)
+        def pic2 = picService.picAnnee(year)
+        def pic3 = picService.picAnnee(year + 1)
+        def pic4 = picService.picAnnee(year + 2)
+        
+        def mesFamilles = Famille.list()
+        
+        respond Pic.list(params), model:[picInstanceCount: Pic.count(), mesFamilles : mesFamilles, year:year, pic1:pic1, pic2:pic2, pic3:pic3, pic4:pic4]
     }
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Pic picInstance) {
@@ -39,6 +51,8 @@ class PicController {
         
         picService.generationPicFamille(picInstance)
 
+        
+        
         flash.message = message(code: 'default.created.message', args: [message(code: 'pic.label', default: 'Pic'), picInstance.id])
         // redirect(action: "show", id: picInstance.id)
         redirect(action:"index")

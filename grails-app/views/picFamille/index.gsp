@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="dateMaj" title="${message(code: 'picFamille.dateMaj.label', default: 'Date Maj')}" />
 					
-						<th><g:message code="picFamille.famille.label" default="Famille" /></th>
+						<th><g:message code="picFamille.ordo.label" default="Ordo" /></th>
 					
 						<g:sortableColumn property="uniteActivite" title="${message(code: 'picFamille.uniteActivite.label', default: 'Unite Activite')}" />
 					
@@ -42,7 +42,7 @@
 					
 						<td><g:formatDate date="${picFamilleInstance.dateMaj}" /></td>
 					
-						<td>${fieldValue(bean: picFamilleInstance, field: "famille")}</td>
+						<td>${fieldValue(bean: picFamilleInstance, field: "ordo")}</td>
 					
 						<td>${fieldValue(bean: picFamilleInstance, field: "uniteActivite")}</td>
 					

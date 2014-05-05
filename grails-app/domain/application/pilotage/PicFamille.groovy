@@ -5,7 +5,7 @@ import application.PP.*
 
 class PicFamille {
     
-    Famille famille
+    Ordonnancement ordo
     Float uniteActivite
     Integer version
     Date dateVersion
@@ -14,7 +14,7 @@ class PicFamille {
     static hasMany = [pdp : Pdp]   
     
     def chargePlanifie = {
-        return (famille.getChargePlanifiee() * uniteActivite)
+        return (ordo.getChargePlanifiee() * uniteActivite)
     }
     
     def restantAPlanifier = {
