@@ -534,6 +534,7 @@
                         var tab = new Array;
                                 
                         var calendar = $('#calendar').fullCalendar({
+                            
 			defaultView: 'agendaWeek',
                             eventSources: [
                             // source pour obtenir mes données 
