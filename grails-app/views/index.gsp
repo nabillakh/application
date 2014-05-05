@@ -4,6 +4,7 @@
   <head>
 		<meta name="layout" content="main"/>
 		<title>Sysprod</title>
+                <g:javascript library="jquery" plugin="jquery" />
   </head>
 
   
@@ -28,7 +29,7 @@
 					-->
 					<!-- end breadcrumb -->
 					
-					<!-- page header -->
+					<!-- page header
                                         
                                         <sec:ifLoggedIn>
 					<div class="alert adjusted alert-info">
@@ -36,7 +37,7 @@
 						<i class="cus-exclamation"></i>
 						<strong>Welcome to  <sec:username/></strong> 
 					</div>
-					</sec:ifLoggedIn>
+					</sec:ifLoggedIn> -->
 					<div class="fluid-container">
 						
 						<!-- start icons -->
@@ -84,139 +85,137 @@
 						<section id="widget-grid" class="">
 							
 							<!-- row-fluid -->
+							
 							<div class="row-fluid">
+		
 								<article class="span12">
 									
-									<div class="jarviswidget transparent" id="widget-id-0">
-									    <header>
-									        <h2>No Title</h2>                           
-									    </header>
-									    
-									    <!-- widget div-->
-									    <div>
-									    	<!-- widget edit box -->
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-									        <!-- end widget edit box -->
-            
-									        <div class="inner-spacer"> 
-									        	<!-- content goes here -->
-									        	
-									        	<div id="chartdiv" class="chart" style="height:350px; margin:0;"></div>
-									        													
-									        	<!-- end calendar container -->
-									        </div>
-									        
-									    </div>
-									    <!-- end widget div -->
-									</div>
-
-								</article>
-							</div>
-							
-							<!-- end row-fluid -->
-							
-							<!-- row-fluid -->
-							
-							<div class="row-fluid">
-
-								<article class="span12">
 									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-1">
+									<div class="jarviswidget" id="widget-id-0">
 									    <header>
-									        <h2>Calendar</h2>                           
+									        <h2>ok</h2>                           
 									    </header>
 									    
 									    <!-- widget div-->
 									    <div>
 									    	<!-- widget edit box -->
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
+									        
+									        <!-- content -->	            
+									        <div class="inner-spacer chat-widget widget-content-padding"> 
+									        	
+									        	<!-- chat tabs -->
+												<ul id="myChat" class="nav nav-tabs chat-tabs">
+									              <li class="active">
+									              	<a href="#newsfeed" data-toggle="tab"><i class="online"></i>Principal</a>
+									              	</li>
+									              <li>
+									              	<a href="#activite" data-toggle="tab"><i class="away"></i>Activités</a>
+									              </li>
+									              <li class="pull-right">
+									              	
+													<div id="chat-user-control" class="btn-group hidden-phone">
+                                                                                                          <button class="btn dropdown-toggle btn-small btn-link" data-toggle="dropdown"><i class="cus-status-online"></i></button>
+		                                                <ul class="dropdown-menu btn-small pull-right">
+															<li>
+																<a href="javascript:void(0);"><i class="cus-status-online"></i> Available</a>
+															</li>
+															<li>
+																<a href="javascript:void(0);"><i class="cus-cross-shield-2"></i> Busy</a>
+															</li>
+															<li>
+																<a href="javascript:void(0);"><i class="cus-clock"></i> Away</a>
+															</li>
+															<li class="divider"></li>
+															<li>
+																<a href="javascript:void(0);"><i class="cus-disconnect"></i> Disconnect</a>
+															</li>
+		                                                </ul>
+		                                            </div>
+
+							
+									              </li>
+									            </ul>
+									            <!-- end chat tabs -->
+									            
+									            <!-- chat box -->
+									            <div id="myChatTab" class="tab-content chat-content">
+									              
+                                                                                      <div class="row-fluid chat-box">
+									            	
+                                                                                    <input class="span12 type-effect"  rows="3" cols="1"  type="text" id="messageBox" name="message" onkeypress="messageKeyPress(this,event);"/>
+                                                                                        <g:hiddenField name="kanban" id="monKanban"/>
+                                                                                    <div id="temp"></div>
+                                                                                        
+                                                                                      </div>
+                                                                                      <!-- chat user1 -->	
+                                                                                      <div class="tab-pane fade in active" id="newsfeed">
+                                                                                        
+									              	<!-- chat messages -->
+									              	<div class="newsfeed1"></div>
+									              	<!-- end chat messages -->
+									              	
+									              </div>
+                                                                                      <script type="text/javascript">
+                                                                                        <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed1"/>;
+                                                                                      </script>
+									              <!-- end chat user1 -->
+									              
+									              <!-- chat user2 -->
+									              <div class="tab-pane fade" id="activite">
+									              	
+									              	<!-- chat messages -->
+									              	<div class="chat-messages">														
+														
+									              	</div>
+									              	<!-- end chat messages -->
+									              	
+									              </div>
+                                                                                      
+									              <!-- end chat user2 -->
+									              
 									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
+									            <!-- end chat box -->
+									            
+									            
+										       		
+											
 									        </div>
-									        <!-- end widget edit box -->
-            
-									        <div class="inner-spacer"> 
-									        <!-- content goes here -->
-												<div class="widget alert alert-info adjusted">
-													<button class="close" data-dismiss="alert">×</button>
-													<i class="cus-exclamation"></i>
-													<strong>Helpful Hint:</strong> Did you know you can click on the <strong>Calendar Cell</strong> to add a new event? Try to add an event and see how easy it is!
-												</div>
-												<!-- calnedar container -->
-									        	<div id="calendar-container">
-										        	<div id="calendar-buttons">
-														<div class="btn-group">
-															<a href="javascript:void(0)" class="btn btn-small" id="btn-today">Today</a>
-															<a href="javascript:void(0)" class="btn dropdown-toggle btn-small" data-toggle="dropdown"><span class="caret"></span></a>
-															<ul class="dropdown-menu btn-small pull-right">
-																<li>
-																	<a href="javascript:void(0);" id="btn-month">Month</a>
-																</li>
-																<li>
-																	<a href="javascript:void(0);" id="btn-agenda">Agenda</a>
-																</li>
-																<li>
-																	<a href="javascript:void(0);" id="btn-day">Today</a>
-																</li>
-															</ul>
-														</div>
-														<div class="btn-group">
-															<a href="javascript:void(0)" class="btn btn-small" id="btn-prev"><i class="icon-chevron-left"></i></a>
-															<a href="javascript:void(0)" class="btn btn-small" id="btn-next"><i class="icon-chevron-right"></i></a>
-														</div>
-													</div>
-										        	<div class="dt-header calender-spacer"></div>
-										        	<div id="calendar"></div>
-									        	</div>
-									        	<!-- end calendar container -->
-									        </div>
+									        <!-- end content -->	
 									        
 									    </div>
 									    <!-- end widget div -->
 									</div>
 									<!-- end widget -->
+									
 								</article>
-										
-								
 								
 							</div>
 							
 							<!-- end row-fluid -->
-							
-
+ <script>
+                                                                                      function messageKeyPress(field,event) {
+                                                                                        var theCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                                                                                        var message = $('#messageBox').val();
+                                                                                        if (theCode == 13){
+                                                                                    <g:remoteFunction controller = "message" action="posterMessage" params="\'message=\'+message" update="temp"/>
+                                                                                                $('#messageBox').val('');
+                                                                                                return false;
+                                                                                              } else {
+                                                                                                return true;
+                                                                                              }
+                                                                                              }
+                                                                                              function obtenirMessage() {
+                                                                                              var kanban = $('#monKanban').val()
+                                                                                              <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed"/>
+                                                                                            }
+                                                                                                function pollMessages() {
+                                                                                                          obtenirMessage();
+                                                                                                          setTimeout('pollMessages()', 5000);
+                                                                                                        }
+                                                                                                        pollMessages();
+                                                                                                                                                                                          
+                                                                                    </script>
 						</section>
-						<!-- end widget grid -->
 					</div>		
 				</div>
 

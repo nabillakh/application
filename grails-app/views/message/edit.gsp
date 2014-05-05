@@ -1,4 +1,4 @@
-<%@ page import="application.communication.Chat.Message" %>
+<%@ page import="application.communication.Message" %>
 <!DOCTYPE html>
 <html>
 	<head>

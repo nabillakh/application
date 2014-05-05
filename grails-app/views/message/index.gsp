@@ -1,5 +1,5 @@
 
-<%@ page import="application.communication.Chat.Message" %>
+<%@ page import="application.communication.Message" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,11 +24,27 @@
 			<thead>
 					<tr>
 					
+						<th><g:message code="message.kanban.label" default="Kanban" /></th>
+					
+						<th><g:message code="message.auteur.label" default="Auteur" /></th>
+					
+						<g:sortableColumn property="date" title="${message(code: 'message.date.label', default: 'Date')}" />
+					
+						<g:sortableColumn property="message" title="${message(code: 'message.message.label', default: 'Message')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${messageInstanceList}" status="i" var="messageInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${messageInstance.id}">${fieldValue(bean: messageInstance, field: "kanban")}</g:link></td>
+					
+						<td>${fieldValue(bean: messageInstance, field: "auteur")}</td>
+					
+						<td><g:formatDate date="${messageInstance.date}" /></td>
+					
+						<td>${fieldValue(bean: messageInstance, field: "message")}</td>
 					
 					</tr>
 				</g:each>

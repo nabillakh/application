@@ -1,5 +1,5 @@
 
-<%@ page import="application.communication.Chat.Message" %>
+<%@ page import="application.communication.Message" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,6 +22,42 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list message">
+			
+				<g:if test="${messageInstance?.kanban}">
+				<li class="fieldcontain">
+					<span id="kanban-label" class="property-label"><g:message code="message.kanban.label" default="Kanban" /></span>
+					
+						<span class="property-value" aria-labelledby="kanban-label"><g:link controller="kanban" action="show" id="${messageInstance?.kanban?.id}">${messageInstance?.kanban?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${messageInstance?.auteur}">
+				<li class="fieldcontain">
+					<span id="auteur-label" class="property-label"><g:message code="message.auteur.label" default="Auteur" /></span>
+					
+						<span class="property-value" aria-labelledby="auteur-label"><g:link controller="effectif" action="show" id="${messageInstance?.auteur?.id}">${messageInstance?.auteur?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${messageInstance?.date}">
+				<li class="fieldcontain">
+					<span id="date-label" class="property-label"><g:message code="message.date.label" default="Date" /></span>
+					
+						<span class="property-value" aria-labelledby="date-label"><g:formatDate date="${messageInstance?.date}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${messageInstance?.message}">
+				<li class="fieldcontain">
+					<span id="message-label" class="property-label"><g:message code="message.message.label" default="Message" /></span>
+					
+						<span class="property-value" aria-labelledby="message-label"><g:fieldValue bean="${messageInstance}" field="message"/></span>
+					
+				</li>
+				</g:if>
 			
 			</ol>
 			<g:form url="[resource:messageInstance, action:'delete']" method="DELETE">
