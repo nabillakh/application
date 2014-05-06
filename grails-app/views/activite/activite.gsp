@@ -86,7 +86,7 @@
 													<tbody>
                                                                                                           <g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><g:link action="show" id="${kanbanInstance.id}">${fieldValue(bean: kanbanInstance, field: "nomKanban")}</g:link></td>
+                                                                                                              <td><g:link controller="kanban" action="show" id="${kanbanInstance.id}">${fieldValue(bean: kanbanInstance, field: "nomKanban")}</g:link></td>
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "description")}</td>
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "phaseActuelle")}</td>
                                                                                                           <td><g:formatDate date="${kanbanInstance.dateFinPlanifie}" /></td>

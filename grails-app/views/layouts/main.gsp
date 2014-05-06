@@ -153,6 +153,9 @@
 	<!-- REQUIRED: Datatable components -->
 	<script src="${request.contextPath}/js/include/jquery.dataTables.min.js"></script>
 	<script src="${request.contextPath}/js/include/DT_bootstrap.min.js"></script> 
+        
+        <!-- ajouter par NL -->
+
 
     <!-- REQUIRED: Form element skin  -->
     <script src="${request.contextPath}/js/include/jquery.uniform.min.js"></script> 

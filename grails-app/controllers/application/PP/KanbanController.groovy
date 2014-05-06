@@ -89,8 +89,23 @@ class KanbanController {
         kanbanService.requeteCreation(monKanban)        
         monKanban.save(flush : true)
         // redirect(action:"index")
-        redirect(action: "show", id: monKanban.id)
+        redirect(action: "gestionOf", id: monKanban.id)
          
+    }
+    
+    def gestionOf(Kanban kanbanInstance) {
+        [kanbanInstance:kanbanInstance]
+    }
+    
+    
+    def majOF() {  
+        println("ancienOf.phase.nom")
+        def id = Long.parseLong(params.monId)
+        def ancienOf = OF.findById(id)     
+        println(ancienOf.phase.nom)
+        def monKanban = ancienOf.kanban
+        println(monKanban.nomKanban)
+        
     }
     
     

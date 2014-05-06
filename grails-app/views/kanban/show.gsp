@@ -84,7 +84,7 @@
                                                                                       <g:if test="${ofInstance.affectes}">
                                                                                         Affecté à : 
                                                                                       <g:each in="${ofInstance.affectes}" status="j" var="aff">
-                                                                                     <g:link controller="Effectif" action="show" id="${aff.id}"> ${aff.nom} ${aff.prenom}</g:link>
+                                                                                     <g:link controller="Effectif" action="show" id="${aff.id}"> ${aff.nom} ${aff.prenom},</g:link>
                                                                                 </g:each></g:if></center></td>
                                                                                 </g:each>
                                                                                       </table>

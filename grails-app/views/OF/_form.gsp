@@ -1,7 +1,15 @@
-<%@ page import="application.PP.OF" %>
 
 
-
+<div class="row-fluid">
+  <article class="span3">
+    
+<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'phase', 'error')} required">
+	<label for="phase">
+		Phase  : ${OFInstance?.phase?.nom}
+	</label>
+</div>
+  </article>
+<article class="span6">
 <div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'chargePlanifiee', 'error')} ">
 	<label for="chargePlanifiee">
 		<g:message code="OF.chargePlanifiee.label" default="Charge Planifiee" />
@@ -11,48 +19,44 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'affectes', 'error')} ">
+<div class="control-group">
 	<label for="affectes">
 		<g:message code="OF.affectes.label" default="Affectes" />
 		
-	</label>
-	<g:select name="affectes" from="${application.RH.Effectif.list()}" multiple="multiple" optionKey="id" size="5" value="${OFInstance?.affectes*.id}" class="many-to-many"/>
+        </label><div class="controls"  size="16" >
+	
+	<g:select id="multiSelect" name="chefProjet" from="${application.RH.Effectif.list()}" optionKey="id" required="" class="span12 with-search"/>
+        <g:select id="multiSelect" name="affectes" from="${application.RH.Effectif.list()}" optionKey="id" required="" value="${OFInstance?.affectes*.id}" class="span12 with-search"/>
+</div>
+</div>
+  
+  
+  
+  
+</article>
+<article class="span3">
+<div>
+  <label class="control-label">Date de lancement <span class="required-indicator">*</span></label>
 
+  
+  <div class="controls" size="16" >
+    <div>
+      <g:field type="date" name="dateDebutPlanifie" 
+              default="${new Date()}" precision="day"  />
+    </div>
+  </div>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'dateDebutPlanifie', 'error')} required">
-	<label for="dateDebutPlanifie">
-		<g:message code="OF.dateDebutPlanifie.label" default="Date Debut Planifie" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="dateDebutPlanifie" precision="day"  value="${OFInstance?.dateDebutPlanifie}"  />
 
+<div>
+  <label class="control-label">Date de fin planifiée <span class="required-indicator">*</span></label>
+
+  
+  <div class="controls" size="16" >
+    <div>
+      <g:field type="date" name="dateFinPlanifie" 
+              default="${new Date()}" precision="day"  />
+    </div>
+  </div>
 </div>
-
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'dateFinPlanifie', 'error')} required">
-	<label for="dateFinPlanifie">
-		<g:message code="OF.dateFinPlanifie.label" default="Date Fin Planifie" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="dateFinPlanifie" precision="day"  value="${OFInstance?.dateFinPlanifie}"  />
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'kanban', 'error')} required">
-	<label for="kanban">
-		<g:message code="OF.kanban.label" default="Kanban" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="kanban" name="kanban.id" from="${application.PP.Kanban.list()}" optionKey="id" required="" value="${OFInstance?.kanban?.id}" class="many-to-one"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: OFInstance, field: 'phase', 'error')} required">
-	<label for="phase">
-		<g:message code="OF.phase.label" default="Phase" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="phase" name="phase.id" from="${application.PP.Phase.list()}" optionKey="id" required="" value="${OFInstance?.phase?.id}" class="many-to-one"/>
-
-</div>
-
+</article></div>

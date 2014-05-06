@@ -1194,3 +1194,18 @@ Cannot resolve which method to invoke for [null] due to overlapping prototypes b
 	at java.lang.Thread.run(Thread.java:724)
 2014-05-06 10:21:28,296 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-05-06 10:21:30,434 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-06 15:58:53,589 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 68: Controller actions may not be overloaded.  The [nouveauKanban] action has been overloaded in [application.PP.KanbanController]. @ line 68, column 5.
+       def nouveauKanban() {
+       ^
+
+1 error
+
+2014-05-06 16:17:51,953 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 107: The current scope already contains a variable of the name chargePlanifiee
+ @ line 107, column 13.
+           def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
+               ^
+
+1 error
+
