@@ -209,10 +209,11 @@ class KanbanService {
     }
     
     @Transactional
-    CompteRendu[] afficherCRKanban(Kanban monKanban){
+    Message[] afficherCRKanban(Kanban monKanban){
+        println("dans kanban service")
         try{
             // requete SQL
-            return CompteRendu.findAll("from CompteRendu as b where b.kanban=?", [monKanban])
+            return Message.findAll("from Message as b where b.kanban=?", [monKanban])
         }
         catch (NullPointerException n) {
             return null

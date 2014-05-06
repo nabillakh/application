@@ -1,6 +1,6 @@
 package application.communication
 
-
+import application.PP.*
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -9,6 +9,7 @@ import grails.transaction.Transactional
 class MessageController {
 
     def messageService
+    def kanbanService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -107,18 +108,36 @@ class MessageController {
     
     def posterMessage(String message) {
         
-        println("controleur ajout message " + message)
         messageService.posterMessage(message)
         render "<script>obtenirMessage()</script>"
     }
     
     
     def obtenirMessage() {
-        def mesMessages = Message.list()
+        def mesMessages
+        if(params.kanban == null) {
+            mesMessages = Message.list()
+        }
+        else {
+            println("dans controller 1")
+            println(params.kanban)
+            def monId = Long.parseLong(params.kanban)
+            println(monId)
+            def monKanban = Kanban.get(monId)
+            println("kanban : " + monKanban.id)
+            mesMessages = kanbanService.afficherCRKanban(monKanban)
+            
+            println("mes messages ok")
+        }
         def moi = messageService.lookupCurrentPerson()
         [mesMessages:mesMessages.reverse(), moi:moi]
     }
     
-    
+     def posterMessageKanban(String message, Long kanban) {
+        
+        println("controleur updateCR" + message + kanban)
+        messageService.posterMessageKanban(message , kanban)
+        render "<script>obtenirMessage()</script>"
+    }
     
 }

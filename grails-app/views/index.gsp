@@ -14,19 +14,7 @@
      <!-- main content -->
 				<div id="page-content">
 					<!-- breadcrumb -->
-					<!-- DISABLED 
-					<ul class="breadcrumb">
-						<li>
-							<a href="javascript:void(0);"><i class="icon-off"></i> Tableau de bord</a><span class="divider">/</span>
-						</li>
-						<li>
-							<a href="javascript:void(0);">Library</a><span class="divider">/</span>
-						</li>
-						<li class="active">
-							Current Page
-						</li>
-					</ul>
-					-->
+					
 					<!-- end breadcrumb -->
 					
 					<!-- page header
@@ -141,9 +129,12 @@
 									            <div id="myChatTab" class="tab-content chat-content">
 									              
                                                                                       <div class="row-fluid chat-box">
-									            	
-                                                                                    <input class="span12 type-effect"  rows="3" cols="1"  type="text" id="messageBox" name="message" onkeypress="messageKeyPress(this,event);"/>
-                                                                                        <g:hiddenField name="kanban" id="monKanban"/>
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                    <input class="span12 type-effect"  type="text" id="messageBox" name="message" onkeypress="messageKeyPress(this,event);"/> 
+                                                                                    
+                                                                                    <g:hiddenField name="kanban" id="monKanban"/>
                                                                                     <div id="temp"></div>
                                                                                         
                                                                                       </div>
@@ -185,36 +176,36 @@
 									    </div>
 									    <!-- end widget div -->
 									</div>
+                                                                        
 									<!-- end widget -->
 									
 								</article>
 								
 							</div>
-							
-							<!-- end row-fluid -->
- <script>
-                                                                                      function messageKeyPress(field,event) {
-                                                                                        var theCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
-                                                                                        var message = $('#messageBox').val();
-                                                                                        if (theCode == 13){
-                                                                                    <g:remoteFunction controller = "message" action="posterMessage" params="\'message=\'+message" update="temp"/>
-                                                                                                $('#messageBox').val('');
-                                                                                                return false;
-                                                                                              } else {
-                                                                                                return true;
-                                                                                              }
-                                                                                              }
-                                                                                              function obtenirMessage() {
-                                                                                              var kanban = $('#monKanban').val()
-                                                                                              <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed"/>
-                                                                                            }
-                                                                                                function pollMessages() {
-                                                                                                          obtenirMessage();
-                                                                                                          setTimeout('pollMessages()', 5000);
-                                                                                                        }
-                                                                                                        pollMessages();
-                                                                                                                                                                                          
-                                                                                    </script>
+                                                        
+                                                        <script>
+                                                          function messageKeyPress(field,event) {
+                                                            var theCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                                                            var message = $('#messageBox').val();
+                                                            if (theCode == 13){
+                                                        <g:remoteFunction controller = "message" action="posterMessage" params="\'message=\'+message" update="temp"/>
+                                                                    $('#messageBox').val('');
+                                                                    return false;
+                                                                  } else {
+                                                                    return true;
+                                                                  }
+                                                                  }
+                                                                  function obtenirMessage() {
+                                                                  // var kanban = $('#monKanban').val()
+                                                                          <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed"/>
+                                                                        }
+                                                                function pollMessages() {
+                                                                  obtenirMessage();
+                                                                  setTimeout('pollMessages()', 25000);
+                                                                }
+                                                                pollMessages();
+                                                                                                                               
+                                                        </script>
 						</section>
 					</div>		
 				</div>
