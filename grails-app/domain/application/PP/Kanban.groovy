@@ -19,6 +19,7 @@ class Kanban {
     Ordonnancement ordo
     Phase phaseActuelle
     Famille famille 
+    Effectif chefProjet
     
     static hasMany = [compteRendus : CompteRendu, of:OF]
     
@@ -53,6 +54,7 @@ class Kanban {
         dateFinPlanifie nullable : true
         chargePlanifiee nullable :true
         of nullable:true
+        chefProjet nullable : true
     }
     
    

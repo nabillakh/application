@@ -26,6 +26,13 @@
 
 
 <div class="control-group">
+  <label class="control-label" for="multiSelect">Chef de projet</label>
+  <div class="controls"  size="16" >
+	<g:select id="multiSelect" name="chefProjet" from="${application.RH.Effectif.list()}" optionKey="id" required="" class="span12 with-search"/>
+  </div>
+</div>
+
+<div class="control-group">
   <label class="control-label" for="multiSelect">Famille de projet</label>
   <div class="controls"  size="16" >
 	<g:select id="multiSelect" name="famille" from="${application.PP.Famille.list()}" optionKey="id" required="" class="span12 with-search"/>

@@ -7,6 +7,7 @@ import grails.plugins.springsecurity.Secured
 import grails.plugins.springsecurity.Secured
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
+import application.RH.*
 
 @Transactional(readOnly = true)
 class KanbanController {
@@ -71,12 +72,13 @@ class KanbanController {
         def famille = params.famille
         def ordo = params.ordo
         def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
-        
+        def chefProjet = params.chefProjet
         def monKanban = new Kanban()
         
             monKanban.nomKanban = nomKanban
             monKanban.dateFinPlanifie = dateLivraison.toDate()
             monKanban.description = description
+            monKanban.chefProjet = Effectif.get(Integer.parseInt(chefProjet))
             monKanban.famille = Famille.get(Integer.parseInt(famille))
             monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
             monKanban.chargePlanifiee = chargePlanifiee 

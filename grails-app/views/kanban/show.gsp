@@ -65,7 +65,32 @@
                                                   </div>
 
 
-                                                  
+                                                  <div class="row-fluid">                                
+                                                          <article class="span12">    
+                                                            <header>
+                                                              <center><h3>Organisation du projet du projet</h3>   </center>                        
+									    </header>
+									    <!-- wrap div -->
+									    
+            
+									        <div class="inner-spacer"> 
+									        <!-- content goes here -->
+                                                                                
+                                                                                  <table class="table table-responsive" >
+                                                                                    <center><h4>Chef de projet : ${kanbanInstance.chefProjet.nom} ${kanbanInstance.chefProjet.prenom}</h4>  </center>
+                                                                                <g:each in="${ofs}" status="i" var="ofInstance">
+                                                                                  <td><center>Phase : <g:link controller="OF" action="show" id="${ofInstance.id}">${ofInstance.phase.nom} </g:link></br>
+                                                                                      Livraison : <g:formatDate format ='dd-MM-yyyy' date="${ofInstance.dateFinPlanifie}" /> </br>
+                                                                                      <g:if test="${ofInstance.affectes}">
+                                                                                        Affecté à : 
+                                                                                      <g:each in="${ofInstance.affectes}" status="j" var="aff">
+                                                                                     <g:link controller="Effectif" action="show" id="${aff.id}"> ${aff.nom} ${aff.prenom}</g:link>
+                                                                                </g:each></g:if></center></td>
+                                                                                </g:each>
+                                                                                      </table>
+									</div>
+                                                                </article>
+							</div>
                                                   
                                                   
 							<!-- row-fluid -->
@@ -118,41 +143,28 @@
 							</div>
                                                         
                                                 </section>
+							
+                                                
+                                                
+                                                
                                                 <section>
 							<div class="row-fluid">
-								<article class="span6">      
-									    <header>
-									        <h2>Ordonnancement du projet</h2>                           
-									    </header>
-									    <!-- wrap div -->
-									    
-            
-									        <div class="inner-spacer"> 
-									        <!-- content goes here -->
-                                                                                
-                                                                                <g:each in="${ofs}" status="i" var="ofInstance">
-                                                                                  <div>
-                                                                                    <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                      <td>${ofInstance.kanban.nomKanban}</td
-                                                                                      <td><g:formatDate format ='dd-MM-yyyy' date="${ofInstance.dateFinPlanifie}" /></td>
-                                                                                      <td>${fieldValue(bean: ofInstance, field: "affectes")}</td
-                                                                                      </tr>
-                                                                                  </div>
-                                                                                </g:each>
-									</div>
-                                                                </article>
+								
                                                           
-                                                        <article class="span6">
+                                                        <article class="span12">
                                                           <div class="jarviswidget" id="widget-id-0" data-widget-collapsed="false">
 									    <header>
 									        <h2>Compte Rendu</h2>                           
 									    </header> 
 									    
 									    <div>
-                                                                                          
-	
+                                                                              
+                                                                              <div class="row-fluid chat-box">
+                                                                                    <input class="span12 type-effect" type="text" id="messageBox" name="message" placeholder="Tapez votre message..." onkeypress="messageKeyPress(this,event);"/>
+                                                                                        <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
+                                                                                    <div id="temp"></div>
                                                                                     <!-- script de gestion des messages -->
-                                                                                    
+                                                                                    </div>
                                                                                     <div id="chatMessages">
                                                                                     </div>
                                                                                       <script type="text/javascript">
@@ -160,9 +172,6 @@
                                                                                       </script>
                                                                                       
                                                                                       
-                                                                                    <input type="text" id="messageBox" name="message" onkeypress="messageKeyPress(this,event);"/>
-                                                                                        <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
-                                                                                    <div id="temp"></div>
                                                                                     
                                                                                     
                                                                                     <script>

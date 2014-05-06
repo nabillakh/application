@@ -1183,3 +1183,14 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\services\application\comm
 java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
 	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
 	at java.lang.Thread.run(Thread.java:724)
+2014-05-06 09:44:53,549 [FileSystemWatcher: files=#18 cl=groovy.lang.GroovyClassLoader@f64843] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\Kanban.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-06 10:21:28,296 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-06 10:21:30,434 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig

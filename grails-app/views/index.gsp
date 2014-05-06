@@ -132,7 +132,7 @@
                                                                                         
                                                                                         
                                                                                         
-                                                                                    <input class="span12 type-effect"  type="text" id="messageBox" name="message" onkeypress="messageKeyPress(this,event);"/> 
+                                                                                    <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
                                                                                     
                                                                                     <g:hiddenField name="kanban" id="monKanban"/>
                                                                                     <div id="temp"></div>
