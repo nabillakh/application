@@ -24,6 +24,17 @@ class EventController {
         params.max = Math.min(max ?: 10, 100)
         respond Event.list(params), model:[eventInstanceCount: Event.count(), mesOF : mesOF]
     }
+    
+    
+    def showPopup = {
+        
+        def eventInstance = Event.get(params.id)
+        
+        [eventInstance: eventInstance]
+        render(template: "showPopup")
+        
+
+    }
 
     def show = {
         def eventInstance = Event.get(params.id)
@@ -37,7 +48,7 @@ class EventController {
             def model = [eventInstance: eventInstance, occurrenceStart: occurrenceStart, occurrenceEnd: occurrenceEnd]
 
             if (request.xhr) {
-                render(template: "showPopup", model: model)
+                render(template: "show", model: model)
             }
             else {
                 model
@@ -65,7 +76,8 @@ class EventController {
                 */
 
                 eventList << [
-                        title: event.title,
+                id: event.id,    
+                title: event.title,
                         allDay: false,
                         start: displayDateFormatter.format(startTime.toDate()),
                         end: displayDateFormatter.format(endTime.toDate()),
@@ -131,7 +143,7 @@ class EventController {
     }
     
     @Transactional
-    def nouveauEvent2() {
+    def nouveauEventKanban() {
         // recupere en params le json du kanban planifie. traduit en joda les dates puis cree l'event dans la bdd        
         def titre = params.title
         println(" titre : " + titre)
@@ -155,6 +167,49 @@ class EventController {
         // creation de l'imputation
         
         eventService.imputation(eventInstance, OF.get(params.id))
+        
+        
+        
+        [eventInstance : eventInstance]
+        redirect action: "list" 
+    }
+    
+    @Transactional
+    def eventResize() {
+        def displayDateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        // recupere en params le json de l'event modifie. traduit en joda les dates puis cree l'event dans la bdd        
+        def monId = params.id
+        println(monId)
+        def eventInstance = Event.get(monId)
+        println(" date de fin 0 : " + eventInstance.endTime)
+        DateTime fin = new DateTime(eventInstance.endTime)
+        println(" titre : " + eventInstance.title)
+        println(" delta jours : " + params.decalageJour)
+        println(" delta minutes : " + params.decalageMin)
+        
+        
+        
+        def decalageMin = Integer.parseInt(params.decalageMin)
+        // decalageMin += 120 // pour decalage horaire
+        def decalageJour = Integer.parseInt(params.decalageJour)
+        
+        println(" date de debut 1: " + eventInstance.startTime)
+        println(" date de fin 1 : " + fin)
+        DateTime fin2 = fin.plusMinutes(decalageMin)
+        // fin2 = fin2.plusDays(decalageJour)
+        eventInstance.endTime = fin2.toDate()
+        println(" date de debut 2: " + eventInstance.startTime)
+        println(" date de fin dans instance : " + eventInstance.endTime)
+        eventInstance.save(flush : true)
+        println(" date de debut 3: " + eventInstance.startTime)
+        println(" date de fin dans instance apres save : " + eventInstance.endTime)
+        
+        
+        // eventInstance.save()
+        
+        // maj de l'imputation
+        
+        // eventService.imputation(eventInstance, OF.get(params.id))
         
         
         

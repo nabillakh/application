@@ -108,4 +108,32 @@ class ImputationController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    
+    def feuilleImputation() {
+        // moi user
+        def kanbanInstanceList = Kanban.list()
+        def date = new Date() 
+        def semaine = date.toCalendar().get(Calendar.WEEK_OF_YEAR)
+        def annee = date.toCalendar().get(Calendar.YEAR)
+        println(semaine)
+        println(annee)
+        
+        
+        // Get calendar, clear it and set week number and year.
+        Calendar calendar = Calendar.getInstance();
+        calendar.clear();
+        calendar.set(Calendar.WEEK_OF_YEAR, semaine);
+        calendar.set(Calendar.YEAR, annee);
+
+        Date premierJour = calendar.getTime();
+        
+        
+        
+// Now get the first day of week.
+        
+        
+        
+        [kanbanInstanceList : kanbanInstanceList, semaine : semaine]
+        
+    }
 }

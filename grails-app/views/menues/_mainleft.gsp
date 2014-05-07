@@ -155,7 +155,11 @@
 								</ul>
 							</li>
                                                         <li class="">
-								<g:link  action="index" controller="event"> <i class="cus-calendar-2"></i> Mes agenda </g:link>
+								<g:link  action="index" controller="event"> <i class="cus-calendar-2"></i> Mon agenda </g:link>
+							</li>
+                                                        
+							<li class="">
+								<g:link  action="feuilleImputation" controller="imputation"> <i class="icon-envelope"></i>Feuille d'imputation</g:link>
 							</li>
 
 							

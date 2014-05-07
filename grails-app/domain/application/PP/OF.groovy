@@ -12,6 +12,7 @@ class OF {
     Kanban kanban
     Phase phase
     Float chargePlanifiee
+    Float chargeImputee
     
     static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser']
     
@@ -36,6 +37,7 @@ class OF {
     
     static constraints = {
         chargePlanifiee nullable : true
+        chargeImputee nullable : true
         affectes nullable : true
         dateFinPlanifie nullable : true
     }

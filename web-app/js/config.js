@@ -541,7 +541,7 @@
                         var calendar = $('#calendar').fullCalendar({
                             
 			defaultView: 'agendaWeek',
-		firstDay: 1,
+                        firstDay: 1,
                             eventSources: [
                             // source pour obtenir mes données 
                                     {
@@ -549,7 +549,7 @@
                                         type: 'POST',
                                         formulaireType: 'json',
                                         formulaire: {
-                                            
+                                            id:'id',
                                             start: 'start',
                                             end: 'end',
                                             title: 'title'
@@ -564,6 +564,30 @@
                             },
                         
                         ],
+                editable: true,
+                durationEditable: true,
+                startEditable:true,
+                // a retravailler ci dessous
+                eventResize: function(event,dayDelta,minuteDelta,revertFunc) {                    
+                    $.ajax({
+                        url: '/application/event/eventResize',
+                        type: 'POST',
+                        format: 'json',
+                        data: {
+                            id: event.id,
+                            decalageJour: dayDelta,
+                            decalageMin: minuteDelta,
+                        },
+                        error: function () {
+                            alert('pb denvoi du json');
+                        },
+                            });
+                    $('#calendar').fullCalendar( 'refetchEvents');
+
+    },
+                
+                
+                
 				header: {
 					left: 'title', //,today
 					center: 'prev, next, today',
@@ -577,9 +601,8 @@
                         eventMouseout: function(event, jsEvent, view) {
                             $(this).removeClass("active");
                         },
+                               
                                 
-                                
-                                            
                                 
                                 
 				selectable: true,
@@ -611,15 +634,14 @@
                                                     alert('pb denvoi du json');
                                                 },
                                             }),
-                                            calendar.fullCalendar('unselect');
+                                            $('#calendar').fullCalendar( 'refetchEvents');
                                         }
                                         else {  
                                         };
+                                        
                                     });
                               },                                
-				editable: true,
-                                
-                                
+				
                                 
                                 
                                 droppable: true, // this allows things to be dropped onto the calendar
@@ -640,7 +662,7 @@
 				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
                             // persistence de l'event    
                             $.ajax({
-                                                url: '/application/event/nouveauEvent2',
+                                                url: '/application/event/nouveauEventKanban',
                                                 type: 'POST',
                                                 format: 'json',
                                                 data: {
@@ -654,7 +676,7 @@
                                                     alert('pb denvoi du json');
                                                 },
                                             });
-				
+				$('#calendar').fullCalendar( 'refresh');
 				// is the "remove after drop" checkbox checked?
 				if ($('#drop-remove').is(':checked')) {
 					// if so, remove the element from the "Draggable Events" list

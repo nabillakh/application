@@ -1242,3 +1242,79 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 
 1 error
 
+2014-05-07 11:19:43,261 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 69: unexpected token: title @ line 69, column 17.
+                   title: event.title,
+                   ^
+
+1 error
+
+2014-05-07 14:08:17,172 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 14:08:18,636 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 15:45:03,737 [Thread-12] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 28: unexpected token: ouvrirPopUp @ line 28, column 5.
+       ouvrirPopUp
+       ^
+
+1 error
+
+2014-05-07 15:46:12,448 [Thread-12] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 42: expecting anything but ''\n''; got it anyway @ line 42, column 56.
+   mplate: "show"", model: model)
+                                 ^
+
+1 error
+
+2014-05-07 16:31:19,133 [FileSystemWatcher: files=#9 cl=groovy.lang.GroovyClassLoader@17553f0] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\Imputation.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 16:31:43,476 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@164db5c] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\Imputation.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 16:32:35,247 [FileSystemWatcher: files=#17 cl=groovy.lang.GroovyClassLoader@46bd54] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\PP\OF.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 16:36:58,866 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 16:37:00,599 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 17:09:34,322 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ImputationController.groovy: 127: The current scope already contains a variable of the name date
+ @ line 127, column 6.
+   Date date = calendar.getTime();
+        ^
+
+1 error
+
+2014-05-07 17:09:56,333 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ImputationController.groovy: 128: The current scope already contains a variable of the name date
+ @ line 128, column 6.
+   Date date = calendar.getTime();
+        ^
+
+1 error
+
+2014-05-07 17:10:06,059 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\ImputationController.groovy: 129: The current scope already contains a variable of the name date
+ @ line 129, column 6.
+   Date date = calendar.getTime();
+        ^
+
+1 error
+
