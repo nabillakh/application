@@ -1,337 +1,306 @@
-2014-05-06 10:22:03,137 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:03,164 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:10,801 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-06 10:22:11,659 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
-2014-05-06 10:22:22,381 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:22,382 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:22,382 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:22,830 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
-2014-05-06 10:22:27,816 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-06 10:22:28,594 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-06 10:22:32,114 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:05:12,831 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:12,851 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:20,043 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-07 09:05:20,630 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-07 09:05:29,604 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:29,605 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:29,605 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:29,945 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
+2014-05-07 09:05:36,317 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-07 09:05:37,117 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-07 09:05:47,794 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
+2014-05-07 09:05:47,802 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
+2014-05-07 09:05:47,802 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
+2014-05-07 09:05:47,850 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
+2014-05-07 09:05:47,850 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
+2014-05-07 09:05:47,850 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
+2014-05-07 09:05:47,896 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
+2014-05-07 09:05:47,896 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
+2014-05-07 09:05:47,896 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
+2014-05-07 09:05:47,965 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
+2014-05-07 09:05:47,965 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
+2014-05-07 09:05:47,965 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
+2014-05-07 09:05:48,041 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
+2014-05-07 09:05:48,041 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
+2014-05-07 09:05:48,041 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
+2014-05-07 09:05:48,077 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
+2014-05-07 09:05:48,078 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
+2014-05-07 09:05:48,078 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
+2014-05-07 09:05:48,103 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
+2014-05-07 09:05:48,103 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
+2014-05-07 09:05:48,103 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
+2014-05-07 09:05:48,142 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
+2014-05-07 09:05:48,142 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
+2014-05-07 09:05:48,142 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
+2014-05-07 09:05:48,159 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
+2014-05-07 09:05:48,159 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
+2014-05-07 09:05:48,160 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
+2014-05-07 09:05:48,255 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
+2014-05-07 09:05:48,255 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
+2014-05-07 09:05:48,255 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
+2014-05-07 09:05:48,305 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
+2014-05-07 09:05:48,305 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
+2014-05-07 09:05:48,305 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
+2014-05-07 09:05:48,349 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
+2014-05-07 09:05:48,349 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
+2014-05-07 09:05:48,349 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
+2014-05-07 09:05:48,393 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
+2014-05-07 09:05:48,393 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
+2014-05-07 09:05:48,393 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
+2014-05-07 09:05:48,436 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
+2014-05-07 09:05:48,437 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
+2014-05-07 09:05:48,437 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
+2014-05-07 09:05:48,480 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
+2014-05-07 09:05:48,480 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
+2014-05-07 09:05:48,480 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
+2014-05-07 09:05:48,822 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
+2014-05-07 09:05:48,822 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
+2014-05-07 09:05:48,823 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
+2014-05-07 09:05:49,321 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
+2014-05-07 09:05:49,322 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
+2014-05-07 09:05:49,322 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
+2014-05-07 09:05:49,375 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
+2014-05-07 09:05:49,375 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
+2014-05-07 09:05:49,375 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
+2014-05-07 09:06:17,714 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
+2014-05-07 09:06:17,714 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
+2014-05-07 09:06:17,714 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
+2014-05-07 09:06:17,793 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
+2014-05-07 09:06:17,793 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
+2014-05-07 09:06:17,793 [http-bio-8080-exec-1] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
+2014-05-07 09:21:16,002 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 178
+dateFinPlanifie: 
+affectes: 1
+monId: 2
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYg5R9.$tt__majOF(KanbanController.groovy:104)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:32,115 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:22:48,199 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 178
+dateFinPlanifie: 
+affectes: 1
+monId: 1
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYgWLe.$tt__majOF(KanbanController.groovy:104)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:32,148 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:22:57,266 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-15
+charge: 178
+dateFinPlanifie: 2014-05-30
+affectes: 1
+monId: 1
+No such property: monId for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: monId for class: application.PP.KanbanController
+	at application.PP.KanbanController$$EOdYgWLe.$tt__majOF(KanbanController.groovy:121)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:32,149 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:23:18,870 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-23
+charge: 178
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 5
+For input string: ",". Stacktrace follows:
+java.lang.NumberFormatException: For input string: ","
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:430)
+	at java.lang.Long.parseLong(Long.java:483)
+	at application.PP.KanbanController$_$tt__majOF_closure14.doCall(KanbanController.groovy:110)
+	at application.PP.KanbanController$$EOdYgWLe.$tt__majOF(KanbanController.groovy:109)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:32,149 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:24:07,814 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-29
+charge: 178
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 3
+For input string: ",". Stacktrace follows:
+java.lang.NumberFormatException: For input string: ","
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:430)
+	at java.lang.Long.parseLong(Long.java:483)
+	at application.PP.KanbanController$_$tt__majOF_closure14$$EOdYgpl6.doCall(KanbanController.groovy:111)
+	at application.PP.KanbanController$$EOdYgpl2.$tt__majOF(KanbanController.groovy:110)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:33,285 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:24:38,558 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-29
+charge: 178
+dateFinPlanifie: 2014-05-16
+affectes: 1,2
+monId: 4
+For input string: ",". Stacktrace follows:
+java.lang.NumberFormatException: For input string: ","
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:430)
+	at java.lang.Long.parseLong(Long.java:483)
+	at application.PP.KanbanController$_$tt__majOF_closure14$$EOdYgxks.doCall(KanbanController.groovy:111)
+	at application.PP.KanbanController$$EOdYgxkm.$tt__majOF(KanbanController.groovy:110)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:38,062 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:26:17,445 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/4
+Cannot get property 'of' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.of] on line [103]: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:262)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:39,109 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+Caused by: java.lang.NullPointerException: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2_closure64.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	... 7 more
+2014-05-07 09:26:23,041 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/4
+Cannot get property 'of' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.of] on line [103]: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:262)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:40,350 [2014-05-06 10:22:40,350 [http-bio-8080-exec-7] ERROR http-bio-8080-exec-5] StackTrace ERROR  - errors.GrailsExceptionResolver Full Stack Trace:
- - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+Caused by: java.lang.NullPointerException: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2_closure64.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	... 7 more
+2014-05-07 09:26:31,035 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/4
+Cannot get property 'of' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.of] on line [103]: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:262)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:40,350 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+Caused by: java.lang.NullPointerException: Cannot get property 'of' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2_closure64.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:112)
+	... 7 more
+2014-05-07 09:27:08,617 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-15
+charge: 160
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 6
+No such property: monId for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: monId for class: application.PP.KanbanController
+	at application.PP.KanbanController$$EOdYhOcs.$tt__majOF(KanbanController.groovy:124)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:41,086 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver 2014-05-06 10:22:41,086 [ - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:29:19,604 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-15
+charge: 160
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 6
+No such property: charge for class: application.PP.OF
+Possible solutions: phase. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: charge for class: application.PP.OF
+Possible solutions: phase
+	at application.PP.KanbanController$$EOdYiAH6.$tt__majOF(KanbanController.groovy:119)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:41,089 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:29:37,814 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-21
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 9
+No such property: charge for class: application.PP.OF
+Possible solutions: phase. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: charge for class: application.PP.OF
+Possible solutions: phase
+	at application.PP.KanbanController$$EOdYiDeM.$tt__majOF(KanbanController.groovy:118)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:43,893 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
-2014-05-06 10:22:43,906 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
-2014-05-06 10:22:43,906 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
-2014-05-06 10:22:43,942 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
-2014-05-06 10:22:43,943 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
-2014-05-06 10:22:43,943 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
-2014-05-06 10:22:43,993 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
-2014-05-06 10:22:43,993 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
-2014-05-06 10:22:43,993 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
-2014-05-06 10:22:44,025 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
-2014-05-06 10:22:44,025 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
-2014-05-06 10:22:44,025 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
-2014-05-06 10:22:44,061 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
-2014-05-06 10:22:44,061 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
-2014-05-06 10:22:44,061 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
-2014-05-06 10:22:44,115 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
-2014-05-06 10:22:44,115 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
-2014-05-06 10:22:44,115 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
-2014-05-06 10:22:44,177 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
-2014-05-06 10:22:44,177 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
-2014-05-06 10:22:44,177 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
-2014-05-06 10:22:44,276 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
-2014-05-06 10:22:44,276 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
-2014-05-06 10:22:44,276 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
-2014-05-06 10:22:44,345 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
-2014-05-06 10:22:44,345 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
-2014-05-06 10:22:44,345 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
-2014-05-06 10:22:44,392 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
-2014-05-06 10:22:44,392 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
-2014-05-06 10:22:44,392 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
-2014-05-06 10:22:44,415 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
-2014-05-06 10:22:44,416 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
-2014-05-06 10:22:44,416 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
-2014-05-06 10:22:44,498 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
-2014-05-06 10:22:44,498 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
-2014-05-06 10:22:44,498 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
-2014-05-06 10:22:44,548 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
-2014-05-06 10:22:44,548 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
-2014-05-06 10:22:44,549 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
-2014-05-06 10:22:44,600 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
-2014-05-06 10:22:44,600 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
-2014-05-06 10:22:44,600 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
-2014-05-06 10:22:44,650 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
-2014-05-06 10:22:44,651 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
-2014-05-06 10:22:44,651 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
-2014-05-06 10:22:44,698 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:29:56,105 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-21
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 9
+No such property: charge for class: application.PP.OF
+Possible solutions: phase. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: charge for class: application.PP.OF
+Possible solutions: phase
+	at application.PP.KanbanController$$EOdYiKN8.$tt__majOF(KanbanController.groovy:117)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:44,759 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
-2014-05-06 10:22:44,760 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
-2014-05-06 10:22:44,760 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
-2014-05-06 10:22:44,794 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
-2014-05-06 10:22:44,795 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
-2014-05-06 10:22:44,795 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
-2014-05-06 10:22:44,862 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
-2014-05-06 10:22:44,862 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
-2014-05-06 10:22:44,862 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
-2014-05-06 10:22:49,690 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
+2014-05-07 09:30:07,843 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-21
+charge: 160
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 8
+No such property: charge for class: application.PP.OF
+Possible solutions: phase. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: charge for class: application.PP.OF
+Possible solutions: phase
+	at application.PP.KanbanController$$EOdYiKN8.$tt__majOF(KanbanController.groovy:117)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:54,689 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:22:59,692 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:04,689 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:09,688 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:14,689 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:19,691 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:24,690 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:29,691 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:30,604 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
-2014-05-06 10:23:30,604 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
-2014-05-06 10:23:30,604 [http-bio-8080-exec-2] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
-2014-05-06 10:23:30,613 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
-2014-05-06 10:23:30,614 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
-2014-05-06 10:23:30,614 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
-2014-05-06 10:23:34,687 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:23:39,685 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [POST] /application/message/obtenirMessage - parameters:
-kanban: 2
-Cannot get property 'id' on null object. Stacktrace follows:
-java.lang.NullPointerException: Cannot get property 'id' on null object
-	at application.communication.MessageController.$tt__obtenirMessage(MessageController.groovy:127)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:41:04,030 [http-bio-8080-exec-11] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/2
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [75]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 10:41:19,071 [http-bio-8080-exec-1] ERROR pages.GroovyPagesTemplateEngine  - Compilation error compiling GSP [C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp]:startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48: unexpected token: . @ line 48, column 106.
-   turn kanbanInstance.chefProjet.?nom })
-                                 ^
+2014-05-07 09:30:29,525 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 114: unexpected token: ok @ line 114, column 23.
+           println(liste ok)
+                         ^
 
 1 error
 
+2014-05-07 09:30:38,615 [http-bio-8080-exec-1] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
 org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48: unexpected token: . @ line 48, column 106.
-   turn kanbanInstance.chefProjet.?nom })
-                                 ^
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 114: unexpected token: ok @ line 114, column 23.
+           println("liste ok")
+                         ^
 
 1 error
 
@@ -348,416 +317,6 @@ C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48
 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
 	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:41:19,075 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MultipleCompilationErrorsException occurred when processing request: [GET] /application/kanban/show/2
-startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48: unexpected token: . @ line 48, column 106.
-   turn kanbanInstance.chefProjet.?nom })
-                                 ^
-
-1 error
-. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp]: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48: unexpected token: . @ line 48, column 106.
-   turn kanbanInstance.chefProjet.?nom })
-                                 ^
-
-1 error
-
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 48: unexpected token: . @ line 48, column 106.
-   turn kanbanInstance.chefProjet.?nom })
-                                 ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
-	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
-	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
-	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
-	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
-	... 5 more
-2014-05-06 10:44:32,141 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/3
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [75]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 10:47:04,881 [http-bio-8080-exec-11] ERROR errors.GrailsExceptionResolver  - IllegalStateException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
-dateLancement: 2014-05-21
-dateFinPlanifie: 2014-05-31
-description: Planifiez, pilotez, optimisez !
-nomKanban: developpement commercial
-ordo: 1
-create: Create
-famille: 1
-chargePlanifiee: 4
-chefProjet: 1
-Cannot convert value of type [java.lang.String] to required type [application.RH.Effectif] for property 'chefProjet': no matching editors or conversion strategy found. Stacktrace follows:
-java.lang.IllegalStateException: Cannot convert value of type [java.lang.String] to required type [application.RH.Effectif] for property 'chefProjet': no matching editors or conversion strategy found
-	at application.PP.KanbanController$$EOdTBDMR.$tt__nouveauKanban(KanbanController.groovy:80)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:47:44,386 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
-dateLancement: 2014-05-21
-dateFinPlanifie: 2014-05-31
-description: Planifiez, pilotez, optimisez !
-nomKanban: developpement commercial
-ordo: 1
-create: Create
-famille: 1
-chargePlanifiee: 4
-chefProjet: 1
-No such property: Effectif for class: application.PP.KanbanController. Stacktrace follows:
-groovy.lang.MissingPropertyException: No such property: Effectif for class: application.PP.KanbanController
-	at application.PP.KanbanController$$EOdTBO0L.$tt__nouveauKanban(KanbanController.groovy:80)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 10:48:04,682 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
-dateLancement: 2014-05-21
-dateFinPlanifie: 2014-05-31
-description: Planifiez, pilotez, optimisez !
-nomKanban: developpement commercial
-ordo: 1
-create: Create
-famille: 1
-chargePlanifiee: 4
-chefProjet: 1
-No such property: Effectif for class: application.PP.KanbanController. Stacktrace follows:
-groovy.lang.MissingPropertyException: No such property: Effectif for class: application.PP.KanbanController
-	at application.PP.KanbanController$$EOdTBO0L.$tt__nouveauKanban(KanbanController.groovy:80)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 11:30:22,008 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /application/kanban/show/4
-No such property: nom for class: application.PP.OF
-Possible solutions: id, all. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [ofInstance.nom] on line [83]: No such property: nom for class: application.PP.OF
-Possible solutions: id, all
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:56)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: groovy.lang.MissingPropertyException: No such property: nom for class: application.PP.OF
-Possible solutions: id, all
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure19.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:56)
-	... 6 more
-2014-05-06 11:31:24,434 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /application/kanban/show/4
-Grails tags were not closed! [[<g:each>]] in GSP C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp. Stacktrace follows:
-java.lang.RuntimeException: Error initializing GroovyPageView
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Grails tags were not closed! [[<g:each>]] in GSP C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp
-	... 5 more
-2014-05-06 11:31:27,390 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /application/kanban/show/4
-Grails tags were not closed! [[<g:each>]] in GSP C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp. Stacktrace follows:
-java.lang.RuntimeException: Error initializing GroovyPageView
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Grails tags were not closed! [[<g:each>]] in GSP C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp
-	... 5 more
-2014-05-06 11:31:39,382 [http-bio-8080-exec-5] ERROR pages.GroovyPagesTemplateEngine  - Compilation error compiling GSP [C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp]:startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 61: The current scope already contains a variable of the name i
- @ line 61, column 5.
-   int i = 0
-       ^
-
-1 error
-
-org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 61: The current scope already contains a variable of the name i
- @ line 61, column 5.
-   int i = 0
-       ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
-	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 11:31:39,387 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MultipleCompilationErrorsException occurred when processing request: [GET] /application/kanban/show/4
-startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 61: The current scope already contains a variable of the name i
- @ line 61, column 5.
-   int i = 0
-       ^
-
-1 error
-. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\show.gsp]: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 61: The current scope already contains a variable of the name i
- @ line 61, column 5.
-   int i = 0
-       ^
-
-1 error
-
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp: 61: The current scope already contains a variable of the name i
- @ line 61, column 5.
-   int i = 0
-       ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
-	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
-	... 5 more
-2014-05-06 11:58:06,960 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
-dateLancement: 
-dateFinPlanifie: 
-description: 
-nomKanban: 
-ordo: 1
-create: Create
-famille: 1
-chargePlanifiee: 
-chefProjet: 1
-empty String. Stacktrace follows:
-java.lang.NumberFormatException: empty String
-	at java.lang.Float.parseFloat(Float.java:452)
-	at application.PP.KanbanController$$EOdTBTpE.$tt__nouveauKanban(KanbanController.groovy:74)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 11:58:59,922 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/2
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [80]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 12:01:14,961 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/2
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [80]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 12:01:18,552 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [GET] /application/kanban/show/1
-Ambiguous method overloading for method java.lang.Float#div.
-Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
-	[class java.lang.Character]
-	[class java.lang.Number]. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
-Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
-	[class java.lang.Character]
-	[class java.lang.Number]
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
-Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
-	[class java.lang.Character]
-	[class java.lang.Number]
-	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
-	... 6 more
-2014-05-06 12:01:21,319 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/3
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [80]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 14:21:59,110 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /application/OF/edit/3
-Expecting '=' after attribute name (id="kanban" name="kanban.id" from="${application.PP.Kanban.list()}" optionKey="id" required="" value="${OFInstance?.kanban?.id}" class="many-to-one" disabled).. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Expecting '=' after attribute name (id="kanban" name="kanban.id" from="${application.PP.Kanban.list()}" optionKey="id" required="" value="${OFInstance?.kanban?.id}" class="many-to-one" disabled).
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Expecting '=' after attribute name (id="kanban" name="kanban.id" from="${application.PP.Kanban.list()}" optionKey="id" required="" value="${OFInstance?.kanban?.id}" class="many-to-one" disabled).
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_OF_edit_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_OF_edit_gsp:81)
-	... 5 more
-2014-05-06 15:10:55,392 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/2
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [80]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more
-2014-05-06 15:58:52,490 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
-C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 68: Controller actions may not be overloaded.  The [nouveauKanban] action has been overloaded in [application.PP.KanbanController]. @ line 68, column 5.
-       def nouveauKanban() {
-       ^
-
-1 error
-
-2014-05-06 16:00:40,229 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/2
-Cannot get property 'of' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.of] on line [144]: Cannot get property 'of' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:118)
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:242)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'of' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2_closure65.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:118)
-	... 7 more
-2014-05-06 16:01:07,712 [http-bio-8080-exec-13] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/5
-Cannot get property 'of' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.of] on line [144]: Cannot get property 'of' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:118)
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:242)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'of' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp$_run_closure2_closure65.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp:118)
-	... 7 more
-2014-05-06 16:03:56,874 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
-dateDebutPlanifie: 
-dateFinPlanifie: 
-affectes: 1
-create: Mettre à jour
-chargePlanifiee: 178
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Integer.parseInt(Integer.java:454)
-	at java.lang.Integer.parseInt(Integer.java:527)
-	at application.PP.KanbanController$$EOdUSX7D.$tt__majOF(KanbanController.groovy:114)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 16:15:31,930 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
-dateDebutPlanifie: 2014-05-22
-dateFinPlanifie: 
-affectes: 2
-create: Mettre à jour
-chargePlanifiee: 32
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Integer.parseInt(Integer.java:454)
-	at java.lang.Integer.parseInt(Integer.java:527)
-	at application.PP.KanbanController$$EOdUSX7D.$tt__majOF(KanbanController.groovy:114)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 16:16:28,584 [http-bio-8080-exec-13] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
-dateDebutPlanifie: 
-dateFinPlanifie: 
-affectes: 1
-affectes: 2
-create: Mettre à jour
-chargePlanifiee: 32
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Integer.parseInt(Integer.java:454)
-	at java.lang.Integer.parseInt(Integer.java:527)
-	at application.PP.KanbanController$$EOdUSX7D.$tt__majOF(KanbanController.groovy:114)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 16:17:51,811 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
-C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 107: The current scope already contains a variable of the name chargePlanifiee
- @ line 107, column 13.
-           def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
-               ^
-
-1 error
-
-2014-05-06 16:17:52,716 [http-bio-8080-exec-1] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
-org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 107: The current scope already contains a variable of the name chargePlanifiee
- @ line 107, column 13.
-           def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
-               ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
-	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
 	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
 	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
@@ -766,7 +325,7 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
 	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
-	at sun.reflect.GeneratedMethodAccessor1872.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor619.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
@@ -825,12 +384,829 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 	at groovy.lang.Closure.call(Closure.java:405)
 	at groovy.lang.Closure.run(Closure.java:492)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 16:17:55,692 [http-bio-8080-exec-7] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+2014-05-07 09:30:53,297 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-07
+charge: 160
+dateFinPlanifie: 2014-05-16
+affectes: 1
+monId: 9
+No such property: charge for class: application.PP.OF
+Possible solutions: phase. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: charge for class: application.PP.OF
+Possible solutions: phase
+	at application.PP.KanbanController$$EOdYiVnS.$tt__majOF(KanbanController.groovy:118)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:31:59,107 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 125: unexpected token: ancienOf @ line 125, column 32.
+           println("apres save :" ancienOf.chargePlanifiee)
+                                  ^
+
+1 error
+
+2014-05-07 09:32:00,260 [http-bio-8080-exec-2] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
 org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 107: The current scope already contains a variable of the name chargePlanifiee
- @ line 107, column 13.
-           def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 125: unexpected token: ancienOf @ line 125, column 32.
+           println("apres save :" ancienOf.chargePlanifiee)
+                                  ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor619.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:32:10,616 [http-bio-8080-exec-7] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 125: unexpected token: ancienOf @ line 125, column 32.
+           println("apres save :" + ancienOf.chargePlanifiee)
+                                  ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:32:30,424 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-29
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 7
+No such property: chargePlanifiee for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: chargePlanifiee for class: application.PP.KanbanController
+	at application.PP.KanbanController$$EOdYiu9H.$tt__majOF(KanbanController.groovy:120)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:33:09,853 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-22
+charge: 120
+dateFinPlanifie: 2014-05-31
+affectes: 1
+monId: 9
+No such property: chargePlanifiee for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: chargePlanifiee for class: application.PP.KanbanController
+	at application.PP.KanbanController$$EOdYj5Vc.$tt__majOF(KanbanController.groovy:120)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:40:21,678 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 7
+No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes()
+	at application.PP.KanbanController$$EOdYkx4P.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:40:35,896 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 7
+No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes()
+	at application.PP.KanbanController$$EOdYl0SX.$tt__majOF(KanbanController.groovy:122)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:41:22,729 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 160
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 7
+No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes()
+	at application.PP.KanbanController$$EOdYl0SX.$tt__majOF(KanbanController.groovy:122)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:41:39,174 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-08
+charge: 12
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 9
+No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes(). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.OF.setAffectes() is applicable for argument types: (java.util.ArrayList) values: [[1, 2]]
+Possible solutions: setAffectes(java.util.Set), getAffectes()
+	at application.PP.KanbanController$$EOdYl0SX.$tt__majOF(KanbanController.groovy:122)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:47:43,931 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure16.doCall(KanbanController.groovy:128)
+	at application.PP.KanbanController$$EOdYmkpu.$tt__majOF(KanbanController.groovy:127)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:48:06,554 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYmsDS.doCall(KanbanController.groovy:125)
+	at application.PP.KanbanController$$EOdYmsDO.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:48:36,006 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYn12F.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYn129.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:48:50,206 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYn12F.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYn129.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:48:54,948 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYn64e.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYn64a.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:49:17,784 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnCad.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnCaY.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:49:20,356 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnCft.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnCfp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:49:23,006 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnCft.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnCfp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:49:49,588 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.getAt() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: getAt(java.lang.String), getAt(int), getAt(java.lang.String), getKey(), wait(long), putAt(java.lang.String, java.lang.Object)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnCft.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnCfp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:49:52,134 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnLdL.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnLdH.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:50:06,398 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnLdL.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnLdH.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:50:38,186 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnXdt.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnXdp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:50:40,431 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnXdt.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnXdp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:50:51,630 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnXdt.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnXdp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:51:07,471 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-29
+charge: 178
+dateFinPlanifie: 2014-05-16
+affectes: 1,2
+monId: 4
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (java.lang.Long) values: [1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYnXdt.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYnXdp.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:52:51,787 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No such property: id for class: java.lang.Long. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: id for class: java.lang.Long
+	at application.PP.KanbanController$_tt__majOF_closure15_closure20.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYo5OC.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYo5O6.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:53:15,352 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No such property: id for class: java.lang.Long. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: id for class: java.lang.Long
+	at application.PP.KanbanController$_tt__majOF_closure15_closure20.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYo5OC.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYo5O6.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:54:05,285 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1,2
+monId: 6
+No such property: id for class: java.lang.Long. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: id for class: java.lang.Long
+	at application.PP.KanbanController$_tt__majOF_closure15_closure20$$EOdYoPOO.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYoPOO.doCall(KanbanController.groovy:126)
+	at application.PP.KanbanController$$EOdYoPOI.$tt__majOF(KanbanController.groovy:124)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:55:52,920 [http-bio-8080-exec-10] ERROR property.BasicPropertyAccessor  - IllegalArgumentException in class: application.RH.Effectif, getter method of property: id
+2014-05-07 09:55:53,026 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-19
+charge: 110
+dateFinPlanifie: 2014-05-31
+affectes: 1
+monId: 6
+java.lang.ClassCastException@12bc1ae. Stacktrace follows:
+java.lang.IllegalArgumentException: java.lang.ClassCastException@12bc1ae
+	at application.PP.KanbanController$$EOdYoinq.$tt__majOF(KanbanController.groovy:139)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:57:27,509 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 130: expecting ')', found 'else' @ line 130, column 13.
+               else {
                ^
+
+1 error
+
+2014-05-07 09:57:31,084 [http-bio-8080-exec-8] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 130: expecting ')', found 'else' @ line 130, column 13.
+               else {
+               ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor619.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:57:34,074 [http-bio-8080-exec-3] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 130: expecting ')', found 'else' @ line 130, column 13.
+               else {
+               ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 09:58:04,559 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-22
+charge: 110
+dateFinPlanifie: 2014-05-30
+affectes: 1
+monId: 6
+No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: org.hibernate.collection.PersistentSet.find() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), min(groovy.lang.Closure)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYpNWS.doCall(KanbanController.groovy:127)
+	at application.PP.KanbanController$$EOdYpNWM.$tt__majOF(KanbanController.groovy:125)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:00:06,078 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 160
+dateFinPlanifie: 
+affectes: 2
+monId: 10
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYpXEL.$tt__majOF(KanbanController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:00:09,646 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 160
+dateFinPlanifie: 
+affectes: 2
+monId: 10
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYpXEL.$tt__majOF(KanbanController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:04:15,633 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unable to resolve class Message 
+ @ line 131, column 30.
+                   def action = new Message(message : "nouveau travail !")
+                                ^
+
+1 error
+
+2014-05-07 10:04:23,889 [http-bio-8080-exec-10] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unable to resolve class Message 
+ @ line 131, column 30.
+                   def action = new Message(message : "nouveau travail !")
+                                ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor619.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:04:48,892 [http-bio-8080-exec-2] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unable to resolve class Message 
+ @ line 131, column 30.
+                   def action = new Message(message : "nouveau travail !")
+                                ^
 
 1 error
 
@@ -847,191 +1223,213 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:01:39,827 [http-bio-8080-exec-7] ERROR pages.GroovyPagesTemplateEngine  - Compilation error compiling GSP [C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp]:startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp: 139: unexpected token: params @ line 139, column 127.
-    it) { return [action:'majOF' params='${
-                                 ^
-
-1 error
-
+2014-05-07 10:05:13,895 [http-bio-8080-exec-4] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
 org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp: 139: unexpected token: params @ line 139, column 127.
-    it) { return [action:'majOF' params='${
-                                 ^
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unable to resolve class Message 
+ @ line 131, column 30.
+                   def action = new Message(message : "nouveau travail !")
+                                ^
 
 1 error
 
 	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
-	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
-	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
-	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:06:06,139 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-28
+charge: 160
+dateFinPlanifie: 2014-05-30
+affectes: 2
+monId: 8
+No signature of method: application.PP.CompteRenduService.updateCompteRendu() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: updateCompteRendu(java.lang.String), updateCompteRendu(java.lang.String, java.lang.Long). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.PP.CompteRenduService.updateCompteRendu() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: updateCompteRendu(java.lang.String), updateCompteRendu(java.lang.String, java.lang.Long)
+	at application.PP.KanbanController$_$tt__majOF_closure15$$EOdYrOpT.doCall(KanbanController.groovy:131)
+	at application.PP.KanbanController$$EOdYrOpO.$tt__majOF(KanbanController.groovy:125)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:01:39,844 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MultipleCompilationErrorsException occurred when processing request: [GET] /application/kanban/gestionOf/4
-startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp: 139: unexpected token: params @ line 139, column 127.
-    it) { return [action:'majOF' params='${
-                                 ^
-
-1 error
-. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Could not parse script [C:\Users\Nabil\Documents\GitHub\application\grails-app\views\kanban\gestionOf.gsp]: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp: 139: unexpected token: params @ line 139, column 127.
-    it) { return [action:'majOF' params='${
-                                 ^
-
-1 error
-
+2014-05-07 10:07:36,372 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-28
+charge: 160
+dateFinPlanifie: 2014-05-30
+affectes: 2
+monId: 8
+No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long)
+	at application.PP.KanbanController$_$tt__majOF_closure13.doCall(KanbanController.groovy:131)
+	at application.PP.KanbanController$$EOdYrnpg.$tt__majOF(KanbanController.groovy:125)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_gestionOf_gsp: 139: unexpected token: params @ line 139, column 127.
-    it) { return [action:'majOF' params='${
-                                 ^
-
-1 error
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
-	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
-	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
-	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
-	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
-	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
-	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
-	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
-	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
-	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
-	... 5 more
-2014-05-06 17:01:54,280 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /application/kanban/gestionOf/4
-Attribute value quote wasn't closed (url="[action:'majOF' params=${OFInstance?.id}]").. Stacktrace follows:
-java.lang.RuntimeException: Error initializing GroovyPageView
+2014-05-07 10:07:57,527 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 160
+dateFinPlanifie: 2014-05-23
+affectes: 1
+monId: 8
+No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.lang.String, application.PP.Kanban) values: [nouveau travail, application.PP.Kanban(dzdz)]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long)
+	at application.PP.KanbanController$_$tt__majOF_closure13.doCall(KanbanController.groovy:131)
+	at application.PP.KanbanController$$EOdYrnpg.$tt__majOF(KanbanController.groovy:125)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Attribute value quote wasn't closed (url="[action:'majOF' params=${OFInstance?.id}]").
-	... 5 more
-2014-05-06 17:04:38,754 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+2014-05-07 10:12:32,754 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-13
+charge: 178
+dateFinPlanifie: 2014-05-23
+affectes: 1,2
+monId: 12
+No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.util.LinkedHashMap) values: [[message:Vous êtes chargé d'une nouvelle activité, ...]]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long). Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.communication.MessageService.posterMessageKanban() is applicable for argument types: (java.util.LinkedHashMap) values: [[message:Vous êtes chargé d'une nouvelle activité, ...]]
+Possible solutions: posterMessageKanban(java.lang.String, java.lang.Long)
+	at application.PP.KanbanController$_$tt__majOF_closure13$$EOdYt0Mw.doCall(KanbanController.groovy:131)
+	at application.PP.KanbanController$$EOdYt0Ms.$tt__majOF(KanbanController.groovy:125)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:17:52,638 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
 dateDebutPlanifie: 
+charge: 178
 dateFinPlanifie: 
 affectes: 1
+monId: 15
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYuH4n.$tt__majOF(KanbanController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:18:29,114 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 178
+dateFinPlanifie: 
+affectes: 1
+monId: 15
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYuVlv.$tt__majOF(KanbanController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:18:35,483 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 
+charge: 178
+dateFinPlanifie: 
+affectes: null
+monId: 15
+Invalid format: "". Stacktrace follows:
+java.lang.IllegalArgumentException: Invalid format: ""
+	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
+	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
+	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
+	at org.joda.time.DateTime.<init>(DateTime.java:168)
+	at application.PP.KanbanController$$EOdYuVlv.$tt__majOF(KanbanController.groovy:106)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:18:53,766 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 178
+dateFinPlanifie: 2014-05-22
+affectes: null
+monId: 15
+For input string: "null". Stacktrace follows:
+java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:441)
+	at java.lang.Long.parseLong(Long.java:483)
+	at application.PP.KanbanController$_$tt__majOF_closure12$$EOdYuVlz.doCall(KanbanController.groovy:112)
+	at application.PP.KanbanController$$EOdYuVlv.$tt__majOF(KanbanController.groovy:111)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:19:18,596 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 178
+dateFinPlanifie: 2014-05-22
+affectes: null
+monId: 15
+For input string: "null". Stacktrace follows:
+java.lang.NumberFormatException: For input string: "null"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:441)
+	at java.lang.Long.parseLong(Long.java:483)
+	at application.PP.KanbanController$_$tt__majOF_closure12$$EOdYuVlz.doCall(KanbanController.groovy:112)
+	at application.PP.KanbanController$$EOdYuVlv.$tt__majOF(KanbanController.groovy:111)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-07 10:19:44,732 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 178
+dateFinPlanifie: 2014-05-22
 affectes: 2
-create: Mettre à jour
-chargePlanifiee: 8
-monId: 14
-No such property: ancienOF for class: application.PP.KanbanController. Stacktrace follows:
-groovy.lang.MissingPropertyException: No such property: ancienOF for class: application.PP.KanbanController
-	at application.PP.KanbanController$$EOdUiHMy.$tt__majOF(KanbanController.groovy:105)
+monId: 15
+No such property: nvEff for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: nvEff for class: application.PP.KanbanController
+	at application.PP.KanbanController$_$tt__majOF_closure14$$EOdYupwh.doCall(KanbanController.groovy:142)
+	at application.PP.KanbanController$$EOdYupwd.$tt__majOF(KanbanController.groovy:136)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:28:26,929 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUoFcd.$tt__majOF(KanbanController.groovy:102)
+2014-05-07 10:20:19,683 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: 2014-05-14
+charge: 178
+dateFinPlanifie: 2014-05-22
+affectes: 2
+monId: 15
+No such property: nvEff for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: nvEff for class: application.PP.KanbanController
+	at application.PP.KanbanController$_$tt__majOF_closure14$$EOdYupwh.doCall(KanbanController.groovy:142)
+	at application.PP.KanbanController$$EOdYupwd.$tt__majOF(KanbanController.groovy:136)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:29:00,857 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUoFcd.$tt__majOF(KanbanController.groovy:102)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:29:18,255 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUoTFU.$tt__majOF(KanbanController.groovy:103)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:30:31,311 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUoTFU.$tt__majOF(KanbanController.groovy:103)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:32:08,922 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUpB5I.$tt__majOF(KanbanController.groovy:103)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:43:47,041 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUs2xM.$tt__majOF(KanbanController.groovy:103)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 17:44:07,983 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/majOF
-null. Stacktrace follows:
-java.lang.NumberFormatException: null
-	at java.lang.Long.parseLong(Long.java:404)
-	at java.lang.Long.parseLong(Long.java:483)
-	at application.PP.KanbanController$$EOdUsCpt.$tt__majOF(KanbanController.groovy:103)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-06 18:07:44,285 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/show/2
-Cannot get property 'nom' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.chefProjet.nom] on line [80]: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure16.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:48)
-	... 6 more

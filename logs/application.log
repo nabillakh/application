@@ -1209,3 +1209,36 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 
 1 error
 
+2014-05-06 18:24:49,184 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-06 18:24:50,858 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 09:04:48,003 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 09:04:49,234 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-07 09:30:28,686 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 114: unexpected token: ok @ line 114, column 23.
+           println(liste ok)
+                         ^
+
+1 error
+
+2014-05-07 09:31:58,383 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 125: unexpected token: ancienOf @ line 125, column 32.
+           println("apres save :" ancienOf.chargePlanifiee)
+                                  ^
+
+1 error
+
+2014-05-07 09:57:29,904 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 130: expecting ')', found 'else' @ line 130, column 13.
+               else {
+               ^
+
+1 error
+
+2014-05-07 10:04:14,438 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 131: unable to resolve class Message 
+ @ line 131, column 30.
+                   def action = new Message(message : "nouveau travail !")
+                                ^
+
+1 error
+

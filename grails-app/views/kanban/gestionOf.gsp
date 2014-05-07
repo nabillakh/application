@@ -149,7 +149,7 @@
 
                                                                                         <div class="controls" size="16" >
                                                                                           <div>
-                                                                                            <g:field type="date" name="dateDebutPlanifie" 
+                                                                                            <g:field type="date" name="dateDebutPlanifie"   id="dateDebutPlanifie${i}"
                                                                                                      default="${new Date()}" precision="day"  />
                                                                                           </div>
                                                                                         </div>
@@ -159,7 +159,7 @@
                                                                                         <label class="control-label">Date de fin planifiée <span class="required-indicator">*</span></label>
                                                                                         <div class="controls" size="16" >
                                                                                           <div>
-                                                                                            <g:field type="date" name="dateFinPlanifie" 
+                                                                                            <g:field type="date" name="dateFinPlanifie"   id="dateFinPlanifie${i}"
                                                                                                      default="${new Date()}" precision="day"  />
                                                                                           </div>
                                                                                         </div>
@@ -187,10 +187,12 @@
 				</div>
          <script>
            function majOF(monId) {
-             alert(monId)
-             var monId = $('#monId'+monId).val()
-             alert(monId);
-             <g:remoteFunction controller="kanban" action="majOF"  params="\'monId=\' + monId"/>;
+             var id = $('#monId'+monId).val();
+             var charge = $('#chargeplanifiee'+monId).val();
+             var dateFinPlanifie = $('#dateFinPlanifie'+monId).val();
+             var dateDebutPlanifie = $('#dateDebutPlanifie'+monId).val();
+             var affectes = $('#affectes'+monId).val();
+             <g:remoteFunction controller="kanban" action="majOF"  params="\'monId=\' + id+ '&charge=\' + charge+ '&dateFinPlanifie=\' + dateFinPlanifie+ '&dateDebutPlanifie=\' + dateDebutPlanifie+ '&affectes=\' + affectes"/>;
                    }
            function pollMessages() {
              obtenirMessage();

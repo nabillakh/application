@@ -149,7 +149,7 @@
 		setup_flots();
 		
 		/* draw calendar */
-                langCalendrier();
+                // langCalendrier();
 		setup_calendar();
 		
 		/* find #second-menu-js and apply accordion menu function */
@@ -706,7 +706,7 @@
 // Additionally, when this config is loaded, Moment and the jQuery UI datepicker
 // (if it is on the page) will also be initialized.
 //
-function langCalendrier(){
+/* function langCalendrier(){
     function onload (moment, $) {
  
         // RIPPED STRAIGHT FROM MOMENT'S SOURCE
@@ -802,7 +802,7 @@ function langCalendrier(){
     }
  
 };
-      
+   */   
       
       
       

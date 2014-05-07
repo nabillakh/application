@@ -8,13 +8,13 @@ import grails.plugins.springsecurity.Secured
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 import application.RH.*
+import application.communication.*
 
 @Transactional(readOnly = true)
 class KanbanController {
 
     def kanbanService
-    def compteRenduService
-    def timelineService
+    def messageService
     def springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -97,14 +97,54 @@ class KanbanController {
         [kanbanInstance:kanbanInstance]
     }
     
-    
+    // permet d'editer les OF d'un kanban
     def majOF() {  
-        println("ancienOf.phase.nom")
+        // rapatriement et conversion des variables
+        
         def id = Long.parseLong(params.monId)
-        def ancienOf = OF.findById(id)     
-        println(ancienOf.phase.nom)
-        def monKanban = ancienOf.kanban
-        println(monKanban.nomKanban)
+        def charge = Float.parseFloat(params.charge)
+        DateTime dateFinPlanifie = new DateTime(params.dateFinPlanifie)
+        DateTime dateDebutPlanifie = new DateTime(params.dateDebutPlanifie)
+        def affectes = []
+        def affect = params.affectes
+        List<String> items = Arrays.asList(affect.split("\\s*,\\s*"));
+        items.each() {aff->
+            def affs = Effectif.findById(Long.parseLong(aff))
+            affectes.add(affs)        
+        }
+        
+        // recherche of
+        def ancienOf = OF.findById(id) 
+        // maj de l'of
+        ancienOf.setChargePlanifiee(charge)
+        ancienOf.setDateFinPlanifie(dateFinPlanifie.toDate())
+        ancienOf.setDateDebutPlanifie(dateDebutPlanifie.toDate())
+        //ancienOf.setAffectes(affectes)        
+        
+        // permet d'ajouter des effectifs sur l'of et envoie un message automatiquement
+        affectes.each() {nvEff ->
+                println("dans boucle" + nvEff)
+            if(ancienOf.affectes.find {it.id == nvEff.id}) {
+            }   
+            else {
+                ancienOf.affectes.add(nvEff)
+                messageService.posterMessageKanban("Vous êtes chargé d'une nouvelle activité" , ancienOf.kanban.id)
+            }
+        }
+        
+        // permet de supprimer des effectifs sur l'of et envoie un message automatiquement
+        ancienOf.affectes.each() {ancienEff ->
+            if(affectes.find {it.id == ancienEff.id}) {
+            }   
+            else {
+                ancienOf.removeFromAffectes(ancienEff)
+                messageService.posterMessageKanban("Vous avez été déchargé d'une activité" , ancienOf.kanban.id)
+            }
+        }
+        
+        
+        
+        ancienOf.save(flush:true)
         
     }
     
@@ -167,22 +207,6 @@ class KanbanController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
-    def updateCompteRendu(String message, Long kanban) {
-        
-        println("controleur updateCR" + message + kanban)
-        compteRenduService.updateCompteRendu(message , kanban)
-        render "<script>obtenirCompteRendu()</script>"
-    }
-    
-    
-    def obtenirCompteRendu(Long kanban) {
-        println("ok")
-        println(kanban)
-        def monKanban = Kanban.get(kanban)
-        def mesCR = kanbanService.afficherCRKanban(monKanban)
-        [mesCR:mesCR.reverse()]
     }
        
 }
