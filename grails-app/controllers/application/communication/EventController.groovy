@@ -14,6 +14,7 @@ class EventController {
 
     def kanbanService
     def eventService
+    def springSecurityService
     
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
     
@@ -58,9 +59,10 @@ class EventController {
     }
     
     def list = {
-        def events = Event.list()
-        // iterate through to see if we need to add additional Event instances because of recurring
-        // events
+        def events = eventService.mesEvent()
+        
+        // def events = Event.list()
+        
         def eventList = []
 
         def displayDateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
@@ -103,7 +105,7 @@ class EventController {
             respond eventInstance.errors, view:'create'
             return
         }
-
+        
         eventInstance.save flush:true
 
         request.withFormat {
@@ -120,23 +122,19 @@ class EventController {
     def nouveauEvent() {
         // recupere en params le json du nouvel event. traduit en joda les dates puis cree l'event dans la bdd        
         def titre = params.title
-        println(" titre : " + titre)
         DateTime debut = new DateTime(params.start)
         
         DateTime fin = new DateTime(params.end)
-        
-        println("debut : " + debut)
-        
-        println("fin : " + fin)
         
         Event eventInstance = new Event()      
             eventInstance.title = titre
             eventInstance.startTime = debut.toDate()
             eventInstance.endTime = fin.toDate()
-           
-        println("fin a partir de l'event: " + eventInstance.endTime) 
-        
+            
+        println("avant save")
         eventInstance.save()
+        // met le user principal en organisateur + dans les participants
+        eventService.organiserEvent(eventInstance)
         
         [eventInstance : eventInstance]
         redirect action: "list" 
@@ -163,6 +161,8 @@ class EventController {
         println("fin a partir de l'event: " + eventInstance.endTime) 
         
         eventInstance.save()
+        // met le user principal en organisateur + dans les participants
+        eventService.organiserEvent(eventInstance)
         
         // creation de l'imputation
         

@@ -60,7 +60,38 @@ class EventService {
         
         return lesOF
     }
+    
+    // associe l'organisateur aux participants à la création de l'event
+    private void organiserEvent(Event e) {
+        def per = Effectif.get(springSecurityService.principal.id)
+        def eventEffectif = new EventEffectif(event : e, recepteur : per, participe : true)
+        eventEffectif.save(flush:true)
+        e.organisateur=per
+        e.addToParticipants(eventEffectif)
+        e.save(flush:true)
+    }
 
+     // liste d'event concernant le principal
+     
+    private Event[] mesEvent() {
+        def lesEventEffectif = [] 
+        def lesEvent = [] 
+        def per = Effectif.get(springSecurityService.principal.id)
+        try {
+            def query = EventEffectif.whereAny {
+                recepteur == per
+            }
+            lesEventEffectif = query.list()
+            lesEventEffectif.each() { ee ->
+                lesEvent.add(ee.event)            
+            }
+        }
+        
+        catch (NullPointerException n){
+        }
+        
+        return lesEvent
+    }
     
     
 
