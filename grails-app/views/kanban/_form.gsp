@@ -7,7 +7,7 @@
 		
 	</label>
   <div class="controls"  size="16" >
-	<g:textField name="nomKanban"  class="span12"  />
+	<g:textField name="nomKanban"  class="span12" value="${kanbanInstance.nomKanban}" />
 
 </div>
 </div>
@@ -19,7 +19,7 @@
 		
 	</label>
   <div class="controls"  size="16" >
-	<g:textField name="description" class="span12"/>
+	<g:textField name="description" class="span12" value="${kanbanInstance.description}" />
 
 </div>
 </div>
@@ -28,7 +28,7 @@
 <div class="control-group">
   <label class="control-label" for="multiSelect">Chef de projet</label>
   <div class="controls"  size="16" >
-	<g:select id="multiSelect" name="chefProjet" from="${application.RH.Effectif.list()}" optionKey="id" required="" class="span12 with-search"/>
+	<g:select id="multiSelect" name="chefProjet"  value="${kanbanInstance.chefProjet}"  from="${application.RH.Effectif.list()}" optionKey="id" required="" class="span12 with-search"/>
   </div>
 </div>
 

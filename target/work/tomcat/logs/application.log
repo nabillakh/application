@@ -589,3 +589,251 @@ org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error eval
 Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
 	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp$_run_closure31.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp:91)
 	... 6 more
+2014-05-09 19:47:14,117 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:50:26,589 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 38: You tried to use a map entry for an index operation, this is not allowed. Maybe something should be set in parentheses or a comma is missing?
+ @ line 38, column 29.
+           render view : show [kanbanInstance:kanbanInstance]
+                               ^
+
+1 error
+
+2014-05-09 19:52:09,862 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:55:22,538 [http-bio-8080-exec-14] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [GET] /application/kanban/show/monId
+Provided id of the wrong type for class application.PP.Kanban. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class application.PP.Kanban. Expected: class java.lang.Long, got class java.lang.String
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 19:55:51,800 [http-bio-8080-exec-12] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:56:45,911 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:57:00,881 [http-bio-8080-exec-12] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:58:09,023 [http-bio-8080-exec-12] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [GET] /application/kanban/show/id=1
+Provided id of the wrong type for class application.PP.Kanban. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class application.PP.Kanban. Expected: class java.lang.Long, got class java.lang.String
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 19:58:09,538 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:58:25,760 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [GET] /application/kanban/show/1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 19:58:25,765 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [POST] /application/kanban/show - parameters:
+id: 1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 20:02:03,981 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - GroovyRuntimeException occurred when processing request: [GET] /application/kanban/show/1
+Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [kanbanInstance.getAvancementRealise()] on line [58]: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method java.lang.Float#div.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[class java.lang.Character]
+	[class java.lang.Number]
+	at application.PP.Kanban.getAvancementRealise(Kanban.groovy:41)
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp$_run_closure14.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_kanban_show_gsp:44)
+	... 6 more
+2014-05-09 20:04:54,576 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - NumberFormatException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
+dateLancement: 2014-05-21
+dateFinPlanifie: 2014-05-29
+description: 
+nomKanban: developpement fonction 1
+ordo: 1
+create: Create
+famille: 1
+chargePlanifiee: 
+chefProjet: 1
+empty String. Stacktrace follows:
+java.lang.NumberFormatException: empty String
+	at java.lang.Float.parseFloat(Float.java:452)
+	at application.PP.KanbanController$$EOdmvz2J.$tt__nouveauKanban(KanbanController.groovy:76)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)

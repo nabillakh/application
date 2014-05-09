@@ -1639,3 +1639,11 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\A
 
 2 errors
 
+2014-05-09 19:50:25,001 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\PP\KanbanController.groovy: 38: You tried to use a map entry for an index operation, this is not allowed. Maybe something should be set in parentheses or a comma is missing?
+ @ line 38, column 29.
+           render view : show [kanbanInstance:kanbanInstance]
+                               ^
+
+1 error
+

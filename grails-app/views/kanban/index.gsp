@@ -117,25 +117,6 @@
 									    </header>
 									    <!-- wrap div -->
 									    <div>
-									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
             
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
@@ -143,6 +124,7 @@
 												<table class="table table-striped table-bordered responsive" id="dtable">
 													<thead>
 														<tr>
+                                                                                                                        <th></th>
                                                                                                                   <th>Nom du projet</th>
 															<th>Description</th>
 															<th>Phase du projet</th>
@@ -152,6 +134,29 @@
 													</thead>
 													<tbody class="responsive"><g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                                                                                                          <td><center>
+                                                                                                            
+                                                                                                            <div class="btn-group">
+																<a class="btn" href="javascript:void(0);">Edition</a>
+																<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+																<ul class="dropdown-menu">
+																	<li>
+																		<a href="javascript:voir(${kanbanInstance.id});">Voir</a>
+																	</li>
+																	<li>
+																		<a href="javascript:editer(${kanbanInstance.id});">Modifier</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);">Affecter</a>
+																	</li>
+																	<li class="divider"></li>
+																	<li>
+																		<a href="javascript:void(0);">Supprimer</a>
+																	</li>
+																</ul>
+															</div>
+                                                                                                            
+                                                                                                            </center></td>
                                                                                                               <td><g:link action="show" controller="Kanban" id="${kanbanInstance.id}">${fieldValue(bean: kanbanInstance, field: "nomKanban")}</g:link></td>
                                                                                                           <td>${fieldValue(bean: kanbanInstance, field: "description")}</td>
                                                                                                           <td>${kanbanInstance.phaseActuelle.nom}</td>
@@ -168,16 +173,34 @@
 									    <!-- end wrap div -->
 									</div>
 									<!-- end widget -->
+                                                                        
+                                                                        
+                                                                        
 								</article>
+                                                          
+                                                          
                                                           
 							</div>
 							
 							<!-- end row-fluid -->
                                                         <g:link  action="create" controller="Kanban" class="btn btn-primary medium pull-right" >Ajouter un Kanban</g:link>
-                                                        <div></div>
                                                         
                                                         
-
+                                                        
+                                                        <div>
+                                                        
+                                                        
+                                                        
+                                                        </div>
+                                                        
+                                                        <script>
+                                                          function voir(monId) {
+                                                                    window.location = "show/"+monId;
+                                                          }        
+                                                          function editer(monId) {
+                                                                    window.location = "edit/"+monId;
+                                                          }                                                                                                                                    
+                                                        </script>
 						</section>
 						<!-- end widget grid -->
 					</div>		

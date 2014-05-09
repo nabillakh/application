@@ -130,10 +130,19 @@
 									              
                                                                                       <div class="row-fluid chat-box">
                                                                                         
-                                                                                        
-                                                                                        
+                                                                                      <div class="controls">
+																	<div class="input-append">  
                                                                                     <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
-                                                                                    
+                                                                                    <div class="btn-group">
+						                                                    <button class="btn dropdown-toggle medium" data-toggle="dropdown">Action <span class="caret"></span></button>
+						                                                    <ul class="dropdown-menu btn-small pull-right">
+						                                                        <li><a href="javascript:void(0);">Favorite it</a></li>
+						                                                        <li><a href="javascript:void(0);">Reload page</a></li>
+						                                                        <li><a href="javascript:void(0);">Attach something</a></li>
+						                                                    </ul>
+						                                                </div>
+						                                            </div>
+                                            					</div>  
                                                                                     <g:hiddenField name="kanban" id="monKanban"/>
                                                                                     <div id="temp"></div>
                                                                                         

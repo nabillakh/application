@@ -25,6 +25,7 @@ class KanbanController {
     }
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Kanban kanbanInstance) {
+        println(kanbanInstance.id)
         def ofs = kanbanService.montrerOF(kanbanInstance)
         println("charger des of ok")
         def mesCR = kanbanService.afficherCRKanban(kanbanInstance)
@@ -32,6 +33,7 @@ class KanbanController {
         println("charger des cr ok")
         [kanbanInstance:kanbanInstance, ofs : ofs, mesCR : mesCR]
     }
+    
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def create() {
         respond new Kanban(params)
