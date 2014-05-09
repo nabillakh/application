@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
   <head>
@@ -18,6 +17,16 @@
                                 
                                 <article class="span9">
                                   <!-- new widget -->
+                                  
+                                  
+						
+                                                <div class="inner-spacer"> 
+									        	<!-- content goes here -->
+									        	
+									        	<div id="chartdiv" class="chart" style="height:350px; margin:0;"></div>
+									        													
+									        	<!-- end calendar container -->
+									        </div>
                                   <div class="jarviswidget" id="widget-id-4" data-widget-fullscreenbutton="false">
 									    <header>
 									        <h2>ok</h2>                           
@@ -59,6 +68,8 @@
 								</article>
                                   
                                   <article class="span9">
+                                    
+                                    
                                   <!-- new widget -->
                                   <div class="jarviswidget" id="widget-id-4" data-widget-fullscreenbutton="false">
 									    <header>

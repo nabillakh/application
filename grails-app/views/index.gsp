@@ -81,7 +81,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
 									    <header>
-									        <h2>ok</h2>                           
+									        <h2>Mon mur</h2>                           
 									    </header>
 									    
 									    <!-- widget div-->
@@ -199,11 +199,11 @@
                                                                   // var kanban = $('#monKanban').val()
                                                                           <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed"/>
                                                                         }
-                                                                function pollMessages() {
+                                                                function maj() {
                                                                   obtenirMessage();
                                                                   setTimeout('pollMessages()', 25000);
                                                                 }
-                                                                pollMessages();
+                                                                maj();
                                                                                                                                
                                                         </script>
 						</section>

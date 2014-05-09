@@ -1393,3 +1393,249 @@ java.lang.NullPointerException: Cannot get property 'objectDefinitionSource' on 
 2014-05-09 14:13:48,183 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-05-09 14:24:32,549 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-05-09 14:24:33,526 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 15:52:47,094 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 15:52:48,656 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 15:55:02,221 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 15:55:03,083 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 15:59:27,040 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 20: unable to resolve class MultipartHttpServletRequest 
+ @ line 20, column 31.
+     MultipartHttpServletRequest mpr = (MultipartHttpServletRequest)request;
+                                 ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 20: unable to resolve class MultipartHttpServletRequest 
+ @ line 20, column 37.
+     MultipartHttpServletRequest mpr = (MultipartHttpServletRequest)request;
+                                       ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 21: unable to resolve class CommonsMultipartFile 
+ @ line 21, column 24.
+     CommonsMultipartFile file = (CommonsMultipartFile) mpr.getFile("file");
+                          ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 21: unable to resolve class CommonsMultipartFile 
+ @ line 21, column 31.
+     CommonsMultipartFile file = (CommonsMultipartFile) mpr.getFile("file");
+                                 ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 23: unable to resolve class Workbook 
+ @ line 23, column 12.
+     Workbook workbook = WorkbookFactory.create(file.inputStream)
+              ^
+
+5 errors
+
+2014-05-09 16:05:31,239 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 38: unable to resolve class Competence 
+ @ line 38, column 13.
+               new Competence(comp).save()
+               ^
+
+1 error
+
+2014-05-09 16:05:56,408 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 38: unable to resolve class Competence 
+ @ line 38, column 13.
+               new Competence(comp).save()
+               ^
+
+1 error
+
+2014-05-09 16:06:43,330 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 29: unable to resolve class Workbook 
+ @ line 29, column 18.
+           Workbook workbook = WorkbookFactory.create(file.inputStream)
+                    ^
+
+1 error
+
+2014-05-09 16:22:30,906 [FileSystemWatcher: files=#16 cl=groovy.lang.GroovyClassLoader@1d9d546] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\Nabil\Documents\GitHub\application\grails-app\domain\application\RH\Equipe.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 16:27:05,872 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 16:27:08,839 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 16:38:10,836 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:38:17,841 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:05,959 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:22,349 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:32,434 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:45,727 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:49,644 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:40:09,329 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:40:50,825 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:41:10,254 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:42:04,508 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:59:56,376 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 97: The current scope already contains a variable of the name effectifList
+ @ line 97, column 13.
+           def effectifList = excelImportService.columns(workbook, CONFIG_EFFECTIF_COLUMN_MAP)
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 97: The current scope already contains a variable of the name effectifList
+ @ line 97, column 13.
+           def effectifList = excelImportService.columns(workbook, CONFIG_EFFECTIF_COLUMN_MAP)
+               ^
+
+2 errors
+
+2014-05-09 17:00:53,927 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:07,387 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:27,382 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:57,068 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement().save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:20,385 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : "produit1", chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:30,879 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:41,342 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:03:36,315 [Thread-11] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+

@@ -1,365 +1,591 @@
-2014-05-09 14:24:43,212 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:43,229 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:46,325 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-09 14:24:46,632 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
-2014-05-09 14:24:53,249 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:53,250 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:53,250 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:53,506 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
-2014-05-09 14:24:56,847 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-09 14:24:57,069 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-09 14:25:07,768 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
-2014-05-09 14:25:07,781 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
-2014-05-09 14:25:07,781 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
-2014-05-09 14:25:07,985 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
-2014-05-09 14:25:07,985 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
-2014-05-09 14:25:07,985 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
-2014-05-09 14:25:08,060 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
-2014-05-09 14:25:08,061 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
-2014-05-09 14:25:08,062 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
-2014-05-09 14:25:08,164 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
-2014-05-09 14:25:08,164 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
-2014-05-09 14:25:08,164 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
-2014-05-09 14:25:08,204 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
-2014-05-09 14:25:08,205 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
-2014-05-09 14:25:08,205 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
-2014-05-09 14:25:08,247 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
-2014-05-09 14:25:08,247 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
-2014-05-09 14:25:08,247 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
-2014-05-09 14:25:08,279 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
-2014-05-09 14:25:08,279 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
-2014-05-09 14:25:08,279 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
-2014-05-09 14:25:08,359 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
-2014-05-09 14:25:08,360 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
-2014-05-09 14:25:08,360 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
-2014-05-09 14:25:08,441 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
-2014-05-09 14:25:08,441 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
-2014-05-09 14:25:08,441 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
-2014-05-09 14:25:08,573 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
-2014-05-09 14:25:08,573 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
-2014-05-09 14:25:08,576 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
-2014-05-09 14:25:08,686 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
-2014-05-09 14:25:08,686 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
-2014-05-09 14:25:08,688 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
-2014-05-09 14:25:08,762 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
-2014-05-09 14:25:08,762 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
-2014-05-09 14:25:08,762 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
-2014-05-09 14:25:08,808 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
-2014-05-09 14:25:08,810 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
-2014-05-09 14:25:08,810 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
-2014-05-09 14:25:08,859 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
-2014-05-09 14:25:08,860 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
-2014-05-09 14:25:08,861 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
-2014-05-09 14:25:08,962 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
-2014-05-09 14:25:08,963 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
-2014-05-09 14:25:08,963 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
-2014-05-09 14:25:09,026 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
-2014-05-09 14:25:09,026 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
-2014-05-09 14:25:09,026 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
-2014-05-09 14:25:09,104 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
-2014-05-09 14:25:09,104 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
-2014-05-09 14:25:09,104 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
-2014-05-09 14:25:09,198 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
-2014-05-09 14:25:09,198 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
-2014-05-09 14:25:09,199 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
-2014-05-09 14:25:20,992 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
-2014-05-09 14:25:20,992 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
-2014-05-09 14:25:20,992 [http-bio-8080-exec-8] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
-2014-05-09 14:25:21,012 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
-2014-05-09 14:25:21,013 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
-2014-05-09 14:25:21,013 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
-2014-05-09 14:26:00,867 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 13:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController.$tt__nouveauEventKanban(EventController.groovy:171)
+2014-05-09 16:27:41,705 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:27:41,791 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:27:53,201 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-09 16:27:54,410 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-09 16:28:14,187 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:28:14,190 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:28:14,190 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:28:15,888 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
+2014-05-09 16:28:25,399 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-09 16:28:25,941 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-09 16:28:39,350 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
+2014-05-09 16:28:39,370 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
+2014-05-09 16:28:39,370 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
+2014-05-09 16:28:39,616 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
+2014-05-09 16:28:39,616 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
+2014-05-09 16:28:39,616 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
+2014-05-09 16:28:39,846 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
+2014-05-09 16:28:39,857 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
+2014-05-09 16:28:39,858 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
+2014-05-09 16:28:39,873 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
+2014-05-09 16:28:39,874 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
+2014-05-09 16:28:39,874 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
+2014-05-09 16:28:40,098 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
+2014-05-09 16:28:40,100 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
+2014-05-09 16:28:40,100 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
+2014-05-09 16:28:40,139 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
+2014-05-09 16:28:40,139 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
+2014-05-09 16:28:40,140 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
+2014-05-09 16:28:40,445 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
+2014-05-09 16:28:40,445 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
+2014-05-09 16:28:40,445 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
+2014-05-09 16:28:40,703 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
+2014-05-09 16:28:40,704 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
+2014-05-09 16:28:40,704 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
+2014-05-09 16:28:40,800 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
+2014-05-09 16:28:40,801 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
+2014-05-09 16:28:40,801 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
+2014-05-09 16:28:41,030 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
+2014-05-09 16:28:41,030 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
+2014-05-09 16:28:41,031 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
+2014-05-09 16:28:41,254 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
+2014-05-09 16:28:41,254 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
+2014-05-09 16:28:41,254 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
+2014-05-09 16:28:41,455 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
+2014-05-09 16:28:41,455 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
+2014-05-09 16:28:41,456 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
+2014-05-09 16:28:41,463 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
+2014-05-09 16:28:41,464 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
+2014-05-09 16:28:41,464 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
+2014-05-09 16:28:41,682 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
+2014-05-09 16:28:41,683 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
+2014-05-09 16:28:41,683 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
+2014-05-09 16:28:41,683 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
+2014-05-09 16:28:41,683 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
+2014-05-09 16:28:41,683 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
+2014-05-09 16:28:41,856 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
+2014-05-09 16:28:41,856 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
+2014-05-09 16:28:41,857 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
+2014-05-09 16:28:42,007 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
+2014-05-09 16:28:42,008 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
+2014-05-09 16:28:42,008 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
+2014-05-09 16:28:42,183 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
+2014-05-09 16:28:42,183 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
+2014-05-09 16:28:42,183 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
+2014-05-09 16:28:45,653 [http-bio-8080-exec-9] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
+2014-05-09 16:28:48,345 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
+2014-05-09 16:28:48,345 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
+2014-05-09 16:28:48,345 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
+2014-05-09 16:28:48,442 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
+2014-05-09 16:28:48,443 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
+2014-05-09 16:28:48,443 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
+2014-05-09 16:28:48,920 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
+2014-05-09 16:28:48,921 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
+2014-05-09 16:28:48,930 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
+2014-05-09 16:28:48,931 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
+2014-05-09 16:28:48,956 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
+2014-05-09 16:28:48,956 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
+2014-05-09 16:28:48,960 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
+2014-05-09 16:28:48,960 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
+2014-05-09 16:28:48,967 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
+2014-05-09 16:28:48,967 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
+2014-05-09 16:28:49,017 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
+2014-05-09 16:28:49,017 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
+2014-05-09 16:28:49,330 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
+2014-05-09 16:28:49,331 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
+2014-05-09 16:28:49,352 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
+2014-05-09 16:28:49,352 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
+2014-05-09 16:28:49,361 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
+2014-05-09 16:28:49,362 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
+2014-05-09 16:28:49,404 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
+2014-05-09 16:28:49,404 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
+2014-05-09 16:28:49,414 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
+2014-05-09 16:28:49,414 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
+2014-05-09 16:28:49,443 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
+2014-05-09 16:28:49,444 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
+2014-05-09 16:28:49,713 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
+2014-05-09 16:28:49,713 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
+2014-05-09 16:28:49,735 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
+2014-05-09 16:28:49,735 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
+2014-05-09 16:28:49,739 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
+2014-05-09 16:28:49,740 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
+2014-05-09 16:28:49,787 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
+2014-05-09 16:28:49,787 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
+2014-05-09 16:28:49,792 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
+2014-05-09 16:28:49,792 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
+2014-05-09 16:28:49,954 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
+2014-05-09 16:28:49,955 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
+2014-05-09 16:28:50,158 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
+2014-05-09 16:28:50,158 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
+2014-05-09 16:28:50,186 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
+2014-05-09 16:28:50,187 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
+2014-05-09 16:28:50,240 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
+2014-05-09 16:28:50,240 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
+2014-05-09 16:28:50,321 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
+2014-05-09 16:28:50,321 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
+2014-05-09 16:28:50,336 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
+2014-05-09 16:28:50,336 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
+2014-05-09 16:28:50,399 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
+2014-05-09 16:28:50,400 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
+2014-05-09 16:28:50,602 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
+2014-05-09 16:28:50,602 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
+2014-05-09 16:28:50,729 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
+2014-05-09 16:28:50,730 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
+2014-05-09 16:28:50,733 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
+2014-05-09 16:28:50,733 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
+2014-05-09 16:28:50,743 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
+2014-05-09 16:28:50,744 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
+2014-05-09 16:28:50,875 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
+2014-05-09 16:28:50,876 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
+2014-05-09 16:28:50,880 [http-bio-8080-exec-8] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
+2014-05-09 16:28:50,881 [http-bio-8080-exec-8] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
+2014-05-09 16:28:51,068 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
+2014-05-09 16:28:51,068 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
+2014-05-09 16:28:51,085 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
+2014-05-09 16:28:51,085 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
+2014-05-09 16:28:51,095 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
+2014-05-09 16:28:51,095 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
+2014-05-09 16:28:51,112 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
+2014-05-09 16:28:51,113 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
+2014-05-09 16:28:51,166 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
+2014-05-09 16:28:51,166 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
+2014-05-09 16:38:12,039 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:38:15,964 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:04,064 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:20,469 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:33,613 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:43,642 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:39:50,602 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:40:10,083 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:40:51,509 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:41:07,921 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:42:02,137 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+2014-05-09 16:43:06,477 [http-bio-8080-exec-9] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor556.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 16:43:11,396 [http-bio-8080-exec-6] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 39: unexpected token: ] @ line 39, column 5.
+       ]  
+       ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:142)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:108)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:162)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:912)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:550)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:527)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 16:43:34,010 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/admin/upload
+No such property: monEquipe for class: application.AdminController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: monEquipe for class: application.AdminController
+	at application.AdminController$_closure1_closure4.doCall(AdminController.groovy:72)
+	at application.AdminController$_closure1$$EOdmAWEu.doCall(AdminController.groovy:71)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:26:39,441 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Thu May 08 2014 09:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Thu May 08 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlc4Z4.$tt__nouveauEventKanban(EventController.groovy:171)
+2014-05-09 16:59:56,825 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 97: The current scope already contains a variable of the name effectifList
+ @ line 97, column 13.
+           def effectifList = excelImportService.columns(workbook, CONFIG_EFFECTIF_COLUMN_MAP)
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 97: The current scope already contains a variable of the name effectifList
+ @ line 97, column 13.
+           def effectifList = excelImportService.columns(workbook, CONFIG_EFFECTIF_COLUMN_MAP)
+               ^
+
+2 errors
+
+2014-05-09 17:00:54,365 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:04,841 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:28,070 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+1 error
+
+2014-05-09 17:01:57,904 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement().save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:21,226 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : "produit1", chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:31,781 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:02:39,410 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:03:34,446 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+2014-05-09 17:03:39,926 [http-bio-8080-exec-2] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.grails.compiler.Grailsc.compile(Grailsc.java:78)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.GeneratedMethodAccessor556.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1260)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at groovy.util.AntBuilder.performTask(AntBuilder.java:319)
+	at groovy.util.AntBuilder.nodeCompleted(AntBuilder.java:264)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:147)
+	at groovy.util.AntBuilder.doInvokeMethod(AntBuilder.java:203)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:296)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler$compile$3.callCurrent(Unknown Source)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compile(GrailsProjectCompiler.groovy:263)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectCompiler.compileAll(GrailsProjectCompiler.groovy:254)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.compileIfSource(GrailsProjectWatcher.java:279)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$300(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onChange(GrailsProjectWatcher.java:153)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.fireOnChange(DirectoryWatcher.java:174)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:156)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:178)
+	at java_lang_Runnable$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess.startProjectWatcher(ForkedGrailsProcess.groovy:707)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1031)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:145)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy:696)
+	at org.codehaus.groovy.grails.cli.fork.ForkedGrailsProcess$_setupReloading_closure16.doCall(ForkedGrailsProcess.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1254)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:910)
+	at groovy.lang.Closure.call(Closure.java:411)
+	at groovy.lang.Closure.call(Closure.java:405)
+	at groovy.lang.Closure.run(Closure.java:492)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 17:03:44,652 [http-bio-8080-exec-4] ERROR [/application].[default]  - Servlet.service() for servlet [default] in context with path [/application] threw exception
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 111: unable to resolve class Famille 
+ @ line 111, column 13.
+               new Famille(nom : comp.nom).save()
+               ^
+
+C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\AdminController.groovy: 115: unable to resolve class Ordonnancement 
+ @ line 115, column 13.
+               new Ordonnancement(nom : comp.nom, chargeStandard : comp.chargeStandard, famille : maFamille).save()
+               ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:927)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:574)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:523)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:506)
+	at org.codehaus.groovy.tools.FileSystemCompiler.compile(FileSystemCompiler.java:59)
+	at org.codehaus.groovy.tools.FileSystemCompiler.doCompilation(FileSystemCompiler.java:215)
+	at org.codehaus.groovy.ant.Groovyc.runCompiler(Groovyc.java:1104)
+	at org.codehaus.groovy.ant.Groovyc.compile(Groovyc.java:1155)
+	at org.codehaus.groovy.ant.Groovyc.execute(Groovyc.java:770)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at java.lang.Thread.run(Thread.java:724)
+2014-05-09 17:12:59,469 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/admin/upload
+No such property: nomA for class: application.AdminController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: nomA for class: application.AdminController
+	at application.AdminController$_closure1_closure7.doCall(AdminController.groovy:122)
+	at application.AdminController$_closure1$$EOdmHuVw.doCall(AdminController.groovy:120)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:26:42,083 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Tue May 06 2014 09:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Tue May 06 2014 11:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlc4Z4.$tt__nouveauEventKanban(EventController.groovy:171)
+2014-05-09 17:15:28,170 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/admin/upload
+No such property: file for class: application.AdminController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: file for class: application.AdminController
+	at application.AdminController$_closure1$$EOdmIXli.doCall(AdminController.groovy:90)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:27:36,467 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 13:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcJxB.$tt__nouveauEventKanban(EventController.groovy:172)
+2014-05-09 17:16:06,670 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/administration/activite
+Cannot get property 'nom' on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [phaseInstance.competence.nom] on line [183]: Cannot get property 'nom' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp:91)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:27:50,887 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 10:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 12:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcJxB.$tt__nouveauEventKanban(EventController.groovy:172)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:28:40,108 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 10:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 12:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcaFu.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:28:49,393 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 10:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 12:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcaFu.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:29:27,110 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Tue May 06 2014 09:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Tue May 06 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcmMd.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:29:59,500 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Fri May 09 2014 11:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Fri May 09 2014 13:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdlbgJ9.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:30:44,925 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Thu May 08 2014 10:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Thu May 08 2014 12:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdld6iL.organiserEvent(EventService.groovy:70)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:31:24,403 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 13:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdldHBz.organiserEvent(EventService.groovy:69)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:31:52,430 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 10:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 12:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdldNll.organiserEvent(EventService.groovy:70)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:32:40,295 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 09:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 11:30:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdldYxV.organiserEvent(EventService.groovy:70)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:33:01,888 [http-bio-8080-exec-6] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/nouveauEventKanban - parameters:
-id: 4
-title: sasa : Test
-start: Wed May 07 2014 11:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-end: Wed May 07 2014 13:00:00 GMT+0200 (Paris, Madrid (heure d’été))
-No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.Event.organisateur() is applicable for argument types: (application.RH.Effectif) values: [application.RH.Effectif : 1]
-Possible solutions: setOrganisateur(application.RH.Effectif), setOrganisateur(), getOrganisateur(), getOrganisateur(), setOrganisateur(java.lang.Object)
-	at application.communication.EventService$$EOdldgVI.organiserEvent(EventService.groovy:70)
-	at application.communication.EventController$$EOdlcudB.$tt__nouveauEventKanban(EventController.groovy:165)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-09 14:34:00,146 [http-bio-8080-exec-5] WARN  util.GrailsUtil  - [DEPRECATED] Using a closure reference in the 'action' argument of the 'redirect' method is deprecated. Please change to use a String.
-2014-05-09 14:34:01,002 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/amchart/amchart-draw1.js%22
-2014-05-09 14:34:01,002 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/amchart/amchart-draw1.js%22]
-2014-05-09 14:34:01,012 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.ibutton.min.js%22
-2014-05-09 14:34:01,013 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.ibutton.min.js%22]
-2014-05-09 14:34:01,031 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/raphael.2.1.0.min.js%22
-2014-05-09 14:34:01,031 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/raphael.2.1.0.min.js%22]
-2014-05-09 14:34:01,044 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/justgage.min.js%22
-2014-05-09 14:34:01,044 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/justgage.min.js%22]
-2014-05-09 14:34:01,083 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris.min.js%22
-2014-05-09 14:34:01,083 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris.min.js%22]
-2014-05-09 14:34:01,137 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/morris-chart-settings.js%22
-2014-05-09 14:34:01,137 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/morris-chart-settings.js%22]
-2014-05-09 14:34:01,155 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.easy-pie-chart.min.js%22
-2014-05-09 14:34:01,155 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.easy-pie-chart.min.js%22]
-2014-05-09 14:34:01,183 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/mobiledevices.min.js%22
-2014-05-09 14:34:01,183 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/mobiledevices.min.js%22]
-2014-05-09 14:34:01,196 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jarvis.widget.min.js%22
-2014-05-09 14:34:01,196 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jarvis.widget.min.js%22]
-2014-05-09 14:34:01,214 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.fullcalendar.min.js%22
-2014-05-09 14:34:01,214 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.fullcalendar.min.js%22]
-2014-05-09 14:34:01,250 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.cust.min.js%22
-2014-05-09 14:34:01,251 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.cust.min.js%22]
-2014-05-09 14:34:01,282 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.resize.min.js%22
-2014-05-09 14:34:01,282 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.resize.min.js%22]
-2014-05-09 14:34:01,344 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.tooltip.min.js%22
-2014-05-09 14:34:01,344 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.tooltip.min.js%22]
-2014-05-09 14:34:01,345 [http-bio-8080-exec-2] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.orderBar.min.js%22
-2014-05-09 14:34:01,346 [http-bio-8080-exec-2] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.orderBar.min.js%22]
-2014-05-09 14:34:01,379 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.fillbetween.min.js%22
-2014-05-09 14:34:01,380 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.fillbetween.min.js%22]
-2014-05-09 14:34:01,425 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.sparkline.min.js%22
-2014-05-09 14:34:01,425 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.sparkline.min.js%22]
-2014-05-09 14:34:01,426 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.flot.pie.min.js%22
-2014-05-09 14:34:01,426 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.flot.pie.min.js%22]
-2014-05-09 14:34:01,458 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.inbox.slashc.sliding-menu.js%22
-2014-05-09 14:34:01,458 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.inbox.slashc.sliding-menu.js%22]
-2014-05-09 14:34:01,506 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-progressbar.min.js%22
-2014-05-09 14:34:01,506 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-progressbar.min.js%22]
-2014-05-09 14:34:01,508 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.validate.min.js%22
-2014-05-09 14:34:01,508 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.validate.min.js%22]
-2014-05-09 14:34:01,517 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/wysihtml5-0.3.0.min.js%22
-2014-05-09 14:34:01,517 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/wysihtml5-0.3.0.min.js%22]
-2014-05-09 14:34:01,525 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-wysihtml5.min.js%22
-2014-05-09 14:34:01,525 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-wysihtml5.min.js%22]
-2014-05-09 14:34:01,536 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.maskedinput.min.js%22
-2014-05-09 14:34:01,536 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.maskedinput.min.js%22]
-2014-05-09 14:34:01,565 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-datepicker.min.js%22
-2014-05-09 14:34:01,565 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-datepicker.min.js%22]
-2014-05-09 14:34:01,751 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.min.js%22
-2014-05-09 14:34:01,751 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.min.js%22]
-2014-05-09 14:34:01,761 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/config.js%22
-2014-05-09 14:34:01,761 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/config.js%22]
-2014-05-09 14:34:01,762 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-timepicker.min.js%22
-2014-05-09 14:34:01,762 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-timepicker.min.js%22]
-2014-05-09 14:34:01,763 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootbox.min.js%22
-2014-05-09 14:34:01,763 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootbox.min.js%22]
-2014-05-09 14:34:01,767 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap-colorpicker.min.js%22
-2014-05-09 14:34:01,767 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap-colorpicker.min.js%22]
-2014-05-09 14:34:01,770 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - Resource not found: /js/include/bootstrap.wizard.min.js%22
-2014-05-09 14:34:01,771 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/bootstrap.wizard.min.js%22]
-2014-05-09 14:34:01,903 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - Resource not found: /js/include/select2.min.js%22
-2014-05-09 14:34:01,903 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/select2.min.js%22]
-2014-05-09 14:34:01,909 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - Resource not found: /js/include/TableTools.min.js%22
-2014-05-09 14:34:01,909 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/TableTools.min.js%22]
-2014-05-09 14:34:01,909 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - Resource not found: /js/include/ZeroClipboard.min.js%22
-2014-05-09 14:34:01,909 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/ZeroClipboard.min.js%22]
-2014-05-09 14:34:01,910 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.excanvas.min.js%22
-2014-05-09 14:34:01,910 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.excanvas.min.js%22]
-2014-05-09 14:34:01,914 [http-bio-8080-exec-3] ERROR resource.ResourceMeta  - Resource not found: /js/include/jquery.placeholder.min.js%22
-2014-05-09 14:34:01,914 [http-bio-8080-exec-3] WARN  util.ResourceMetaStore  - Cannot locate resource [/js/include/jquery.placeholder.min.js%22]
+Caused by: java.lang.NullPointerException: Cannot get property 'nom' on null object
+	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp$_run_closure31.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_administration_activite_gsp:91)
+	... 6 more

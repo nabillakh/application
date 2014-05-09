@@ -61,6 +61,8 @@ grails.project.dependency.resolution = {
         mavenRepo "http://m2repo.spockframework.org/snapshots/"
         mavenRepo "http://snapshots.repository.codehaus.org"
         mavenRepo "http://maven.springframework.org/milestone/"
+        //import excel
+        mavenRepo "http://m2repo.spockframework.org/ext/"
         
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
@@ -117,6 +119,6 @@ grails.project.dependency.resolution = {
         test ':spock:0.7'
         test ':functional-test:2.0.RC1'
         
-        
+        compile ":excel-import:1.0.0"
     }
 }

@@ -28,7 +28,7 @@ class EventController {
     
     
     def showPopup = {
-        
+        prinln(params.id)
         def eventInstance = Event.get(params.id)
         
         [eventInstance: eventInstance]
@@ -179,30 +179,19 @@ class EventController {
         def displayDateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
         // recupere en params le json de l'event modifie. traduit en joda les dates puis cree l'event dans la bdd        
         def monId = params.id
-        println(monId)
         def eventInstance = Event.get(monId)
-        println(" date de fin 0 : " + eventInstance.endTime)
+        DateTime deb = new DateTime(eventInstance.startTime)
         DateTime fin = new DateTime(eventInstance.endTime)
-        println(" titre : " + eventInstance.title)
-        println(" delta jours : " + params.decalageJour)
-        println(" delta minutes : " + params.decalageMin)
-        
         
         
         def decalageMin = Integer.parseInt(params.decalageMin)
         // decalageMin += 120 // pour decalage horaire
         def decalageJour = Integer.parseInt(params.decalageJour)
-        
-        println(" date de debut 1: " + eventInstance.startTime)
-        println(" date de fin 1 : " + fin)
         DateTime fin2 = fin.plusMinutes(decalageMin)
         // fin2 = fin2.plusDays(decalageJour)
         eventInstance.endTime = fin2.toDate()
-        println(" date de debut 2: " + eventInstance.startTime)
-        println(" date de fin dans instance : " + eventInstance.endTime)
+        eventInstance.startTime = deb.toDate()
         eventInstance.save(flush : true)
-        println(" date de debut 3: " + eventInstance.startTime)
-        println(" date de fin dans instance apres save : " + eventInstance.endTime)
         
         
         // eventInstance.save()

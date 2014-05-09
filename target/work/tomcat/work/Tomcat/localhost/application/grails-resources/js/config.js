@@ -592,7 +592,10 @@
 					left: 'title', //,today
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
-				},                               
+				},  
+                                
+                                
+                               
                                 
                         eventMouseover: function(event, jsEvent, view) {
                             $(this).addClass("active");
@@ -640,7 +643,11 @@
                                         };
                                         
                                     });
-                              },                                
+                              },             
+                              
+                              
+                                      
+                              
 				
                                 
                                 
