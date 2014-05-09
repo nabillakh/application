@@ -94,7 +94,7 @@
 		color:#5F5F5F;
 	}
 	body {
-		background: url('../img/backgrounds/mesh.png') #333;
+		/* background: url('../img/backgrounds/mesh.png') #333; */
 	}
 	
 	h1, h2, h3, h4, h5, h6, .my-profile span, .number-stats {
@@ -224,10 +224,10 @@
 	/* ---------------------------------------------------------------------- */
 	
 	/* title that appears on top left of the page */
-	
+	/* ici on gere la couleur du titre en haut */
 	#header-toolbar h1 {
 		float:left;
-		color: #F0F0F0;
+		color: white;
 		font-size: 16px;
 		line-height: 40px;
 		margin: 0;
@@ -253,13 +253,14 @@
 		margin-left:2px;
 	}
 	
-	
+	/* ici on gere le fond du haut */
 	#header-toolbar {
 		height: 46px;
 		position:relative;
-		background: url('../img/transparant-30.png');
-		border-bottom: 1px solid #585858;
-		border-top: 5px solid #000;
+		/* background: url('../img/transparant-30.png'); */
+                background-color: #0101DF;
+                /* border-bottom: 1px solid #81BEF7;
+		border-top: 5px solid #81BEF7; */
 		padding-right: 16px;
 	}
 
@@ -670,12 +671,13 @@
 		padding: 20px 25px 0;
 		overflow: hidden;
 		height:100%;
-		background:#fff;
+		background:white;
 		margin-top:15px;
 		border-radius:10px 0px 0px 10px;
 		-webkit-border-radius: 10px 0px 0px 10px;
 		-moz-border-radius: 10px 0px 0px 10px;
-		background:url('../img/backgrounds/bgnoise.png')
+		/* background:url('../img/backgrounds/bgnoise.png')  
+                background-color: #FAFAFA; */
 	}
 	
 	/* ---------------------------------------------------------------------- */
@@ -691,12 +693,12 @@
 		padding-bottom: 10px;
 		border-bottom: 1px dotted transparent;
 		text-transform:capitalize;
-		text-shadow: 0px 1px 0px white;
+		/* text-shadow: 0px 1px 0px white; */
 		font-size:40px;
 		
 		-webkit-text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 		-moz-text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-		text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+		/*text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);*/
 	}
 	
 	#page-header span {
@@ -764,9 +766,9 @@
 	.my-profile {
 		padding: 0 15px;
 		font-size: 12px;
-		color: #fff;
+		color: black;
 		position: relative;
-		text-shadow: 0px 1px 0px #333;
+		/* text-shadow: 0px 1px 0px #333;*/
 	}
 	.my-profile-pic {
 		float: left;
@@ -836,7 +838,7 @@
 		margin: 1px auto;
 		margin-bottom: 0;
 		background: #f6f6f6;
-		border: 1px solid #2c2c2c;
+		/* border: 1px solid #2c2c2c; */
 		box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
 		-webkit-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
 		-moz-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
@@ -845,17 +847,17 @@
 		border-radius: 4px 4px 4px 4px;
 		overflow: hidden;
 		color: white;
-		background: #7EA437 url(../img/backgrounds/menu_bg.png) repeat-x;
+		background: #F0F0F0 url(../img/backgrounds/menu_bg.png) repeat-x;
 		-webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;
 		background-size: 100% 100%;
-		background: -webkit-gradient(linear, left top, left bottom, from(#AAD15F), to(#7EA437));
-		background: -webkit-linear-gradient(top, #AAD15F, #7EA437);
-		background: -moz-linear-gradient(top, #AAD15F, #7EA437);
-		background: -ms-linear-gradient(top, #AAD15F, #7EA437);
-		background: -o-linear-gradient(top, #AAD15F, #7EA437);
-		background: linear-gradient(top, #AAD15F, #7EA437);
+		background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#F0F0F0));
+		background: -webkit-linear-gradient(top, #FAFAFA, #F0F0F0);
+		background: -moz-linear-gradient(top, #FAFAFA, #F0F0F0);
+		background: -ms-linear-gradient(top, #FAFAFA, #F0F0F0);
+		background: -o-linear-gradient(top, #FAFAFA, #F0F0F0);
+		background: linear-gradient(top, #FAFAFA, #F0F0F0);
 	}
 
 	
@@ -921,13 +923,15 @@
 		line-height: 32px;
 		width: 100%;
 		text-indent: 15px;
-		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		/* ici ca fait de l'ombre sur le texte'
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); */
 		padding: 5px 0px;
 		font-size: 14px;
 		font-weight: bold;
 
 		position:relative;
-		color:#FFF;
+                /* couleur texte menu */
+		color:black;
 	}
 	
 	aside ul.menu a i {
@@ -943,8 +947,8 @@
 	}
 	
 	aside ul.menu > li.current > a {
-		background: url('../img/backgrounds/current.png') repeat;
-	}
+		 /* background: url('../img/backgrounds/current.png') repeat;  */
+        }
 	
 
 		/* second level */
@@ -957,7 +961,7 @@
 		
 		aside ul.menu > li > ul {
 			display: block;
-			background: url('../img/transparant-20.png');
+			/* background: url('../img/transparant-20.png'); */
 	
 		}
 		
@@ -1016,9 +1020,9 @@
 	
 	.mini-inbox div.alert.inbox {
 		border: 1px solid #494949;
-		background: url('../img/transparant-20.png');
-		color:#A8A8A8;
-		font-size: 11px;
+		/* background: url('../img/transparant-20.png'); */
+		color: black;
+		font-size: 11px; 
 		line-height: 17px;
 		position:relative;
 		overflow:hidden;
@@ -1036,7 +1040,7 @@
 	}
 	
 	.mini-inbox div.alert.inbox:hover {
-		background: url('../img/transparant-30.png');
+		/* background: url('../img/transparant-30.png'); */
 		
 	}
 	
@@ -1911,7 +1915,7 @@
 
 	.indented {
 		padding: 10px !important;
-		background: url('../img/transparant-20.png');
+		/* background: url('../img/transparant-20.png'); */
 		box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
 		-webkit-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
 		-moz-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
@@ -2723,7 +2727,7 @@
 		line-height: normal;
 		padding-left: 25px;
 		width:100%;
-		background: url('../img/transparant-20.png');
+		/* background: url('../img/transparant-20.png'); */
 		border:1px solid #4E4E4E;
 	}
 	.main-search label {
@@ -2838,31 +2842,6 @@
 		font-size:13px;
 	}
 	
-	.jarviswidget.login, .jarviswidget.register {
-		max-width: 300px;
-		min-width: 300px;
-		border: 1px solid #353535;
-		background: #45484d; /* Old browsers */
-		background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-		-webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .1);
-		box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .1);
-		position: relative;
-		border-radius: 4px;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		position: absolute;
-		/*height: 313px;*/
-		z-index: 15;
-		top: 50%;
-		left: 50%;
-		margin: -156.5px 0 0 -150px;
-	}.jarviswidget.register {margin: -156px 0 0 -150px;}
 	
 	.jarviswidget.login #main-content, .jarviswidget.register #main-content {
 		padding: 0;

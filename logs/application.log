@@ -1318,3 +1318,7 @@ C:\Users\Nabil\Documents\GitHub\application\grails-app\controllers\application\P
 
 1 error
 
+2014-05-09 12:44:37,188 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 12:44:38,403 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 12:46:38,960 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-09 12:46:39,970 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
