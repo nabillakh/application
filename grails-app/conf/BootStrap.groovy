@@ -50,17 +50,15 @@ class BootStrap {
         def monMailEffectif = new MailEffectif(mail : monMail,recepteur : testUser, lu: false, archive: false, favoris: false ).save(failOnError: true,flush: true)
                 
                  
-        def monOrdo = new Ordonnancement(nom : "grille1", chargeStandard : 50).save(failOnError: true) 
-        def monOrdo2 = new Ordonnancement(nom : "grille2", chargeStandard : 50).save(failOnError: true) 
-        def monOrdo3 = new Ordonnancement(nom : "grille3", chargeStandard : 50).save(failOnError: true) 
         
-        def maFamille = new Famille(nom : "Famille1", ordo : monOrdo, chargeStandard : '200').save(failOnError: true, flush : true)  
-        def maFamille2 = new Famille(nom : "Famille2", ordo : monOrdo2, chargeStandard : '200').save(failOnError: true, flush : true)  
-        def maFamille3 = new Famille(nom : "Famille3", ordo : monOrdo3, chargeStandard : '200').save(failOnError: true, flush : true)
+        def maFamille = new Famille(nom : "Famille1").save(failOnError: true, flush : true)  
+        def maFamille2 = new Famille(nom : "Famille2").save(failOnError: true, flush : true)  
+        def maFamille3 = new Famille(nom : "Famille3").save(failOnError: true, flush : true)
         
-        
-        def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
-        
+        def monOrdo = new Ordonnancement(nom : "produit1", chargeStandard : 50, famille : maFamille).save(failOnError: true, flush : true) 
+        def monOrdo2 = new Ordonnancement(nom : "produit2", chargeStandard : 50, famille : maFamille2).save(failOnError: true, flush : true) 
+        def monOrdo3 = new Ordonnancement(nom : "grille3", chargeStandard : 50, famille : maFamille3).save(failOnError: true, flush : true) 
+        def monOrdo4 = new Ordonnancement(nom : "grille4", chargeStandard : 50, famille : maFamille3).save(failOnError: true, flush : true) 
         
         
         ["Analyse":1, "Algorithme":2, "Developpement":3, "Test":4, "Mise en prod":5].each {nomA,numA -> 
@@ -69,6 +67,9 @@ class BootStrap {
             monOrdo.addToPhases(phase)
             phase.save(failOnError: true)
         }
+        
+        
+        def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
         
         
         monKanban.setOrdo(monOrdo)
@@ -86,10 +87,11 @@ class BootStrap {
         def nextMonday = now.withDayOfWeek(MONDAY).plusWeeks(1)
 
         // Creating a weekly event that occurs every MWF
-        def event = new Event(title: 'evenement repete chaque semaine').with {
+        def event = new Event(title: 'evenement 1').with {
             startTime = now.toDate()
             endTime = now.plusHours(1).toDate()
             location = "Regular location"
+            organisateur = testUser
             save(flush: true)
         }
 
@@ -98,6 +100,7 @@ class BootStrap {
             startTime = nextMonday.toDate()
             endTime = nextMonday.plusHours(9).toDate()
             location = "New one-time location"
+            organisateur = testUser
             save()
         }
 
@@ -105,8 +108,13 @@ class BootStrap {
         def event3 = new Event(title: 'event isole').with {
             startTime = tomorrow.toDate()
             endTime = tomorrow.plusMinutes(240).toDate()
+            organisateur = testUser2
             save()
         }
+        
+        def ee1 = new EventEffectif(event : event, recepteur : testUser, participe : true).save(flush : true)
+        def ee2 = new EventEffectif(event : event2, recepteur : testUser, participe : true).save(flush : true)
+        def ee3 = new EventEffectif(event : event3, recepteur : testUser2, participe : true).save(flush : true)
         
         
         
