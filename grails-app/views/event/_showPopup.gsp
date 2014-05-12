@@ -11,6 +11,8 @@
     <title>Sample title</title>
   </head>
   <body>
-    <h1>Sample line</h1>
+    <h1><span class="property-value" aria-labelledby="title-label"><g:fieldValue bean="${eventInstance}" field="title"/></span></h1>
+    
+    
   </body>
 </html>

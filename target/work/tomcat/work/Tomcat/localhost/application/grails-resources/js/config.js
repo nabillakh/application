@@ -564,31 +564,70 @@
                             },
                         
                         ],
+                        
+                        
                 editable: true,
                 durationEditable: true,
                 startEditable:true,
-                // a retravailler ci dessous
-                eventResize: function(event,dayDelta,minuteDelta,revertFunc) {                    
+                
+                
+                
+                
+        
+       
+       
+                // changer la date de fin 
+                eventResize: function(event) {                    
+                  if (confirm("confirmez-vous le changement ?")) {
+            
                     $.ajax({
                         url: '/application/event/eventResize',
                         type: 'POST',
                         format: 'json',
                         data: {
                             id: event.id,
-                            decalageJour: dayDelta,
-                            decalageMin: minuteDelta,
+                            start: event.start,
+                            end: event.end
                         },
+                        
+                        
+                        
+                        
                         error: function () {
                             alert('pb denvoi du json');
                         },
-                            });
-                    $('#calendar').fullCalendar( 'refetchEvents');
+                            })
+                            ;
+                   
+
+        }
+    },
+          // faire le drop et changer de jour       
+      eventDrop: function(event) {   
+           if (confirm("confirmez-vous le changement ?")) {
+          
+                    $.ajax({
+                        url: '/application/event/eventResize',
+                        type: 'POST',
+                        format: 'json',
+                        data: {
+                            id: event.id,
+                            start: event.start,
+                            end: event.end
+                        },
+                        
+                        
+                        
+                        
+                        error: function () {
+                            alert('pb denvoi du json');
+                        },
+                            });}
+                   
 
     },
-                
-                
-                
-				header: {
+	
+      					header: {
 					left: 'title', //,today
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 

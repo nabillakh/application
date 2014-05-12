@@ -179,18 +179,18 @@ class EventController {
         def displayDateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
         // recupere en params le json de l'event modifie. traduit en joda les dates puis cree l'event dans la bdd        
         def monId = params.id
+        
         def eventInstance = Event.get(monId)
-        DateTime deb = new DateTime(eventInstance.startTime)
-        DateTime fin = new DateTime(eventInstance.endTime)
+       DateTime debut = new DateTime(new Date(params.start))
         
+        DateTime fin = new DateTime(new Date(params.end))
         
-        def decalageMin = Integer.parseInt(params.decalageMin)
-        // decalageMin += 120 // pour decalage horaire
-        def decalageJour = Integer.parseInt(params.decalageJour)
-        DateTime fin2 = fin.plusMinutes(decalageMin)
-        // fin2 = fin2.plusDays(decalageJour)
-        eventInstance.endTime = fin2.toDate()
-        eventInstance.startTime = deb.toDate()
+        println("debut : " + debut)
+        
+        println("fin : " + fin)
+         eventInstance.startTime = debut.toDate()
+            eventInstance.endTime = fin.toDate()
+        
         eventInstance.save(flush : true)
         
         
