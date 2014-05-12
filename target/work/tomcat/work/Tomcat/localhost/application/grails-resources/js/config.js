@@ -540,7 +540,7 @@
                                 
                         var calendar = $('#calendar').fullCalendar({
                             
-			defaultView: 'agendaWeek',
+			
                         firstDay: 1,
                             eventSources: [
                             // source pour obtenir mes données 
@@ -627,7 +627,39 @@
 
     },
 	
-      					header: {
+     //Event click 
+       eventClick: function(event) {  
+
+       // bootbox.alert('
+       // Titre :  + title  );
+        
+  $.ajax({
+                        url: '/application/event/showPopup',
+                        type: 'POST',
+                        format: 'json',
+                        data: {
+                            id: event.id
+                           
+                        },
+                        
+                        
+                        
+                        
+                        error: function () {
+                            alert('pb denvoi du json');
+                        },
+                            });},
+                   
+
+    
+	
+      
+      
+      
+      
+      
+     
+  	header: {
 					left: 'title', //,today
 					center: 'prev, next, today',
 					right: 'month, agendaWeek, agenDay' //month, agendaDay, 

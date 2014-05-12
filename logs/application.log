@@ -1671,3 +1671,22 @@ C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\
 
 2014-05-12 12:38:46,765 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
 2014-05-12 12:38:47,820 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-12 16:10:27,724 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib$_closure2.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-12 16:24:53,857 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 31: unexpected token: cpntroller @ line 31, column 21.
+           prinln(dans cpntroller)
+                       ^
+
+1 error
+
+2014-05-12 16:25:00,172 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 31: unexpected token: controller @ line 31, column 21.
+           prinln(dans controller)
+                       ^
+
+1 error
+

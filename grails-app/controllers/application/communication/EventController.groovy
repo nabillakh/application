@@ -28,7 +28,7 @@ class EventController {
     
     
     def showPopup = {
-        prinln(params.id)
+        prinln('cc')
         def eventInstance = Event.get(params.id)
         
         [eventInstance: eventInstance]
