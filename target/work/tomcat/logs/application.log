@@ -95,3 +95,57 @@ java.lang.NullPointerException: Cannot get property 'startTime' on null object
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:08:12,441 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/1
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:08:31,177 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/1
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:08:34,664 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/1
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:09:42,668 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/1
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:10:19,404 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/1
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 1]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-12 14:12:37,246 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [GET] /application/mailEffectif/show/2
+No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 2]. Stacktrace follows:
+groovy.lang.MissingMethodException: No signature of method: application.MailService.messageLu() is applicable for argument types: (application.communication.MailEffectif) values: [application.communication.MailEffectif : 2]
+	at application.communication.MailEffectifController.$tt__show(MailEffectifController.groovy:20)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
