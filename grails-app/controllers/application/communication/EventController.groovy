@@ -28,8 +28,9 @@ class EventController {
     
     
     def showPopup = {
-        prinln('cc')
+        println('dans showpopup')
         def eventInstance = Event.get(params.id)
+        println(eventInstance.title)
         
         [eventInstance: eventInstance]
         render(template: "showPopup")

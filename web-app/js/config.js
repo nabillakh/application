@@ -540,7 +540,7 @@
                                 
                         var calendar = $('#calendar').fullCalendar({
                             
-			
+			defaultView: 'agendaWeek',
                         firstDay: 1,
                             eventSources: [
                             // source pour obtenir mes données 
@@ -564,20 +564,24 @@
                             },
                         
                         ],
-                        
-                        
-                editable: true,
-                durationEditable: true,
-                startEditable:true,
                 
+
                 
-                
-                
-        
-       
+     
+                            header: {
+					left: 'title', //,today
+					center: 'prev, next, today',
+					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
+				},  
+                                
+                                editable: true,
+                                durationEditable: true,
+                                startEditable:true,       
+                                
        
                 // changer la date de fin 
-                eventResize: function(event) {                    
+                
+                        eventResize: function(event) {                    
                   if (confirm("confirmez-vous le changement ?")) {
             
                     $.ajax({
@@ -594,7 +598,7 @@
                         
                         
                         error: function () {
-                            alert('pb denvoi du json');
+                            alert('pb denvoi du json eventResize');
                         },
                             })
                             ;
@@ -615,55 +619,52 @@
                             start: event.start,
                             end: event.end
                         },
-                        
-                        
-                        
-                        
                         error: function () {
-                            alert('pb denvoi du json');
+                            alert('pb denvoi du json eventDrop');
                         },
                             });}
                    
 
     },
-	
+                                
      //Event click 
        eventClick: function(event) {  
-
-       // bootbox.alert('
-       // Titre :  + title  );
+           //permet de mettre a jour les hidden input de la page index avec les valeurs actuelles de l'event7
+           // ajouter l'id 
+                            $('#title').val(event.title);  
+                            $('#lieu').val(event.location);  
+                            $('#description').val(event.description);  
+                           // $('#dateDeb').val(event.start);  
+                            
         
-  $.ajax({
+           $.ajax({
                         url: '/application/event/showPopup',
-                        type: 'POST',
+                        type: 'GET',
                         format: 'json',
                         data: {
                             id: event.id
                            
                         },
-                        
-                        
-                        
-                        
+                        success: function(data) {
+                            // cette fonction va permettre de mettre à jour ou supprimer un event.
+                            // modifier : faire comme bootbox.ajoutEvent et recuperer le json avec l'id cette fois
+                            // supprimer, recuperer l'id et envoyer vers delete.
+                            
+                            bootbox.clickSurEvent(event.title, "Supprimer", "Modifier");   
+                        },
                         error: function () {
                             alert('pb denvoi du json');
                         },
-                            });},
-                   
-
-    
-	
-      
-      
-      
-      
-      
-     
-  	header: {
-					left: 'title', //,today
-					center: 'prev, next, today',
-					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
-				},  
+                                
+                            }
+                )
+                    ;
+                },
+                header: {
+                    left: 'title', //,today
+                    center: 'prev, next, today',
+                    right: 'month, agendaWeek, agenDay' //month, agendaDay, 
+                },  
                                 
                                 
                                

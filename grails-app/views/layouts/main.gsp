@@ -256,8 +256,15 @@
     <!-- REQUIRED: Bootstrap engine -->
     <script src="${request.contextPath}/js/include/bootstrap.min.js"></script>
     
+    
+    
+    <!-- jquery.qtip.min -->
+    <script src="${request.contextPath}/js/include/jquery.qtip.min.js"></script>
+    
     <!-- DO NOT REMOVE: Theme Config file -->
     <script src="${request.contextPath}/js/config.js"></script>
+    
+    
     
     <!-- d3 library placed at the bottom for better performance -->
     <!-- DISABLED  <script src="${request.contextPath}/js/include/d3.v3.min.js"></script> -->
