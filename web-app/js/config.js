@@ -627,22 +627,35 @@
 
     },
                                 
-     //Event click 
-       eventClick: function(event) {  
+     //Event click ___________________________________________________________________________________________________________
+      eventClick: function(event) {  
            //permet de mettre a jour les hidden input de la page index avec les valeurs actuelles de l'event7
            // ajouter l'id 
-                            $('#title').val(event.title);  
-                            $('#lieu').val(event.location);  
-                            $('#description').val(event.description);  
-                           // $('#dateDeb').val(event.start);  
-                            
+                            var id = event.id;
+                            var title = event.title;
+                            var dd = event.start.getDate();
+                            var mm = event.start.getMonth()+1; 
+                            var yyyy = event.start.getFullYear();
+                            if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm};
+                            var start = new Date();
+                              start = dd+'/'+mm+'/'+yyyy;
+                           var ddE = event.end.getDate();
+                            var mmE = event.end.getMonth()+1; 
+                            var yyyyE = event.end.getFullYear();
+                            if(ddE<10){ddE='0'+ddE} if(mmE<10){mmE='0'+mmE};
+                            var end = new Date();
+                              end = ddE+'/'+mmE+'/'+yyyyE;
+                          
+                        
+                         
         
            $.ajax({
                         url: '/application/event/showPopup',
                         type: 'GET',
                         format: 'json',
                         data: {
-                            id: event.id
+                            id: event.id 
+                            
                            
                         },
                         success: function(data) {
@@ -650,7 +663,43 @@
                             // modifier : faire comme bootbox.ajoutEvent et recuperer le json avec l'id cette fois
                             // supprimer, recuperer l'id et envoyer vers delete.
                             
-                            bootbox.clickSurEvent(event.title, "Supprimer", "Modifier");   
+                           bootbox.dialog("<table><form  name='eventInstance' id = 'eventInstance'>  <tr><td>Titre </td><td>:<td></td></td> \n\
+<td><input class='span3' type='text' name='title'  id='title' value="+title+"  /></td></tr> \n\
+<tr><td> Lieu </td><td>:</td> <td></td><td><input type='text' name='location' id='location' value="+$('#location').val()+"  /> \n\
+<tr><td> Description </td><td>:</td><td></td><td><input type='text' name='description' id='description'  value="+$('#description').val()+"    /></td></tr> \n\
+<tr><td> Du </td><td>:</td><td></td><td> <input type='datetime' name='startTime' id='startTime' value="+start+"   /></td></tr>\n\
+<tr><td> Fin </td><td>:</td><td></td><td><input type='datetime' name='endTime' id='endTime' precision='day'  value="+end+"   /> </td></tr>\n\
+</form> <table>", [{
+    "label" : "Modifier",
+    "class" : "success",
+    "callback": function() {
+        console.log("great success");
+    }
+}, 
+//suppression_____________________________
+{ "label" : "Supprimer",
+      
+    "callback": function() {
+        $.ajax({
+        url: '/application/event/delete',
+        type: 'POST',
+        format: 'json',
+        data: id ,
+        
+     error: function () {
+       alert('probleme denvoi du json deleteeee '+id);
+                        }
+              });
+    }
+},
+{
+    "label" : "Retour",
+    "class" : "primary",
+    "callback": function() {
+        console.log("Primary button");
+    }
+}, 
+ ]);
                         },
                         error: function () {
                             alert('pb denvoi du json');
@@ -660,6 +709,7 @@
                 )
                     ;
                 },
+ //____________________________________________________________________________________________________________________________               
                 header: {
                     left: 'title', //,today
                     center: 'prev, next, today',

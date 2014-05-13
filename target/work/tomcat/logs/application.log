@@ -1,233 +1,82 @@
-2014-05-13 10:46:06,646 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:06,660 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:10,145 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-13 10:46:10,506 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
-2014-05-13 10:46:21,547 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:21,548 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:21,548 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:22,186 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
-2014-05-13 10:46:26,873 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-13 10:46:27,106 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-13 10:46:38,083 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
-2014-05-13 10:46:38,092 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
-2014-05-13 10:46:38,092 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
-2014-05-13 10:46:38,166 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
-2014-05-13 10:46:38,166 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
-2014-05-13 10:46:38,166 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
-2014-05-13 10:46:38,227 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
-2014-05-13 10:46:38,228 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
-2014-05-13 10:46:38,228 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
-2014-05-13 10:46:38,313 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
-2014-05-13 10:46:38,313 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
-2014-05-13 10:46:38,313 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
-2014-05-13 10:46:38,378 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
-2014-05-13 10:46:38,378 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
-2014-05-13 10:46:38,378 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
-2014-05-13 10:46:38,434 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
-2014-05-13 10:46:38,434 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
-2014-05-13 10:46:38,434 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
-2014-05-13 10:46:38,490 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
-2014-05-13 10:46:38,490 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
-2014-05-13 10:46:38,490 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
-2014-05-13 10:46:38,540 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
-2014-05-13 10:46:38,540 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
-2014-05-13 10:46:38,540 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
-2014-05-13 10:46:38,593 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
-2014-05-13 10:46:38,594 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
-2014-05-13 10:46:38,594 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
-2014-05-13 10:46:38,646 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
-2014-05-13 10:46:38,646 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
-2014-05-13 10:46:38,646 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
-2014-05-13 10:46:38,704 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
-2014-05-13 10:46:38,704 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
-2014-05-13 10:46:38,704 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
-2014-05-13 10:46:38,771 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
-2014-05-13 10:46:38,771 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
-2014-05-13 10:46:38,772 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
-2014-05-13 10:46:38,825 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
-2014-05-13 10:46:38,825 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
-2014-05-13 10:46:38,825 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
-2014-05-13 10:46:39,223 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
-2014-05-13 10:46:39,224 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
-2014-05-13 10:46:39,224 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
-2014-05-13 10:46:39,295 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
-2014-05-13 10:46:39,295 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
-2014-05-13 10:46:39,295 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
-2014-05-13 10:46:40,074 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
-2014-05-13 10:46:40,075 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
-2014-05-13 10:46:40,075 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
-2014-05-13 10:46:41,443 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
-2014-05-13 10:46:41,444 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
-2014-05-13 10:46:41,444 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
-2014-05-13 10:46:41,516 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
-2014-05-13 10:46:41,517 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
-2014-05-13 10:46:41,517 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
-2014-05-13 10:49:49,102 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
-2014-05-13 10:49:49,102 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
-2014-05-13 10:49:49,102 [http-bio-8080-exec-1] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
-2014-05-13 10:49:49,136 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
-2014-05-13 10:49:49,136 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
-2014-05-13 10:49:49,136 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
-2014-05-13 11:00:05,539 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:05:36,215 [http-bio-8080-exec-7] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:05:38,956 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 6
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:05:40,818 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 4
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:06:25,814 [http-bio-8080-exec-9] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:06:28,059 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:06:31,818 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:06:44,457 [http-bio-8080-exec-5] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:06:49,038 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 11:12:06,570 [http-bio-8080-exec-1] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event/index
-Cannot get property 'title' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Error executing tag <sitemesh:wrapTitleTag>: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <sitemesh:wrapTitleTag>: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:25)
-	... 5 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp$_run_closure6_closure119.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:21)
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp$_run_closure6.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:23)
-	... 6 more
-Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
-	... 8 more
-2014-05-13 11:12:10,100 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event/index
-Cannot get property 'title' on null object. Stacktrace follows:
-org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Error executing tag <sitemesh:wrapTitleTag>: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <sitemesh:wrapTitleTag>: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp.run(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:25)
-	... 5 more
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <g:layoutTitle>: Cannot get property 'title' on null object
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp$_run_closure6_closure119.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:21)
-	at C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp$_run_closure6.doCall(C__Users_Nabil_Documents_GitHub_application_grails_app_views_event_index_gsp:23)
-	... 6 more
-Caused by: java.lang.NullPointerException: Cannot get property 'title' on null object
-	... 8 more
-2014-05-13 11:14:54,691 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - MissingMethodException occurred when processing request: [POST] /application/event/showPopup - parameters:
-id: 5
-No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object). Stacktrace follows:
-groovy.lang.MissingMethodException: No signature of method: application.communication.EventController.prinln() is applicable for argument types: (java.lang.String) values: [cc]
-Possible solutions: println(), println(java.lang.Object), println(java.io.PrintWriter), printf(java.lang.String, [Ljava.lang.Object;), print(java.io.PrintWriter), printf(java.lang.String, java.lang.Object)
-	at application.communication.EventController$_closure1.doCall(EventController.groovy:31)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
-	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
-2014-05-13 12:40:19,177 [http-bio-8080-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event/showPopup
+2014-05-13 16:45:33,638 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:33,664 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:37,602 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-13 16:45:37,997 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/youcef/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-13 16:45:46,614 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:46,615 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:46,615 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:46,862 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
+2014-05-13 16:45:50,609 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-13 16:45:51,378 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-13 16:46:05,446 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
+2014-05-13 16:46:05,477 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
+2014-05-13 16:46:05,478 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
+2014-05-13 16:46:05,687 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
+2014-05-13 16:46:05,692 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
+2014-05-13 16:46:05,693 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
+2014-05-13 16:46:05,788 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
+2014-05-13 16:46:05,788 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
+2014-05-13 16:46:05,788 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
+2014-05-13 16:46:05,914 [http-bio-8080-exec-9] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
+2014-05-13 16:46:05,915 [http-bio-8080-exec-9] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
+2014-05-13 16:46:05,915 [http-bio-8080-exec-9] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
+2014-05-13 16:46:06,003 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
+2014-05-13 16:46:06,003 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
+2014-05-13 16:46:06,004 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
+2014-05-13 16:46:06,031 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
+2014-05-13 16:46:06,031 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
+2014-05-13 16:46:06,031 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
+2014-05-13 16:46:06,216 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
+2014-05-13 16:46:06,216 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
+2014-05-13 16:46:06,216 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
+2014-05-13 16:46:06,364 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
+2014-05-13 16:46:06,365 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
+2014-05-13 16:46:06,365 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
+2014-05-13 16:46:06,448 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
+2014-05-13 16:46:06,448 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
+2014-05-13 16:46:06,448 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
+2014-05-13 16:46:06,495 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
+2014-05-13 16:46:06,495 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
+2014-05-13 16:46:06,496 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
+2014-05-13 16:46:06,559 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
+2014-05-13 16:46:06,560 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
+2014-05-13 16:46:06,560 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
+2014-05-13 16:46:06,580 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
+2014-05-13 16:46:06,580 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
+2014-05-13 16:46:06,580 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
+2014-05-13 16:46:06,693 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
+2014-05-13 16:46:06,693 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
+2014-05-13 16:46:06,693 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
+2014-05-13 16:46:06,792 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
+2014-05-13 16:46:06,793 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
+2014-05-13 16:46:06,793 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
+2014-05-13 16:46:06,865 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
+2014-05-13 16:46:06,865 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
+2014-05-13 16:46:06,866 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
+2014-05-13 16:46:06,938 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
+2014-05-13 16:46:06,939 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
+2014-05-13 16:46:06,940 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
+2014-05-13 16:46:07,011 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
+2014-05-13 16:46:07,011 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
+2014-05-13 16:46:07,011 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
+2014-05-13 16:46:07,058 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
+2014-05-13 16:46:07,058 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
+2014-05-13 16:46:07,058 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
+2014-05-13 16:49:11,166 [http-bio-8080-exec-8] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event/showPopup
 Cannot get property 'title' on null object. Stacktrace follows:
 java.lang.NullPointerException: Cannot get property 'title' on null object
-	at application.communication.EventController$_closure1$$EOe8UDPn.doCall(EventController.groovy:33)
+	at application.communication.EventController$_closure1.doCall(EventController.groovy:33)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-13 17:16:29,548 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/event/showPopup
+Cannot get property 'title' on null object. Stacktrace follows:
+java.lang.NullPointerException: Cannot get property 'title' on null object
+	at application.communication.EventController$_closure1$$EOe9gTvC.doCall(EventController.groovy:36)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
