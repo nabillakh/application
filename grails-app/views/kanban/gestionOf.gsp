@@ -100,8 +100,23 @@
 					<h1 id="page-header">Gestion des activités et des affectations</h1>	
 
 					<div class="fluid-container">
-                                                  <g:each in="${kanbanInstance.of}" status="i" var="OFInstance">
-
+                                            
+												
+				<g:link  action="index" controller="kanban" ><i class="icon-star"></i>  Liste des kanbans </g:link></br>
+                                <g:link  action="show" controller="kanban" id="${kanbanInstance.id}" ><i class="icon-star"></i>  Afficher ce kanban </g:link>
+												
+                                        
+				
+												
+                                                  <g:each in="${mesof}" status="i" var="mesofInstance">
+                                                      <g:set var="of" value="${mesofInstance.id}" />
+                                                        <g:each in="${dateLIst}" status="j" var="dateLIstInstance">
+                                                        <g:set var="laof" value="${dateLIstInstance.id}" /> 
+                                                                <g:if test="${laof == of}">
+                                                              <g:set var="deb" value="${dateLIstInstance.start}" />
+                                                               <g:set var="fin" value="${dateLIstInstance.end}" />
+                                                                    </g:if>         
+                                                        </g:each>
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
 							<div class="row-fluid">
@@ -110,7 +125,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
 									    <header>
-									        <h2>${OFInstance?.phase?.nom}</h2>                           
+									        <h2>${mesofInstance?.phase?.nom}</h2>                           
 									    </header>
 									    <!-- wrap div -->
 									    <div>
@@ -121,14 +136,14 @@
 
                                                                                 <g:form url="[action:'majOF']">
 
-                                                                                  <input type="hidden"  name="monId" id="monId${i}"  value="${OFInstance?.id}">
+                                                                                  <input type="hidden"  name="monId" id="monId${i}"  value="${mesofInstance?.id}">
                                                                                   <fieldset class="form-horizontal themed"> 
                                                                                     <div class="control-group">
                                                                                       <label for="chargePlanifiee" class="control-label">
                                                                                         <g:message code="OF.chargePlanifiee.label" default="Charge Planifiee" />
                                                                                       </label>
                                                                                       <div class="controls"  size="16" >
-                                                                                        <g:field name="chargePlanifiee"  id="chargeplanifiee${i}" value="${fieldValue(bean: OFInstance, field: 'chargePlanifiee')}" />
+                                                                                        <g:field name="chargePlanifiee"  id="chargeplanifiee${i}" value="${fieldValue(bean: mesofInstance, field: 'chargePlanifiee')}" />
                                                                                       </div>
                                                                                     </div>                                                                                 
 
@@ -137,7 +152,7 @@
                                                                                         <g:message code="OF.affectes.label" default="Affectes" />
 
                                                                                       </label>  <div class="controls"  size="16" >
-                                                                                        <g:select id="multiSelect" multiple="multiple"  id="affectes${i}"  name="affectes" from="${application.RH.Effectif.list()}" optionKey="id" required="" value="${OFInstance?.affectes*.id}" class="span12 with-search"/>
+                                                                                        <g:select id="multiSelect" multiple="multiple"  id="affectes${i}"  name="affectes" from="${application.RH.Effectif.list()}" optionKey="id" required="" value="${mesofInstance?.affectes*.id}" class="span12 with-search"/>
                                                                                       </div>
                                                                                     </div>
                                                                                     
@@ -148,10 +163,14 @@
                                                                                         
 
                                                                                         <div class="controls" size="16" >
-                                                                                          <div>
-                                                                                            <g:field type="date" name="dateDebutPlanifie"   id="dateDebutPlanifie${i}"
-                                                                                                     default="${new Date()}" precision="day"  />
-                                                                                          </div>
+                                                                                         
+                                                                                         
+                                                                                          
+                                                                                                       <div class="input-append date" id="datepicker-js" data-date="${fin}" data-date-format="dd/mm/yyyy">
+                                                                                                    <input class="datepicker-input" size="16" type="text"   name="dateDebutPlanifie"  value="${deb}"    placeholder="Select a date" />
+                                                                                                    <span class="add-on"><i class="cus-calendar-2"></i></span>
+                                                                                                     </div>
+                                                                                          
                                                                                         </div>
                                                                                       </div></div>
                                                                                     <div class="control-group">
@@ -159,8 +178,12 @@
                                                                                         <label class="control-label">Date de fin planifiée <span class="required-indicator">*</span></label>
                                                                                         <div class="controls" size="16" >
                                                                                           <div>
-                                                                                            <g:field type="date" name="dateFinPlanifie"   id="dateFinPlanifie${i}"
-                                                                                                     default="${new Date()}" precision="day"  />
+                                                                                           
+                                                                                                    <div class="input-append date" id="datepicker-js" data-date="${fin}" data-date-format="dd/mm/yyyy">
+                                                                                                    <input class="datepicker-input" size="16" type="text"  value="${fin}" name="dateFinPlanifie"    placeholder="Select a date" />
+                                                                                                    <span class="add-on"><i class="cus-calendar-2"></i></span>
+                                                                                                     </div>
+             
                                                                                           </div>
                                                                                         </div>
                                                                                       </div>
@@ -183,6 +206,7 @@
                                                   </g:each>
 						<!-- end widget grid -->
 					</div>	
+                                        
                                                 </section>	
 				</div>
          <script>

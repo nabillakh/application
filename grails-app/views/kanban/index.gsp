@@ -96,11 +96,11 @@
 
 
 
-				<div id="page-content">
+ <div id="page-content" >
 					<!-- page header -->
 					<h1 id="page-header">Gestion du portefeuille</h1>	
 
-					<div class="fluid-container">
+					<div class="fluid-container" style="margin-bottom:300px; ">
 
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
@@ -149,7 +149,7 @@
 																	<li>
 																		<a href="javascript:gererOf(${kanbanInstance.id});">Affecter</a>
 																	</li>
-																	<li class="divider"></li>
+																	
 																	<li>
 																		<a href="javascript:supprimer(${kanbanInstance.id});">Supprimer</a>
 																	</li>
@@ -204,9 +204,10 @@
                                                                     window.location = "gestionOf/"+monId;
                                                           }       
                                                           function supprimer(monId) {
-                                                                    bootbox.confirm("Voulez vous confirmer la suppression du projet?", function(result) {
+                                                                    bootbox.confirm("'Voulez vous confirmer la suppression du projet?" , function(result) {
 					 //console.log("Confirm result: "+result);
-                                                                                  window.location = "delete/"+monId;
+                                        
+                                                                                   <g:remoteFunction controller = "kanban" action="delete"   params ="\'kanban=\' + monId" />
                                          					  // toastr.info("Confirm result: "+result);
                                                                                 });
                                                           }                                                                                                                                    

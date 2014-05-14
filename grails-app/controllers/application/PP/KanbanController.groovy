@@ -17,7 +17,7 @@ class KanbanController {
     def messageService
     def springSecurityService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "POST"]
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -117,18 +117,38 @@ class KanbanController {
     }
     
     def gestionOf(Kanban kanbanInstance) {
-        [kanbanInstance:kanbanInstance]
+        def dateLIst = []
+        def mesof = new ArrayList<OF>()
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
+        kanbanInstance.of.each() {of -> 
+            mesof.add(of)
+            def datedeb = sdf.format(of.dateDebutPlanifie)
+             def datefin = sdf.format(of.dateFinPlanifie)
+            dateLIst << [
+                id: of.id,    
+                start:datedeb,
+                end: datefin,
+                ]
+        }
+            
+       
+        // appeller la fonction qui donne le dernier mail pour chaque conversation
+        mesof.sort{a,b-> a.phase.ordre<=>b.phase.ordre}
+          
+          
+          
+        [kanbanInstance:kanbanInstance,mesof:mesof,dateLIst:dateLIst]
     }
     
     // permet d'editer les OF d'un kanban
     def majOF() {  
         // rapatriement et conversion des variables
-        
+        impleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd")
+        Date dateDebutPlanifie = sdf.parse(params.dateDebutPlanifie)
+        Date dateFinPlanifie = sdf.parse(params.dateFinPlanifie)
         def id = Long.parseLong(params.monId)
         def charge = Float.parseFloat(params.charge)
-        DateTime dateFinPlanifie = new DateTime(params.dateFinPlanifie)
-        DateTime dateDebutPlanifie = new DateTime(params.dateDebutPlanifie)
-        def affectes = []
+       def affectes = []
         def affect = params.affectes
         List<String> items = Arrays.asList(affect.split("\\s*,\\s*"));
         items.each() {aff->
@@ -207,11 +227,11 @@ class KanbanController {
 
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
-    def delete(Kanban kanbanInstance) {
-        println("dans suppresion avec l'id : ")
-        println(kanbanInstance.id)
-
-        kanbanInstance.delete()
+    def delete() {
+       
+     def monId = params.kanban
+     def kanbanInstance = Kanban.get(monId)
+     kanbanInstance.delete flush:true
         redirect(action: "index")
     }
 

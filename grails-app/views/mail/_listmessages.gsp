@@ -1,5 +1,5 @@
 <g:if test="${listcompteur == 1}">
-  <g:set var="listcompteur" value="$listcompteur+1}" />
+  <g:set var="listcompteur" value="${listcompteur+1}" />
 
                                                              
                                                                         <div class="inbox-menu">

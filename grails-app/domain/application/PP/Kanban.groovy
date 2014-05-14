@@ -21,6 +21,7 @@ class Kanban {
     Famille famille 
     Effectif chefProjet
     
+    
     static hasMany = [compteRendus : CompteRendu, of:OF]
     
     static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser', 'avancementRealise']

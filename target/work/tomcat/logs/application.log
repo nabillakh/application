@@ -1,92 +1,114 @@
-2014-05-14 08:29:35,471 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:35,488 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:40,363 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-14 08:29:40,991 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/Nabil/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
-2014-05-14 08:29:51,182 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:51,184 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:51,184 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:51,892 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
-2014-05-14 08:29:56,170 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
-2014-05-14 08:29:56,342 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
-2014-05-14 08:30:07,837 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
-2014-05-14 08:30:07,844 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
-2014-05-14 08:30:07,844 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
-2014-05-14 08:30:07,938 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
-2014-05-14 08:30:07,938 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
-2014-05-14 08:30:07,938 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
-2014-05-14 08:30:07,996 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
-2014-05-14 08:30:07,996 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
-2014-05-14 08:30:07,996 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
-2014-05-14 08:30:08,077 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
-2014-05-14 08:30:08,077 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
-2014-05-14 08:30:08,077 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
-2014-05-14 08:30:08,131 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
-2014-05-14 08:30:08,131 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
-2014-05-14 08:30:08,131 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
-2014-05-14 08:30:08,192 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
-2014-05-14 08:30:08,192 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
-2014-05-14 08:30:08,192 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
-2014-05-14 08:30:08,256 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
-2014-05-14 08:30:08,256 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
-2014-05-14 08:30:08,256 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
-2014-05-14 08:30:08,316 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
-2014-05-14 08:30:08,316 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
-2014-05-14 08:30:08,317 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
-2014-05-14 08:30:08,371 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
-2014-05-14 08:30:08,371 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
-2014-05-14 08:30:08,371 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
-2014-05-14 08:30:08,436 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
-2014-05-14 08:30:08,437 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
-2014-05-14 08:30:08,437 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
-2014-05-14 08:30:08,497 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
-2014-05-14 08:30:08,497 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
-2014-05-14 08:30:08,497 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
-2014-05-14 08:30:08,574 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
-2014-05-14 08:30:08,574 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
-2014-05-14 08:30:08,574 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
-2014-05-14 08:30:08,633 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
-2014-05-14 08:30:08,633 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
-2014-05-14 08:30:08,633 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
-2014-05-14 08:30:08,994 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
-2014-05-14 08:30:08,995 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
-2014-05-14 08:30:08,995 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
-2014-05-14 08:30:09,070 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
-2014-05-14 08:30:09,070 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
-2014-05-14 08:30:09,070 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
-2014-05-14 08:30:09,466 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
-2014-05-14 08:30:09,466 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
-2014-05-14 08:30:09,467 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
-2014-05-14 08:30:09,953 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
-2014-05-14 08:30:09,953 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
-2014-05-14 08:30:09,953 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
-2014-05-14 08:30:10,017 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
-2014-05-14 08:30:10,018 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
-2014-05-14 08:30:10,018 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
-2014-05-14 08:31:09,648 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
-2014-05-14 08:31:09,648 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
-2014-05-14 08:31:09,648 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
-2014-05-14 08:31:09,684 [http-bio-8080-exec-4] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
-2014-05-14 08:31:09,684 [http-bio-8080-exec-4] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
-2014-05-14 08:31:09,684 [http-bio-8080-exec-4] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
-2014-05-14 08:33:09,901 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - IllegalArgumentException occurred when processing request: [POST] /application/kanban/nouveauKanban - parameters:
-dateLancement: 14/05/2014
-description: c'est un kanban
-nomKanban: developpement fonction 1
-ordo: 1
-create: Mettre à jour
-dateLivraison: 23/05/2014
-famille: 1
-chargePlanifiee: 10.0
-chefProjet: 1
-Invalid format: "23/05/2014" is malformed at "/05/2014". Stacktrace follows:
-java.lang.IllegalArgumentException: Invalid format: "23/05/2014" is malformed at "/05/2014"
-	at org.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:644)
-	at org.joda.time.convert.StringConverter.getInstantMillis(StringConverter.java:65)
-	at org.joda.time.base.BaseDateTime.<init>(BaseDateTime.java:171)
-	at org.joda.time.DateTime.<init>(DateTime.java:168)
-	at application.PP.KanbanController.$tt__nouveauKanban(KanbanController.groovy:72)
+2014-05-14 17:30:08,688 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:08,715 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ConfigurationHolder.getConfig() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:12,613 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-14 17:30:12,909 [localhost-startStop-1] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/youcef/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-14 17:30:22,220 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:22,222 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:22,222 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:22,561 [localhost-startStop-1] WARN  module.ModuleDeclarationsFactory  - 'grails.resources.modules' in config does not define any modules
+2014-05-14 17:30:25,356 [localhost-startStop-1] WARN  util.GrailsUtil  - [DEPRECATED] Method ApplicationHolder.getApplication() is deprecated and will be removed in a future version of Grails.
+2014-05-14 17:30:26,132 [localhost-startStop-1] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-14 17:30:37,442 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings.png
+2014-05-14 17:30:37,465 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings.png]
+2014-05-14 17:30:37,465 [http-bio-8080-exec-10] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings.png
+2014-05-14 17:30:37,490 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv.png
+2014-05-14 17:30:37,493 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv.png]
+2014-05-14 17:30:37,496 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv.png
+2014-05-14 17:30:37,585 [http-bio-8080-exec-10] ERROR resource.ResourceMeta  - While processing /css/bootstrap.min.css, a resource was required but not found: /img/glyphicons-halflings-white.png
+2014-05-14 17:30:37,586 [http-bio-8080-exec-10] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/glyphicons-halflings-white.png]
+2014-05-14 17:30:37,586 [http-bio-8080-exec-10] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/glyphicons-halflings-white.png
+2014-05-14 17:30:37,738 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/csv_hover.png
+2014-05-14 17:30:37,738 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/csv_hover.png]
+2014-05-14 17:30:37,738 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/csv_hover.png
+2014-05-14 17:30:37,885 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls.png
+2014-05-14 17:30:37,885 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls.png]
+2014-05-14 17:30:37,886 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls.png
+2014-05-14 17:30:38,006 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/pointer-menu.png
+2014-05-14 17:30:38,006 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/pointer-menu.png]
+2014-05-14 17:30:38,007 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/pointer-menu.png
+2014-05-14 17:30:38,068 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/xls_hover.png
+2014-05-14 17:30:38,068 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/xls_hover.png]
+2014-05-14 17:30:38,072 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/xls_hover.png
+2014-05-14 17:30:38,241 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy.png
+2014-05-14 17:30:38,241 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy.png]
+2014-05-14 17:30:38,241 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy.png
+2014-05-14 17:30:38,502 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/copy_hover.png
+2014-05-14 17:30:38,502 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/copy_hover.png]
+2014-05-14 17:30:38,502 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/copy_hover.png
+2014-05-14 17:30:38,623 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/footer_bg.jpg
+2014-05-14 17:30:38,623 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/footer_bg.jpg]
+2014-05-14 17:30:38,623 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/footer_bg.jpg
+2014-05-14 17:30:38,748 [http-bio-8080-exec-7] ERROR resource.ResourceMeta  - While processing /css/theme.css, a resource was required but not found: /img/back_icn.gif
+2014-05-14 17:30:38,748 [http-bio-8080-exec-7] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/back_icn.gif]
+2014-05-14 17:30:38,749 [http-bio-8080-exec-7] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/back_icn.gif
+2014-05-14 17:30:38,756 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf.png
+2014-05-14 17:30:38,756 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf.png]
+2014-05-14 17:30:38,756 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf.png
+2014-05-14 17:30:38,888 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/pdf_hover.png
+2014-05-14 17:30:38,888 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/pdf_hover.png]
+2014-05-14 17:30:38,888 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/pdf_hover.png
+2014-05-14 17:30:38,990 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print.png
+2014-05-14 17:30:38,991 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print.png]
+2014-05-14 17:30:38,991 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print.png
+2014-05-14 17:30:39,075 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/print_hover.png
+2014-05-14 17:30:39,075 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/print_hover.png]
+2014-05-14 17:30:39,075 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/print_hover.png
+2014-05-14 17:30:39,172 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection.png
+2014-05-14 17:30:39,173 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection.png]
+2014-05-14 17:30:39,173 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection.png
+2014-05-14 17:30:39,246 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/collection_hover.png
+2014-05-14 17:30:39,246 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/collection_hover.png]
+2014-05-14 17:30:39,246 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/collection_hover.png
+2014-05-14 17:30:39,303 [http-bio-8080-exec-6] ERROR resource.ResourceMeta  - While processing /css/TableTools.css, a resource was required but not found: /images/background.png
+2014-05-14 17:30:39,303 [http-bio-8080-exec-6] WARN  util.ResourceMetaStore  - Cannot locate resource [/images/background.png]
+2014-05-14 17:30:39,303 [http-bio-8080-exec-6] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/images/background.png
+2014-05-14 17:37:00,730 [http-bio-8080-exec-1] ERROR resource.ResourceMeta  - While processing /css/uniform.default.css, a resource was required but not found: /img/uniform-skin/bg-input-aristo.png
+2014-05-14 17:37:00,730 [http-bio-8080-exec-1] WARN  util.ResourceMetaStore  - Cannot locate resource [/img/uniform-skin/bg-input-aristo.png]
+2014-05-14 17:37:00,730 [http-bio-8080-exec-1] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/img/uniform-skin/bg-input-aristo.png
+2014-05-14 17:37:00,748 [http-bio-8080-exec-5] ERROR resource.ResourceMeta  - While processing /css/select2.css, a resource was required but not found: /css/spinner.gif
+2014-05-14 17:37:00,748 [http-bio-8080-exec-5] WARN  util.ResourceMetaStore  - Cannot locate resource [/css/spinner.gif]
+2014-05-14 17:37:00,748 [http-bio-8080-exec-5] WARN  mapper.cssrewriter  - Cannot resolve CSS resource, leaving link as is: resource:/css/spinner.gif
+2014-05-14 17:37:53,025 [http-bio-8080-exec-10] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: undefined
+charge: 20
+dateFinPlanifie: undefined
+affectes: null
+monId: 1
+No such property: sdf for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: sdf for class: application.PP.KanbanController
+	at application.PP.KanbanController.$tt__majOF(KanbanController.groovy:146)
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:724)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-14 17:40:00,751 [Thread-10] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-14 17:42:28,031 [FileSystemWatcher: files=#529 cl=groovy.lang.GroovyClassLoader@70f8b1fc] WARN  util.GrailsUtil  - [WARNING] Property [archive] of domain class application.pilotage.Pic has type [boolean] and doesn't support constraint [nullable]. This constraint will not be checked during validation.
+2014-05-14 17:43:21,179 [http-bio-8080-exec-3] WARN  config.ConfigurationFactory  - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/youcef/.m2/repository/net/sf/ehcache/ehcache-core/2.4.6/ehcache-core-2.4.6.jar!/ehcache-failsafe.xml
+2014-05-14 17:43:21,194 [http-bio-8080-exec-3] WARN  ehcache.CacheManager  - Creating a new instance of CacheManager using the diskStorePath "C:\Users\youcef\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$DefaultConfigurationSource@13fabd93.
+The diskStore path for this CacheManager will be set to C:\Users\youcef\AppData\Local\Temp\\ehcache_auto_created_1400082201194.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.
+2014-05-14 17:43:21,878 [http-bio-8080-exec-2] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [POST] /application/kanban/majOF - parameters:
+dateDebutPlanifie: undefined
+charge: 20
+dateFinPlanifie: undefined
+affectes: null
+monId: 3
+No such property: sdf for class: application.PP.KanbanController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: sdf for class: application.PP.KanbanController
+	at application.PP.KanbanController.$tt__majOF(KanbanController.groovy:146)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-14 17:43:26,000 [http-bio-8080-exec-3] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /application/kanban/gestionOf/2
+Stacktrace follows:
+java.lang.NullPointerException
+	at application.PP.KanbanController.$tt__gestionOf(KanbanController.groovy:123)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
