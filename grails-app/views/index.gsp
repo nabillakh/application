@@ -14,9 +14,9 @@
      <!-- main content -->
 				<div id="page-content">
 					<!-- breadcrumb -->
-					
+
 					<!-- end breadcrumb -->
-					
+
 					<!-- page header
                                         
                                         <sec:ifLoggedIn>
@@ -27,7 +27,7 @@
 					</div>
 					</sec:ifLoggedIn> -->
 					<div class="fluid-container">
-						
+
 						<!-- start icons -->
 						<div id="start">
 							<ul>
@@ -68,29 +68,29 @@
 
 						</div>						
 						<!-- end start icons -->
-						
+
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
-							
+
 							<!-- row-fluid -->
-							
+
 							<div class="row-fluid">
-		
+
 								<article class="span12">
-									
+
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
 									    <header>
 									        <h2>Mon mur</h2>                           
 									    </header>
-									    
+
 									    <!-- widget div-->
 									    <div>
 									    	<!-- widget edit box -->
-									        
+
 									        <!-- content -->	            
 									        <div class="inner-spacer chat-widget widget-content-padding"> 
-									        	
+
 									        	<!-- chat tabs -->
 												<ul id="myChat" class="nav nav-tabs chat-tabs">
 									              <li class="active">
@@ -100,7 +100,7 @@
 									              	<a href="#activite" data-toggle="tab"><i class="away"></i>Activités</a>
 									              </li>
 									              <li class="pull-right">
-									              	
+
 													<div id="chat-user-control" class="btn-group hidden-phone">
                                                                                                           <button class="btn dropdown-toggle btn-small btn-link" data-toggle="dropdown"><i class="cus-status-online"></i></button>
 		                                                <ul class="dropdown-menu btn-small pull-right">
@@ -120,18 +120,18 @@
 		                                                </ul>
 		                                            </div>
 
-							
+
 									              </li>
 									            </ul>
 									            <!-- end chat tabs -->
-									            
+
 									            <!-- chat box -->
 									            <div id="myChatTab" class="tab-content chat-content">
-									              
+
                                                                                       <div class="row-fluid chat-box">
                                                                                         
                                                                                       <div class="controls">
-																	<div class="input-append">  
+																	<div class="input-append span10">  
                                                                                     <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
                                                                                     <div class="btn-group">
 						                                                    <button class="btn dropdown-toggle medium" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -153,43 +153,43 @@
 									              	<!-- chat messages -->
 									              	<div class="newsfeed1"></div>
 									              	<!-- end chat messages -->
-									              	
+
 									              </div>
                                                                                       <script type="text/javascript">
                                                                                         <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed1"/>;
                                                                                       </script>
 									              <!-- end chat user1 -->
-									              
+
 									              <!-- chat user2 -->
 									              <div class="tab-pane fade" id="activite">
-									              	
+
 									              	<!-- chat messages -->
 									              	<div class="chat-messages">														
-														
+
 									              	</div>
 									              	<!-- end chat messages -->
-									              	
+
 									              </div>
                                                                                       
 									              <!-- end chat user2 -->
-									              
+
 									            </div>
 									            <!-- end chat box -->
-									            
-									            
-										       		
-											
+
+
+
+
 									        </div>
 									        <!-- end content -->	
-									        
+
 									    </div>
 									    <!-- end widget div -->
 									</div>
                                                                         
 									<!-- end widget -->
-									
+
 								</article>
-								
+
 							</div>
                                                         
                                                         <script>

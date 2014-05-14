@@ -69,23 +69,44 @@ class KanbanController {
     
     def nouveauKanban() {
         def nomKanban = params.nomKanban
-        DateTime dateLivraison = new DateTime(params.dateLivraison)
+        println("date dans input ")
+        println(params.dateLivraison)
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
+        Date dateLivraison = sdf.parse(params.dateLivraison)
+        
+        println(dateLivraison)
         def description = params.description
         def famille = params.famille
         def ordo = params.ordo
         def chargePlanifiee = Float.parseFloat(params.chargePlanifiee)
         def chefProjet = params.chefProjet
-        def monKanban = new Kanban()
-        
+        def monId = params.monId
+        def monKanban 
+        if(!monId) {
+            println("creation de kanban avec id :" + monId)
+            monKanban = new Kanban()        
             monKanban.nomKanban = nomKanban
-            monKanban.dateFinPlanifie = dateLivraison.toDate()
+            monKanban.dateFinPlanifie = dateLivraison
             monKanban.description = description
             monKanban.chefProjet = Effectif.get(Integer.parseInt(chefProjet))
             monKanban.famille = Famille.get(Integer.parseInt(famille))
             monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
             monKanban.chargePlanifiee = chargePlanifiee 
-            
             monKanban.save(flush : true)
+        }
+        else {
+            println("edition de kanban avec id :" + monId)
+            monKanban = Kanban.get(monId)
+            println(monKanban.nomKanban)  
+            monKanban.nomKanban = nomKanban
+            monKanban.dateFinPlanifie = dateLivraison
+            monKanban.description = description
+            monKanban.chefProjet = Effectif.get(Integer.parseInt(chefProjet))
+            monKanban.famille = Famille.get(Integer.parseInt(famille))
+            monKanban.ordo = Ordonnancement.get(Integer.parseInt(ordo))
+            monKanban.chargePlanifiee = chargePlanifiee 
+            monKanban.save(flush : true)
+        }
         
         
         kanbanService.requeteCreation(monKanban)        
@@ -154,7 +175,10 @@ class KanbanController {
     
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Kanban kanbanInstance) {
-        respond kanbanInstance
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
+        def dateFin = sdf.format(kanbanInstance.dateFinPlanifie)
+        def dateDeb = sdf.format(kanbanInstance.dateLancement)
+        [kanbanInstance : kanbanInstance, dateFin : dateFin, dateDeb : dateDeb]
     }
 
     @Transactional
@@ -181,24 +205,14 @@ class KanbanController {
         }
     }
 
-    @Transactional
+    
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def delete(Kanban kanbanInstance) {
+        println("dans suppresion avec l'id : ")
+        println(kanbanInstance.id)
 
-        if (kanbanInstance == null) {
-            notFound()
-            return
-        }
-
-        kanbanInstance.delete flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Kanban.label', default: 'Kanban'), kanbanInstance.id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
+        kanbanInstance.delete()
+        redirect(action: "index")
     }
 
     protected void notFound() {

@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="${request.contextPath}/css/toastr.custom.css?v=1">
 	<link rel="stylesheet" href="${request.contextPath}/css/toastr-responsive.css?v=1">
 	<link rel="stylesheet" href="${request.contextPath}/css/jquery.jgrowl.css?v=1">
-	
+
 	<!-- // DO NOT REMOVE OR CHANGE ORDER OF THE FOLLOWING // -->
 	<!-- bootstrap default css (DO NOT REMOVE) -->
 	<link rel="stylesheet" href="${request.contextPath}/css/bootstrap.min.css?v=1">
@@ -52,20 +52,20 @@
 	<!-- // THEME CSS changed by javascript: the CSS link below will override the rules above // -->
 	<!-- For more information, please see the documentation for "THEMES" -->
     <link rel="stylesheet" id="switch-theme-js" href="${request.contextPath}/css/themes/default.css?v=1">   
-	
+
    	<!-- To switch to full width -->
     <link rel="stylesheet" id="switch-width" href="${request.contextPath}/css/full-width.css?v=1">
     
 	<!-- Webfonts -->
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,400,700' type='text/css'>
-	
+
 	<!-- All javascripts are located at the bottom except for HTML5 Shim -->
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
    		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
    		<script src="${request.contextPath}/js/include/respond.min.js"></script>
    	<![endif]-->
-	
+
 	<!-- For Modern Browsers -->
 	<link rel="shortcut icon" href="${request.contextPath}/img/favicons/favicon.png">
 	<!-- For everything else -->
@@ -76,7 +76,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="${request.contextPath}/img/favicons/apple-touch-icon-ipad.png">
 	<!-- For iPhone 3G, iPod Touch and Android -->
 	<link rel="apple-touch-icon-precomposed" href="${request.contextPath}/img/favicons/apple-touch-icon.png">
-	
+
 	<!-- iOS web-app metas -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -87,7 +87,7 @@
 	<link rel="apple-touch-startup-image" href="${request.contextPath}/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
 	<link rel="apple-touch-startup-image" href="${request.contextPath}/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
 	<link rel="apple-touch-startup-image" href="${request.contextPath}/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
-	
+
   </head>
 
   <body>
@@ -98,16 +98,16 @@
 				<div id="page-content">
 					<!-- page header -->
 					<h1 id="page-header">Ajouter un Kanban</h1>	
-					
+
 					<div class="fluid-container">
-						
+
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
-							
+
 							<!-- row-fluid -->
-							
+
 							<div class="row-fluid">
-								
+
 								<article class="span12">
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
@@ -116,7 +116,7 @@
 									    </header>
 									    <!-- wrap div -->
 									    <div>
-									    
+
 									        <div class="jarviswidget-editbox">
 									            <div>
 									                <label>Title:</label>
@@ -145,15 +145,19 @@
                                                                                       <fieldset class="form-horizontal themed">
                                                                                         <g:render template="form"/>
                                                                                       </fieldset>
-                                                                                      <fieldset class="buttons">
-                                                                                        <g:submitButton  class="btn btn-primary medium" name="create" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                                                                                      <fieldset class="aside-buttons span11">
+                                                                                        <table  class="table responsive">
+                                                                                          <th><g:link  action="index" controller="kanban"  class=" btn btn-warning">Annuler</g:link>   </th>
+                                                                                          <th><g:submitButton  class="btn btn-primary" name="create" value="Créer" /> </th>
+                                                                                        </table>
+                                                                                        
                                                                                       </fieldset>
                                                                                     </g:form>
                                                                                   </div>
                                                                                   
                                                                                   
 									        <!-- content goes here -->
-										
+
 										    </div>
 										    <!-- end content-->
 									    </div>
@@ -162,13 +166,13 @@
 									<!-- end widget -->
 								</article>
 							</div>
-							
+
 							<!-- end row-fluid -->
 
 							<!-- row-fluid -->
-							
-							
-							
+
+
+
 						</section>
 						<!-- end widget grid -->
 					</div>		
@@ -178,9 +182,9 @@
                                 
                                                                
 				<!-- end main content -->
-			
+
 <g:render template="/menues/mainright" />
-	
+
 	<!-- end footer -->
 
     <!--================================================== -->
@@ -209,7 +213,7 @@
     
     <!-- REQUIRED: Sleek scroll UI  -->
     <script src="${request.contextPath}/js/include/slimScroll.min.js"></script>
-	
+
 	<!-- REQUIRED: Datatable components -->
 	<script src="${request.contextPath}/js/include/jquery.dataTables.min.js"></script> 
 	<script src="${request.contextPath}/js/include/DT_bootstrap.min.js"></script>
@@ -224,18 +228,18 @@
 	<script type="text/javascript">
 		var ismobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));	
 	    if(!ismobile){
-	    	
+
 	    	/** ONLY EXECUTE THESE CODES IF MOBILE DETECTION IS FALSE **/
-	    	
+
 	    	/* REQUIRED: Datatable PDF/Excel output componant */
-	    	
+
 	    	document.write('<script src="${request.contextPath}/js/include/ZeroClipboard.min.js"><\/script>');
 	    	document.write('<script src="${request.contextPath}/js/include/TableTools.min.js"><\/script>'); 
 	    	document.write('<script src="${request.contextPath}/js/include/select2.min.js"><\/script>');
 	    	document.write('<script src="${request.contextPath}/js/include/jquery.excanvas.min.js"><\/script>');
 	    	document.write('<script src="${request.contextPath}/js/include/jquery.placeholder.min.js"><\/script>');
 	    }else{
-	    	
+
 	    	/** ONLY EXECUTE THESE CODES IF MOBILE DETECTION IS TRUE **/
 
 	    	document.write('<script src="${request.contextPath}/js/include/responsive-tables.min.js"><\/script>');
@@ -244,7 +248,7 @@
 
 	<!-- REQUIRED: iButton -->
     <script src="${request.contextPath}/js/include/jquery.ibutton.min.js"></script>
-	
+
 	<!-- REQUIRED: Justgage animated charts -->
 	<script src="${request.contextPath}/js/include/raphael.2.1.0.min.js"></script>
     <script src="${request.contextPath}/js/include/justgage.min.js"></script>
@@ -260,7 +264,7 @@
     <script src="${request.contextPath}/js/include/jarvis.widget.min.js"></script>
     <script src="${request.contextPath}/js/include/mobiledevices.min.js"></script>
     <!-- DISABLED (only needed for IE7 <script src="${request.contextPath}/js/include/json2.js"></script> -->
-	
+
 	<!-- REQUIRED: Full Calendar -->
     <script src="${request.contextPath}/js/include/jquery.fullcalendar.min.js"></script>		
     
