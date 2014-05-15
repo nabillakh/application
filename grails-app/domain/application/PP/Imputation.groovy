@@ -6,7 +6,7 @@ import application.communication.*
 class Imputation {
     
     OF of
-    Event event
+    EventEffectif eventEffectif
     Float tempsImpute
     
     Boolean realise
