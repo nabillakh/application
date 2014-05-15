@@ -111,29 +111,29 @@ class ImputationController {
     
     def feuilleImputation() {
         // moi user
+        // def per = Effectif.get(springSecurityService.principal.id)
         def kanbanInstanceList = Kanban.list()
         def date = new Date() 
         def semaine = date.toCalendar().get(Calendar.WEEK_OF_YEAR)
         def annee = date.toCalendar().get(Calendar.YEAR)
-        println(semaine)
-        println(annee)
         
         
-        // Get calendar, clear it and set week number and year.
         Calendar calendar = Calendar.getInstance();
         calendar.clear();
         calendar.set(Calendar.WEEK_OF_YEAR, semaine);
         calendar.set(Calendar.YEAR, annee);
-
+        // permet d'avoir le premier jour de la semaine de la date en cours
         Date premierJour = calendar.getTime();
         
         
-        
-// Now get the first day of week.
-        
-        
-        
-        [kanbanInstanceList : kanbanInstanceList, semaine : semaine]
+        [kanbanInstanceList : kanbanInstanceList, semaine : semaine, annee : annee]
         
     }
+    
+    def imputationSemaine(int annee, int semaine) {
+        println(annee)
+    }
+    
+    
+    
 }
