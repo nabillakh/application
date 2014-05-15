@@ -2008,3 +2008,395 @@ Cannot resolve which method to invoke for [null] due to overlapping prototypes b
 	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
 	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
 	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 09:25:17,112 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 09:25:18,527 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 10:00:14,819 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\ImputationController$_tt__delete_closure13_closure21.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-15 10:00:15,762 [FileSystemWatcher: files=#18 cl=groovy.lang.GroovyClassLoader@424aaec5] ERROR plugins.AbstractGrailsPluginManager  - Plugin [domainClass:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\domain\application\PP\Imputation.groovy]: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+groovy.lang.GroovyRuntimeException: Ambiguous method overloading for method grails.spring.BeanBuilder#registerBeans.
+Cannot resolve which method to invoke for [null] due to overlapping prototypes between:
+	[interface org.codehaus.groovy.grails.commons.spring.RuntimeSpringConfiguration]
+	[interface org.springframework.beans.factory.support.BeanDefinitionRegistry]
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 10:00:24,511 [Thread-10] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\ImputationService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+2014-05-15 10:00:58,885 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 10:01:00,208 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 11:40:20,470 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_notFound_closure9.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_notFound_closure9_closure14.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_$tt__update_closure11.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__update_closure11_closure18.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__delete_closure12_closure19.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib$_closure1_closure3.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+7 errors
+
+2014-05-15 11:49:08,504 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 21: The current scope already contains a variable of the name effectifInstance
+ @ line 21, column 16.
+              def effectifInstance = Effectif.get(springSecurityService.principal.id)
+                  ^
+
+1 error
+
+2014-05-15 11:49:54,908 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__save_closure9_closure14.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_$tt__update_closure10.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__update_closure10_closure17.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__delete_closure11_closure18.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+5 errors
+
+2014-05-15 11:50:45,517 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 11:50:46,140 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 12:09:46,170 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-15 12:11:26,657 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 25: The current scope already contains a variable of the name per
+ @ line 25, column 17.
+               def per = Effectif.get(springSecurityService.principal.id)
+                   ^
+
+1 error
+
+2014-05-15 12:11:52,032 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 22: unexpected token: per @ line 22, column 24.
+             println('cc 'per)
+                          ^
+
+1 error
+
+2014-05-15 12:12:23,348 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_notFound_closure8_closure12.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__delete_closure11_closure18.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+2 errors
+
+2014-05-15 12:12:36,228 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\RH\EffectifController$_tt__delete_closure11_closure18.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-15 12:14:41,188 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 12:14:42,146 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 13:26:55,383 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@533deb47] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:28:41,317 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@533deb47] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:32:42,605 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@64dc15b6] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:32:51,891 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@27d3c85a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:38:03,823 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@5f270347] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:39:01,966 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@24b988a3] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:40:24,611 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy: 43: The current scope already contains a variable of the name per
+ @ line 43, column 12.
+          def per = effectifInstance.id
+              ^
+
+1 error
+
+2014-05-15 13:40:46,400 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@27d3c85a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:41:41,779 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@57aebb93] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:49:47,516 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 28: expecting '(', found 'per' @ line 28, column 9.
+           per = effectifInstance.id
+           ^
+
+1 error
+
+2014-05-15 13:50:50,267 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@32cd1288] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:51:17,853 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@606423e2] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:51:43,148 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@32cd1288] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:52:26,556 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@680fd176] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:52:35,813 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@364f4a06] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:53:27,879 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@70a96aee] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:54:05,155 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@1fa4b5b9] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:54:39,192 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@778a7d6] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 13:56:37,184 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 13:56:38,270 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 13:59:36,131 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 13:59:37,012 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-15 14:41:56,241 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 29: unexpected token: effectif @ line 29, column 22.
+           println(show effectif)
+                        ^
+
+1 error
+
+2014-05-15 14:42:16,204 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\RH\EffectifController.groovy: 29: unexpected token: effectif @ line 29, column 22.
+           println(show effectif)
+                        ^
+
+1 error
+
+2014-05-15 14:42:49,447 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy: 43: unexpected token: effectif @ line 43, column 23.
+            println(list effectif)
+                         ^
+
+1 error
+
+2014-05-15 14:42:57,110 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 14:42:57,325 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@2e722e70] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 14:43:32,122 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:27:19,098 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@9b20bb] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:29:03,882 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@380b93a9] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:29:47,366 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanService$_ordonnancementOF_closure5.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-15 15:29:47,462 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:29:55,002 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@380b93a9] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:30:22,589 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@57fff4da] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:31:24,207 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@71859170] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:31:31,983 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@71859170] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:32:27,597 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:32:28,126 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@7354a374] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:33:43,022 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@57fff4da] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:33:53,557 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:36:08,182 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:38:29,438 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@4f2bcbe8] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:38:30,031 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@213de3a7] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:38:53,162 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@213de3a7] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:39:09,812 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@2e722e70] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:39:14,109 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@77de9a69] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:40:08,162 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@57fff4da] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:40:35,608 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@77de9a69] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:41:04,927 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy: 41: unexpected token: Effectif @ line 41, column 22.
+       private Kanban[] Effectif[] listeKanbanEffectif(Effectif effectifInstance) {
+                        ^
+
+1 error
+
+2014-05-15 15:41:31,441 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@4f2bcbe8] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:50:44,003 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@bb2e023] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:50:45,012 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@380b93a9] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:51:34,858 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@2e722e70] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:52:04,905 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@4ddbbde3] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:59:00,901 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@74a05624] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 15:59:15,761 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@4f2bcbe8] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:07:56,927 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@2f6f5b25] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:08:05,181 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@19b84971] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:08:56,812 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@1a43a47d] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:10:11,681 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@2f6f5b25] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:10:58,135 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@498e3b14] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:11:01,377 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@5a96cc74] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:11:33,201 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@77de9a69] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:11:33,256 [FileSystemWatcher: files=#11 cl=groovy.lang.GroovyClassLoader@206abb66] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:12:39,447 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@71859170] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:13:10,934 [FileSystemWatcher: files=#10 cl=groovy.lang.GroovyClassLoader@640d8d1b] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:13:57,168 [FileSystemWatcher: files=#15 cl=groovy.lang.GroovyClassLoader@79cb0f1a] ERROR plugins.AbstractGrailsPluginManager  - Plugin [services:2.3.6] could not reload changes to file [C:\Users\youcef\Documents\GitHub\application\grails-app\services\application\PP\KanbanService.groovy]: Cannot get property 'cacheOperationSource' on null object
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:181)
+	at java.lang.Thread.run(Thread.java:744)
+2014-05-15 16:21:22,437 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib$_closure2_closure4.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+1 error
+
+2014-05-15 16:34:10,660 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\grails-app\controllers\application\communication\EventController.groovy: 226: expecting '}', found 'flush' @ line 226, column 28.
+        eventInstance..delete flush:true
+                              ^
+
+1 error
+
+2014-05-15 17:34:51,786 [Thread-10] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\communication\EventController.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\communication\EventController$_tt__save_closure11_closure13.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\KanbanTagLib.class (L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte)
+
+3 errors
+

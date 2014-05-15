@@ -16,7 +16,7 @@ class EventController {
     def eventService
     def springSecurityService
     
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "POST"]
     
     def index(Integer max) {
         // envoi de la liste de kanban
@@ -213,17 +213,20 @@ class EventController {
     @Transactional
     def delete() {
 
-       
-def monId = params.id
-def eventInstance = Event.get(monId)
-        eventInstance.delete flush:true
+  println('dans delet') 
+  // recupere en params le json de l'event modifie. traduit en joda les dates puis cree l'event dans la bdd        
+        def monId = params.id
+        println(monId)
+        Event eventInstance = Event.get(monId)
+  
+            
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'EventEffectif.label', default: 'EventEffectif'), eventEffectifInstance.id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
+            println('avant suppression')
+            println(eventInstance)
+            eventInstance.delete flush:true
+            println('aprés supptression')
+            println(eventInstance)
+            redirect action: "list"
+        
     }
 }

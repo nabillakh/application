@@ -35,8 +35,7 @@
 							<!-- end dropdown mini-inbox-->
 							
 							<!-- Tasks -->
-                                                        <kanbans:kanbanmini>
-                                                        </kanbans:kanbanmini>
+                                                       
                                                           
                                                         
                                                         
@@ -95,7 +94,7 @@
                                         <center>
 					<div class="my-profile">
                                           Bienvenue
-                                          <sec:ifLoggedIn><sec:username/></sec:ifLoggedIn>
+                                       <g:link  action="show" controller="Effectif" id="${sec.loggedInUserInfo(field:"id")}">   <sec:ifLoggedIn><sec:username/></sec:ifLoggedIn></g:link>
 					<span><a href="javascript:void(0);">Modifier profil </a></span>
 					</div>
                                         </center>

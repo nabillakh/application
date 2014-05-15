@@ -680,11 +680,17 @@
 { "label" : "Supprimer",
       
     "callback": function() {
+        
+        
         $.ajax({
         url: '/application/event/delete',
         type: 'POST',
         format: 'json',
-        data: id ,
+        data: {
+                            id: event.id 
+                            
+                           
+                        },
         
      error: function () {
        alert('probleme denvoi du json deleteeee '+id);

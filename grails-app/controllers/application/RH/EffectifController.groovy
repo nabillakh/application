@@ -1,13 +1,21 @@
 package application.RH
 
+import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
+import org.codehaus.groovy.grails.web.json.JSONObject
+import application.pilotage.*
+import application.PP.*
 
+import application.*
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class EffectifController {
-
+       def springSecurityService
+        def kanbanService
+        def eventService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -16,6 +24,12 @@ class EffectifController {
     }
 
     def show(Effectif effectifInstance) {
+        def per = effectifInstance
+        
+        println('show effectif')
+        println(per)
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif(per)
+        [kanbanInstanceList:kanbanInstanceList]
         respond effectifInstance
     }
 

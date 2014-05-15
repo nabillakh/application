@@ -38,10 +38,14 @@ class KanbanService {
         return maListe
     }
     
-    private Kanban[] listeKanbanEffectif() {
+    private Kanban[] listeKanbanEffectif(Effectif effectifInstance) {
        def maListe = []
-       def mesOfs = eventService.mesOF()
-       mesOfs.each() { of ->
+       def per = effectifInstance
+         println('listservic')
+        println( per)
+       
+       def mesOfs = eventService.mesOF(per)
+           mesOfs.each() { of ->
            maListe.add(of.kanban)
        }
         maListe.unique()

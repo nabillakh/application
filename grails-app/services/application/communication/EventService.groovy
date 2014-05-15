@@ -28,12 +28,16 @@ class EventService {
 
            // liste des OF pour les event
 
-    private OF[] mesOF() {
+    private OF[] mesOF(Effectif effectifInstance) {
         def lesOF = [] 
-        def per = Effectif.get(springSecurityService.principal.id)
+        println('event')
+        
+       
+       println('perdddd')
+       
         try {
             def query = OF.whereAny {
-                affectes {per}
+                affectes {}
             }
             lesOF = query.list()
         }
