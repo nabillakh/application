@@ -11,14 +11,16 @@ class EventService {
     def kanbanService
     def springSecurityService
     
-    def imputation(Event e, OF of)  {
-        def monEventOf = new Imputation(event : e, of : of, realise : false)
+    def imputation(EventEffectif e, OF of)  {
+        println("dans imputation service")
+        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : false, tempsImpute : 0)
         monEventOf.save()       
+        println("creation de l'imputation?" + monEventOf.id)
       
     }
     
-    def simputer(Event e, OF of) {
-        def monEventOf = new Imputation(event : e, of : of, realise : true)
+    def simputer(EventEffectif e, OF of) {
+        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : true, tempsImpute : 0)
         monEventOf.save()            
     }
     
@@ -62,13 +64,15 @@ class EventService {
     }
     
     // associe l'organisateur aux participants à la création de l'event
-    private void organiserEvent(Event e) {
+    private EventEffectif organiserEvent(Event e) {
         def per = Effectif.get(springSecurityService.principal.id)
         def eventEffectif = new EventEffectif(event : e, recepteur : per, participe : true)
         eventEffectif.save(flush:true)
         e.organisateur=per
         e.addToParticipants(eventEffectif)
         e.save(flush:true)
+        println("mon event effectif :" + eventEffectif.id)
+        return eventEffectif
     }
 
      // liste d'event concernant le principal
