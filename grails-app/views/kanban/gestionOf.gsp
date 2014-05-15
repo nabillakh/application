@@ -167,7 +167,7 @@
                                                                                          
                                                                                           
                                                                                                        <div class="input-append date" id="datepicker-js" data-date="${fin}" data-date-format="dd/mm/yyyy">
-                                                                                                    <input class="datepicker-input" size="16" type="text"   name="dateDebutPlanifie"  value="${deb}"    placeholder="Select a date" />
+                                                                                                    <input class="datepicker-input" size="16" type="text"   name="dateDebutPlanifie" id="dateDebutPlanifie${i}"  value="${deb}"    placeholder="Select a date" />
                                                                                                     <span class="add-on"><i class="cus-calendar-2"></i></span>
                                                                                                      </div>
                                                                                           
@@ -180,7 +180,7 @@
                                                                                           <div>
                                                                                            
                                                                                                     <div class="input-append date" id="datepicker-js" data-date="${fin}" data-date-format="dd/mm/yyyy">
-                                                                                                    <input class="datepicker-input" size="16" type="text"  value="${fin}" name="dateFinPlanifie"    placeholder="Select a date" />
+                                                                                                    <input class="datepicker-input" size="16" type="text"  value="${fin}" name="dateFinPlanifie" id="dateFinPlanifie${i}" placeholder="Select a date" />
                                                                                                     <span class="add-on"><i class="cus-calendar-2"></i></span>
                                                                                                      </div>
              

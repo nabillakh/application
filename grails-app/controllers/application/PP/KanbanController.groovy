@@ -142,34 +142,51 @@ class KanbanController {
     
     // permet d'editer les OF d'un kanban
     def majOF() {  
+        println("dans majOF")
         // rapatriement et conversion des variables
-        impleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd")
+        
+        println(params.dateDebutPlanifie)
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
         Date dateDebutPlanifie = sdf.parse(params.dateDebutPlanifie)
+        
+        println(dateDebutPlanifie)
         Date dateFinPlanifie = sdf.parse(params.dateFinPlanifie)
+        println("date maj" + dateFinPlanifie)
         def id = Long.parseLong(params.monId)
+        
+        println(id)
         def charge = Float.parseFloat(params.charge)
        def affectes = []
         def affect = params.affectes
+        
+        println(affect)
         List<String> items = Arrays.asList(affect.split("\\s*,\\s*"));
         items.each() {aff->
             def affs = Effectif.findById(Long.parseLong(aff))
             affectes.add(affs)        
         }
         
+        println(affectes)
         // recherche of
         def ancienOf = OF.findById(id) 
+        println(ancienOf.phase.nom)
         // maj de l'of
+        println("charge "+charge)
         ancienOf.setChargePlanifiee(charge)
-        ancienOf.setDateFinPlanifie(dateFinPlanifie.toDate())
-        ancienOf.setDateDebutPlanifie(dateDebutPlanifie.toDate())
+        println(ancienOf.chargePlanifiee)
+        ancienOf.setDateFinPlanifie(dateFinPlanifie)
+        println(ancienOf.dateFinPlanifie)
+        ancienOf.setDateDebutPlanifie(dateDebutPlanifie)
         //ancienOf.setAffectes(affectes)        
         
+        println(ancienOf.dateDebutPlanifie)
         // permet d'ajouter des effectifs sur l'of et envoie un message automatiquement
         affectes.each() {nvEff ->
                 println("dans boucle" + nvEff)
             if(ancienOf.affectes.find {it.id == nvEff.id}) {
             }   
             else {
+                println("nv effectif" + nvEff.id)
                 ancienOf.affectes.add(nvEff)
                 messageService.posterMessageKanban("Vous êtes chargé d'une nouvelle activité" , ancienOf.kanban.id)
             }
