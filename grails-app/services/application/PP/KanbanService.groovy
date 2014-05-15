@@ -295,7 +295,7 @@ class KanbanService {
         listeCharge = Imputation.findAll("from Imputation as b where b.of=?", [of])
         def charge = 0
         listeCharge.each() { monImputation ->
-            charge += monImputation.event.durationMinutes / 60
+            charge += monImputation.eventEffectif.event.durationMinutes / 60
         }
         return charge
     }   
