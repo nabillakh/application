@@ -104,12 +104,56 @@
 						
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
-							
+							<div class="inner-spacer widget-content-padding">
+												<!-- content goes here -->
+
+												<!-- .row-fluid -->
+												<div class="row-fluid">
+
+													<!-- span6 -->
+													<div class="pull-right">
+                                                                                                           <div class="pagination pagination-small">
+																Semaine à imputer : </br><ul>
+																	<li>
+																		<a href="javascript:void(0);">«</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);">${semaine-2}</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);">${semaine-1}</a>
+																	</li>
+																	<li class="active">
+																		<a href="javascript:void(0);">${semaine}</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);">${semaine+1}</a>
+																	</li>
+																	<li>
+																		<a href="javascript:void(0);">»</a>
+																	</li>
+																</ul>
+
+															
+														</div>
+														<!-- end well -->
+
+													</div>
+													<!-- end span6 -->
+
+													<!-- span6 -->
+													
+
+												</div>
+												<!-- end content-->
+											</div>
+                                                
 
 							<!-- row-fluid -->
 							
 							<div class="row-fluid">
                                                           <article class="span12">
+                                                            
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
 									    <header>
@@ -140,7 +184,7 @@
 									        <div class="inner-spacer"> 
 									        <!-- content goes here -->
                                                                                 
-												<table class="table table-striped table-bordered responsive" id="dtable">
+												<table class="table hover table-bordered responsive">
 													<thead>
 														<tr>
                                                                                                                   <th>Nom du projet</th>
@@ -156,6 +200,10 @@
                                                                                                               <td><g:link action="show" controller="Kanban" id="${kanbanInstance.id}">${kanbanInstance.nomKanban}</g:link></td>
                                                                                                           
                                                                                                            <td>${kanbanInstance.getChargeAgenda()}</td>
+                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
+                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
+                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
+                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
                                                                                                           </tr>
                                                                                                           </g:each>
 													</tbody>
@@ -170,14 +218,14 @@
 								</article>
                                                           
 							</div>
-							
-							<!-- end row-fluid -->
-                                                        <g:link  action="create" controller="Kanban" class="btn btn-primary medium pull-right" >Ajouter un Kanban</g:link>
-                                                        <div></div>
+                                                        
                                                         
                                                         
 
 						</section>
+                                                
+                                                
+                                                
 						<!-- end widget grid -->
 					</div>		
 				</div>
