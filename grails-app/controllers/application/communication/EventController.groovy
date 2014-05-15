@@ -166,11 +166,11 @@ class EventController {
         
         eventInstance.save()
         // met le user principal en organisateur + dans les participants
-        eventService.organiserEvent(eventInstance)
-        
+        def eventEffectif = eventService.organiserEvent(eventInstance)
+        println("retour dans controleur : " + eventEffectif.id)
         // creation de l'imputation
         
-        eventService.imputation(eventInstance, OF.get(params.id))
+        eventService.imputation(eventEffectif, OF.get(params.id))
         
         
         
