@@ -114,6 +114,7 @@ class MessageController {
     
     
     def obtenirMessage() {
+        println("dans controlleur")
         def mesMessages
         if(params.kanban == null) {
             mesMessages = Message.list()
@@ -139,5 +140,13 @@ class MessageController {
         messageService.posterMessageKanban(message , kanban)
         render "<script>obtenirMessage()</script>"
     }
+    
+    def obtenirMessageEffectif() {
+        println("dans controlleur3")
+        def mesMessages = Message.list()
+        def moi = messageService.lookupCurrentPerson()
+        [mesMessages:mesMessages.reverse(), moi:moi]
+    }
+    
     
 }

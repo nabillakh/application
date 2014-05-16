@@ -7,7 +7,7 @@ class EventEffectif {
 
     Effectif recepteur
     Event event
-    Date dateCreation= new Date()
+    Date dateCreation= new Date()   
     
     Boolean participe 
     

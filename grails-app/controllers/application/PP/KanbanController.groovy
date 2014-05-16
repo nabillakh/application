@@ -261,5 +261,16 @@ class KanbanController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    
+    
+    
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def obtenirKanbanEffectif() {
+        println(params.effectif + "ok")
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif()
+        [kanbanInstanceList:kanbanInstanceList]
+    }
+    
+    
        
 }
