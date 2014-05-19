@@ -133,6 +133,7 @@
                                                                                       <div class="controls">
 																	<div class="input-append span10">  
                                                                                     <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
+                                                                                      <input type="hidden" id="message_id" name="country_id" value="" />
                                                                                     <div class="btn-group">
 						                                                    <button class="btn dropdown-toggle medium" data-toggle="dropdown">Action <span class="caret"></span></button>
 						                                                    <ul class="dropdown-menu btn-small pull-right">
