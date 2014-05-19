@@ -114,7 +114,6 @@ class MessageController {
     
     
     def obtenirMessage() {
-        println("dans controlleur")
         def mesMessages
         if(params.kanban == null) {
             mesMessages = Message.list()
@@ -142,7 +141,6 @@ class MessageController {
     }
     
     def obtenirMessageEffectif() {
-        println("dans controlleur3")
         def mesMessages = Message.list()
         def moi = messageService.lookupCurrentPerson()
         [mesMessages:mesMessages.reverse(), moi:moi]

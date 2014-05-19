@@ -131,9 +131,10 @@
                                                                                       <div class="row-fluid chat-box">
                                                                                         
                                                                                       <div class="controls">
+                                                                                        <input type="hidden" id="message_id" name="message_id" value="" />
 																	<div class="input-append span10">  
                                                                                     <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
-                                                                                      <input type="hidden" id="message_id" name="country_id" value="" />
+                                                                                      
                                                                                     <div class="btn-group">
 						                                                    <button class="btn dropdown-toggle medium" data-toggle="dropdown">Action <span class="caret"></span></button>
 						                                                    <ul class="dropdown-menu btn-small pull-right">
@@ -215,51 +216,38 @@
                                                                 }
                                                                 maj();
                                                                 $(document).ready(function() {
-    $.ajax({
-        type: 'GET',
-       url: '/application/Effectif/listEffectif',
-        dataType: "json",
-        
-        success : function(response) {
-            //Create a map.
-            var data =
-                $.map(response, function(item){
-                  console.log("id: " + item.id);
-                  console.log("nom: " + item.nom );
-                  
-                  return{
-                        id: item.id,
-                        value: item.nom 
-                       
-                    }
-                });
- 
- 
-            $("#messageBox").autocomplete({
-                source: data,
-               beforeRetrieve: function(string){
- if (string.indexOf('@') == 0) return "";
- return string;
-},
-              
-                select: function (event, ui){
-                    console.log("selected id:" + ui.item.id);
-                    console.log("selected nom:" + ui.item.value);
-                  
- 
-                    
-                    //change the value of hidden field to the country's id.
-                    $('#message_id').val(ui.item.id);
-                }
-                
-    
-                
-            });
- 
-        }
-    });
- 
-});                                            
+                                                                  $.ajax({
+                                                                    type: 'GET',
+                                                                    url: '/application/Effectif/listEffectif',
+                                                                    dataType: "json",
+                                                                    success : function(response) {
+                                                                    //Create a map.
+                                                                    var data =
+                                                                            $.map(response, function(item){
+                                                                      console.log("id: " + item.id);
+                                                                      console.log("nom: " + item.nom );
+                                                                      return{
+                                                                        id: item.id,
+                                                                        value: item.nom 
+                                                                      }
+                                                                    });
+                                                                    $("#messageBox").autocomplete({
+
+                                                                    source: data,
+                                                                    beforeRetrieve: function(string){
+                                                                      if (string.indexOf('@') == 0) return "";
+                                                                      return string;
+                                                                    },
+                                                                    select: function (event, ui){
+                                                                      console.log("selected id:" + ui.item.id);
+                                                                      console.log("selected nom:" + ui.item.value);
+                                                                      //change the value of hidden field to the country's id.
+                                                                      $('#message_id').val(ui.item.id);
+                                                                      }
+                                                                            });
+                                                                            }
+                                                                            });
+                                                                            });                                            
    
       
       
