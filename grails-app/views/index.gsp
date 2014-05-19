@@ -213,6 +213,55 @@
                                                                   setTimeout('pollMessages()', 25000);
                                                                 }
                                                                 maj();
+                                                                $(document).ready(function() {
+    $.ajax({
+        type: 'GET',
+       url: '/application/Effectif/listEffectif',
+        dataType: "json",
+        
+        success : function(response) {
+            //Create a map.
+            var data =
+                $.map(response, function(item){
+                  console.log("id: " + item.id);
+                  console.log("nom: " + item.nom );
+                  
+                  return{
+                        id: item.id,
+                        value: item.nom 
+                       
+                    }
+                });
+ 
+ 
+            $("#messageBox").autocomplete({
+                source: data,
+               beforeRetrieve: function(string){
+ if (string.indexOf('@') == 0) return "";
+ return string;
+},
+              
+                select: function (event, ui){
+                    console.log("selected id:" + ui.item.id);
+                    console.log("selected nom:" + ui.item.value);
+                  
+ 
+                    
+                    //change the value of hidden field to the country's id.
+                    $('#message_id').val(ui.item.id);
+                }
+                
+    
+                
+            });
+ 
+        }
+    });
+ 
+});                                            
+   
+      
+      
                                                                                                                                
                                                         </script>
 						</section>
