@@ -23,33 +23,8 @@ class EventService {
         def monEventOf = new Imputation(eventEffectif : e, of : of, realise : true, tempsImpute : 0)
         monEventOf.save()            
     }
-    
-        
-
-           // liste des OF pour les event
-
-    private OF[] mesOF(Effectif effectifInstance) {
-        def lesOF = [] 
-        println('event')
-        
-       
-       println('perdddd')
-       
-        try {
-            def query = OF.whereAny {
-                affectes {}
-            }
-            lesOF = query.list()
-        }
-        
-        catch (NullPointerException n){
-        }
-        
-        return lesOF
-    }
-           // liste des OF pour la to do list de la semaine
-
-    private OF[] maToDo() {
+    // pour ma todo
+       private OF[] maToDo() {
         def lesOF = [] 
         def aujourdhui = new Date()
         def per = Effectif.get(springSecurityService.principal.id)
@@ -66,6 +41,7 @@ class EventService {
         
         return lesOF
     }
+    
     
     // associe l'organisateur aux participants à la création de l'event
     private EventEffectif organiserEvent(Event e) {
