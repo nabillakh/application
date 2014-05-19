@@ -264,8 +264,9 @@ class KanbanController {
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def obtenirKanbanEffectif() {
-        println(params.effectif + "ok")
-        def kanbanInstanceList = kanbanService.listeKanbanEffectif()
+        println(params.effectif + "ok 2 ")
+        def monEffectif = Effectif.get(Integer.parseInt(params.effectif))
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif(monEffectif)
         [kanbanInstanceList:kanbanInstanceList]
     }
     
