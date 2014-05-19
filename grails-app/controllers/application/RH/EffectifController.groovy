@@ -16,7 +16,7 @@ class EffectifController {
        def springSecurityService
         def kanbanService
         def eventService
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", listEffectif:"GET"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -24,6 +24,7 @@ class EffectifController {
     }
 
     def show(Effectif effectifInstance) {
+      
         def per = effectifInstance
         
         println('show effectif')
@@ -32,7 +33,13 @@ class EffectifController {
         [kanbanInstanceList:kanbanInstanceList]
         respond effectifInstance
     }
-
+def listEffectif(){
+    
+    def user = Effectif.list()
+ 
+        render user as JSON
+        
+}
     def create() {
         respond new Effectif(params)
     }
