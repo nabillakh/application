@@ -33,7 +33,7 @@ class OF {
     Date dateDebutPlanifie = new Date()
     Date dateFinPlanifie
     
-    static hasMany = [affectes : Effectif] 
+    static hasMany = [affectes : OFEffectif] 
     
     static constraints = {
         chargePlanifiee nullable : true

@@ -17,6 +17,8 @@ class Effectif {
 	boolean accountLocked = false
 	boolean passwordExpired 
 
+        static hasMany = [mesOF : OFEffectif]
+        
 	static transients = ['springSecurityService', 'listeKanban']
         
         public Kanban[] getListeKanban() {

@@ -144,22 +144,17 @@ class KanbanController {
     def majOF() {  
         println("dans majOF")
         // rapatriement et conversion des variables
-        
-        println(params.dateDebutPlanifie)
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
         Date dateDebutPlanifie = sdf.parse(params.dateDebutPlanifie)
         
-        println(dateDebutPlanifie)
         Date dateFinPlanifie = sdf.parse(params.dateFinPlanifie)
-        println("date maj" + dateFinPlanifie)
         def id = Long.parseLong(params.monId)
         
-        println(id)
         def charge = Float.parseFloat(params.charge)
        def affectes = []
         def affect = params.affectes
         
-        println(affect)
+        println("id des gens affectes :" + affect)
         List<String> items = Arrays.asList(affect.split("\\s*,\\s*"));
         items.each() {aff->
             def affs = Effectif.findById(Long.parseLong(aff))
@@ -169,32 +164,35 @@ class KanbanController {
         println(affectes)
         // recherche of
         def ancienOf = OF.findById(id) 
-        println(ancienOf.phase.nom)
+        
         // maj de l'of
-        println("charge "+charge)
+        
         ancienOf.setChargePlanifiee(charge)
-        println(ancienOf.chargePlanifiee)
+        
         ancienOf.setDateFinPlanifie(dateFinPlanifie)
-        println(ancienOf.dateFinPlanifie)
+        
         ancienOf.setDateDebutPlanifie(dateDebutPlanifie)
         //ancienOf.setAffectes(affectes)        
         
-        println(ancienOf.dateDebutPlanifie)
+        
         // permet d'ajouter des effectifs sur l'of et envoie un message automatiquement
         affectes.each() {nvEff ->
-                println("dans boucle" + nvEff)
-            if(ancienOf.affectes.find {it.id == nvEff.id}) {
+            
+            if(ancienOf.affectes.find {it.effectif == nvEff.id}) {
             }   
             else {
                 println("nv effectif" + nvEff.id)
-                ancienOf.affectes.add(nvEff)
+                def nvOfEff = new OFEffectif(effectif : nvEff, of : ancienOf)
+                nvOfEff.save()
+                println("id de ofeffectif : " + nvOfEff.id)
+                ancienOf.affectes.add(nvOfEff)
                 messageService.posterMessageKanban("Vous êtes chargé d'une nouvelle activité" , ancienOf.kanban.id)
             }
         }
         
         // permet de supprimer des effectifs sur l'of et envoie un message automatiquement
         ancienOf.affectes.each() {ancienEff ->
-            if(affectes.find {it.id == ancienEff.id}) {
+            if(affectes.find {it == ancienEff.effectif}) {
             }   
             else {
                 ancienOf.removeFromAffectes(ancienEff)
