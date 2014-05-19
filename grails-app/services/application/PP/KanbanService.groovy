@@ -53,6 +53,21 @@ class KanbanService {
         return maListe
     }
     
+     
+
+           // liste des OF pour les event
+
+    private OF[] mesOF(Effectif effectifInstance) {
+        def lesOF = []         
+       def ofes = OFEffectif.findAll("from OFEffectif as b where b.effectif=?", [effectifInstance])
+       println(ofes)
+        ofes.each() {ofe ->
+            lesOF.add(ofe.of)            
+        }
+        return lesOF
+    }
+    
+    
         //--- pour la taglib'administration------------- 
    // mettre a jour les listes pour filtrer au niveau d'une entreprise
      private Famille[] listeFamille() {
