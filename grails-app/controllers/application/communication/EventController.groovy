@@ -8,6 +8,7 @@ import org.joda.time.DateTime
 import grails.converters.JSON
 
 import application.PP.*
+import application.RH.*
 
 @Transactional(readOnly = true) 
 class EventController {
@@ -20,7 +21,9 @@ class EventController {
     
     def index(Integer max) {
         // envoi de la liste de kanban
-        def mesOF = eventService.mesOF()
+        
+        def per = Effectif.get(springSecurityService.principal.id)
+        def mesOF = kanbanService.mesOF(per)
         
         params.max = Math.min(max ?: 10, 100)
         respond Event.list(params), model:[eventInstanceCount: Event.count(), mesOF : mesOF]
