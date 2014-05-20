@@ -217,8 +217,8 @@
                                                                 maj();
                                                                 $(document).ready(function() {
                                                                   $.ajax({
-                                                                    type: 'GET',
                                                                     url: '/application/Effectif/listEffectif',
+                                                                    type: 'GET',
                                                                     dataType: "json",
                                                                     success : function(response) {
                                                                     //Create a map.
