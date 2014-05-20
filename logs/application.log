@@ -2400,3 +2400,5 @@ C:\Users\youcef\Documents\GitHub\application\target\classes\application\PP\Kanba
 
 3 errors
 
+2014-05-20 14:48:08,765 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig
+2014-05-20 14:48:09,446 [main] WARN  webxml.WebxmlGrailsPlugin  - Did not find application config file: WebXmlConfig

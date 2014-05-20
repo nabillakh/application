@@ -23,7 +23,7 @@
                                                       
                                                       <center>
     <h4>${effectifInstance?.prenom} ${effectifInstance?.nom}</h4> 
-    <h4> Equipe: ${effectifInstance?.equipe.nom}</h4>
+   <g:link  action="show" controller="Equipe" id=" ${effectifInstance.equipe.id}"> <h4> Equipe: ${effectifInstance?.equipe.nom}</h4></g:link>
     
     <div id="start">
       <ul>

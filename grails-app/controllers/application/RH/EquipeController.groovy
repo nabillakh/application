@@ -1,13 +1,23 @@
 package application.RH
+import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
+import org.codehaus.groovy.grails.web.json.JSONObject
+import application.pilotage.*
+import application.PP.*
+import application.communication.*
 
-
+import application.*
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
+
 @Transactional(readOnly = true)
 class EquipeController {
-
+def springSecurityService
+        def kanbanService
+        def eventService
+        def messageService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -16,6 +26,7 @@ class EquipeController {
     }
 
     def show(Equipe equipeInstance) {
+        
         respond equipeInstance
     }
 
@@ -90,6 +101,31 @@ class EquipeController {
             }
             '*'{ render status: NO_CONTENT }
         }
+    }
+    
+    
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def obtenirKanbanEquipe() {
+        println(params.equipe + "dans  equipe ")
+        
+        def kanbanInstanceList = []
+       def  kanbanListParticipants = []
+        def query = Effectif.whereAny {                
+            equipe { params.equipe }
+           }
+        def malisteEffectif = query.list()
+        println(malisteEffectif + " participants ")
+        
+           malisteEffectif.each() {user -> 
+                 
+                kanbanListParticipants = kanbanService.listeKanbanEffectif(user)
+                println( kanbanListParticipants + "  kanban participants ")
+             kanbanInstanceList.addAll(kanbanListParticipants);
+              println( kanbanListParticipants + "  tout le monde ")
+        }
+        kanbanInstanceList.unique()
+       [kanbanInstanceList:kanbanInstanceList]
+       
     }
 
     protected void notFound() {

@@ -1,55 +1,121 @@
-
-<%@ page import="application.RH.Equipe" %>
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="layout" content="main3">
-		<g:set var="entityName" value="${message(code: 'equipe.label', default: 'Equipe')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#show-equipe" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="show-equipe" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<ol class="property-list equipe">
-			
-				<g:if test="${equipeInstance?.mesEffectifs}">
-				<li class="fieldcontain">
-					<span id="mesEffectifs-label" class="property-label"><g:message code="equipe.mesEffectifs.label" default="Mes Effectifs" /></span>
-					
-						<g:each in="${equipeInstance.mesEffectifs}" var="m">
-						<span class="property-value" aria-labelledby="mesEffectifs-label"><g:link controller="effectif" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${equipeInstance?.nom}">
-				<li class="fieldcontain">
-					<span id="nom-label" class="property-label"><g:message code="equipe.nom.label" default="Nom" /></span>
-					
-						<span class="property-value" aria-labelledby="nom-label"><g:fieldValue bean="${equipeInstance}" field="nom"/></span>
-					
-				</li>
-				</g:if>
-			
-			</ol>
-			<g:form url="[resource:equipeInstance, action:'delete']" method="DELETE">
-				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${equipeInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
-		</div>
-	</body>
-</html>
+<%@ page import="application.MailService" %>
+<%
+    def myService = grailsApplication.classLoader.loadClass('application.MailService').newInstance()
+%>
+  <head>
+		<meta name="layout" content="main"/>
+		<title>Sysprod</title>
+                 <g:javascript library="jquery" plugin="jquery" />
+  </head>
+
+ <sec:ifLoggedIn>
+ <g:render template="/menues/mainleft" />		
+<div id="page-content">
+    <div class="fluid-container">
+						<section id="widget-grid" class="well light">
+                                                  <div class="row-fluid">
+                                                    <article class="span3">
+    <img src="${request.contextPath}/img/start-icons/coucou.jpg" alt="" style="width: 160px; height: 160px;">
+    
+                                                    </article>
+                                                    <article class="span9">
+                                                      
+                                                      <center>
+    <h4> ${equipeInstance?.nom}</h4> 
+  
+    
+    <div id="start">
+      <ul>
+        
+      <li>
+        <a href="javascript:information(${equipeInstance.id})" title="Informations">
+          <img src="${request.contextPath}/img/start-icons/mass.png" alt="">
+          <span>Informations</span>
+        </a>
+      </li>
+        <li>
+        <a href="javascript:voirJournal(${equipeInstance.id})" title="Journal">
+          <img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
+          <span>Journal</span>
+        </a>
+      </li>
+      
+        <li>
+          
+        <a href="javascript:voirProjets(${equipeInstance.id})" title="Projets">
+          <img src="${request.contextPath}/img/start-icons/orders.png" alt="">
+          <span>Projets en cours</span>
+        </a>
+      </li>
+      <li>
+        
+        <a href="javascript:voirIndicateurs(${equipeInstance.id})" title="Indicateurs">
+          <img src="${request.contextPath}/img/start-icons/stats.png" alt="">
+          <span>Indicateurs</span>
+        </a>
+      </li>
+      </ul>
+      
+    </div>
+                                                      </center>
+                                                    </article>
+                                                  </div>
+                                                  
+                                                </section>
+      <section>
+      <div class="row-fluid">
+        <article class="span12">
+        
+        <div id="temp">
+          
+      </div>
+        
+<div class="jarviswidget" id="contenu2" data-widget-collapsed="false">
+        </div>
+          <script type="text/javascript">
+      <g:remoteFunction controller="message" action="obtenirMessageEffectif" update="contenu2"/>;
+          </script>
+        
+        </article>       
+        
+      </div>
+      </section>
+      
+      
+									    <!-- end widget div -->
+									</div>
+
+							</div>
+ 
+ 
+ <script>
+                                                          function voirJournal(monId) {
+                                                                 <g:remoteFunction controller="message" action="obtenirMessageEffectif" update="contenu2"/>;   
+                                                          }        
+                                                          function voirProjets(monId) {
+                                                                 <g:remoteFunction controller="equipe" action="obtenirKanbanEquipe"   params ="\'equipe=\' + monId" update="contenu2"/>;   
+                                                          }        
+                                                          function voirIndicateurs(monId) {
+                                                                 <g:remoteFunction controller="effectif" action="indicateurEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
+                                                          }        
+                                                          function information(monId) {
+                                                                 <g:remoteFunction controller="effectif" action="information"   params ="\'effectif=\' + monId" update="contenu2"/>;   
+                                                          }  
+                                                  
+                                                        </script>
+				
+
+<g:render template="/menues/mainright" />
+
+
+
+ 
+</sec:ifLoggedIn>
+  
+  
+  
+  
+  <sec:ifNotLoggedIn>
+    <h2> <g:link  action="index" controller="login"> <font size="3" face="georgia" color="red"> Se connecter </font></g:link> <h2>
+  </sec:ifNotLoggedIn>
