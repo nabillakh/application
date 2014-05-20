@@ -5,6 +5,7 @@ import grails.plugins.springsecurity.Secured
 import org.codehaus.groovy.grails.web.json.JSONObject
 import application.pilotage.*
 import application.PP.*
+import application.communication.*
 
 import application.*
 
@@ -16,6 +17,8 @@ class EffectifController {
        def springSecurityService
         def kanbanService
         def eventService
+        def messageService
+        
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", listEffectif:"GET"]
 
     def index(Integer max) {
@@ -122,4 +125,28 @@ def listEffectif(){
             '*'{ render status: NOT_FOUND }
         }
     }
+    
+       
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def indicateurEffectif() {
+        println("dans controleur pour indicateur")
+        def monEffectif = Effectif.get(Integer.parseInt(params.effectif))
+        def mesMessages = messageService.listeMessageAuteurEffectif(monEffectif)
+        def nbMessages = mesMessages.size()
+        println(nbMessages)
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif(monEffectif)
+        println("ok")
+        [kanbanInstanceList:kanbanInstanceList, nbMessages : nbMessages]
+    }   
+    
+    
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def information() {
+        println(params.effectif + "ok 2 ")
+        def monEffectif = Effectif.get(Integer.parseInt(params.effectif))
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif(monEffectif)
+        [kanbanInstanceList:kanbanInstanceList]
+    }
+    
+    
 }

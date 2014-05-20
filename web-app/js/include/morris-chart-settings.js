@@ -415,7 +415,7 @@ $(document).ready( function() {
        }
        
        if ($('#indicateurKanban').length){
-           
+           var nomKanban = $('#monKanban').val();
                Morris.Bar({
 		  element: 'indicateurKanban',
 		  axes: true,
@@ -428,7 +428,24 @@ $(document).ready( function() {
 		  ],
 		  xkey: 'x',
 		  ykeys: ['y', 'z', 'a'],
-		  labels: [$('#kanban'), 'Z', 'A'],
+		  labels: [nomKanban, 'Z', 'A'],
+		  stacked: true
+		});
+            }
+            
+            
+       if ($('#indicateurSocial').length){
+               Morris.Bar({
+		  element: 'indicateurSocial',
+		  axes: true,
+		  grid: true,
+		  data: [
+		    {x: 'Nombre de messages', y: $('#messagesKanban').val(), z: $('#messagesAutre').val()},
+		    {x: 'Moyenne', y: $('#messagesKanbanMoyen').val(), z: $('#messagesAutreMoyen').val()}
+		  ],
+		  xkey: 'x',
+		  ykeys: ['y', 'z'],
+		  labels: ['Sur Projets', 'Autres'],
 		  stacked: true
 		});
             }

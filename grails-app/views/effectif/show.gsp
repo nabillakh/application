@@ -27,8 +27,15 @@
     
     <div id="start">
       <ul>
+        
+      <li>
+        <a href="javascript:information(${effectifInstance.id})" title="Informations">
+          <img src="${request.contextPath}/img/start-icons/mass.png" alt="">
+          <span>Informations</span>
+        </a>
+      </li>
         <li>
-        <a href="javascript:voirJournal(${effectifInstance.id})" title="">
+        <a href="javascript:voirJournal(${effectifInstance.id})" title="Journal">
           <img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
           <span>Journal</span>
         </a>
@@ -36,28 +43,16 @@
       
         <li>
           
-        <a href="javascript:voirProjets(${effectifInstance.id})" title="">
+        <a href="javascript:voirProjets(${effectifInstance.id})" title="Projets">
           <img src="${request.contextPath}/img/start-icons/orders.png" alt="">
           <span>Projets en cours</span>
         </a>
       </li>
       <li>
         
-        <a href="javascript:void(0)" title="">
+        <a href="javascript:voirIndicateurs(${effectifInstance.id})" title="Indicateurs">
           <img src="${request.contextPath}/img/start-icons/stats.png" alt="">
           <span>Indicateurs</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)" title="">
-          <img src="${request.contextPath}/img/start-icons/mass.png" alt="">
-          <span>Broadcast</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)" title="">
-          <img src="${request.contextPath}/img/start-icons/upgrade.png" alt="">
-          <span>Service Upgrade</span>
         </a>
       </li>
       </ul>
@@ -100,18 +95,14 @@
                                                           }        
                                                           function voirProjets(monId) {
                                                                  <g:remoteFunction controller="kanban" action="obtenirKanbanEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
-                                                          }       
-                                                          function gererOf(monId) {
-                                                                    window.location = "gestionOf/"+monId;
-                                                          }       
-                                                          function supprimer(monId) {
-                                                                    bootbox.confirm("'Voulez vous confirmer la suppression du projet?" , function(result) {
-					 //console.log("Confirm result: "+result);
-                                        
-                                                                                   <g:remoteFunction controller = "kanban" action="delete"   params ="\'kanban=\' + monId" />
-                                         					  // toastr.info("Confirm result: "+result);
-                                                                                });
-                                                          }                                                                                                                                    
+                                                          }        
+                                                          function voirIndicateurs(monId) {
+                                                                 <g:remoteFunction controller="effectif" action="indicateurEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
+                                                          }        
+                                                          function information(monId) {
+                                                                 <g:remoteFunction controller="effectif" action="information"   params ="\'effectif=\' + monId" update="contenu2"/>;   
+                                                          }  
+                                                  
                                                         </script>
 				
 

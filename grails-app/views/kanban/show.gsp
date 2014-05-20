@@ -103,9 +103,8 @@
                                                                         
                                                     mettre courbe avancement
                                                       <div id="indicateurKanban"></div>
-                                                      <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
+                                                      <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.nomKanban}"/>
                                                       <g:hiddenField name="chargePlanifiee" id="chargePlanifiee" value="${kanbanInstance.chargePlanifiee}"/>
-                                                      <g:hiddenField name="kanban" id="monKanban" value="${kanbanInstance.id}"/>
                                                       
                                                                         
                                                                         

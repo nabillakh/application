@@ -25,12 +25,8 @@ class KanbanController {
     }
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Kanban kanbanInstance) {
-        println(kanbanInstance.id)
         def ofs = kanbanService.montrerOF(kanbanInstance)
-        println("charger des of ok")
         def mesCR = kanbanService.afficherCRKanban(kanbanInstance)
-        
-        println("charger des cr ok")
         [kanbanInstance:kanbanInstance, ofs : ofs, mesCR : mesCR]
     }
     
@@ -211,8 +207,14 @@ class KanbanController {
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def edit(Kanban kanbanInstance) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
-        def dateFin = sdf.format(kanbanInstance.dateFinPlanifie)
-        def dateDeb = sdf.format(kanbanInstance.dateLancement)
+        def dateFin
+        def dateDeb
+        if(kanbanInstance.dateFinPlanifie) {
+            dateFin = sdf.format(kanbanInstance.dateFinPlanifie)
+        }
+        if (kanbanInstance.dateLancement) {
+            dateDeb = sdf.format(kanbanInstance.dateLancement)
+        }
         [kanbanInstance : kanbanInstance, dateFin : dateFin, dateDeb : dateDeb]
     }
 

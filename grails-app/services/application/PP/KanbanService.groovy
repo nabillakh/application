@@ -145,43 +145,35 @@ class KanbanService {
     // creation d'of automatique apres chaque saisie de kanban 
     @Transactional
     void requeteCreation(Kanban monKanban){
-        println("dans requetecreation")
         
         try {
             def famille = monKanban.getFamille()
-        println("famille du kanban :" + famille.nom)
-            println("date de fin : " + monKanban.getDateFinPlanifie())
             // monKanban.setOrdo(famille.getOrdo())
             def ofs = OF.findAll("from OF as b where b.kanban=?", [monKanban])
             if(!ofs)  {
                 montrerPhasesInitiales(monKanban).each() { maPhase ->
                     def of = new OF(phase : maPhase, kanban : monKanban)
-            println("creation de l'of")
                     chargeInitialeOF(of)
-            println("charge dans of")
                     
                     if(maPhase.ordre == 1) {
                         monKanban.phaseActuelle = maPhase
                     }
                     
                     of.save()
-            println("avant ajout dans liste ofs")
-            println("ajout of dans ofs")
                 }
             ordonnancementOF(monKanban)
             }
             else {
-                println("deja OF")
             }
         }
         catch(ValidationException e){
-            System.out.println("ofs")
+            System.out.println("ofs non crees")
         }
     }
     
     // permet de préordonnancer les of et de les étaler dans le temps
     void ordonnancementOF(Kanban kanban) {
-            println("dans ordonancement of")
+        
             def ofs = OF.findAll("from OF as b where b.kanban=?", [kanban])
         Date dateFin = kanban.getDateFinPlanifie()
             println(dateFin)
@@ -200,13 +192,13 @@ class KanbanService {
         
         ofs.each() { of ->
             d += ((of.chargePlanifiee * delta)/charge)
-            println("duree" + d + " de l'of : " + of.phase.nom)
+            
             def jours = Math.round(d)
-            println("nb de jours : " + jours)
+            
             DateTime maDate = new DateTime(dateDeb)
-            println("datedeb : " + maDate)   
+            
             maDate = maDate.plusDays((int)jours)
-            println("datedeb + jours : " + maDate)   
+            
             of.setDateFinPlanifie(maDate.toDate())
             of.save()
         }

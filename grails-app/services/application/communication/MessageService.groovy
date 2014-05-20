@@ -19,13 +19,10 @@ class MessageService {
     
     void posterMessageKanban(String message, Long kanban) {
         try {
-            println("dans message service")
+            
             def leKanban = lookupCurrentKanban(kanban)
-            println("reconstruction kanban" + leKanban.nomKanban)
             def status = new Message(message: message, kanban:leKanban)
             status.auteur = lookupCurrentPerson()
-            println("auteur : " + status.auteur.nom)
-            println("kanban associe : " + status.kanban.nomKanban)
             // leKanban.addToCompteRendus(status)
             // println("leKanban compteRendus")
             // leKanban.save()
@@ -33,8 +30,11 @@ class MessageService {
             println(status.id + " : nv cr")
         }
         catch(NullPointerException n) {}
-        
-        
+    }
+    
+    def listeMessageAuteurEffectif(Effectif effectif) {
+        println("dans service")
+        def mesMessages = Message.findAll("from Message as b where b.auteur=?", [effectif])
     }
     
     
