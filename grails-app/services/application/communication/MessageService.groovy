@@ -52,9 +52,25 @@ class MessageService {
         
     }
     
+    def nbMessageKanbanEffectif(Effectif effectif) { 
+        println("dans service nbMessageKanbaneffectif")
+        def nbMessage = 0
+        listeMessageAuteurEffectif(effectif).each() {message ->
+            if(message.kanban) {
+                nbMessage +=1
+            }
+        }
+        return nbMessage        
+    }
+    
+    
     
     def nbMessageAutre(Message[] mesMessages) { 
         def nbMessage = mesMessages.size() - nbMessageKanban(mesMessages)
+        return nbMessage
+    }
+    def nbMessageAutreEffectif(Effectif effectif) { 
+        def nbMessage = listeMessageAuteurEffectif(effectif).size() - nbMessageKanbanEffectif(effectif)
         return nbMessage
     }
     

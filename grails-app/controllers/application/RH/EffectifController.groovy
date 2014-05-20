@@ -126,7 +126,7 @@ def listEffectif(){
         }
     }
     
-       
+           
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def indicateurEffectif() {
         
@@ -137,18 +137,16 @@ def listEffectif(){
         def messagesKanbanMoyen = messageService.nbMessageKanban(listeMessage) / listeEffectif.size()
         def messagesAutreMoyen = messageService.nbMessageAutre(listeMessage) / listeEffectif.size()
         
-        
-        def mesMessages = messageService.listeMessageAuteurEffectif(monEffectif)
-        println(mesMessages)
-        def messagesKanban = messageService.nbMessageKanban(mesMessages) / 1
+        def messagesKanban = messageService.nbMessageKanbanEffectif(monEffectif)
         println(messagesKanban)
-        def messagesAutre = messageService.nbMessageAutre(mesMessages)
+        def messagesAutre = messageService.nbMessageAutreEffectif(monEffectif)
         
         println(messagesAutre)
         println("ok")
         
         [messagesAutreMoyen:messagesAutreMoyen, messagesKanbanMoyen:messagesKanbanMoyen, messagesKanban:messagesKanban,messagesAutre:messagesAutre]
     }   
+
     
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
