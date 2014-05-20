@@ -32,11 +32,31 @@ class MessageService {
         catch(NullPointerException n) {}
     }
     
-    def listeMessageAuteurEffectif(Effectif effectif) {
+    def listeMessageAuteurEffectif(Effectif effectif) { 
         println("dans service")
         def mesMessages = Message.findAll("from Message as b where b.auteur=?", [effectif])
+        return mesMessages
     }
     
+    
+    
+    def nbMessageKanban(Message[] mesMessages) { 
+        println("dans service nbMessageKanban")
+        def nbMessage = 0
+        mesMessages.each() {message ->
+            if(message.kanban) {
+                nbMessage +=1
+            }
+        }
+        return nbMessage
+        
+    }
+    
+    
+    def nbMessageAutre(Message[] mesMessages) { 
+        def nbMessage = mesMessages.size() - nbMessageKanban(mesMessages)
+        return nbMessage
+    }
     
 
     private lookupCurrentPerson() {

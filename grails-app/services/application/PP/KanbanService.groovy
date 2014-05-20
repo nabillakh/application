@@ -111,6 +111,12 @@ class KanbanService {
         maListe = Droit.list(sort: "authority", order: "desc")
         return maListe
     }
+    //_________________________________
+    private Message[] listeMessage() {
+       def maListe = []
+        maListe = Message.list()
+        return maListe
+    }
    //---------------------
     
     

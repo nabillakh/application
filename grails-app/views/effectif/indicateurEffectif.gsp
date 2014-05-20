@@ -10,10 +10,10 @@
 									<!-- new widget -->
                                                       <div id="indicateurSocial"></div>
                                                                         <center>Impact social (nombre de messages envoyés)</center>
-                                                      <g:hiddenField name="messagesKanban" id="messagesKanban" value="${nbMessages+2}"/>
-                                                      <g:hiddenField name="messagesAutre" id="messagesAutre" value="${nbMessages}"/>
-                                                      <g:hiddenField name="messagesKanbanMoyen" id="messagesKanbanMoyen" value="${nbMessages}"/>
-                                                      <g:hiddenField name="messagesAutreMoyen" id="messagesAutreMoyen" value="${nbMessages+2}"/>
+                                                      <g:hiddenField name="messagesKanban" id="messagesKanban" value="${messagesKanban}"/>
+                                                      <g:hiddenField name="messagesAutre" id="messagesAutre" value="${messagesAutre}"/>
+                                                      <g:hiddenField name="messagesKanbanMoyen" id="messagesKanbanMoyen" value="${messagesKanbanMoyen}"/>
+                                                      <g:hiddenField name="messagesAutreMoyen" id="messagesAutreMoyen" value="${messagesAutreMoyen}"/>
                                                       
                                                       
                                                                         
