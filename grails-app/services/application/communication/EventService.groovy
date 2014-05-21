@@ -13,15 +13,16 @@ class EventService {
     
     def imputation(EventEffectif e, OF of)  {
         println("dans imputation service")
-        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : false, tempsImpute : 0)
+        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : false, tempsImpute : 0, effectif : eventEffectif.recepteur)
         monEventOf.save()       
         println("creation de l'imputation?" + monEventOf.id)
       
     }
     
-    def simputer(EventEffectif e, OF of) {
-        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : true, tempsImpute : 0)
-        monEventOf.save()            
+    def simputer(Imputation imput, Float temps) {
+        imput.setRealise(true)
+        imput.setTempsImpute(temps)
+        imput.save()            
     }
     // pour ma todo
        private OF[] maToDo() {

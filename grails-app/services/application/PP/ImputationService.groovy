@@ -17,7 +17,7 @@ class ImputationService {
         // def imputations = Imputation.list()
         
         def query = Imputation.whereAny {
-                // eventEffectif.recepteur {per}
+                effectif {per}
             }
             
         def imputations = query.list()
