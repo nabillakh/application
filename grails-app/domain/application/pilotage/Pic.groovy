@@ -15,7 +15,6 @@ class Pic {
         version nullable : true
         dateVersion nullable : true
         dateMaj nullable : true
-        archive nullable : true
     }
     
     
