@@ -125,14 +125,18 @@ class ImputationController {
         // permet d'avoir le premier jour de la semaine de la date en cours
         Date premierJour = imputationService.premierJour(annee, semaine)
         
-        def ok = imputationService.monImputation()
-        println(ok)
+        def mesImputations = imputationService.monImputation()
         
-        [kanbanInstanceList : kanbanInstanceList, semaine : semaine, annee : annee]
+        println(mesImputations)
+        
+        [kanbanInstanceList : kanbanInstanceList, semaine : semaine, annee : annee, mesImputations : mesImputations]
         
     }
     
-    def imputationSemaine(int annee, int semaine) {
+    def imputationSemaine() {
+        def annee = params.annee
+        def semaine = params.semaine
+        
         Date premierJour = imputationService.premierJour(annee, semaine)
         Date dernierJour = imputationService.dernierJour(annee, semaine)
         
@@ -143,6 +147,8 @@ class ImputationController {
         println("equals : " + (cal1.compareTo(cal2) > 0));
         
         def mesImputations = imputationService.monImputation()
+        
+        
         
         
     }

@@ -17,11 +17,10 @@ class ImputationService {
         // def imputations = Imputation.list()
         
         def query = Imputation.whereAny {
-                effectif {per}
+                effectif == per
             }
             
-        def imputations = query.list()
-        
+        def imputations = query.list()    
         
     }
     

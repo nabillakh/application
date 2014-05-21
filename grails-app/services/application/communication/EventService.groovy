@@ -13,7 +13,7 @@ class EventService {
     
     def imputation(EventEffectif e, OF of)  {
         println("dans imputation service")
-        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : false, tempsImpute : 0, effectif : eventEffectif.recepteur)
+        def monEventOf = new Imputation(eventEffectif : e, of : of, realise : false, tempsImpute : 0, effectif : e.recepteur)
         monEventOf.save()       
         println("creation de l'imputation?" + monEventOf.id)
       

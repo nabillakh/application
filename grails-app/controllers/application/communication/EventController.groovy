@@ -20,7 +20,7 @@ class EventController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "POST"]
     
     def index(Integer max) {
-        // envoi de la liste de kanban
+        // envoi de la liste d event
         
         def per = Effectif.get(springSecurityService.principal.id)
         def mesOF = kanbanService.mesOF(per)
