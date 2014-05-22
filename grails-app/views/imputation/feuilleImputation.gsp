@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
     <title>SysProd</title>
+                 <g:javascript library="jquery" plugin="jquery" />
     <meta name="description" content="">
     <meta name="author" content="">
     
@@ -112,22 +113,23 @@
 
 													<!-- span6 -->
 													<div class="pull-right">
+                                                                                                          <input type="hidden"  id="annee"  value="${annee}">
                                                                                                            <div class="pagination pagination-small">
 																Semaine à imputer : </br><ul>
 																	<li>
 																		<a href="javascript:void(0);">«</a>
 																	</li>
 																	<li>
-																		<a href="javascript:void(0);">${semaine-2}</a>
+																		<a href="javascript:voirSemaine(${semaine-2});">${semaine-2}</a>
 																	</li>
 																	<li>
-																		<a href="javascript:void(0);">${semaine-1}</a>
+																		<a href="javascript:voirSemaine(${semaine-1});">${semaine-1}</a>
 																	</li>
 																	<li class="active">
-																		<a href="javascript:void(0);">${semaine}</a>
+																		<a href="javascript:voirSemaine(${semaine});">${semaine}</a>
 																	</li>
 																	<li>
-																		<a href="javascript:void(0);">${semaine+1}</a>
+																		<a href="javascript:voirSemaine(${semaine+1});">${semaine+1}</a>
 																	</li>
 																	<li>
 																		<a href="javascript:void(0);">»</a>
@@ -155,65 +157,13 @@
                                                           <article class="span12">
                                                             
 									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-0">
-									    <header>
-									        <h2>Grille d'imputation</h2>                           
-									    </header>
-									    <!-- wrap div -->
-									    <div>
-									    
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-            
-									        <div class="inner-spacer"> 
-									        <!-- content goes here -->
-                                                                                
-												<table class="table hover table-bordered responsive">
-													<thead>
-														<tr>
-                                                                                                                  <th>Nom du projet</th>
-															<th>Lundi</th>
-															<th>Mardi</th>
-															<th>Mercredi</th>
-															<th>Jeudi</th>
-															<th>Vendredi</th>
-														</tr>
-													</thead>
-													<tbody class="responsive"><g:each in="${kanbanInstanceList}" status="i" var="kanbanInstance">
-                                                                                                            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><g:link action="show" controller="Kanban" id="${kanbanInstance.id}">${kanbanInstance.nomKanban}</g:link></td>
-                                                                                                          
-                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
-                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
-                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
-                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
-                                                                                                           <td>${kanbanInstance.getChargeAgenda()}</td>
-                                                                                                          </tr>
-                                                                                                          </g:each>
-													</tbody>
-												</table>
-										        	
-										    </div>
-										    <!-- end content-->
-									    </div>
+									<div class="jarviswidget" id="tabImputation">
+                                                                          
 									    <!-- end wrap div -->
 									</div>
+                                                                              <script type="text/javascript">
+                                                                                    <g:remoteFunction controller="imputation" action="imputationSemaine" update="tabImputation"/>;
+                                                                              </script>
 									<!-- end widget -->
 								</article>
                                                           
@@ -229,8 +179,14 @@
 						<!-- end widget grid -->
 					</div>		
 				</div>
- 
- 
+
+                                                         <script>
+                                                          function voirSemaine(semaine) {
+                                                            var annee = $('#annee').val();
+                                                                <g:remoteFunction controller="imputation" action="imputationSemaine"  params ="\'semaine=\' + semaine+ '&annee=\' + annee" update="tabImputation"/>;
+                                                          }        
+                                                  
+                                                        </script>
                     
                                                                
 				<!-- end main content -->

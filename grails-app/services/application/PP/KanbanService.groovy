@@ -39,17 +39,14 @@ class KanbanService {
     }
     
     private Kanban[] listeKanbanEffectif(Effectif effectifInstance) {
-        println("liste des kanbans avec id :"+effectifInstance.id)
         
        def maListe = []
        
        def ofes = OFEffectif.findAll("from OFEffectif as b where b.effectif=?", [effectifInstance])
-       println(ofes)
            ofes.each() { ofeff ->
            maListe.add(ofeff.of.kanban)
        }
         maListe.unique()
-        println(maListe)
         return maListe
     }
     

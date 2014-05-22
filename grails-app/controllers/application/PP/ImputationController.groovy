@@ -134,9 +134,10 @@ class ImputationController {
     }
     
     def imputationSemaine() {
-        def annee = params.annee
-        def semaine = params.semaine
+        def per = Effectif.get(springSecurityService.principal.id)
         
+        def annee = Integer.parseInt(params.annee)
+        def semaine = Integer.parseInt(params.semaine)
         Date premierJour = imputationService.premierJour(annee, semaine)
         Date dernierJour = imputationService.dernierJour(annee, semaine)
         
@@ -144,13 +145,14 @@ class ImputationController {
         Calendar cal2 = Calendar.getInstance();
         cal1.setTime(premierJour);
         cal2.setTime(dernierJour);
-        println("equals : " + (cal1.compareTo(cal2) > 0));
+        // println("equals : " + (cal1.compareTo(cal2) > 0));
         
-        def mesImputations = imputationService.monImputation()
+        // mettre imputation pour la semaine
+        def mesImputations = imputationService.monImputationEntreDates(premierJour, dernierJour)
         
+        def kanbanInstanceList = kanbanService.listeKanbanEffectif(per)
         
-        
-        
+        [kanbanInstanceList : kanbanInstanceList]
     }
     
     
