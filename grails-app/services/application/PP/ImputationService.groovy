@@ -49,16 +49,18 @@ class ImputationService {
             calFinEvent.setTime(finEvent);          
             
             if((calDebutEvent.compareTo(calFin)<0)) {
-                if((calFinEvent.compareTo(calDeb)<0)) {
+                if((calFinEvent.compareTo(calDeb)>0)) {
                     mesImput.add(imput)
                 }
             }
         }
         return mesImput
+        println(mesImput)
         
     }
     
-    def monImputationEntreDatesOF(Date deb, Date fin, Imputation[] mesImput) {
+    // deb est le premier jour de la semaine selectionee
+    def monImputationParJour(Date deb, Imputation[] mesImput) {
         
         def lignes = []
         
@@ -68,29 +70,114 @@ class ImputationService {
         }
         mesOF.unique()
         
+        // création des jours
+            Date lundi2 = deb
+            Calendar cal = Calendar.getInstance();
+            Calendar lundi = Calendar.getInstance();
+            Calendar mardi = Calendar.getInstance();
+            Calendar mercredi = Calendar.getInstance();
+            Calendar jeudi = Calendar.getInstance();
+            Calendar vendredi = Calendar.getInstance();
+            Calendar samedi = Calendar.getInstance();
+            Calendar dimanche = Calendar.getInstance();
+            
+            cal.setTime(lundi2);
+            lundi.setTime(lundi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date mardi2 = cal.getTime()
+            mardi.setTime(mardi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date mercredi2 = cal.getTime()
+            mercredi.setTime(mercredi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date jeudi2 = cal.getTime()
+            jeudi.setTime(jeudi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date vendredi2 = cal.getTime()
+            vendredi.setTime(vendredi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date samedi2 = cal.getTime()
+            samedi.setTime(samedi2);
+            
+            cal.add(Calendar.DATE,1)
+            Date dimanche2 = cal.getTime()
+            dimanche.setTime(dimanche2);
+            
+            
+        
         
         
         mesOF.each() { of ->
+            println(of.id)
             def uneLigne = new LinkedHashMap()
             
             uneLigne.put("Of",of)
-            uneLigne.put("Lundi","of")
-            uneLigne.put("Mardi","of")
-            uneLigne.put("Mercredi","of")
-            uneLigne.put("Jeudi","of")
-            uneLigne.put("Vendredi","of")  
-            uneLigne.put("Samedi","of")
-            uneLigne.put("Dimanche","of")  
+            
+            def imputs = mesImput.findAll {it.of == of}
+            
+            def listeLundi = []
+            def listeMardi = []
+            def listeMercredi = []
+            def listeJeudi = []
+            def listeVendredi = []
+            def listeSamedi = []
+            def listeDimanche = []
+            
+            imputs.each() {imput ->
+                Date debutEvent = imput.eventEffectif.event.startTime
+                Date finEvent = imput.eventEffectif.event.endTime
+                Calendar calDebutEvent = Calendar.getInstance();
+                Calendar calFinEvent = Calendar.getInstance();
+                calDebutEvent.setTime(debutEvent);
+                calFinEvent.setTime(finEvent);        
+            if((calDebutEvent.compareTo(mardi)<0)) {
+                if((calFinEvent.compareTo(lundi)>0)) {
+                    listeLundi.add(imput)
+                }
+            }
+            if((calDebutEvent.compareTo(mercredi)<0)) {
+                if((calFinEvent.compareTo(mardi)>0)) {
+                    listeMardi.add(imput)
+                }
+            }
+            if((calDebutEvent.compareTo(jeudi)<0)) {
+                if((calFinEvent.compareTo(mercredi)>0)) {
+                    listeMercredi.add(imput)
+                }
+            }
+            if((calDebutEvent.compareTo(vendredi)<0)) {
+                if((calFinEvent.compareTo(jeudi)>0)) {
+                    listeJeudi.add(imput)
+                }
+            }
+            if((calDebutEvent.compareTo(samedi)<0)) {
+                if((calFinEvent.compareTo(vendredi)>0)) {
+                    listeVendredi.add(imput)
+                }
+            }
+            if((calDebutEvent.compareTo(dimanche)<0)) {
+                if((calFinEvent.compareTo(samedi)>0)) {
+                    listeSamedi.add(imput)
+                }
+            }
+            
+            }
+            uneLigne.put("Lundi",listeLundi)
+            uneLigne.put("Mardi",listeMardi)
+            uneLigne.put("Mercredi",listeMercredi)
+            uneLigne.put("Jeudi",listeJeudi)
+            uneLigne.put("Vendredi",listeVendredi)  
+            uneLigne.put("Samedi",listeJeudi)
+            uneLigne.put("Dimanche",listeDimanche)  
             
             lignes << (uneLigne)
         }
-        
-        
-       // println("montrer la hashmap : " + lignes)
-        lignes.each() { ligne -> 
-                println(ligne.get("Lundi"))
-                println(ligne.get("Of"))
-            }       
+        return lignes
     }
     
     def Date premierJour(int annee, int semaine) {

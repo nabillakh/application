@@ -36,7 +36,7 @@
 				<g:each in="${imputationInstanceList}" status="i" var="imputationInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${imputationInstance.id}">${fieldValue(bean: imputationInstance, field: "event")}</g:link></td>
+						<td><g:link action="show" id="${imputationInstance.id}">${fieldValue(bean: imputationInstance, field: "eventEffectif")}</g:link></td>
 					
 						<td>${fieldValue(bean: imputationInstance, field: "of")}</td>
 					

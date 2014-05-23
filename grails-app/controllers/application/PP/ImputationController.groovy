@@ -149,10 +149,9 @@ class ImputationController {
         
         // mettre imputation pour la semaine
         def mesImputations = imputationService.monImputationEntreDates(premierJour, dernierJour)
-        
-        def kanbanInstanceList = kanbanService.listeKanbanEffectif(per)
-        
-        [kanbanInstanceList : kanbanInstanceList]
+        def lignes = imputationService.monImputationParJour(premierJour, mesImputations)
+                
+        [lignes :lignes]
     }
     
     
