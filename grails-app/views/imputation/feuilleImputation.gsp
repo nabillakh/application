@@ -155,24 +155,16 @@
 							<!-- row-fluid -->
 							
 							<div class="row-fluid">
-                                                          <article class="span12">
-                                                            
-									<!-- new widget -->
-									<div class="jarviswidget" id="tabImputation">
-                                                                          
-									    <!-- end wrap div -->
-									</div>
+                                                          <article class="span12"  id="tabImputation">
+                                                            okiuhgjkl
+									<!-- end widget -->
+								</article>
                                                                               <script type="text/javascript">
                                                                                 var semaine = (${semaine});
                                                                                 var annee = (${annee});
                                                                               voirSemaine(semaine)
                                                                               </script>
-                                                                              
-                                                                         <g:link  action="imputer" controller="imputation"  class=" btn btn-info pull-right">Valider</g:link> 
-                                                                         <g:link  action="imputer" controller="imputation"  class=" btn btn-warning pull-right">Annuler</g:link>  
                                                                          
-									<!-- end widget -->
-								</article>
                                                           
 							</div>
                                                         
@@ -192,7 +184,23 @@
                                                             
                                                             var annee = $('#annee').val();
                                                                 <g:remoteFunction controller="imputation" action="imputationSemaine"  params ="\'semaine=\' + semaine+ '&annee=\' + annee" update="tabImputation"/>;
-                                                          }        
+                                                          }    
+                                                          
+                                                          function imputer(size) {
+                                                            var liste = "";
+                                                            for(i=0;i<size;i++) {
+                                                              for(j=1;j<6;j++) {
+                                                              var ids = $('#v'+j+i).val();
+                                                              liste += "id:" + ids + ";";
+                                                              var val = $('#i'+j+i).val();
+                                                              liste += "valeur:" + val;
+                                                              liste += "/";
+                                                              
+                                                      };
+                                                      liste += "";
+                                                    };
+                                                                <g:remoteFunction controller="imputation" action="imputer"  params ="\'liste=\' + liste" />;
+                                                          }
                                                   
                                                         </script>
                     

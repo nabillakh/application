@@ -27,6 +27,7 @@
 						<th><g:message code="imputation.event.label" default="Event" /></th>
 					
 						<th><g:message code="imputation.of.label" default="Of" /></th>
+						<th>charge</th>
 					
 						<g:sortableColumn property="realise" title="${message(code: 'imputation.realise.label', default: 'Realise')}" />
 					
@@ -39,6 +40,7 @@
 						<td><g:link action="show" id="${imputationInstance.id}">${fieldValue(bean: imputationInstance, field: "eventEffectif")}</g:link></td>
 					
 						<td>${fieldValue(bean: imputationInstance, field: "of")}</td>
+                                                <td>${fieldValue(bean: imputationInstance, field: "tempsImpute")}</td>
 					
 						<td><g:formatBoolean boolean="${imputationInstance.realise}" /></td>
 					

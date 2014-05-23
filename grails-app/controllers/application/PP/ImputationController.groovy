@@ -131,7 +131,7 @@ class ImputationController {
     }
     
     def imputationSemaine() {
-        println("ok")
+        
         def per = Effectif.get(springSecurityService.principal.id)
         
         def annee = Integer.parseInt(params.annee)
@@ -150,6 +150,45 @@ class ImputationController {
         def lignes = imputationService.monImputationParJour(premierJour, mesImputations)
                 
         [lignes :lignes]
+    }
+    
+    def imputer() {
+        
+        println("dans controleur")
+        def liste = params.liste
+        String[] lignes = liste.split("/")
+        
+        for(int i=0 ; i<lignes.length; i++) {
+            def ligne=lignes[i]   
+            String[] binome = ligne.split(";")
+            String ids = binome[0].replace("id:","")
+            ids = ids.replace("[","")
+            ids = ids.replace("]","")
+            def mesId = ids.split(", ")
+            String val = binome[1].replace("valeur:","")
+            
+            
+            if(mesId[0]) {
+                def charge = Float.parseFloat(val) 
+                def imputs = []
+                for(int j=0;j<mesId.length;j++) {
+                    def monId = Long.parseLong(mesId[j])
+                    def monImput = Imputation.get(monId)
+                    imputs.add(monImput)
+                }
+                    println(imputs)
+                    def chargeIni = imputs*.eventEffectif.event.dureeHeures.sum()
+                    imputs.each() { imput ->
+                        println(imput)
+                        def maCharge = imput.eventEffectif.event.dureeHeures
+                        def chargeImp = maCharge  * charge / chargeIni
+                        imput.tempsImpute = chargeImp
+                        imput.setRealise(true)
+                        imput.save(flush : true)
+                    }
+            }
+                
+        }
     }
     
     

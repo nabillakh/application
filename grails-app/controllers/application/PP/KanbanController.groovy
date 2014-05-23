@@ -138,7 +138,7 @@ class KanbanController {
     
     // permet d'editer les OF d'un kanban
     def majOF() {  
-        println("dans majOF")
+        
         // rapatriement et conversion des variables
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
         Date dateDebutPlanifie = sdf.parse(params.dateDebutPlanifie)
@@ -150,14 +150,12 @@ class KanbanController {
        def affectes = []
         def affect = params.affectes
         
-        println("id des gens affectes :" + affect)
         List<String> items = Arrays.asList(affect.split("\\s*,\\s*"));
         items.each() {aff->
             def affs = Effectif.findById(Long.parseLong(aff))
             affectes.add(affs)        
         }
         
-        println(affectes)
         // recherche of
         def ancienOf = OF.findById(id) 
         
@@ -177,10 +175,8 @@ class KanbanController {
             if(ancienOf.affectes.find {it.effectif == nvEff.id}) {
             }   
             else {
-                println("nv effectif" + nvEff.id)
                 def nvOfEff = new OFEffectif(effectif : nvEff, of : ancienOf)
                 nvOfEff.save()
-                println("id de ofeffectif : " + nvOfEff.id)
                 ancienOf.affectes.add(nvOfEff)
                 messageService.posterMessageKanban("Vous êtes chargé d'une nouvelle activité" , ancienOf.kanban.id)
             }
