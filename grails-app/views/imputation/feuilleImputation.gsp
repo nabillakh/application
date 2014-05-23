@@ -181,7 +181,7 @@
 
                                                          <script>
                                                           function voirSemaine(semaine) {
-                                                            
+                                                            $('#semaine').val(semaine)
                                                             var annee = $('#annee').val();
                                                                 <g:remoteFunction controller="imputation" action="imputationSemaine"  params ="\'semaine=\' + semaine+ '&annee=\' + annee" update="tabImputation"/>;
                                                           }    
@@ -200,6 +200,8 @@
                                                       liste += "";
                                                     };
                                                                 <g:remoteFunction controller="imputation" action="imputer"  params ="\'liste=\' + liste" />;
+                                                        var sem = $('#semaine').val();
+                                                        toastr.info('Semaine '+sem+' imputée avec succès !'); 
                                                           }
                                                   
                                                         </script>
