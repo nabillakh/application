@@ -137,8 +137,8 @@
                                                                                                           <td><center>
                                                                                                             
                                                                                                             <div class="btn-group">
-																<a class="btn" href="javascript:void(0);">Edition</a>
-																<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+																<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Edition  <span class="caret"></span></a>
+																
 																<ul class="dropdown-menu">
 																	<li>
 																		<a href="javascript:voir(${kanbanInstance.id});">Voir</a>

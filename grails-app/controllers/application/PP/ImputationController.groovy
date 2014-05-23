@@ -124,16 +124,14 @@ class ImputationController {
         
         // permet d'avoir le premier jour de la semaine de la date en cours
         Date premierJour = imputationService.premierJour(annee, semaine)
+               
         
-        def mesImputations = imputationService.monImputation()
-        
-        println(mesImputations)
-        
-        [kanbanInstanceList : kanbanInstanceList, semaine : semaine, annee : annee, mesImputations : mesImputations]
+        [kanbanInstanceList : kanbanInstanceList, semaine : semaine, annee : annee]
         
     }
     
     def imputationSemaine() {
+        println("ok")
         def per = Effectif.get(springSecurityService.principal.id)
         
         def annee = Integer.parseInt(params.annee)

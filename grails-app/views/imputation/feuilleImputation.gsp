@@ -114,6 +114,7 @@
 													<!-- span6 -->
 													<div class="pull-right">
                                                                                                           <input type="hidden"  id="annee"  value="${annee}">
+                                                                                                          <input type="hidden"  id="semaine"  value="${semaine}">
                                                                                                            <div class="pagination pagination-small">
 																Semaine à imputer : </br><ul>
 																	<li>
@@ -162,8 +163,14 @@
 									    <!-- end wrap div -->
 									</div>
                                                                               <script type="text/javascript">
-                                                                                    <g:remoteFunction controller="imputation" action="imputationSemaine" update="tabImputation"/>;
+                                                                                var semaine = (${semaine});
+                                                                                var annee = (${annee});
+                                                                              voirSemaine(semaine)
                                                                               </script>
+                                                                              
+                                                                         <g:link  action="imputer" controller="imputation"  class=" btn btn-info pull-right">Valider</g:link> 
+                                                                         <g:link  action="imputer" controller="imputation"  class=" btn btn-warning pull-right">Annuler</g:link>  
+                                                                         
 									<!-- end widget -->
 								</article>
                                                           
@@ -182,6 +189,7 @@
 
                                                          <script>
                                                           function voirSemaine(semaine) {
+                                                            
                                                             var annee = $('#annee').val();
                                                                 <g:remoteFunction controller="imputation" action="imputationSemaine"  params ="\'semaine=\' + semaine+ '&annee=\' + annee" update="tabImputation"/>;
                                                           }        

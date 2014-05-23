@@ -10,9 +10,20 @@ import static org.joda.time.DateTimeConstants.FRIDAY
 class BootStrap {
 
     def init = { servletContext ->
- 
+ environments {
+            production {
       createData()
-        
+                // prod initialization
+            }
+            test {
+      createData()
+                // test initialization
+            }
+            development {
+      createData()
+                // dev initialization
+            }
+  }
     }
     def destroy = {
     }
@@ -61,6 +72,9 @@ class BootStrap {
         def monOrdo4 = new Ordonnancement(nom : "grille4", chargeStandard : 50, famille : maFamille3).save(failOnError: true, flush : true) 
         
         
+        def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
+        
+        
         ["Analyse":1, "Algorithme":2, "Developpement":3, "Test":4, "Mise en prod":5].each {nomA,numA -> 
             def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 2)
             monKanban.setPhaseActuelle(phase)
@@ -69,12 +83,10 @@ class BootStrap {
         }
         
         
-        def monKanban = new Kanban( nomKanban : "developpement fonction 1" , description : "c'est un kanban",  statut: "en cours", famille : maFamille)
-        
         
         monKanban.setOrdo(monOrdo)
         monOrdo.save(failOnError: true)
-        monKanban.save(failOnError: true)
+        monKanban.save(failOnError: true, flush : true)
         
         
         
@@ -122,4 +134,4 @@ class BootStrap {
         
 
         
-}
+} 

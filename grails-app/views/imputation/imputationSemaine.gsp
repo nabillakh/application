@@ -27,7 +27,9 @@
                                                                                                               <td>${ligne.get("Of").phase.nom}</td>
                                                                                                           
                                                                                                            <td>${ligne.get("Lundi")*.eventEffectif.event.dureeHeures.sum()}</td>
-                                                                                                           <td>${ligne.get("Mardi")*.eventEffectif.event.dureeHeures.sum()}</td>
+                                                                                                           <td>${ligne.get("Mardi")*.eventEffectif.event.dureeHeures.sum()}
+                                                                                                           <input type="text" class="input-mini" value="test">ok</input>
+                                                                                                           </td>
                                                                                                            <td>${ligne.get("Mercredi")*.eventEffectif.event.dureeHeures.sum()}</td>
                                                                                                            <td>${ligne.get("Jeudi")*.eventEffectif.event.dureeHeures.sum()}</td>
                                                                                                            <td>${ligne.get("Vendredi")*.eventEffectif.event.dureeHeures.sum()}</td>
