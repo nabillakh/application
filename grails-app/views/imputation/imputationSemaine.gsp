@@ -12,6 +12,7 @@
 													<thead>
 														<tr>
                                                                                                                   <th>Nom du projet</th>
+                                                                                                                  <th>Phase</th>
 															<th>Lundi</th>
 															<th>Mardi</th>
 															<th>Mercredi</th>
@@ -23,11 +24,13 @@
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                                                                                                               <td><g:link action="show" controller="Kanban" id="${ligne.get("Of").kanban.id}">${ligne.get("Of").kanban.nomKanban}</g:link></td>
                                                                                                           
-                                                                                                           <td>${ligne.get("Lundi")*.eventEffectif.event.durationMinutes.sum()}</td>
-                                                                                                           <td>${ligne.get("Mardi")*.eventEffectif.event.durationMinutes.sum()}</td>
-                                                                                                           <td>${ligne.get("Mercredi")*.eventEffectif.event.durationMinutes.sum()}</td>
-                                                                                                           <td>${ligne.get("Jeudi")*.eventEffectif.event.durationMinutes.sum()}</td>
-                                                                                                           <td>${ligne.get("Vendredi")*.eventEffectif.event.durationMinutes.sum()}</td>
+                                                                                                              <td>${ligne.get("Of").phase.nom}</td>
+                                                                                                          
+                                                                                                           <td>${ligne.get("Lundi")*.eventEffectif.event.dureeHeures.sum()}</td>
+                                                                                                           <td>${ligne.get("Mardi")*.eventEffectif.event.dureeHeures.sum()}</td>
+                                                                                                           <td>${ligne.get("Mercredi")*.eventEffectif.event.dureeHeures.sum()}</td>
+                                                                                                           <td>${ligne.get("Jeudi")*.eventEffectif.event.dureeHeures.sum()}</td>
+                                                                                                           <td>${ligne.get("Vendredi")*.eventEffectif.event.dureeHeures.sum()}</td>
                                                                                                           </tr>
                                                                                                           </g:each>
 													</tbody>

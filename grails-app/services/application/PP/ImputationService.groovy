@@ -113,7 +113,6 @@ class ImputationService {
         
         
         mesOF.each() { of ->
-            println(of.id)
             def uneLigne = new LinkedHashMap()
             
             uneLigne.put("Of",of)

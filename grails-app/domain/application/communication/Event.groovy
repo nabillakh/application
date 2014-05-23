@@ -19,7 +19,7 @@ class Event {
     
     static hasMany = [participants : EventEffectif]
     
-    static transients = ['durationMinutes']
+    static transients = ['durationMinutes', 'dureeHeures']
 
 
     static constraints = {
@@ -35,6 +35,9 @@ class Event {
 
     public int getDurationMinutes() {
         Minutes.minutesBetween(new DateTime(startTime), new DateTime(endTime)).minutes
+    }
+    public Float getDureeHeures() {
+        durationMinutes / 60
     }
     
     
