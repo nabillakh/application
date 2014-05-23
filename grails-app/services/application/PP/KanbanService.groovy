@@ -263,7 +263,7 @@ class KanbanService {
         listeCharge.each() { monImputation ->
             // test si l'imput est déclarée comme realisee
             if(monImputation.realise) {
-                charge += monImputation.event.durationMinutes /60
+                charge += monImputation.eventEffectif.event.durationMinutes /60
             }
         }
         return charge
