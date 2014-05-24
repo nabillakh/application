@@ -13,7 +13,7 @@
                                                                           
                                                                           <g:each in="${mesOF}" status="i" var="monOF">
 						                <li>
-						                    <strong><i class="online pull-left"></i>${monOF.phase.nom}</strong><b>En cours : ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%</b>
+						                    <strong>${monOF.phase.nom}</strong><b>En cours : ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%</b>
 						                    <div class="progress progress-success slim"><div class="bar" style="width: ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%;"></div></div>
 						                </li>
                                                                           </g:each>

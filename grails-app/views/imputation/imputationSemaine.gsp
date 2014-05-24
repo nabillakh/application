@@ -22,7 +22,7 @@
 													</thead>
 													<tbody class="responsive"><g:each in="${lignes}" status="i" var="ligne">
                                                                                                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                                                                                                              <td><center><g:link action="show" controller="Kanban" id="${ligne.get("Of").kanban.id}" class="btn-link">${ligne.get("Of").kanban.nomKanban}</g:link></center></td>
+                                                                                                              <td><center><g:link action="show" controller="Kanban" id="${ligne.get("Of").kanban.id}" class="btn-link"  data-toggle="tooltip" title="afficher le projet">${ligne.get("Of").kanban.nomKanban}</g:link></center></td>
                                                                                                           
                                                                                                               <td><center>${ligne.get("Of").phase.nom}</center></td>
                                                                                                           

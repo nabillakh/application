@@ -76,7 +76,7 @@ class BootStrap {
         
         
         ["Analyse":1, "Algorithme":2, "Developpement":3, "Test":4, "Mise en prod":5].each {nomA,numA -> 
-            def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 2)
+            def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 0.2)
             monKanban.setPhaseActuelle(phase)
             monOrdo.addToPhases(phase)
             phase.save(failOnError: true)

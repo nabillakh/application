@@ -1,15 +1,19 @@
 package application.PP
 import application.PP.KanbanService
+import application.RH.*
+
 class KanbanTagLib {
     static namespace = 'kanbans'
     
     def kanbanService
     def eventService
+    def springSecurityService
     
     def kanbanmini = { attrs ->
         
        
-       def mesOF = eventService.mesOF()
+        def per = Effectif.get(springSecurityService.principal.id)
+       def mesOF = kanbanService.mesOF(per)
        
         mesOF.eachWithIndex { OF, counter ->
             out << g.render(template: '/kanban/minikanban', model: [mesOF : mesOF, ofCounter: counter])
