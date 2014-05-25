@@ -35,7 +35,7 @@
         </select>
   </div>
 </div>
-${kanbanInstance.famille?.id}
+
 <div class="control-group">
   <label class="control-label" for="multiSelect">Famille de projet</label>
   <div class="controls"  size="16" >
@@ -47,7 +47,7 @@ ${kanbanInstance.famille?.id}
         </select>
   </div>
 </div>
-${kanbanInstance.ordo?.id}
+
 <div class="control-group">
   <label class="control-label" for="multiSelect">sous famille</label>
   <div class="controls"  size="16" >

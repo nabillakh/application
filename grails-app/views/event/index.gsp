@@ -215,14 +215,14 @@
                                                                                                  <div id='wrap'>
                                                                                                    
                                                                                                    <div id='external-events'>
-                                                                                                     <h4>Liste des projets en cours</h4>
+                                                                                                     <h4>Activités : </h4>
                                                                                                      
                                                                                                      <g:each in="${mesOF}" status="i" var="ofInstance">
-                                                                                                        <div class='external-event' data-id=${ofInstance.id}> ${ofInstance.kanban.nomKanban} : ${ofInstance.phase.nom}</div>
+                                                                                                        <div class='external-event btn-info' data-id=${ofInstance.id}> ${ofInstance.kanban.nomKanban} : ${ofInstance.phase.nom}</div>
                                                                                                        </g:each>
                                                                                                        
                                                                                                        <input type='checkbox' id='drop-remove' /> <label for='drop-remove'>a enlever?</label>
-                                                                                                     </p>
+                                                                                                     
                                                                                                    </div>
                                                                                                    
                                                                                                    <div id="calendar-container" style="weight: 600px; float :left ; text-align: left;  ">
