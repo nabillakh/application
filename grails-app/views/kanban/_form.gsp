@@ -27,21 +27,36 @@
 <div class="control-group">
   <label class="control-label" for="multiSelect">Chef de projet</label>
   <div class="controls"  size="16" >
-	<g:select id="multiSelect" name="chefProjet"  value="${kanbanInstance.chefProjet?.id}"  from="${application.RH.Effectif.list()}" optionKey="id" required="" class="span12 with-search"/>
+	<select id="multiSelect" name="chefProjet" value="${kanbanInstance.chefProjet?.id}" required="" class="span12 with-search"/>
+          <option value="${kanbanInstance.chefProjet?.id}">${kanbanInstance.chefProjet?.nom} ${kanbanInstance.chefProjet?.prenom}</option>
+        <g:each in="${application.RH.Effectif.list()}" status="i" var="ordoInstance">
+          <option value="${ordoInstance.id}">${ordoInstance.nom} ${ordoInstance.prenom}</option>
+        </g:each>
+        </select>
   </div>
 </div>
-
+${kanbanInstance.famille?.id}
 <div class="control-group">
   <label class="control-label" for="multiSelect">Famille de projet</label>
   <div class="controls"  size="16" >
-	<g:select id="multiSelect" name="famille" value="${kanbanInstance.famille?.id}" from="${application.PP.Famille.list()}" optionKey="id" required="" class="span12 with-search"/>
+	<select id="multiSelect" name="famille" value="${kanbanInstance.famille?.id}" required="" class="span12 with-search">
+          <option value="${kanbanInstance.famille?.id}" selected>${kanbanInstance.famille?.nom}</option>
+        <g:each in="${application.PP.Famille.list()}" status="i" var="familleInstance">
+          <option value="${familleInstance.id}">${familleInstance.nom}</option>
+        </g:each>
+        </select>
   </div>
 </div>
-
+${kanbanInstance.ordo?.id}
 <div class="control-group">
   <label class="control-label" for="multiSelect">sous famille</label>
   <div class="controls"  size="16" >
-	<g:select id="multiSelect" name="ordo"  value="${kanbanInstance.ordo?.id}" from="${application.PP.Ordonnancement.list()}" optionKey="id" required="" class="span12 with-search"/>
+	<select id="multiSelect" name="ordo" value="${kanbanInstance.ordo?.id}" required="" class="span12 with-search"/>
+          <option value="${kanbanInstance.ordo?.id}">${kanbanInstance.ordo?.nom}</option>
+        <g:each in="${application.PP.Ordonnancement.list()}" status="i" var="ordoInstance">
+          <option value="${ordoInstance.id}">${ordoInstance.nom}</option>
+        </g:each>
+        </select>
   </div>
 </div>
 
