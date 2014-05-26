@@ -268,6 +268,27 @@ class KanbanController {
         [kanbanInstanceList:kanbanInstanceList]
     }
     
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def information() {
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        
+        [kanbanInstance : kanbanInstance]
+    }
+    
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def indicateurKanban() {
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        
+        [kanbanInstance : kanbanInstance]
+    }
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def obtenirJournal() {
+        println("okok "+params.kanban)
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        
+        [kanbanInstance : kanbanInstance]
+    }
+    
     
        
 }

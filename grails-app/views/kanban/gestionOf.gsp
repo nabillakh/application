@@ -152,8 +152,8 @@
                                                                                         <g:message code="OF.affectes.label" default="Affectes" />
 
                                                                                       </label>  <div class="controls"  size="16" >
-                                                                                        <g:select id="multiSelect" multiple="multiple"  id="affectes${i}"  name="affectes" from="${application.PP.OFEffectif.list()}" optionKey="id" required="" value="${mesofInstance?.affectes*.id}" class="span12 with-search"/>
-                                                                                      </div>
+                                                                                        <g:select id="multiSelect" multiple="multiple"  id="affectes${i}"  name="affectes" from="${application.RH.Effectif.list()}" optionKey="id" required="" value="${mesofInstance?.affectes*.id}" class="span12 with-search"/>
+                                                                                       </div>
                                                                                     </div>
                                                                                     
                                                                                     <div class="control-group">
