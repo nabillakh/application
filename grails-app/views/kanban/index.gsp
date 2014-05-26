@@ -137,21 +137,21 @@
                                                                                                           <td><center>
                                                                                                             
                                                                                                             <div class="btn-group">
-																<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">Edition  <span class="caret"></span></a>
+																<a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" class=" pull-left"><i class="icon-edit"></i> Edition  <span class="caret"></span></a>
 																
 																<ul class="dropdown-menu">
 																	<li>
-																		<a href="javascript:voir(${kanbanInstance.id});">Voir</a>
+																		<a href="javascript:voir(${kanbanInstance.id});" class=" pull-left"><i class="icon-zoom-in"></i> Voir</a>
 																	</li>
 																	<li>
-																		<a href="javascript:editer(${kanbanInstance.id});">Modifier</a>
+																		<a href="javascript:editer(${kanbanInstance.id});" class=" pull-left"><i class="icon-pencil"></i> Modifier</a>
 																	</li>
 																	<li>
-																		<a href="javascript:gererOf(${kanbanInstance.id});">Affecter</a>
+																		<a href="javascript:gererOf(${kanbanInstance.id});" class=" pull-left"><i class="icon-user icon-white"></i> Affecter</a>
 																	</li>
-																	
+                                                                                                                                        
 																	<li>
-																		<a href="javascript:supprimer(${kanbanInstance.id});">Supprimer</a>
+																		<a href="javascript:supprimer(${kanbanInstance.id});" class=" pull-left"><i class="icon-trash"></i> Supprimer</a>
 																	</li>
 																</ul>
 															</div>

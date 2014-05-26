@@ -1,12 +1,7 @@
-ok                                              
+                                          
 
 <div class="row-fluid">
-                                                    <article class="span12">
-                                                      <center><label class="control-label"  for="nomKanban">
-                                                          <h1 id="page-header"><g:message code="kanban.nomKanban.label" default="Projet : ${kanbanInstance?.nomKanban}" /></h1>
-                                                        </label></center>
-                                                    </article>
-                                                  </div>
+
                                                   <div class="row-fluid">
                                                     <article class="span9">
                                                       <center>
