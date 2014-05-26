@@ -145,11 +145,14 @@
                                                                                       <fieldset class="form-horizontal themed">
                                                                                         <g:render template="form"/>
                                                                                       </fieldset>
-                                                                                      <fieldset class="aside-buttons span11">
-                                                                                        <table  class="table responsive">
-                                                                                          <th><g:link  action="index" controller="kanban"  class=" btn btn-warning">Annuler</g:link>   </th>
-                                                                                          <th><g:submitButton  class="btn btn-primary" name="create" value="Créer" /> </th>
-                                                                                        </table>
+                                                                                      <fieldset class="aside-buttons">
+                                                                                                                                                                               
+                                                                                        </br>
+                                                                                        <div class="btn-group">
+                                                                                          <g:link  action="index" controller="kanban"  class="btn">Annuler</g:link> 
+                                                                                          <g:submitButton  class="btn btn-primary" name="create" value="Créer" />
+                                                                                        </div>
+                                                                                        
                                                                                         
                                                                                       </fieldset>
                                                                                     </g:form>
