@@ -565,7 +565,32 @@
                         
                         ],
                 
+monthNames:['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+monthNamesShort:['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'],
+dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+titleFormat: {
+    month: 'MMMM yyyy',
+    week: "d[ MMMM][ yyyy]{ - d MMMM yyyy}",
+day: 'dddd d MMMM yyyy'
+},
+columnFormat: {
+    month: 'ddd',
+week: 'ddd d',
+day: ''
+},
+axisFormat: 'H:mm', 
+timeFormat: {
+    '': 'H:mm', 
+agenda: 'H:mm{ - H:mm}'
+},
 
+buttonText: {
+    today: 'aujourd\'hui',
+    day: 'jour',
+    week:'semaine',
+    month:'mois'
+}, 
                 
      
                             header: {
