@@ -12,15 +12,15 @@ class BootStrap {
     def init = { servletContext ->
  environments {
             production {
-      createData()
+     createData()
                 // prod initialization
             }
             test {
-      createData()
+    createData()
                 // test initialization
             }
             development {
-      createData()
+    createData()
                 // dev initialization
             }
   }
@@ -62,9 +62,9 @@ class BootStrap {
                 
                  
         
-        def maFamille = new Famille(nom : "Famille1").save(failOnError: true, flush : true)  
-        def maFamille2 = new Famille(nom : "Famille2").save(failOnError: true, flush : true)  
-        def maFamille3 = new Famille(nom : "Famille3").save(failOnError: true, flush : true)
+        def maFamille = new Famille(nom : "Famille1", travaille : true).save(failOnError: true, flush : true)  
+        def maFamille2 = new Famille(nom : "Famille2", travaille : true).save(failOnError: true, flush : true)  
+        def maFamille3 = new Famille(nom : "Famille3", travaille : false).save(failOnError: true, flush : true)
         
         def monOrdo = new Ordonnancement(nom : "produit1", chargeStandard : 50, famille : maFamille).save(failOnError: true, flush : true) 
         def monOrdo2 = new Ordonnancement(nom : "produit2", chargeStandard : 50, famille : maFamille2).save(failOnError: true, flush : true) 
@@ -76,7 +76,7 @@ class BootStrap {
         
         
         ["Analyse":1, "Algorithme":2, "Developpement":3, "Test":4, "Mise en prod":5].each {nomA,numA -> 
-            def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 0.2)
+            def phase = new Phase(nom : nomA,ordre:numA, competence:maCompetence, cleRepartition : 0.2, valeurAjoutee : true)
             monKanban.setPhaseActuelle(phase)
             monOrdo.addToPhases(phase)
             phase.save(failOnError: true)

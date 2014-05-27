@@ -10,6 +10,7 @@ class Phase  implements Comparable {
     String nom
     Long ordre
     Float cleRepartition
+    Boolean valeurAjoutee
     
     Competence competence    
     Ordonnancement monOrdo
@@ -18,6 +19,7 @@ class Phase  implements Comparable {
     
     
     static constraints = {
+        valeurAjoutee nullable : true
         kanbans nullable : true
         cleRepartition nullable : true
         competence nullable : true

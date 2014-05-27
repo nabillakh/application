@@ -10,6 +10,8 @@ class Famille {
     String nom
     static hasMany = [ordo : Ordonnancement]
     
+    boolean travaille
+    
     static transients = ['chargePlanifiee', 'nbProjets']
     
     public int getChargePlanifiee() {
@@ -23,5 +25,6 @@ class Famille {
     
     static constraints = {
         ordo nullable : true
+        travaille nullable : true
     }
 }
