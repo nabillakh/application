@@ -62,8 +62,6 @@
                                                     </article>
                                                   </div>
                                                   
-                                                </section>
-      <section>
       <div class="row-fluid">
         <article class="span12">
         
@@ -80,7 +78,8 @@
         </article>       
         
       </div>
-      </section>
+                                                </section>
+      
       
       
 									    <!-- end widget div -->
