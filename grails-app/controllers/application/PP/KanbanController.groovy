@@ -10,7 +10,7 @@ import org.joda.time.DateTime
 import application.RH.*
 import application.communication.*
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class KanbanController {
 
     def kanbanService

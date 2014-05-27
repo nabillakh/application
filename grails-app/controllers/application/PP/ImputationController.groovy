@@ -7,7 +7,7 @@ import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 import application.RH.*
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 
 class ImputationController {
     

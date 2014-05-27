@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 import application.PP.*
 import org.joda.time.DateTime
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class PicController {
     
     def picService

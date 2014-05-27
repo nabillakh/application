@@ -6,7 +6,7 @@ import static org.springframework.http.HttpStatus.*
 import grails.plugins.springsecurity.Secured
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class CompteRenduController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

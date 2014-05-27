@@ -10,7 +10,7 @@ import grails.converters.JSON
 import application.PP.*
 import application.RH.*
 
-@Transactional(readOnly = true) 
+@Transactional(readOnly = false) 
 class EventController {
 
     def kanbanService

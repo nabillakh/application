@@ -3,7 +3,7 @@
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class ${className}Controller {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
