@@ -78,6 +78,7 @@ grails.project.dependency.resolution = {
         runtime "joda-time:joda-time:1.6.2"
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.27'
+        runtime 'net.sourceforge.jtds:jtds:1.2.6' 
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
     }
 
