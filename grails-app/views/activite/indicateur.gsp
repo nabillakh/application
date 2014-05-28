@@ -13,17 +13,21 @@
 
 
 				<div id="page-content">
-                                
-                                
-                                <article class="span9">
+                                <article>
                                   <!-- new widget -->
                                   
                                   
+                                
+                                                                              avanement kanban
+                                                                                  <div id="avancementKanban" class="chart" style="height:350px; margin:0;"></div>
+									        
+                                	
 						
                                                 <div class="inner-spacer"> 
 									        	<!-- content goes here -->
 									        	
-									        	<div id="chartdiv" class="chart" style="height:350px; margin:0;"></div>
+									        	
+									        	<div id="chargeCapa" class="chart" style="height:350px; margin:0;"></div>
 									        													
 									        	<!-- end calendar container -->
 									        </div>
@@ -103,8 +107,9 @@
 												<div id="1barPIC"></div>
 
 									        </div>
-									        
 									    </div>
+                                    
+                                    
 									</div>
 									
 									<!-- end widget -->
@@ -116,3 +121,15 @@
                                 </div>
 				<!-- end main content -->
 <g:render template="/menues/mainright" />
+
+
+    
+    <script src="${request.contextPath}/js/include/amchart/amcharts.js"></script>
+    <script src="${request.contextPath}/js/include/amchart/serial.js"></script>
+    <script src="${request.contextPath}/js/include/amchart/light.js"></script>
+    
+    
+    <!-- creer par NL pour gerer tous les graphiques -->
+    <script src="${request.contextPath}/js/include/indicateur.js"></script>
+    <!-- creer par NL pour gerer tous les graphiques -->
+    <script src="${request.contextPath}/js/include/indicateur2.js"></script>

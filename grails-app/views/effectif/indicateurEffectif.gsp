@@ -24,4 +24,4 @@
   </div>  </div></div>
 
 
-    <script src="${request.contextPath}/js/include/morris-chart-settings.js"></script> 
+    <script src="${request.contextPath}/js/include/indicateur.js"></script> 

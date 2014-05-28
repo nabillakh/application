@@ -108,6 +108,8 @@ class ActiviteController {
     def indicateur() {
         
     }
+    
+    
     // envoie data pour indicateur de 
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def chargePIC = {

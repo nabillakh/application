@@ -4,6 +4,8 @@
 		<meta name="layout" content="main"/>
 		<title>Gestion projet</title>
                 <g:javascript library="jquery" plugin="jquery" />
+                
+                
   </head>
 
  

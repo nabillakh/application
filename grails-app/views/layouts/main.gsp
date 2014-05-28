@@ -261,6 +261,12 @@
     <!-- jquery.qtip.min -->
     <script src="${request.contextPath}/js/include/jquery.qtip.min.js"></script>
     
+    
+    
+    <!-- creer par NL pour gerer tous les graphiques -->
+    <script src="${request.contextPath}/js/include/indicateur.js"></script>
+    
+    
     <!-- DO NOT REMOVE: Theme Config file -->
     <script src="${request.contextPath}/js/config.js"></script>
     

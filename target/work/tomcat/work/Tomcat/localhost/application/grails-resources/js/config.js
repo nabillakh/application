@@ -571,8 +571,9 @@ dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
 dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
 titleFormat: {
     month: 'MMMM yyyy',
-    week: "d[ MMMM][ yyyy]{ - d MMMM yyyy}",
-day: 'dddd d MMMM yyyy'
+    // week: "d[ MMMM][ yyyy]{ - d MMMM yyyy}",
+    week: "'Semaine du' dd  [MMM] [yyyy] {'au' dd MMM yyyy}",
+    day: 'dddd d MMMM yyyy'
 },
 columnFormat: {
     month: 'ddd',
@@ -594,9 +595,9 @@ buttonText: {
                 
      
                             header: {
-					left: 'title', //,today
-					center: 'prev, next, today',
-					right: 'month, agendaWeek, agenDay' //month, agendaDay, 
+					left: 'prev, next, today', //,today
+					center: 'title',
+					right: 'month, agendaWeek, agendaDay' //month, agendaDay, 
 				},  
                                 
                                 editable: true,
