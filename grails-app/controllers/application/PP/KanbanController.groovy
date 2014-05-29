@@ -288,21 +288,25 @@ class KanbanController {
     def avancement= {
         def monId = params.monId
         
-        println(monId)
+        
         def kanbanInstance = Kanban.get(Integer.parseInt(monId))
-        println(kanbanInstance.nomKanban)
+        
         def chargePlanifiee = kanbanInstance.chargePlanifiee
         Date dateDeb = kanbanInstance.dateLancement
         Date dateFin = kanbanInstance.dateFinPlanifie
         
         def delta = (dateFin.getTime() - dateDeb.getTime())/(1000*60*60*24)
-            println((int)Math.round(delta))
+        
         
         def dates = indicateurService.listeDate(dateDeb, dateFin)
         def charges = 0
         def charges2 = 0
         def monAvancement = []
         def charge = - 100/(int)Math.round(delta)
+        def mesImput = indicateurService.imputations(kanbanInstance)
+        def datee = indicateurService.dateMaxAgenda(mesImput)
+        def datee2 = indicateurService.dateMaxRealise(mesImput)
+        println("date max : " + datee)
         dates.each {date ->
             
             def maDate = new LinkedHashMap()
@@ -313,17 +317,34 @@ class KanbanController {
             charge += 100/(int)Math.round(delta)
             maDate.put("theorique",(double)Math.round(charge * 10) / 10)
         
-        def mesImput = indicateurService.imputations(kanbanInstance)
         def chargePlanifie = indicateurService.chargePlanifieJourKanban(date, mesImput)
         def chargeImputee =  indicateurService.chargeRealiseJourKanban(date, mesImput)
         charges += chargePlanifie / chargePlanifiee * 100 /8
         charges2 += chargeImputee  / chargePlanifiee * 100 /8
-        println(charges2)
-            maDate.put("planifie",charges)
-            maDate.put("realise",charges2)
-             monAvancement << (maDate)
+        
+        
+                Calendar calDate = Calendar.getInstance();
+                Calendar calMax = Calendar.getInstance();
+                Calendar calMax2 = Calendar.getInstance();
+                calDate.setTime(date);
+                calMax.setTime(datee); 
+                calMax.add(Calendar.DATE,1)
+                calMax2.setTime(datee2); 
+                calMax2.add(Calendar.DATE,1)
+        
+        if((calDate.compareTo(calMax)<0)) {
+            maDate.put("planifie",(double)Math.round(charges * 10) / 10)
         }
-        println(monAvancement)
+        if((calDate.compareTo(calMax2)<0)) {
+            maDate.put("realise",(double)Math.round(charges2 * 10) / 10 )
+        }
+            
+            
+        
+        monAvancement << (maDate)
+        
+    }
+    
         [monAvancement: monAvancement]
         render monAvancement as JSON 
     }

@@ -395,7 +395,7 @@ if ($('#avancementKanban').length) {
                        alert("Error loading chart");
                    }
                });
-                       
+               
                        var chart2;
 
 	AmCharts.ready(function() {
@@ -426,16 +426,38 @@ if ($('#avancementKanban').length) {
 		salesAxis.mininimum = 0;
 		salesAxis.maximum = 120;
 		salesAxis.unit = " %";
-                salesAxis.stackType ="regular";
+                // Permet d'emplier les donnees
+                // salesAxis.stackType ="regular";
 		salesAxis.axisAlpha = 0;
 		chart2.addValueAxis(salesAxis);
 
 		// GRAPHS
 		// duration graph
                 // developpement graph
+                
+                var planifie = new AmCharts.AmGraph();
+		planifie.id = "g2";
+		planifie.title = "planifie";
+		planifie.type = "line";                
+		planifie.valueField = "planifie";
+                planifie.bulletBorderAlpha = 1;
+                planifie.bulletColor = "#FFFFFF";
+                planifie.bulletSize = 5;
+                planifie.hideBulletsCount = 50;
+                planifie.lineThickness = 2;
+                planifie.useLineColorForBulletBorder = true;
+                planifie.connect = true;
+		planifie.balloonText = "[[title]] : [[value]] %";
+		planifie.legendValueText = "[[value]] %";
+                
+		chart2.addGraph(planifie);
+                
+                
+                
 		var monGraphe = new AmCharts.AmGraph();
 		monGraphe.id = "g1";
 		monGraphe.title = "Theorique";
+		monGraphe.type = "line";
                 
 		monGraphe.valueField = "theorique";
                 monGraphe.bulletBorderAlpha = 1;
@@ -449,28 +471,13 @@ if ($('#avancementKanban').length) {
                 
 		chart2.addGraph(monGraphe);
 	
-                var planifie = new AmCharts.AmGraph();
-		planifie.id = "g2";
-		planifie.title = "planifie";
-                
-		planifie.valueField = "planifie";
-                planifie.bulletBorderAlpha = 1;
-                planifie.bulletColor = "#FFFFFF";
-                planifie.bulletSize = 5;
-                planifie.hideBulletsCount = 50;
-                planifie.lineThickness = 2;
-                planifie.useLineColorForBulletBorder = true;
-                planifie.connect = false;
-		planifie.balloonText = "[[title]] : [[value]] %";
-		planifie.legendValueText = "[[value]] %";
-                
-		chart2.addGraph(planifie);
 
 
 
                 var realise = new AmCharts.AmGraph();
 		realise.id = "g3";
 		realise.title = "realise";
+		realise.type = "line";
                 
 		realise.valueField = "realise";
                 realise.bulletBorderAlpha = 1;
@@ -479,7 +486,7 @@ if ($('#avancementKanban').length) {
                 realise.hideBulletsCount = 50;
                 realise.lineThickness = 2;
                 realise.useLineColorForBulletBorder = true;
-                realise.connect = false;
+                realise.connect = true;
 		realise.balloonText = "[[title]] : [[value]] %";
 		realise.legendValueText = "[[value]] %";
                 
@@ -496,6 +503,12 @@ if ($('#avancementKanban').length) {
 
 		// LEGEND
                 
+		var legend = new AmCharts.AmLegend();
+		legend.bulletType = "round";
+		legend.equalWidths = true;
+		legend.valueWidth = 50;
+		legend.color = "#000000";
+		chart2.addLegend(legend);
 
 		var chartScrollbar = new AmCharts.ChartScrollbar();
 		chartScrollbar.scrollbarHeight = 30;
@@ -509,7 +522,7 @@ if ($('#avancementKanban').length) {
         
 
 function zoomChart(){
-    chart2.zoomToIndexes(chart2.dataProvider.length - 40, chart2.dataProvider.length - 1);
+    chart2.zoomToIndexes(0, chart2.dataProvider.length);
 }
 }
 

@@ -68,7 +68,7 @@ class IndicateurService {
             mesImput.add(imput)
         }
         }
-        println("dans service : avec imput " + mesImput)
+        
         return mesImput
     }
     
@@ -77,6 +77,7 @@ class IndicateurService {
         
         // création des jours
             Date maDate = deb
+            Date dateMax = dateMaxAgenda(mesImput)
             def charge = 0
             Calendar cal = Calendar.getInstance();
             Calendar cal2 = Calendar.getInstance();
@@ -91,8 +92,11 @@ class IndicateurService {
                 Date finEvent = imput.eventEffectif.event.endTime
                 Calendar calDebutEvent = Calendar.getInstance();
                 Calendar calFinEvent = Calendar.getInstance();
+                Calendar calMax = Calendar.getInstance();
                 calDebutEvent.setTime(debutEvent);
                 calFinEvent.setTime(finEvent);   
+                calMax.setTime(dateMax);   
+                calMax.add(Calendar.DATE,1)
                 def charge2 = imput.eventEffectif.event.dureeHeures
             if((calDebutEvent.compareTo(cal2)<0)&&(calFinEvent.compareTo(cal)>0)) {
                     charge += charge2
@@ -100,6 +104,7 @@ class IndicateurService {
             else {
                 
             }
+            
             
             }
         return charge
@@ -137,6 +142,42 @@ class IndicateurService {
             }
         return charge
     }
+    
+    def dateMaxAgenda(Imputation[] mesImput) {
+        def maDate = new Date()
+        Calendar cal = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
+        mesImput.each() {imput ->
+                Date debutEvent = imput.eventEffectif.event.startTime
+                cal.setTime(debutEvent);
+                cal2.setTime(maDate);   
+                
+            if((cal.compareTo(cal2)>0)) {
+                    maDate = debutEvent
+            }
+            else {
+                
+            }
+    }
+    return maDate}
+
+    def dateMaxRealise(Imputation[] mesImput) {
+        def maDate = new Date()
+        Calendar cal = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
+        mesImput.each() {imput ->
+                Date debutEvent = imput.eventEffectif.event.startTime
+                cal.setTime(debutEvent);
+                cal2.setTime(maDate);   
+                
+            if((cal.compareTo(cal2)>0)&&imput.realise) {
+                    maDate = debutEvent
+            }
+            else {
+                
+            }
+    }
+    return maDate}
     
     
 }
