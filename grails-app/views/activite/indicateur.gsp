@@ -131,5 +131,4 @@
     
     <!-- creer par NL pour gerer tous les graphiques -->
     <script src="${request.contextPath}/js/include/indicateur.js"></script>
-    <!-- creer par NL pour gerer tous les graphiques -->
-    <script src="${request.contextPath}/js/include/indicateur2.js"></script>
+    

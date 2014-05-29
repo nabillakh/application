@@ -556,7 +556,7 @@
                                           
                                         },
                                 error: function () {
-                                    alert('there was an error while fetching events!');
+                                    
                                 },
                                         color: 'yellow',
                                         textColor: 'black',

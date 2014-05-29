@@ -371,184 +371,61 @@ if ($('#chargeCapa').length) {
 	});
 }
 
-if ($('#avancementKanban').length) {
-	var chartData2 = [{
-            "date": "2012-07-27",
-            "value": 13
-        }, {
-            "date": "2012-07-28",
-            "value": 11
-        }, {
-            "date": "2012-07-29",
-            "value": 15
-        }, {
-            "date": "2012-07-30",
-            "value": 16
-        }, {
-            "date": "2012-07-31",
-            "value": 18
-        }, {
-            "date": "2012-08-01",
-            "value": 13
-        }, {
-            "date": "2012-08-02",
-            "value": 22
-        }, {
-            "date": "2012-08-03",
-            "value": 23
-        }, {
-            "date": "2012-08-04",
-            "value": 20
-        }, {
-            "date": "2012-08-05",
-            "value": 17
-        }, {
-            "date": "2012-08-06",
-            "value": 16
-        }, {
-            "date": "2012-08-07",
-            "value": 18
-        }, {
-            "date": "2012-08-08",
-            "value": 21
-        }, {
-            "date": "2012-09-22",
-            "value": 57
-        }, {
-            "date": "2012-09-23",
-            "value": 61
-        }, {
-            "date": "2012-09-24",
-            "value": 59
-        }, {
-            "date": "2012-09-25",
-            "value": 67
-        }, {
-            "date": "2012-09-26",
-            "value": 65
-        }, {
-            "date": "2012-09-27",
-            "value": 61
-        }, {
-            "date": "2012-09-28",
-            "value": 66
-        }, {
-            "date": "2012-09-29",
-            "value": 69
-        }, {
-            "date": "2012-09-30",
-            "value": 71
-        }, {
-            "date": "2012-10-01",
-            "value": 67
-        }, {
-            "date": "2012-10-02",
-            "value": 63
-        }, {
-            "date": "2012-10-03",
-            "value": 46
-        }, {
-            "date": "2012-10-04",
-            "value": 32
-        }, {
-            "date": "2012-10-08",
-            "value": 28
-        }, {
-            "date": "2012-10-09",
-            "value": 27
-        }, {
-            "date": "2012-10-10",
-            "value": 36
-        }, {
-            "date": "2012-10-11",
-            "value": 33
-        }, {
-            "date": "2012-10-12",
-            "value": 31
-        }, {
-            "date": "2012-10-13",
-            "value": 30
-        }, {
-            "date": "2012-10-14",
-            "value": 34
-        }, {
-            "date": "2012-10-15",
-            "value": 38
-        }, {
-            "date": "2012-10-16",
-            "value": 37
-        }, {
-            "date": "2012-10-17",
-            "value": 44
-        }, {
-            "date": "2012-10-18",
-            "value": 49
-        }, {
-            "date": "2012-10-19",
-            "value": 53
-        }, {
-            "date": "2012-10-20",
-            "value": 57
-        }, {
-            "date": "2012-10-21",
-            "value": 60
-        }, {
-            "date": "2012-10-22",
-            "value": 61
-        }, {
-            "date": "2012-10-23",
-            "value": 69
-        }, {
-            "date": "2012-10-24",
-            "value": 67
-        }, {
-            "date": "2012-10-25",
-            "value": 72
-        }, {
-            "date": "2012-10-26",
-            "value": 77
-        }, {
-            "date": "2012-10-27",
-            "value": 75
-        }, {
-            "date": "2012-10-28",
-            "value": 70
-        }, {
-            "date": "2012-10-29",
-            "value": 72
-        }, {
-            "date": "2012-10-30",
-            "value": 70
-        }];
 
-	var chart2;
+
+
+
+
+if ($('#avancementKanban').length) {
+        var monId = $('#monId').val();
+        var json;
+    
+    var chartData2 = $.ajax({
+                   type:'GET',
+                   url: '/application/kanban/avancement',
+                   data : {
+                     monId : monId, 
+                   },
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       json = data;
+                   }, 
+                           error:function(){
+                       alert("Error loading chart");
+                   }
+               });
+                       
+                       var chart2;
 
 	AmCharts.ready(function() {
 		// SERIAL CHART
 		chart2 = new AmCharts.AmSerialChart();
-
-		chart2.pathToImages = "img/amchart/";
+// mettre lien interne
+		chart2.pathToImages = "http://www.amcharts.com/lib/3/images/";
 		chart2.type = "serial";
-		chart2.dataProvider = chartData2;
+		chart2.dataProvider = json;
 		chart2.categoryField = "date";
-		chart2.dataDateFormat = "YYYY-MM-DD";
+		chart2.dataDateFormat = "YYYY-MM-DD";      
+                chart2.addListener("rendered", zoomChart);
+
 		// AXES
 		// category axis
 		var categoryAxis = chart2.categoryAxis;
 		categoryAxis.parseDates = true;
                 categoryAxis.dashLenght = 1;
 		categoryAxis.minorGridEnabled = true;
-                categoryAxis.position = top;
+                //categoryAxis.position = top;
 		
 
 		// charge value axis
 		var salesAxis = new AmCharts.ValueAxis();
-		salesAxis.title = "Charge planifiée (jour)";
+		salesAxis.title = "Avancement (%)";
 		salesAxis.gridAlpha = 0;
 		salesAxis.inside = true;
 		salesAxis.mininimum = 0;
-		salesAxis.maximum = 400;
-		salesAxis.unit = " j";
+		salesAxis.maximum = 120;
+		salesAxis.unit = " %";
                 salesAxis.stackType ="regular";
 		salesAxis.axisAlpha = 0;
 		chart2.addValueAxis(salesAxis);
@@ -558,18 +435,56 @@ if ($('#avancementKanban').length) {
                 // developpement graph
 		var monGraphe = new AmCharts.AmGraph();
 		monGraphe.id = "g1";
-		monGraphe.title = "developpement";
+		monGraphe.title = "Theorique";
                 
-		monGraphe.valueField = "value";
+		monGraphe.valueField = "theorique";
                 monGraphe.bulletBorderAlpha = 1;
                 monGraphe.bulletColor = "#FFFFFF";
                 monGraphe.bulletSize = 5;
                 monGraphe.hideBulletsCount = 50;
                 monGraphe.lineThickness = 2;
                 monGraphe.useLineColorForBulletBorder = true;
+		monGraphe.balloonText = "[[title]] : [[value]] %";
+		monGraphe.legendValueText = "[[value]] %";
                 
 		chart2.addGraph(monGraphe);
 	
+                var planifie = new AmCharts.AmGraph();
+		planifie.id = "g2";
+		planifie.title = "planifie";
+                
+		planifie.valueField = "planifie";
+                planifie.bulletBorderAlpha = 1;
+                planifie.bulletColor = "#FFFFFF";
+                planifie.bulletSize = 5;
+                planifie.hideBulletsCount = 50;
+                planifie.lineThickness = 2;
+                planifie.useLineColorForBulletBorder = true;
+                planifie.connect = false;
+		planifie.balloonText = "[[title]] : [[value]] %";
+		planifie.legendValueText = "[[value]] %";
+                
+		chart2.addGraph(planifie);
+
+
+
+                var realise = new AmCharts.AmGraph();
+		realise.id = "g3";
+		realise.title = "realise";
+                
+		realise.valueField = "realise";
+                realise.bulletBorderAlpha = 1;
+                realise.bulletColor = "#FFFFFF";
+                realise.bulletSize = 5;
+                realise.hideBulletsCount = 50;
+                realise.lineThickness = 2;
+                realise.useLineColorForBulletBorder = true;
+                realise.connect = false;
+		realise.balloonText = "[[title]] : [[value]] %";
+		realise.legendValueText = "[[value]] %";
+                
+		chart2.addGraph(realise);
+
 
 		// CURSOR
 		var chartCursor = new AmCharts.ChartCursor();
@@ -580,25 +495,22 @@ if ($('#avancementKanban').length) {
 		chart2.addChartCursor(chartCursor);
 
 		// LEGEND
-		var legend = new AmCharts.AmLegend();
-		legend.bulletType = "round";
-		legend.equalWidths = true;
-		legend.valueWidth = 30;
-		legend.color = "#000000";
-		chart2.addLegend(legend);
+                
 
-		// BAR
-		/* var chartScrollbar = new AmCharts.ChartScrollbar();
-		chartScrollbar.scrollbarHeight = 25;
-		chartScrollbar.graph = salesGraph; // as we want graph to be displayed in the scrollbar, we set graph here
-		chartScrollbar.graphType = "line"; // we don't want candlesticks to be displayed in the scrollbar
-		chartScrollbar.gridCount = 5;
+		var chartScrollbar = new AmCharts.ChartScrollbar();
+		chartScrollbar.scrollbarHeight = 30;
+		chartScrollbar.graph = monGraphe;
 		chartScrollbar.color = "#FFFFFF";
-		chart.addChartScrollbar(chartScrollbar);*/
+		chart2.addChartScrollbar(chartScrollbar);
 
-		// WRITE
 		chart2.write("avancementKanban");
 	});
+        
+        
+
+function zoomChart(){
+    chart2.zoomToIndexes(chart2.dataProvider.length - 40, chart2.dataProvider.length - 1);
+}
 }
 
 

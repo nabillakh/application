@@ -15,6 +15,12 @@
  
  <div id="page-content">
     <div class="fluid-container">
+      
+                                                                              avanement kanban
+                                                                                  <div id="avancementKanban" class="chart" style="height:350px; margin:0;"></div>
+									         <g:hiddenField name="monId" id="monId" value="${kanbanInstance.id}"/>
+      
+      
 						<section id="widget-grid" class="well light">
                                                   <div class="row-fluid">
                                                     <article class="span3">
@@ -62,6 +68,10 @@
     </div>
                                                       </center>
                                                     </article>
+                                                    
+                                                    
+                                                    
+                                                    
                                                   </div>
                                                   
       <div class="row-fluid">
@@ -114,3 +124,14 @@
                                                         				<!-- end main content -->
 			
 				<g:render template="/menues/mainright" />
+
+
+    
+    <script src="${request.contextPath}/js/include/amchart/amcharts.js"></script>
+    <script src="${request.contextPath}/js/include/amchart/serial.js"></script>
+    <script src="${request.contextPath}/js/include/amcharts/amcharts/themes/black.js"></script>
+    
+    
+    <!-- creer par NL pour gerer tous les graphiques -->
+    <script src="${request.contextPath}/js/include/indicateur.js"></script>
+    

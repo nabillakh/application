@@ -3,12 +3,13 @@ package application.PP
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import application.*
-import grails.plugins.springsecurity.Secured
-import grails.plugins.springsecurity.Secured
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 import application.RH.*
 import application.communication.*
+import grails.converters.JSON
+import grails.plugins.springsecurity.Secured
+import org.codehaus.groovy.grails.web.json.JSONObject
 
 @Transactional(readOnly = false)
 class KanbanController {
@@ -16,6 +17,7 @@ class KanbanController {
     def kanbanService
     def messageService
     def springSecurityService
+    def indicateurService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "POST"]
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
@@ -281,6 +283,54 @@ class KanbanController {
         
         [kanbanInstance : kanbanInstance]
     }
+    
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def avancement= {
+        def monId = params.monId
+        
+        println(monId)
+        def kanbanInstance = Kanban.get(Integer.parseInt(monId))
+        println(kanbanInstance.nomKanban)
+        def chargePlanifiee = kanbanInstance.chargePlanifiee
+        Date dateDeb = kanbanInstance.dateLancement
+        Date dateFin = kanbanInstance.dateFinPlanifie
+        
+        def delta = (dateFin.getTime() - dateDeb.getTime())/(1000*60*60*24)
+            println((int)Math.round(delta))
+        
+        def dates = indicateurService.listeDate(dateDeb, dateFin)
+        def charges = 0
+        def charges2 = 0
+        def monAvancement = []
+        def charge = - 100/(int)Math.round(delta)
+        dates.each {date ->
+            
+            def maDate = new LinkedHashMap()
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+            DateTime date2 = new DateTime(date)
+            maDate.put("date",sdf.format(date2.toDate()))
+            charge += 100/(int)Math.round(delta)
+            maDate.put("theorique",(double)Math.round(charge * 10) / 10)
+        
+        def mesImput = indicateurService.imputations(kanbanInstance)
+        def chargePlanifie = indicateurService.chargePlanifieJourKanban(date, mesImput)
+        def chargeImputee =  indicateurService.chargeRealiseJourKanban(date, mesImput)
+        charges += chargePlanifie / chargePlanifiee * 100 /8
+        charges2 += chargeImputee  / chargePlanifiee * 100 /8
+        println(charges2)
+            maDate.put("planifie",charges)
+            maDate.put("realise",charges2)
+             monAvancement << (maDate)
+        }
+        println(monAvancement)
+        [monAvancement: monAvancement]
+        render monAvancement as JSON 
+    }
+    
+    
+    
+    
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def obtenirJournal() {
         println("okok "+params.kanban)

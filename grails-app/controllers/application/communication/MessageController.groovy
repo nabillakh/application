@@ -114,10 +114,10 @@ class MessageController {
     
     
     def obtenirMessage() {
-        println("dans obtenir message :" + params.kanban)
+        
         def mesMessages
         if(params.kanban == null) {
-            println("params.kanban null")
+            
             mesMessages = Message.list()
         }
         else {
