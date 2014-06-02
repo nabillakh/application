@@ -57,6 +57,72 @@
         
        }
        
+       
+         // chargement data pour PIC
+        var ordoOF = (function() {
+               var json;
+               $.ajax({
+                   type:'GET',
+                   url: '/application/kanban/chargeOF',
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       bootbox.alert("ok");
+                       json = data;
+                   }, 
+                       error:function(){
+                       bootbox.alert("Error loading chart");
+                   }
+               });
+               return json;
+           });
+           
+        var absOF = (function() {
+               var json;
+               $.ajax({
+                   type:'GET',
+                   url: '/application/kanban/listeOF',
+                   async: false,
+                   global: false,
+                   success: function(data) {
+                       bootbox.alert("ok");
+                       json = data;
+                   }, 
+                           error:function(){
+                       bootbox.alert("Error loading chart");
+                   }
+               });
+               return json;
+           });
+        
+        
+        
+        // charge issue du pic
+        
+       if ($('#avancementOf').length){
+           
+           $.getJSON( "/application/kanban/chargeOF", function( data ) {
+               $.getJSON( "/application/kanban/listeOF", function( fam ) {
+               Morris.Bar({
+		  element: 'avancementOf',
+		  axes: false,
+		  grid: false,
+		  data: data,
+		  xkey: 'annee',
+		  ykeys: fam,
+		  labels: fam,
+		  stacked: true
+		});
+	});
+	});
+        
+       }
+       
+       
+       
+       
+       
+       
        if ($('#indicateurKanban').length){
            var nomKanban = $('#monKanban').val();
                Morris.Bar({
@@ -216,7 +282,7 @@ if ($('#chargeCapa').length) {
 	AmCharts.ready(function() {
 		// SERIAL CHART
 		chart = new AmCharts.AmSerialChart();
-		chart.pathToImages = "img/amchart/";
+		chart.pathToImages = "http://www.amcharts.com/lib/3/images/";
 		chart.dataProvider = chartData;
 		chart.categoryField = "date";
 		chart.marginTop = 0;
@@ -356,6 +422,13 @@ if ($('#chargeCapa').length) {
 		legend.valueWidth = 30;
 		legend.color = "#000000";
 		chart.addLegend(legend);
+                
+                
+		var chartScrollbar = new AmCharts.ChartScrollbar();
+		chartScrollbar.scrollbarHeight = 30;
+		chartScrollbar.graph = salesGraph;
+		chartScrollbar.color = "#FFFFFF";
+		chart.addChartScrollbar(chartScrollbar);
 
 		// BAR
 		/* var chartScrollbar = new AmCharts.ChartScrollbar();

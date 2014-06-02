@@ -16,11 +16,6 @@
  <div id="page-content">
     <div class="fluid-container">
       
-                                                                              avanement kanban
-                                                                                  <div id="avancementKanban" class="chart" style="height:350px; margin:0;"></div>
-									         <g:hiddenField name="monId" id="monId" value="${kanbanInstance.id}"/>
-      
-      
 						<section id="widget-grid" class="well light">
                                                   <div class="row-fluid">
                                                     <article class="span3">
@@ -58,10 +53,10 @@
       </li>
       <li>
         
-        <a href="javascript:voirIndicateurs(${kanbanInstance.id})" title="Indicateurs">
+        <g:link controller ="kanban" action ="indicateurKanban" id="${kanbanInstance.id}" title="Indicateurs">
           <img src="${request.contextPath}/img/start-icons/stats.png" alt="">
           <span>Indicateurs</span>
-        </a>
+        </g:link>
       </li>
       </ul>
       

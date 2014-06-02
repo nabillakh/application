@@ -279,7 +279,7 @@ class KanbanController {
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def indicateurKanban() {
-        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.id))
         
         [kanbanInstance : kanbanInstance]
     }
@@ -358,6 +358,44 @@ class KanbanController {
         def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
         
         [kanbanInstance : kanbanInstance]
+    }
+    
+    
+    
+    
+    
+    // envoie data pour indicateur de 
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def chargeOF = {
+        def pics = Pic.list()
+        // hypothese nbannee = nb pic
+              
+        def picLists = []
+        pics.each {pic ->
+            def picList = new LinkedHashMap()
+            picList.put("annee",pic.annee.toString())
+            
+            pic.picFamille.each() { maPicFamille ->
+                 picList.put((maPicFamille.famille.nom.toString()),(maPicFamille.chargePlanifie()))
+            }
+             picLists << (picList)
+        }
+        
+        [picInstanceList: picLists]
+        render picLists as JSON
+    }
+    // envoie la liste de famille pour parising dans le graphe 1
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def listeOF = {
+        println("dans liste OF")
+        def fams = Famille.list()
+        def famLists = []
+        fams.each{ fam ->
+            famLists << fam.nom.toString()
+        }
+        
+        [famInstanceList: famLists]
+        render famLists as JSON
     }
     
     
