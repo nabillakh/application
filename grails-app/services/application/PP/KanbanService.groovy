@@ -120,14 +120,16 @@ class KanbanService {
     // montre les phases auxquelles un kanban va passer
     @Transactional
     OF[] montrerOF(Kanban monKanban) {
-        
+        def ofs
         try{
             // requete SQL
-            return OF.findAll("from OF as b where b.kanban=?", [monKanban])
+            ofs = OF.findAll("from OF as b where b.kanban=?", [monKanban])
+            ofs.sort{a,b-> a.phase.ordre<=>b.phase.ordre}
         }
         catch (NullPointerException n) {
-            return null
+            
         }
+        return ofs
     }        
     // montre les phases auxquelles un kanban va passer dans l'ordo initial
     @Transactional
@@ -155,7 +157,7 @@ class KanbanService {
             def ofs = OF.findAll("from OF as b where b.kanban=?", [monKanban])
             if(!ofs)  {
                 montrerPhasesInitiales(monKanban).each() { maPhase ->
-                    def of = new OF(phase : maPhase, kanban : monKanban)
+                    def of = new OF(phase : maPhase, kanban : monKanban, ordre : maPhase.ordre)
                     chargeInitialeOF(of)
                     
                     if(maPhase.ordre == 1) {

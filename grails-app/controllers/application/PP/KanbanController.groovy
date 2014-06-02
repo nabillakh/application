@@ -28,6 +28,7 @@ class KanbanController {
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(Kanban kanbanInstance) {
         def ofs = kanbanService.montrerOF(kanbanInstance)
+        ofs.sort{a,b-> a.phase.ordre<=>b.phase.ordre}
         def mesCR = kanbanService.afficherCRKanban(kanbanInstance)
         [kanbanInstance:kanbanInstance, ofs : ofs, mesCR : mesCR]
     }
@@ -72,7 +73,7 @@ class KanbanController {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy")
         Date dateLivraison = sdf.parse(params.dateLivraison)
         
-        println(dateLivraison)
+        
         def description = params.description
         def famille = params.famille
         def ordo = params.ordo
@@ -81,7 +82,7 @@ class KanbanController {
         def monId = params.monId
         def monKanban 
         if(!monId) {
-            println("creation de kanban avec id :" + monId)
+            
             monKanban = new Kanban()        
             monKanban.nomKanban = nomKanban
             monKanban.dateFinPlanifie = dateLivraison
@@ -93,7 +94,7 @@ class KanbanController {
             monKanban.save(flush : true)
         }
         else {
-            println("edition de kanban avec id :" + monId)
+            
             monKanban = Kanban.get(monId)
             println(monKanban.nomKanban)  
             monKanban.nomKanban = nomKanban
@@ -264,17 +265,18 @@ class KanbanController {
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def obtenirKanbanEffectif() {
-        println(params.effectif + "ok 2 ")
-        def monEffectif = Effectif.get(Integer.parseInt(params.effectif))
+        
+        def monEffectif = Effectif.get(Integer.parseInt(params.id))
         def kanbanInstanceList = kanbanService.listeKanbanEffectif(monEffectif)
-        [kanbanInstanceList:kanbanInstanceList]
+        [kanbanInstanceList:kanbanInstanceList, effectifInstance : monEffectif]
     }
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def information() {
-        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.id))
+        def ofs = kanbanService.montrerOF(kanbanInstance)
         
-        [kanbanInstance : kanbanInstance]
+        [kanbanInstance : kanbanInstance, ofs : ofs]
     }
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
@@ -354,8 +356,8 @@ class KanbanController {
     
     @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def obtenirJournal() {
-        println("okok "+params.kanban)
-        def kanbanInstance = Kanban.get(Integer.parseInt(params.kanban))
+        
+        def kanbanInstance = Kanban.get(Integer.parseInt(params.id))
         
         [kanbanInstance : kanbanInstance]
     }

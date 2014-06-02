@@ -22,6 +22,7 @@
 							</div>
 							<!-- end buttons for phone device -->
 							
+                                                                <g:link  action="show" controller="Effectif" id="${sec.loggedInUserInfo(field:"id")}" class="btn btn-inverse btn-small">Mon profil</g:link>
 							<!-- dropdown mini-inbox-->
                                                         <g:set var="affichage" value="${1}" /> 
                                                           
@@ -38,7 +39,6 @@
                                                         <kanbans:kanbanmini>
                                                         </kanbans:kanbanmini>
                                                        
-                                                          
                                                         
                                                         
 							<!-- end Tasks -->
@@ -116,10 +116,10 @@
 								<ul>
                                                                         
                                                                         <li>
-                                                                                <g:link  action="activite" controller="activite"> Mon activité </g:link>
+                                                                                <g:link controller="kanban" action="obtenirKanbanEffectif" id="${sec.loggedInUserInfo(field:"id")}" > Mon activité </g:link>
 									</li>
 									<li>
-                                                                                <g:link  action="indicateur" controller="activite"> Mes indicateurs </g:link>
+                                                                                <g:link   controller="effectif" action="indicateurEffectif" id="${sec.loggedInUserInfo(field:"id")}" > Mes indicateurs </g:link>
 									</li>
                                                                         <li>
                                                                                 <g:link  action="index" controller="kanban"> Ajouter un projet </g:link>

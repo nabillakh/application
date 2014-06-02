@@ -5,7 +5,7 @@ import application.RH.*
 
 
 @ToString()
-class OF {
+class OF  implements Comparable {
 // a retirer et passer en transient
     def kanbanService
     
@@ -13,6 +13,8 @@ class OF {
     Phase phase
     Float chargePlanifiee
     Float chargeImputee
+    
+    Long ordre
     
     static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser']
     
@@ -40,5 +42,10 @@ class OF {
         chargeImputee nullable : true
         affectes nullable : true
         dateFinPlanifie nullable : true
+        ordre nullable : true
     }
+    
+    int compareTo(obj) {
+       ordre.compareTo(obj.ordre)
+   }
 }

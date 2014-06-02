@@ -70,13 +70,13 @@
                                                                                     <tr><center><h4>Chef de projet :<g:link controller="Effectif" action="show" id="${kanbanInstance.chefProjet.id}" class="btn-link"> ${kanbanInstance.chefProjet.nom} ${kanbanInstance.chefProjet.prenom}</h4> </g:link> </center></tr>
                                                                                 
                                                                                     
-                                                                                    <tr><td>Phase : </td><g:each in="${kanbanInstance.of}" status="i" var="ofInstance">
+                                                                                    <tr><td>Phase : </td><g:each in="${ofs}" status="i" var="ofInstance">
                                                                                   <td><center><g:link controller="OF" action="show" id="${ofInstance.id}">${ofInstance.phase.ordre} : ${ofInstance.phase.nom} </g:link></br></center></td>
                                                                                 </g:each> </tr>
-                                                                                     <tr><td> Livraison : </td><g:each in="${kanbanInstance.of}" status="i" var="ofInstance">
+                                                                                     <tr><td> Livraison : </td><g:each in="${ofs}" status="i" var="ofInstance">
                                                                                      <td><center><g:formatDate format ='dd-MM-yyyy' date="${ofInstance.dateFinPlanifie}" /> </br>
                                                                                      </td></g:each> </tr>
-                                                                                     <tr><td>Affecté à : </td><g:each in="${kanbanInstance.of}" status="i" var="ofInstance"><td> <center><g:if test="${ofInstance.affectes}">
+                                                                                     <tr><td>Affecté à : </td><g:each in="${ofs}" status="i" var="ofInstance"><td> <center><g:if test="${ofInstance.affectes}">
                                                                                          
                                                                                       <g:each in="${ofInstance.affectes}" status="j" var="aff">
                                                                                      <g:link controller="Effectif" action="show" id="${aff.effectif.id}" class="btn-link"><i class="icon-user icon-white"></i>  ${aff.effectif.nom} ${aff.effectif.prenom},</g:link></br>
@@ -84,7 +84,7 @@
                                                                                        <g:else> 
                                                                                        </g:else></center></td>
                                                                                 </g:each></tr>
-                                                                                <tr> <td>Actif?</td><g:each in="${kanbanInstance.of}" status="i" var="ofInstance">
+                                                                                <tr> <td>Actif?</td><g:each in="${ofs}" status="i" var="ofInstance">
                                                                                  <td>
 													<div class="switch switch-small" data-on-label="<i class='icon-ok icon-white'></i>" data-off-label="<i class='icon-remove'></i>">
 													    <input type="checkbox" checked /> 
@@ -126,3 +126,12 @@
         
 	<!-- REQUIRED: iButton -->
     <script src="${request.contextPath}/js/include/jquery.ibutton.min.js"></script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

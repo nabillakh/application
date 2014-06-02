@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<%@ page import="application.MailService" %>
-<%
-    def myService = grailsApplication.classLoader.loadClass('application.MailService').newInstance()
-%>
+
   <head>
 		<meta name="layout" content="main"/>
 		<title>Sysprod</title>
@@ -29,31 +26,31 @@
       <ul>
         
       <li>
-        <a href="javascript:information(${effectifInstance.id})" title="Informations">
+        <g:link controller="effectif" action="information" id="${effectifInstance.id}" title="Informations">
           <img src="${request.contextPath}/img/start-icons/mass.png" alt="">
           <span>Informations</span>
-        </a>
+        </g:link>
       </li>
         <li>
-        <a href="javascript:voirJournal(${effectifInstance.id})" title="Journal">
+        <g:link controller="effectif" action="show" id="${effectifInstance.id}" title="Journal">
           <img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
           <span>Journal</span>
-        </a>
+        </g:link>
       </li>
       
         <li>
           
-        <a href="javascript:voirProjets(${effectifInstance.id})" title="Projets">
+        <g:link controller="kanban" action="obtenirKanbanEffectif" id="${effectifInstance.id}" title="Projets">
           <img src="${request.contextPath}/img/start-icons/orders.png" alt="">
           <span>Projets en cours</span>
-        </a>
+        </g:link>
       </li>
       <li>
         
-        <a href="javascript:voirIndicateurs(${effectifInstance.id})" title="Indicateurs">
+        <g:link controller="effectif" action="indicateurEffectif" id="${effectifInstance.id}" title="Indicateurs">
           <img src="${request.contextPath}/img/start-icons/stats.png" alt="">
           <span>Indicateurs</span>
-        </a>
+        </g:link>
       </li>
       </ul>
       
@@ -71,11 +68,143 @@
           
       </div>
         
+									    <!-- a modifier-->
 <div class="jarviswidget" id="contenu2" data-widget-collapsed="false">
+    <header>
+									        <h2>Journal</h2>                           
+  </header> <div>
+    <div class="inner-spacer chat-widget widget-content-padding"> 
+
+									        	<!-- chat tabs -->
+												<ul id="myChat" class="nav nav-tabs chat-tabs">
+									              <li class="active">
+									              	<a href="#newsfeed" data-toggle="tab"><i class="online"></i>Principal</a>
+									              	</li>
+                                                                                        
+									            </ul>
+									            <!-- end chat tabs -->
+
+									            <!-- chat box -->
+									            <div id="myChatTab" class="tab-content chat-content">
+
+                                                                                      <div class="row-fluid chat-box">
+                                                                                        
+                                                                                      <div class="controls">
+                                                                                        <input type="hidden" id="message_id" name="message_id" value="" />
+																	<div class="input-append span10">  
+                                                                                    <input class="span12 type-effect"  type="text" id="messageBox"  placeholder="Tapez votre message..." name="message" onkeypress="messageKeyPress(this,event);"/> 
+                                                                                      
+                                                                                    <div class="btn-group">
+						                                                    <button class="btn dropdown-toggle medium" data-toggle="dropdown">Action <span class="caret"></span></button>
+						                                                    <ul class="dropdown-menu btn-small pull-right">
+						                                                        <li><a href="javascript:void(0);">Favorite it</a></li>
+						                                                        <li><a href="javascript:void(0);">Reload page</a></li>
+						                                                        <li><a href="javascript:void(0);">Attach something</a></li>
+						                                                    </ul>
+						                                                </div>
+						                                            </div>
+                                            					</div>  
+                                                                                        
+                                                                                        
+                                                                                      </div>
+                                                                                      <!-- chat user1 -->	
+                                                                                      <div class="tab-pane fade in active" id="newsfeed">
+                                                                                        
+									              	<!-- chat messages -->
+									              	<div class="newsfeed1"></div>
+									              	<!-- end chat messages -->
+
+									              </div>
+                                                                                      <script type="text/javascript">
+                                                                                        <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed1"/>;
+                                                                                      </script>
+									              <!-- end chat user1 -->
+
+									              <!-- chat user2 -->
+									              <div class="tab-pane fade" id="activite">
+
+									              	<!-- chat messages -->
+									              	<div class="chat-messages">														
+
+									              	</div>
+									              	<!-- end chat messages -->
+
+									              </div>
+                                                                                      
+									              <!-- end chat user2 -->
+
+									            </div>
+									            <!-- end chat box -->
+
+
+
+
+									        </div>
+									        </div>
+									        <!-- end content -->	
+									        
+									    
+                                                        <script>
+                                                          function messageKeyPress(field,event) {
+                                                            var theCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                                                            var message = $('#messageBox').val();
+                                                            if (theCode == 13){
+                                                        <g:remoteFunction controller = "message" action="posterMessage" params="\'message=\'+message" update="temp"/>
+                                                                    $('#messageBox').val('');
+                                                                    return false;
+                                                                  } else {
+                                                                    return true;
+                                                                  }
+                                                                  }
+                                                                  function obtenirMessage() {
+                                                                  // var kanban = $('#monKanban').val()
+                                                                          <g:remoteFunction controller="message" action="obtenirMessage" update="newsfeed"/>
+                                                                        }
+                                                                function maj() {
+                                                                  obtenirMessage();
+                                                                  setTimeout('pollMessages()', 25000);
+                                                                }
+                                                                maj();
+                                                                $(document).ready(function() {
+                                                                  $.ajax({
+                                                                    url: '/application/Effectif/listEffectif',
+                                                                    type: 'GET',
+                                                                    dataType: "json",
+                                                                    success : function(response) {
+                                                                    //Create a map.
+                                                                    var data =
+                                                                            $.map(response, function(item){
+                                                                      console.log("id: " + item.id);
+                                                                      console.log("nom: " + item.nom );
+                                                                      return{
+                                                                        id: item.id,
+                                                                        value: item.nom 
+                                                                      }
+                                                                    });
+                                                                    $("#messageBox").autocomplete({
+
+                                                                    source: data,
+                                                                    beforeRetrieve: function(string){
+                                                                      if (string.indexOf('@') == 0) return "";
+                                                                      return string;
+                                                                    },
+                                                                    select: function (event, ui){
+                                                                      console.log("selected id:" + ui.item.id);
+                                                                      console.log("selected nom:" + ui.item.value);
+                                                                      //change the value of hidden field to the country's id.
+                                                                      $('#message_id').val(ui.item.id);
+                                                                      }
+                                                                            });
+                                                                            }
+                                                                            });
+                                                                            });                                            
+   
+      
+      
+                                                                                                                               
+                                                        </script>
         </div>
-          <script type="text/javascript">
-      <g:remoteFunction controller="message" action="obtenirMessageEffectif" update="contenu2"/>;
-          </script>
+          
         
         </article>       
         
@@ -89,21 +218,6 @@
 							</div>
  
  
- <script>
-                                                          function voirJournal(monId) {
-                                                                 <g:remoteFunction controller="message" action="obtenirMessageEffectif" update="contenu2"/>;   
-                                                          }        
-                                                          function voirProjets(monId) {
-                                                                 <g:remoteFunction controller="kanban" action="obtenirKanbanEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
-                                                          }        
-                                                          function voirIndicateurs(monId) {
-                                                                 <g:remoteFunction controller="effectif" action="indicateurEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
-                                                          }        
-                                                          function information(monId) {
-                                                                 <g:remoteFunction controller="effectif" action="information"   params ="\'effectif=\' + monId" update="contenu2"/>;   
-                                                          }  
-                                                  
-                                                        </script>
 				
 
 <g:render template="/menues/mainright" />

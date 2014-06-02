@@ -2,7 +2,7 @@
 
   <head>
 		<meta name="layout" content="main"/>
-		<title>Gestion projet</title>
+		<title>Indicateurs : ${kanbanInstance.nomKanban}</title>
                 <g:javascript library="jquery" plugin="jquery" />
                 
                 
@@ -15,7 +15,8 @@
  
  <div id="page-content">
     <div class="fluid-container">
-      <section id="widget-grid" class="well light">
+      
+						<section id="widget-grid" class="well light">
                                                   <div class="row-fluid">
                                                     <article class="span3">
     <img src="${request.contextPath}/img/start-icons/coucou.jpg" alt="" style="width: 160px; height: 160px;">
@@ -25,22 +26,22 @@
                                                       
                                                       <center>
     <h4> Projet : ${kanbanInstance?.nomKanban} </h4> 
-   <g:link  action="show" controller="Famille" id=" ${kanbanInstance.famille.id}"> <h4> Famille : ${kanbanInstance?.famille.nom}</h4></g:link>
+   <g:link  action="show" controller="Famille" id="${kanbanInstance.famille.id}"> <h4> Famille : ${kanbanInstance?.famille.nom}</h4></g:link>
     
     <div id="start">
       <ul>
         
       <li>
-        <a href="javascript:information(${kanbanInstance.id})" title="Informations">
+        <g:link controller ="kanban" action ="show" id ="${kanbanInstance.id}" title="Informations">
           <img src="${request.contextPath}/img/start-icons/mass.png" alt="">
           <span>Informations</span>
-        </a>
+        </g:link>
       </li>
         <li>
-        <a href="javascript:voirJournal(${kanbanInstance.id})" title="Journal">
+        <g:link controller ="kanban" action ="obtenirJournal" id ="${kanbanInstance.id}" title="Journal">
           <img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
           <span>Journal</span>
-        </a>
+        </g:link>
       </li>
       
         <li>
@@ -64,9 +65,10 @@
                                                     </article>
                                                     
                                                     
-                                                    
-                                                    
                                                   </div>
+                                                </section>
+      <section>
+                                      
                                                   
       <div class="row-fluid">
         <article class="span12">
@@ -153,25 +155,6 @@
       
 									    <!-- end widget div -->
 									</div>
- 
- 
- <script>
-                                                          function voirJournal(monId) {
-                                                                 <g:remoteFunction controller="kanban" action="obtenirJournal"  params ="\'kanban=\' + monId" update="contenu2"/>;   
-                                                          }        
-                                                          function voirProjets(monId) {
-                                                                 <g:remoteFunction controller="kanban" action="obtenirKanbanEffectif"   params ="\'effectif=\' + monId" update="contenu2"/>;   
-                                                          }        
-                                                          function voirIndicateurs(monId) {
-                                                                 <g:remoteFunction controller="kanban" action="indicateurKanban"   params ="\'kanban=\' + monId" update="contenu2"/>;   
-                                                          }        
-                                                          function information(monId) {
-                                                                 <g:remoteFunction controller="kanban" action="information"   params ="\'kanban=\' + monId" update="contenu2"/>;   
-                                                          }  
-                                                                                   
-                                                  
-                                                        </script>
- 
  
                                                                         
                                                           

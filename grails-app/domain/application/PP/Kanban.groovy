@@ -22,6 +22,7 @@ class Kanban {
     Effectif chefProjet
     
     
+    SortedSet of
     static hasMany = [compteRendus : Message, of:OF]
     
     static transients = ['chargeRealisee','chargeAgenda', 'chargeRestantAPlanifier', 'chargeRestantARealiser', 'avancementRealise']
@@ -44,9 +45,7 @@ class Kanban {
     public Float getAvancementAgenda() {
         chargeRealisee / chargeAgenda * 100
     }
-    
-    
-    
+     
     
     static constraints = {
         compteRendus nullable : true   
