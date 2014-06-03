@@ -17,7 +17,7 @@ class MailEffectifController {
     }
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
     def show(MailEffectif mailEffectifInstance) {
-        mailService.messageLu( mailEffectifInstance)
+        mailService.messageLu(mailEffectifInstance)
 
         def mailRecepteurs =  mailService.afficherRecepteurs(mailEffectifInstance)
         [mailEffectifInstance: mailEffectifInstance, mailRecepteurs : mailRecepteurs ]

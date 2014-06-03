@@ -31,38 +31,27 @@
 						<!-- start icons -->
 						<div id="start">
 							<ul>
+                                                          
 								<li>
-									<label>246 </label>
-									<a href="javascript:void(0)" title="">
+									<g:link   controller="effectif" action="show" id="${sec.loggedInUserInfo(field:"id")}" title="Mon mur">
+										<img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
+										<span>Mon mur</span>
+									</g:link>
+								</li>
+								<li>
+									<!-- <label></label> -->
+									<g:link controller="kanban" action="obtenirKanbanEffectif" id="${sec.loggedInUserInfo(field:"id")}" title="Projets">
 										<img src="${request.contextPath}/img/start-icons/orders.png" alt="">
 										<span>Projets en cours</span>
-									</a>
+                                                                        </g:link>
 								</li>
+                                                                
 								<li>
-									<a href="javascript:void(0)" title="">
-										<img src="${request.contextPath}/img/start-icons/mass.png" alt="">
-										<span>Broadcast</span>
-									</a>
-								</li>
-								<li>
-									<label>new</label>
-									<a href="javascript:void(0)" title="">
+									<!-- <label>new</label> -->
+									<g:link   controller="effectif" action="indicateurEffectif" id="${sec.loggedInUserInfo(field:"id")}" title="Mes indicateurs">
 										<img src="${request.contextPath}/img/start-icons/stats.png" alt="">
-										<span>Show Statistics</span>
-									</a>
-								</li>
-								<li>
-									<label>657</label>
-									<a href="javascript:void(0)" title="">
-										<img src="${request.contextPath}/img/start-icons/pending-message.png" alt="">
-										<span>Comments</span>
-									</a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" title="">
-										<img src="${request.contextPath}/img/start-icons/upgrade.png" alt="">
-										<span>Service Upgrade</span>
-									</a>
+										<span>Indicateurs</span>
+                                                                </g:link>
 								</li>
 							</ul>
 

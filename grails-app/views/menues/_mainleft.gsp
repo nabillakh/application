@@ -7,7 +7,7 @@
 				<div class="contained">
 					
 					<!-- theme name -->
-					<h1> SysProd <span class="hidden-phone">- Mon tableau de bord</span> </h1>
+                                        <h1> SysProd <span class="hidden-phone">- Mon tableau de bord</span> </h1>
 					<!-- end theme name -->
 																		
 					<!-- span4 -->
@@ -80,7 +80,7 @@
 					<div class="my-profile">
                                           Bienvenue
                                        <g:link  action="show" controller="Effectif" id="${sec.loggedInUserInfo(field:"id")}">   <sec:ifLoggedIn><sec:username/></sec:ifLoggedIn></g:link>
-					<span><a href="javascript:void(0);">Modifier profil </a></span>
+					<span><g:link  action="edit" controller="Effectif" id="${sec.loggedInUserInfo(field:"id")}"> Modifier profil </g:link></span>
 					</div>
                                         </center>
 					<div class="divider"></div>
@@ -91,10 +91,14 @@
 						
 						<ul class="menu" id="accordion-menu-js">
 							<li class="current">
-								<a href="javascript:void(0)"><i class="icon-off"></i>Général <span class="badge">2</span></a>
+								<a href="javascript:void(0)"><i class="icon-off"></i>Général <!--  <span class="badge">2</span> --></a>
 								<ul>
 									<li>
 										<g:link  action="index" controller="Login">Page d'accueil</g:link>
+									</li>
+                                                                        
+									<li>
+                                                                                <g:link   controller="effectif" action="show" id="${sec.loggedInUserInfo(field:"id")}" > Mon profil </g:link>
 									</li>
 									<li>
                                                                                 <sec:ifLoggedIn>
@@ -112,29 +116,32 @@
 								<g:link  action="index" controller="mail"> <i class="icon-envelope"></i>Boite de réception</g:link>
 							</li>
 							<li class="">
-								<a href="javascript:void(0)"><i class="cus-chart-bar"></i>Suvi d'activités<span class="badge">3</span></a>
+								<a href="javascript:void(0)"><i class="cus-briefcase"></i>Suvi d'activités<!--<span class="badge">3</span>--></a>
 								<ul>
                                                                         
                                                                         <li>
                                                                                 <g:link controller="kanban" action="obtenirKanbanEffectif" id="${sec.loggedInUserInfo(field:"id")}" > Mon activité </g:link>
 									</li>
-									<li>
-                                                                                <g:link   controller="effectif" action="indicateurEffectif" id="${sec.loggedInUserInfo(field:"id")}" > Mes indicateurs </g:link>
-									</li>
                                                                         <li>
                                                                                 <g:link  action="index" controller="kanban"> Ajouter un projet </g:link>
 									</li>
+							<li class="">
+								<g:link  action="feuilleImputation" controller="imputation">Feuille d'imputation</g:link>
+							</li>
 								</ul>
 							</li>
                                                         <li class="">
 								<a href="javascript:void(0)"><i class="cus-chart-bar"></i>Pilotage</a>
 								<ul>
                                                                         
-                                                                        <li>
-                                                                                <g:link  action="index" controller="pic"> Plan pluri-annuel </g:link>
+									<li>
+                                                                                <g:link   controller="effectif" action="indicateurEffectif" id="${sec.loggedInUserInfo(field:"id")}" > Mes indicateurs </g:link>
 									</li>
 									<li>
                                                                                 <g:link  action="index" controller="pdp"> Plan annuel </g:link>
+									</li>
+                                                                        <li>
+                                                                                <g:link  action="index" controller="pic"> Plan pluri-annuel </g:link>
 									</li>
 								</ul>
 							</li>
@@ -142,9 +149,6 @@
 								<g:link  action="index" controller="event"> <i class="cus-calendar-2"></i> Mon agenda </g:link>
 							</li>
                                                         
-							<li class="">
-								<g:link  action="feuilleImputation" controller="imputation"> <i class="icon-envelope"></i>Feuille d'imputation</g:link>
-							</li>
 
 							
 							<li class="">

@@ -12,8 +12,8 @@
 									<ul class="progressbox">
                                                                           
                                                                           <g:each in="${mesOF}" status="i" var="monOF">
-						                <li>
-						                    <strong>${monOF.phase.nom}</strong><b>En cours : ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%</b>
+						                <li><g:link controller ="kanban" action ="show" id ="${monOF.kanban.id}">
+						                    <strong>${monOF.phase.nom}</strong><b>En cours : ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%</b></g:link>
 						                    <div class="progress progress-success slim"><div class="bar" style="width: ${monOF.getChargeRealisee() / monOF.chargePlanifiee *100}%;"></div></div>
 						                </li>
                                                                           </g:each>
