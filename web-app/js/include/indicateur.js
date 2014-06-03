@@ -12,11 +12,13 @@
                        json = data;
                    }, 
                        error:function(){
-                       bootbox.alert("Error loading chart");
+                       bootbox.alert("Error loading chart chargePic");
                    }
                });
                return json;
            });
+           
+           
            
         var absPIC = (function() {
                var json;
@@ -30,7 +32,7 @@
                        json = data;
                    }, 
                            error:function(){
-                       bootbox.alert("Error loading chart");
+                       bootbox.alert("Error loading chart liste des familles");
                    }
                });
                return json;
@@ -47,7 +49,7 @@
 		  axes: false,
 		  grid: false,
 		  data: data,
-		  xkey: 'annee',
+		  xkey: 'famille',
 		  ykeys: fam,
 		  labels: fam,
 		  stacked: true
@@ -71,7 +73,7 @@
                        json = data;
                    }, 
                        error:function(){
-                       bootbox.alert("Error loading chart");
+                       bootbox.alert("Error loading chart charge par OF");
                    }
                });
                return json;
@@ -89,7 +91,7 @@
                        json = data;
                    }, 
                            error:function(){
-                       bootbox.alert("Error loading chart");
+                       bootbox.alert("Error loading chart liste des OF");
                    }
                });
                return json;
@@ -118,9 +120,7 @@
         
        }
        
-       
-       
-       
+             
        
        
        if ($('#indicateurKanban').length){
@@ -142,6 +142,25 @@
 		});
             }
             
+            
+       
+       if ($('#deltaChargeCapa').length){
+           
+           var nomKanban = $('#monKanban').val();
+           $.getJSON( "/application/activite/deltaCharge", function(data) {
+               $.getJSON( "/application/activite/listeFamille", function(fam) {
+               Morris.Bar({
+		  element: 'deltaChargeCapa',
+		  axes: true,
+		  grid: true,
+		  data: data,
+		  xkey: 'mois',
+		  ykeys: fam,
+		  labels: fam,
+		  stacked: true
+		});
+            });});}
+            
        
        
         var json_data2 = (function() {
@@ -155,7 +174,7 @@
                        json = data;
                    }, 
                            error:function(){
-                       alert("Error loading chart");
+                       alert("Error loading chart barPIC");
                    }
                });
                return json;
@@ -465,7 +484,7 @@ if ($('#avancementKanban').length) {
                        json = data;
                    }, 
                            error:function(){
-                       alert("Error loading chart");
+                       alert("Error loading chart avancement kanban");
                    }
                });
                

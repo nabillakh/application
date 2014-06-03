@@ -111,7 +111,7 @@ class ActiviteController {
     
     
     // envoie data pour indicateur de 
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED']) 
     def chargePIC = {
         def pics = Pic.list()
         // hypothese nbannee = nb pic
@@ -131,8 +131,9 @@ class ActiviteController {
         render picLists as JSON
     }
     // envoie la liste de famille pour parising dans le graphe 1
-    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    @Secured(['IS_AUTHENTICATED_REMEMBERED']) 
     def listeFamille = {
+        
         def fams = Famille.list()
         def famLists = []
         fams.each{ fam ->
@@ -165,5 +166,25 @@ class ActiviteController {
     
     
     
+    // envoie data pour indicateur de 
+    @Secured(['IS_AUTHENTICATED_REMEMBERED'])
+    def deltaCharge = {
+        
+        def familles = Famille.list()
+        // hypothese nbannee = nb pic
+        def familleLists = []
+            for(Integer i = 1; i<13;i++) {
+        familles.each {famille ->
+                def familleList = new LinkedHashMap()
+                familleList.put("mois",i)
+                familleList.put(famille.nom.toString(),6-i)
+                println(familleList)
+                familleLists << (familleList)
+            }
+        }
+        println(familleLists)
+        [familleInstanceList: familleLists]
+        render familleLists as JSON
+    }
     
 }

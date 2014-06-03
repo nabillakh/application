@@ -180,6 +180,9 @@
                                                                                                         <li>
 														<a href="#s4" data-toggle="tab">Droits</a>
 													</li>
+                                                                                                        <li>
+														<a href="#s4" data-toggle="tab">entreprise</a>
+													</li>
 													
 												</ul>
 												<div id="myTabContent" class="tab-content">
@@ -194,6 +197,7 @@
                                                                                                                     <th>Equipe</th>
                                                                                                                     <th>Compte expiré</th>
                                                                                                                      <th>Compte Bloqué</th>
+                                                                                                                     <th>Entreprise</th>
                                                                                                                   </tr>
                                                                                                                 </thead>
                                                                                                                 <tbody>
@@ -205,6 +209,7 @@
                                                                                                                 <td>${EffectifInstance.equipe}</td>
                                                                                                                 <td>${EffectifInstance.accountExpired}</td>
                                                                                                                 <td>${EffectifInstance.accountLocked}</td>
+                                                                                                                <td>${EffectifInstance.entreprise.nom}</td>
                                                                                                                 </tr>
                                                                                                                 </g:each>
                                                                                                               </tbody>

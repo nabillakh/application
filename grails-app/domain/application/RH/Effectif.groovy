@@ -21,6 +21,8 @@ class Effectif {
         
 	static transients = ['springSecurityService', 'listeKanban']
         
+        Entreprise entreprise
+    
         public Kanban[] getListeKanban() {
             kanbanService.listeKanbanEffectif(this)
         }

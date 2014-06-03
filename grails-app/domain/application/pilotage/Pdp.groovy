@@ -12,7 +12,6 @@ class Pdp {
     Date dateVersion
     Date dateMaj
     
-    static hasMany = [kanbansRealises : PdpKanbanEvent] 
     
     def chargePlanifie = {
         picFamille.getOrdo().getChargeStandard() * uniteActivite
